@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "project": "K GraphFuse",
+  "version": "0.1.0",
+  "creator": "Utkarsh Sinha",
+  "historical_benchmark_name": "Sinha GraphFuse",
+  "evidence_url": "https://github.com/Utkarsh-Sinha0/k-graphfuse/tree/main/evidence",
+  "claims": [
+    {
+      "id": "same_t4_median",
+      "kind": "measurement",
+      "value": 21.281298617317614,
+      "unit": "percent lower median latency",
+      "source": "evidence/SINHA_GRAPHFUSE_PUBLIC_REFERENCE_RAW.json",
+      "scope": "Original probability-score vectors; unweighted undirected global PageRank; uniform initialization; damping0.85; exactly10 iterations",
+      "limitations": "One selected configuration on one graph in one run; no global SOTA or independent replication"
+    },
+    {
+      "id": "reference_pass",
+      "kind": "measurement",
+      "value": 11,
+      "unit": "accepted configurations",
+      "source": "evidence/SINHA_GRAPHFUSE_PUBLIC_REFERENCE_RAW.json",
+      "limitations": "Reference acceptance does not imply universal accuracy improvement; aggregate L1 error is higher"
+    },
+    {
+      "id": "sampled_memory",
+      "kind": "measurement",
+      "value": 56.755862434095874,
+      "unit": "percent lower sampled total GPU peak",
+      "source": "evidence/SINHA_GRAPHFUSE_PUBLIC_REFERENCE_RAW.json",
+      "limitations": "20ms sampling; inherited/library allocations included; short peaks may be missed"
+    },
+    {
+      "id": "broader_gate",
+      "kind": "measurement",
+      "value": 0,
+      "unit": "passes among 19 complete strongest-control GPU gates",
+      "source": "evidence/SINHA_GRAPHFUSE_COMPARISONS.csv",
+      "limitations": "Different suite and gates than the matched public-reference task"
+    },
+    {
+      "id": "job_impact",
+      "kind": "model",
+      "value": 10.640649308658801,
+      "unit": "percent modeled whole-job latency reduction at 50% matching-stage share",
+      "source": "evidence/application_impact_model.csv",
+      "limitations": "Amdahl projection, not measured customer savings"
+    },
+    {
+      "id": "complete_inequality",
+      "kind": "conditional mathematical premise",
+      "value": 2,
+      "unit": "complete inequality constant",
+      "source": "docs/concepts/mathematics.md",
+      "limitations": "Depends on cited manuscript; public PageRank uses zero truncation and demonstrates no degree reduction"
+    }
+  ],
+  "unestablished": [
+    "global SOTA",
+    "unique market positioning",
+    "universal accuracy superiority",
+    "integrated energy savings",
+    "cloud-bill savings",
+    "customer production quality",
+    "guaranteed search or AI ranking"
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "application_impact_model.csv": {
+    "bytes": 521,
+    "sha256": "ef8ebe924d8961c65b003399d239e91635274ce9fc84078b4a351c3f80ace91e"
+  },
+  "measured_metrics.csv": {
+    "bytes": 2357,
+    "sha256": "4c7924e4c2ee171c348ed905bc16dcbd5c91a7fcc9bffdace391b5ebdb4c84b3"
+  },
+  "protocols/SINHA_GRAPHFUSE_BENCHMARK_PROTOCOL.md": {
+    "bytes": 7682,
+    "sha256": "e1c1a3076111bd44c1fe73fbc81d853dd56248be88ed9362885638b7a9adb84e"
+  },
+  "protocols/SINHA_GRAPHFUSE_PUBLIC_REFERENCE_PROTOCOL.md": {
+    "bytes": 5266,
+    "sha256": "fcf5b9b906653a7146b08d5b35d8ce8066cc5572a4181ec16ce4181ec9063150"
+  },
+  "PUBLICATION_TRANSFORMATIONS.json": {
+    "bytes": 991,
+    "sha256": "0dd3c7dd2390e1971bd56825be3e7a2bf2b23877ba3ccc3cb56fcacc23fec69e"
+  },
+  "README.md": {
+    "bytes": 1972,
+    "sha256": "828e1960d1cefdb69fe41dbbc65ce7227923bd95660a7e3e3d135f84d56371a9"
+  },
+  "sinha_benchmark_evidence/community/raw.json": {
+    "bytes": 564971,
+    "sha256": "844934a47230265d4c0350df6180241f09885d54f5cdc06743cf05839a350e1b"
+  },
+  "sinha_benchmark_evidence/community/run.py": {
+    "bytes": 151704,
+    "sha256": "3cf2f32f199f63737d016261d170be9424615d5bcadb8b06db2f849fb43c3022"
+  },
+  "sinha_benchmark_evidence/community/source-manifest.json": {
+    "bytes": 1943,
+    "sha256": "44d63eed5dc91a86e75cf1f6b6e8c7cdaafc15594f6236ed71b5a446b3684ab3"
+  },
+  "sinha_benchmark_evidence/large/raw.json": {
+    "bytes": 542395,
+    "sha256": "2949bc08bdd45e0f8db9086afef2a86526848e01cf3a0e9ba830d06a2a483a66"
+  },
+  "sinha_benchmark_evidence/large/run.py": {
+    "bytes": 150438,
+    "sha256": "a20064681316ed18e8f480690d861bb766b7a696faf4ec94d98a2128a760857c"
+  },
+  "sinha_benchmark_evidence/large/source-manifest.json": {
+    "bytes": 1943,
+    "sha256": "e58d6a5d4b08bab3cd6215052dce65119e0815b91dab71ade213af52635d2773"
+  },
+  "sinha_benchmark_evidence/scale-gpu/raw.json": {
+    "bytes": 257335,
+    "sha256": "83e8c17d3a4850332dfc11bc1e9fdaa7b9276b40bc0a680551f121c2af303739"
+  },
+  "sinha_benchmark_evidence/scale-gpu/run.py": {
+    "bytes": 152454,
+    "sha256": "a6da3f0407483b8dadcb37cb32a559d86519f2f66cedf800ccd8bad51fab23b1"
+  },
+  "sinha_benchmark_evidence/scale-gpu/source-manifest.json": {
+    "bytes": 1943,
+    "sha256": "4724b430f604cfe9d7dfb016c7ee9a9f94799c32796e55c0b696bc2905e63d2e"
+  },
+  "SINHA_GRAPHFUSE_ALL_CANDIDATES.csv": {
+    "bytes": 218809,
+    "sha256": "4e6fdb9b1ed92defa0f4da81ea3d2018b12bb1ee3a753435185f7a52881afeb3"
+  },
+  "SINHA_GRAPHFUSE_COMPARISONS.csv": {
+    "bytes": 9748,
+    "sha256": "7949a6cf34f70a43d05de7ab06db4fa82e8a83e4ca0e91e2670268a13f40b01c"
+  },
+  "SINHA_GRAPHFUSE_KAGGLE_RAW.json": {
+    "bytes": 1371491,
+    "sha256": "4cbea7eab6b4cde1b3e92d095fb70bf86840cf0c1676d3d79a4abe90ca45b01c"
+  },
+  "SINHA_GRAPHFUSE_PUBLIC_INDUSTRY_METRICS.csv": {
+    "bytes": 7217,
+    "sha256": "e1f90772d59acfbd30396d398f360fb05310935946b5aa9318a007ca58199eea"
+  },
+  "SINHA_GRAPHFUSE_PUBLIC_REFERENCE_ALL_CANDIDATES.csv": {
+    "bytes": 2837,
+    "sha256": "8fbe8e1086c243232f86192ad182d883a2521c15707dbb390407182577f923da"
+  },
+  "SINHA_GRAPHFUSE_PUBLIC_REFERENCE_COMPARISONS.csv": {
+    "bytes": 850,
+    "sha256": "9c95df1dd700c6f562ffb62a86fef49c3b7e5d40fcaab8abc0f061feb612667c"
+  },
+  "SINHA_GRAPHFUSE_PUBLIC_REFERENCE_RAW.json": {
+    "bytes": 35664,
+    "sha256": "05a8ff5916a1eeaf1b73378dd1afc1d0fedf711d0ba3d92854291fe4777fe173"
+  },
+  "sinha_public_reference_evidence/arcade_scores.bin": {
+    "bytes": 10134912,
+    "sha256": "aab9445285dad0a0afcfd53f64d1faceb9bcbcdaf118045f3173ebacef087338"
+  },
+  "sinha_public_reference_evidence/arcade_timing.json": {
+    "bytes": 472,
+    "sha256": "fc04a31cc452354b1015075874691295b1f0f9d4ca4501d19317ffd549ddd0fa"
+  },
+  "sinha_public_reference_evidence/industry_reference.json": {
+    "bytes": 35664,
+    "sha256": "05a8ff5916a1eeaf1b73378dd1afc1d0fedf711d0ba3d92854291fe4777fe173"
+  },
+  "sinha_public_reference_evidence/run.py": {
+    "bytes": 223142,
+    "sha256": "763357058ec8d8b4db5ab3723eb04c5148ac6e5b0f3d3e109086249923c27522"
+  },
+  "sinha_public_reference_evidence/source/benchmark.py": {
+    "bytes": 5402,
+    "sha256": "cf1dbf0f66e9d86791736cd87016af8877306c4ab5e876917410ec0aaa4b0c17"
+  },
+  "sinha_public_reference_evidence/source/benchmark_cuda.py": {
+    "bytes": 13404,
+    "sha256": "a7d81e1e4416ba353a3d188df5ff6406d2b75e5955e4173da1222d81f6ef4ff0"
+  },
+  "sinha_public_reference_evidence/source/benchmark_sparse.py": {
+    "bytes": 7295,
+    "sha256": "1647078caea1f8a7c82eef311f15d6e6a074e67db81c239e9d0fe6f7f82a2646"
+  },
+  "sinha_public_reference_evidence/source/benchmark_upgrades.py": {
+    "bytes": 12782,
+    "sha256": "0fc0083b2c93ce3719e147bca93a753eafa01ff470151ef64666bc0ea6e202ea"
+  },
+  "sinha_public_reference_evidence/source/c2fuse.py": {
+    "bytes": 7026,
+    "sha256": "963c620edff3713ad33b6740238eeba1db0f3029074fca4d8cb955d8bc59a6f7"
+  },
+  "sinha_public_reference_evidence/source/chebyshev_ppr.py": {
+    "bytes": 3919,
+    "sha256": "a6527efceea496b88f22bd559752f32e59aeab3d78d4c678b451423bd5eacfa8"
+  },
+  "sinha_public_reference_evidence/source/cuda_c2fuse.py": {
+    "bytes": 9283,
+    "sha256": "19040d22de0070b13d31a732a67f068d51c673ba9e9ad41a93f466edf85f26f7"
+  },
+  "sinha_public_reference_evidence/source/example_sensitivity_gpu.py": {
+    "bytes": 1732,
+    "sha256": "179ecb0c83520ededcded8bf9567eb3fad742748bccc88cae7eb5f44acf595fb"
+  },
+  "sinha_public_reference_evidence/source/example_sparse.py": {
+    "bytes": 1131,
+    "sha256": "8f60530d25d28a8654589b5173a9e37c92d296494e811fbecbb32d1ef28d6aaf"
+  },
+  "sinha_public_reference_evidence/source/example_upgrades.py": {
+    "bytes": 1333,
+    "sha256": "987ea5a8a13308c188dc28dc4cd0afde10c681b9c876ad98911737de72571c1b"
+  },
+  "sinha_public_reference_evidence/source/fast_bounds.py": {
+    "bytes": 1957,
+    "sha256": "ea784e68d37969cd2ffb930f6f0f2366b792325b26f7089f4ed91c011482d0ba"
+  },
+  "sinha_public_reference_evidence/source/LICENSE": {
+    "bytes": 1110,
+    "sha256": "50b71848dbcd3b0e474e84c1583677b99aa6509daa9319cfe85a83ef551f95fc"
+  },
+  "sinha_public_reference_evidence/source/local_c2fuse.py": {
+    "bytes": 3052,
+    "sha256": "1bd13dda418c79149d098604753fed10debb95c16ea51827d00047108195b149"
+  },
+  "sinha_public_reference_evidence/source/ppr_certificate.py": {
+    "bytes": 2318,
+    "sha256": "29be33af074c12ced2fbb5a1638e01b18f4a14e92b7302ac178e778ceeebba95"
+  },
+  "sinha_public_reference_evidence/source/sensitivity_c2fuse.py": {
+    "bytes": 6044,
+    "sha256": "c16440125dd8b3dfe0ecc0052f26d1548bce203bc94a9b2c4659dfd9d8760d79"
+  },
+  "sinha_public_reference_evidence/source/sinha_industry_bench.py": {
+    "bytes": 31528,
+    "sha256": "26e86ebdd3ef340487f471829634adc2155eba4a745e621d002edcf4ce5a65fe"
+  },
+  "sinha_public_reference_evidence/source/sinha_public_reference_bench.py": {
+    "bytes": 13452,
+    "sha256": "166f7933da39bf1bf29272e46d4601e683e1053b0427ebf98583f587d5645fe1"
+  },
+  "sinha_public_reference_evidence/source/SinhaArcadePR.class": {
+    "bytes": 8506,
+    "sha256": "be40d28a8714d6fa73dd9fa21e7f92a788d921d91deb8a6e0aa0e2e12801d20d"
+  },
+  "sinha_public_reference_evidence/source/SinhaArcadePR.java": {
+    "bytes": 3924,
+    "sha256": "a4ff4101c96d64cc7810344bf67cf8bf92159f48dbdf99f35a4888b960b6938f"
+  },
+  "sinha_public_reference_evidence/source/sparse_c2fuse.py": {
+    "bytes": 5533,
+    "sha256": "58051f683f2dda31b3d83b83baed6030f2a706dc826c5277408feebbd4facca9"
+  },
+  "sinha_public_reference_evidence/source/test_c2fuse.py": {
+    "bytes": 4028,
+    "sha256": "01ba822d20ca280a22a5942a3263fe485d37a71d3521ec9f83edef05ecee07d9"
+  },
+  "sinha_public_reference_evidence/source/test_cuda.py": {
+    "bytes": 4031,
+    "sha256": "527aa0d9bd8f775f36b4e54429e6772f548277235dc1620a7dde1ecafd641725"
+  },
+  "sinha_public_reference_evidence/source/test_graph_upgrades.py": {
+    "bytes": 8187,
+    "sha256": "2553a8709e13ac69e83c5729076f55c4d86541d3a4b780253c471d0792bc8c00"
+  },
+  "sinha_public_reference_evidence/source/test_sensitivity.py": {
+    "bytes": 5468,
+    "sha256": "2d91184ce3a384ccabb13895601374961dff4d80451d1e982c12895d5a53dda1"
+  },
+  "sinha_public_reference_evidence/source/test_sparse_c2fuse.py": {
+    "bytes": 4983,
+    "sha256": "45db6d494542e4857cca1fe1cbc91dfe651cbd946fbb58857bf194ae00cac251"
+  },
+  "sinha_public_reference_evidence/source-manifest.json": {
+    "bytes": 2236,
+    "sha256": "730feeb1f038b1b8b58a017b9d49a38f0a75561daaba6a344fbe1e21002fd1b5"
+  },
+  "sinha_public_reference_evidence/verified_release.json": {
+    "bytes": 503,
+    "sha256": "f82b47580e13c12cbf1ac52d44990984beb41f1160858e99d172e44a04721a30"
+  }
+}

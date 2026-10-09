@@ -1,0 +1,12 @@
+﻿metric,sinha,nvidia_native,unit,lower_value_pct,scope,practical_meaning
+Median warm compute,49.90580599996974,63.39764900002365,ms,21.281298617317614,Same T4; 31 samples; original probability output,Less time spent on the matching graph computation
+p95 warm compute,49.98325400001136,67.15626950000342,ms,25.57172342634545,Same T4; 31 samples; original probability output,Shorter observed slow calls in this sequential experiment
+Median host-output call,50.42191500001536,63.46562400000266,ms,20.552400146552962,Same T4; 11 samples; prepared resident graph,Less time to compute and copy scores/IDs to CPU
+p95 host-output call,51.35854700000664,68.48313000000417,ms,25.00554954190395,Same T4; 11 samples; prepared resident graph,Shorter observed slow compute-and-copy calls
+First call after GPU preparation,61.941168000032576,70.69517799999403,ms,12.382754025970755,Single observation; excludes CPU graph/compiler work,Shorter observed first execution after preparation
+Sampled total device peak,1284702208,2970812416,bytes,56.755862434095874,20 ms samples during preparation/calls; total use; short peaks may be missed,Observed device-memory headroom during this setup and call sequence
+Sampled process RSS peak,4920475648,7672205312,bytes,35.86621515063021,20 ms samples during preparation/calls; total use; short peaks may be missed,Lower observed process working set during this experiment
+Maximum relative per-vertex error,2.520975279509721e-07,4.527438019987574e-07,dimensionless,44.31784005920769,One reference graph; FP32; both pass 1e-4 gate,Smaller worst score deviation here; no universal accuracy advantage
+Aggregate L1 error,4.903210049011926e-08,4.49805788038916e-08,dimensionless,-9.00726890129997,One reference graph; FP32; lower is better,Sinha is slightly worse on aggregate deviation; both are accepted
+GPU frontend preparation,0.6936757140000509,4.493052310000053,seconds,84.56114760880577,Different preparation scopes; CPU graph normalization/compiler excluded; not a fair complete cold-start comparison,Observed timings only; do not advertise this as cold-start speedup
+Sampled average board power,59.5755322580645,41.84420769230769,watts,-42.37462134816905,Sample means over preparation/calls; different durations; not integrated query energy,Sinha samples show higher power; query energy and cloud bills are unmeasured

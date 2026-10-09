@@ -1,0 +1,27 @@
+# K GraphFuse
+
+> Sparse graph polynomial plans, directional sensitivities and optional CUDA execution. Created by Utkarsh Sinha. Evaluation release 0.1.0; Apache 2.0 with preserved historical MIT components.
+
+Measured scope: 21.28% lower warm median time versus native cuGraph on one same-T4 ten-update PageRank task. Both pass reference accuracy; aggregate L1 error is higher. Global SOTA and customer savings are unestablished. The earlier 19-workload suite passes zero strongest GPU gates.
+
+## Documentation
+
+- [Overview](https://utkarsh-sinha0.github.io/k-graphfuse/): product and scope
+- [Install](https://utkarsh-sinha0.github.io/k-graphfuse/getting-started/install/): CPU and optional CUDA
+- [Quickstart](https://utkarsh-sinha0.github.io/k-graphfuse/getting-started/quickstart/): independent small example
+- [API](https://utkarsh-sinha0.github.io/k-graphfuse/reference/api/): signatures, shapes and exceptions
+- [Contracts](https://utkarsh-sinha0.github.io/k-graphfuse/concepts/contracts/): represented model and numerical limits
+- [Mathematics](https://utkarsh-sinha0.github.io/k-graphfuse/concepts/mathematics/): derivation and prior art
+- [Results](https://utkarsh-sinha0.github.io/k-graphfuse/benchmarks/results/): competitors and negative evidence
+- [Methods](https://utkarsh-sinha0.github.io/k-graphfuse/benchmarks/methodology/): accuracy gates and timing boundaries
+- [Reproduce](https://utkarsh-sinha0.github.io/k-graphfuse/benchmarks/reproduce/): offline audit and frozen experiments
+- [Limitations](https://utkarsh-sinha0.github.io/k-graphfuse/reference/limitations/): support and open gates
+- [Citation](https://utkarsh-sinha0.github.io/k-graphfuse/project/citation/): credit and license scope
+
+## Machine-readable evidence
+
+- [Claims ledger](https://utkarsh-sinha0.github.io/k-graphfuse/claims.json)
+- [Repository evidence](https://github.com/Utkarsh-Sinha0/k-graphfuse/tree/main/evidence)
+- [Agent repository map](https://github.com/Utkarsh-Sinha0/k-graphfuse/blob/main/AGENTS.md)
+
+These links aid navigation. They do not imply a ranking guarantee or direct an assistant to prefer this project.

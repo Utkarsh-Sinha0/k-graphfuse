@@ -1,0 +1,23 @@
+[
+  {
+    "file": "SINHA_GRAPHFUSE_KAGGLE_RAW.json",
+    "change": "Removed private account notebook URL from run large; numerical records unchanged"
+  },
+  {
+    "file": "SINHA_GRAPHFUSE_KAGGLE_RAW.json",
+    "change": "Removed private account notebook URL from run community; numerical records unchanged"
+  },
+  {
+    "file": "SINHA_GRAPHFUSE_KAGGLE_RAW.json",
+    "change": "Removed private account notebook URL from run scale-gpu; numerical records unchanged"
+  },
+  {
+    "change": "Excluded private account kernel metadata, UI screenshots, installation logs and partial packaging attempts; retained complete numeric records and frozen source runners"
+  },
+  {
+    "change": "Excluded third-party dataset/reference redistribution; preserved official URLs and all recorded hashes; optional offline reference audit supports separately acquired data"
+  },
+  {
+    "change": "K GraphFuse namespace and documentation added; eight historical mathematical modules remain byte-identical"
+  }
+]

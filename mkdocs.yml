@@ -1,0 +1,76 @@
+site_name: K GraphFuse
+site_description: Sparse graph polynomial filters, directional sensitivities and CUDA execution, with scoped PageRank benchmarks and reproducible evidence.
+site_author: Utkarsh Sinha
+site_url: https://utkarsh-sinha0.github.io/k-graphfuse/
+repo_url: https://github.com/Utkarsh-Sinha0/k-graphfuse
+repo_name: Utkarsh-Sinha0/k-graphfuse
+edit_uri: edit/main/docs/
+copyright: K GraphFuse by <a href="https://github.com/Utkarsh-Sinha0">Utkarsh Sinha</a> · Apache 2.0 with preserved MIT components
+theme:
+  name: material
+  font: false
+  icon:
+    logo: material/graph-outline
+  palette:
+    - scheme: default
+      primary: white
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: green
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+extra_css:
+  - assets/styles.css
+nav:
+  - Overview: index.md
+  - Get started:
+      - Installation: getting-started/install.md
+      - First graph filter: getting-started/quickstart.md
+  - Guides:
+      - CUDA execution: guides/gpu.md
+      - Directional sensitivities: guides/sensitivity.md
+      - Symmetric resolvents: guides/resolvent.md
+      - Application fit: guides/applications.md
+      - Troubleshooting: guides/troubleshooting.md
+  - Concepts:
+      - Graph and accuracy contracts: concepts/contracts.md
+      - Mathematical derivation: concepts/mathematics.md
+      - Design and performance: concepts/design.md
+  - Reference:
+      - Python API: reference/api.md
+      - Limitations and support: reference/limitations.md
+  - Benchmarks:
+      - Results and competitors: benchmarks/results.md
+      - Measurement methodology: benchmarks/methodology.md
+      - Reproduce and audit: benchmarks/reproduce.md
+  - Project:
+      - Citation and licenses: project/citation.md
+      - Contributing: project/contributing.md
+      - Release notes: project/releases.md
+      - Discoverability: project/discoverability.md

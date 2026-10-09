@@ -1,0 +1,10 @@
+{
+  "archive_sha256": "01f4e37523c091b5f8f75541554d30ee97c7c2f846df06eff071b65fa5181e38",
+  "engine_jar_sha256": "91001fa91a0630e3584532f397bcc91780aadce87c333fa0fd0dfbd2f6183db8",
+  "maven_jar_sha256": "e2e98691a6c399f439d52f441536abf551e76d6b809d2c835d5e60061a84dc2a",
+  "release_maven_selected_class_equivalence": {
+    "com/arcadedb/graph/olap/GraphAlgorithms.class": true,
+    "com/arcadedb/graph/olap/GraphAnalyticalView.class": true,
+    "com/arcadedb/graph/GraphBatch.class": true
+  }
+}

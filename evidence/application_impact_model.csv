@@ -1,0 +1,7 @@
+﻿graph_compute_share_pct,predicted_total_job_latency_reduction_pct,evidence
+0,0.0,Amdahl model only; not measured application savings
+10.0,2.1281298617317645,Amdahl model only; not measured application savings
+25.0,5.320324654329401,Amdahl model only; not measured application savings
+50.0,10.640649308658801,Amdahl model only; not measured application savings
+75.0,15.960973962988213,Amdahl model only; not measured application savings
+100,21.281298617317614,Amdahl model only; not measured application savings

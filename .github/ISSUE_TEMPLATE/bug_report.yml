@@ -1,0 +1,16 @@
+name: Correctness or integration bug
+description: Report a minimal nonprivate reproducer
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Expected and observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproducer and environment
+      description: Include versions, shapes, degree and dtype. Exclude credentials and personal paths.
+    validations:
+      required: true
