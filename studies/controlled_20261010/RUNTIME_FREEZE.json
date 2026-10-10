@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-10",
+  "runner_freeze_sha256": "fe6e761811c7ca7eafb509f1cd7deaf13844652f1a19dce63090a6491bb66295",
+  "wrapper_sha256": "a5628a6c6f14116c169eaf3d60331e9807fdcaa14705a22ce8ae72ae697d6695",
+  "reason": "The first local attempt selected CUDA 13 headers with PyTorch-preloaded CUDA 12 NVRTC, invalidating large CuPy controls. Preserve it as a failed environment attempt. Load the toolkit-selected NVRTC before PyTorch and repeat both frozen seeds; do not count missing controls as wins."
+}
