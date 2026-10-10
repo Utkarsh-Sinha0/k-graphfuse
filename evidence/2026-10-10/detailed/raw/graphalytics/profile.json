@@ -1,0 +1,25 @@
+{
+  "family": "graphalytics",
+  "cases": [
+    {
+      "name": "Official Graphalytics datagen-7_5-fb PageRank",
+      "n": 100000,
+      "dataset": {
+        "name": "datagen-7_5-fb",
+        "url": "https://datasets.ldbcouncil.org/graphalytics/datagen-7_5-fb.tar.zst",
+        "undirected": true
+      },
+      "goal": 1e-06
+    },
+    {
+      "name": "Official Graphalytics graph500-22 PageRank",
+      "n": 100000,
+      "dataset": {
+        "name": "graph500-22",
+        "url": "https://datasets.ldbcouncil.org/graphalytics/graph500-22.tar.zst",
+        "undirected": true
+      },
+      "goal": 1e-06
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+suite,case,vertices,entries,task,goal,status,error,K_status,accepted_control_groups
+sensitivity,Affine value and derivative n=10000 q=4,10000,20000,sensitivity,1e-08,complete,,ACCEPTED_MATRIX_31_SAMPLES,
+sensitivity,Affine value and derivative n=100000 q=4,100000,200000,sensitivity,1e-08,complete,,ACCEPTED_MATRIX_31_SAMPLES,
+sensitivity,Affine value and derivative n=1000000 q=4,1000000,2000000,sensitivity,1e-08,complete,,ACCEPTED_MATRIX_31_SAMPLES,
+sensitivity,Affine value and derivative n=100000 q=16,100000,200000,sensitivity,1e-08,complete,,ACCEPTED_MATRIX_31_SAMPLES,
+sensitivity,Affine value and derivative n=1000000 q=8,1000000,2000000,sensitivity,1e-08,complete,,ACCEPTED_MATRIX_31_SAMPLES,
+scale-density,Scale n=1000 degree=5,1000,5975,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+scale-density,Scale n=10000 degree=5,10000,59979,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+scale-density,Scale n=100000 degree=5,100000,599967,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+scale-density,Scale n=1000000 degree=5,1000000,5999981,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+scale-density,Scale n=5000000 degree=5,5000000,29999979,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+scale-density,Scale n=100000 degree=64,100000,6497848,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+scale-density,Scale n=500000 degree=32,500000,16499410,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+public-snap,Public ca-GrQc ten-step global,5242,28968,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+public-snap,Public ca-GrQc converged personalized,5242,28968,converged PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+public-snap,Public facebook_combined ten-step global,4039,176468,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+public-snap,Public facebook_combined converged personalized,4039,176468,converged PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+public-snap,Public web-Google ten-step global,875713,5105039,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+public-snap,Public web-Google converged personalized,875713,5105039,converged PageRank,1e-06,recorded,,NO_ACCEPTED_K_CONFIRMATION,NATIVE_GPU
+public-snap,Public com-dblp.ungraph ten-step global,317080,2099732,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+public-snap,Public com-dblp.ungraph converged personalized,317080,2099732,converged PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+public-snap,Public com-youtube.ungraph ten-step global,1134890,5975248,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+public-snap,Public com-youtube.ungraph converged personalized,1134890,5975248,converged PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+public-snap,Public roadNet-CA ten-step global,1965206,5533214,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+public-snap,Public roadNet-CA converged personalized,1965206,5533214,converged PageRank,1e-06,recorded,,NO_ACCEPTED_K_CONFIRMATION,NATIVE_GPU
+precision-weights,Precision goal=0.0001 weights=ordinary,50000,299977,converged PageRank,0.0001,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+precision-weights,Precision goal=0.0001 weights=wide-range,50000,299977,converged PageRank,0.0001,recorded,,NO_ACCEPTED_K_CONFIRMATION,NATIVE_GPU
+precision-weights,Precision goal=0.0001 weights=dominant-edge,50000,299977,converged PageRank,0.0001,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+precision-weights,Precision goal=1e-06 weights=ordinary,50000,299977,converged PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+precision-weights,Precision goal=1e-06 weights=wide-range,50000,299977,converged PageRank,1e-06,recorded,,NO_ACCEPTED_K_CONFIRMATION,NATIVE_GPU
+precision-weights,Precision goal=1e-06 weights=dominant-edge,50000,299977,converged PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+precision-weights,Precision goal=1e-08 weights=ordinary,50000,299977,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+precision-weights,Precision goal=1e-08 weights=wide-range,50000,299977,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+precision-weights,Precision goal=1e-08 weights=dominant-edge,50000,299977,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+precision-weights,Precision goal=1e-10 weights=ordinary,50000,299977,converged PageRank,1e-10,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+precision-weights,Precision goal=1e-10 weights=wide-range,50000,299977,converged PageRank,1e-10,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+precision-weights,Precision goal=1e-10 weights=dominant-edge,50000,299977,converged PageRank,1e-10,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+precision-weights,Precision goal=1e-12 weights=ordinary,50000,299977,converged PageRank,1e-12,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+precision-weights,Precision goal=1e-12 weights=wide-range,50000,299977,converged PageRank,1e-12,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+precision-weights,Precision goal=1e-12 weights=dominant-edge,50000,299977,converged PageRank,1e-12,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+other-calculations,BFS / fewest hops,5000,59932,other_calculations,,recorded,,NOT_IMPLEMENTED,
+other-calculations,Shortest weighted routes,5000,59932,other_calculations,,recorded,,NOT_IMPLEMENTED,
+other-calculations,Connected groups,5000,59932,other_calculations,,recorded,,NOT_IMPLEMENTED,
+other-calculations,Triangle counting,5000,59932,other_calculations,,recorded,,NOT_IMPLEMENTED,
+other-calculations,Community detection,5000,59932,other_calculations,,recorded,,NOT_IMPLEMENTED,
+memory-pressure,Feature workspace n=1000000 q=16,1000000,5999981,polynomial,1e-08,complete,,ACCEPTED_MATRIX_31_SAMPLES,
+memory-pressure,Feature workspace n=1000000 q=32,1000000,5999981,polynomial,1e-08,complete,,ACCEPTED_MATRIX_31_SAMPLES,
+memory-pressure,Feature workspace n=500000 q=64,500000,2999991,polynomial,1e-08,complete,,ACCEPTED_MATRIX_31_SAMPLES,
+memory-pressure,Feature workspace n=250000 q=128,250000,1499980,polynomial,1e-08,complete,,ACCEPTED_MATRIX_31_SAMPLES,
+locality,Localized finite propagation n=100000 shape=chain,100000,100000,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+locality,Localized finite propagation n=100000 shape=hub,100000,199998,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+locality,Localized finite propagation n=100000 shape=random,100000,599967,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+locality,Localized finite propagation n=1000000 shape=chain,1000000,1000000,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+locality,Localized finite propagation n=1000000 shape=hub,1000000,1999998,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+locality,Localized finite propagation n=1000000 shape=random,1000000,5999981,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+independent-repeat,Independent directed weighted repeat,100000,599967,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+independent-repeat,Independent undirected personalized repeat,100000,1199888,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+independent-repeat,Independent strict precision repeat,50000,299977,converged PageRank,1e-10,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+independent-repeat,Independent large scale repeat,1000000,5999981,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+hard-graphs,Topology chain,100000,100000,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+hard-graphs,Topology hub,100000,199998,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+hard-graphs,Topology disconnected,100000,599962,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+hard-graphs,Topology dangling,100000,599907,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+hard-graphs,Topology isolated,100000,599864,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+hard-graphs,Topology empty,100000,0,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+hard-graphs,Topology dense,2000,3998000,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+hard-graphs,Dead ends fraction=0.01 personal=False,100000,593967,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+hard-graphs,Dead ends fraction=0.01 personal=True,100000,593967,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+hard-graphs,Dead ends fraction=0.25 personal=False,100000,449974,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+hard-graphs,Dead ends fraction=0.25 personal=True,100000,449974,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+hard-graphs,Dead ends fraction=0.75 personal=False,100000,149992,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+hard-graphs,Dead ends fraction=0.75 personal=True,100000,149992,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+hard-graphs,Isolated fraction=0.1,100000,495001,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+hard-graphs,Isolated fraction=0.75,100000,56196,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+graphalytics,Official Graphalytics datagen-7_5-fb PageRank,633432,68371494,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+graphalytics,Official Graphalytics graph500-22 PageRank,2396657,128311470,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+file-workflows,File workflow warm stage context,20000,119982,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+file-workflows,File import -> preparation -> ranking -> saved scores,20000,119982,file_pipeline,,recorded,,,
+dynamic-rebuild,Warm baseline before frequent rebuilds,10000,59979,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+dynamic-rebuild,"Changing directed weighted graph, rebuild each query",10000,,dynamic,,recorded,,,
+directed-fixed,Directed n=1000 weighted=False personalized=False,1000,5975,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+directed-fixed,Directed n=1000 weighted=False personalized=True,1000,5975,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+directed-fixed,Directed n=1000 weighted=True personalized=False,1000,5975,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+directed-fixed,Directed n=1000 weighted=True personalized=True,1000,5975,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+directed-fixed,Directed n=100000 weighted=False personalized=False,100000,599967,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+directed-fixed,Directed n=100000 weighted=False personalized=True,100000,599967,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+directed-fixed,Directed n=100000 weighted=True personalized=False,100000,599967,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+directed-fixed,Directed n=100000 weighted=True personalized=True,100000,599967,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+directed-fixed,Directed n=1000000 weighted=False personalized=False,1000000,5999981,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+directed-fixed,Directed n=1000000 weighted=False personalized=True,1000000,5999981,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+directed-fixed,Directed n=1000000 weighted=True personalized=False,1000000,5999981,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+directed-fixed,Directed n=1000000 weighted=True personalized=True,1000000,5999981,exact 10-update PageRank,1e-06,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU
+convergence,Convergence beta=0.5 n=10000 shape=random,10000,59979,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+convergence,Convergence beta=0.85 n=10000 shape=random,10000,59979,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+convergence,Convergence beta=0.95 n=10000 shape=random,10000,59979,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+convergence,Convergence beta=0.5 n=10000 shape=undirected,10000,119922,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+convergence,Convergence beta=0.85 n=10000 shape=undirected,10000,119922,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+convergence,Convergence beta=0.95 n=10000 shape=undirected,10000,119922,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+convergence,Convergence beta=0.5 n=100000 shape=random,100000,599967,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+convergence,Convergence beta=0.85 n=100000 shape=random,100000,599967,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+convergence,Convergence beta=0.95 n=100000 shape=random,100000,599967,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+convergence,Convergence beta=0.5 n=100000 shape=undirected,100000,1199888,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+convergence,Convergence beta=0.85 n=100000 shape=undirected,100000,1199888,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+convergence,Convergence beta=0.95 n=100000 shape=undirected,100000,1199888,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+convergence,Slow restart beta=.99 directed,2000,2000,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+convergence,Slow restart beta=.99 undirected,10000,119922,converged PageRank,1e-08,recorded,,ACCEPTED_155_SAMPLES,CUPY_GPU;NATIVE_GPU;SCIPY_CPU
+matrix-filters,Polynomial filter n=10000 q=4,10000,59979,polynomial,1e-08,complete,,ACCEPTED_MATRIX_31_SAMPLES,
+matrix-filters,Polynomial filter n=100000 q=8,100000,599967,polynomial,1e-08,complete,,ACCEPTED_MATRIX_31_SAMPLES,
+matrix-filters,Polynomial filter n=1000000 q=4,1000000,5999981,polynomial,1e-08,complete,,ACCEPTED_MATRIX_31_SAMPLES,
+matrix-filters,Polynomial filter n=100000 q=16,100000,200000,polynomial,1e-08,complete,,ACCEPTED_MATRIX_31_SAMPLES,
+matrix-filters,Polynomial filter n=100000 q=4,100000,200000,polynomial,1e-12,complete,,ACCEPTED_MATRIX_31_SAMPLES,
+matrix-filters,Polynomial filter n=100000 q=4,100000,599967,polynomial,0.0001,complete,,ACCEPTED_MATRIX_31_SAMPLES,

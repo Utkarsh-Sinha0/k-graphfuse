@@ -1,0 +1,3118 @@
+{
+  "status": "verified",
+  "selection_policy": "Accuracy screen: every sampled Frobenius and max-absolute component no worse, at least one improves; fastest accuracy-eligible pilot method. Speed: >=10% lower median, paired five-block 95% bootstrap interval above 1, p95 no worse. Strongest control selected conservatively by held-out median.",
+  "t4_cases": [
+    {
+      "platform": "T4",
+      "n": 10000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_fma",
+      "old_method": "torch",
+      "old_ms": 0.9443799999644398,
+      "new_ms": 0.2817999999820131,
+      "speedup": 3.351242015701626,
+      "ci_low": 2.6470763766766594,
+      "ci_high": 3.554849397065209,
+      "old_p95_ms": 1.0572281000179373,
+      "new_p95_ms": 0.40036890001147185,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 0.3521040000009634,
+      "old_sampled_errors": [
+        4.9067054400340605e-17
+      ],
+      "new_sampled_errors": [
+        4.9063264894347914e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "worst_component_error_reduction_percent": 0.007723116944768904,
+      "max_global_reference_error": 2.0218072905526672e-17,
+      "configuration": {
+        "packed": false,
+        "capture": false
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_fma",
+      "old_method": "cupy",
+      "old_ms": 4.334325999991506,
+      "new_ms": 1.159077000011166,
+      "speedup": 3.7394633833211692,
+      "ci_low": 3.6035300964726478,
+      "ci_high": 3.794145889649938,
+      "old_p95_ms": 4.369096799973704,
+      "new_p95_ms": 1.299991400003364,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 1.1405570000420084,
+      "old_sampled_errors": [
+        4.6576090890556464e-17
+      ],
+      "new_sampled_errors": [
+        4.567644556504455e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "worst_component_error_reduction_percent": 1.9315603957100635,
+      "max_global_reference_error": 1.7859379541681647e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_fma",
+      "old_method": "cupy",
+      "old_ms": 43.25848900003848,
+      "new_ms": 14.140727000039988,
+      "speedup": 3.0591417965933543,
+      "ci_low": 2.9269661006401866,
+      "ci_high": 3.1300812324126785,
+      "old_p95_ms": 44.17232799998487,
+      "new_p95_ms": 15.1760716000183,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 13.492122000002382,
+      "old_sampled_errors": [
+        5.6586750879442e-17
+      ],
+      "new_sampled_errors": [
+        5.0912178199646025e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "worst_component_error_reduction_percent": 10.028094194497307,
+      "max_global_reference_error": 1.853511704942516e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4 wide follow-up",
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "method": "fused_wide_final",
+      "old_method": "torch",
+      "old_ms": 14.216403999967042,
+      "new_ms": 9.179019000043809,
+      "speedup": 1.548793395013039,
+      "ci_low": 1.5407022881132655,
+      "ci_high": 1.549662047479793,
+      "old_p95_ms": 14.336299799975905,
+      "new_p95_ms": 9.289823199981129,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 9.070251999958145,
+      "old_sampled_errors": [
+        5.4596989245030915e-17
+      ],
+      "new_sampled_errors": [
+        5.379316683527289e-17
+      ],
+      "old_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "new_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "worst_component_error_reduction_percent": 1.472283400373009,
+      "max_global_reference_error": 3.298357041305123e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-wide\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_mixed",
+      "old_method": "cupy",
+      "old_ms": 10.028472999977112,
+      "new_ms": 4.839038000000073,
+      "speedup": 2.072410466703704,
+      "ci_low": 2.053832619844741,
+      "ci_high": 2.071951127726306,
+      "old_p95_ms": 10.108783199996196,
+      "new_p95_ms": 4.888430099987318,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 4.660456999999951,
+      "old_sampled_errors": [
+        4.6974766885624817e-17,
+        1.382480056994655e-17,
+        6.039492062435442e-17,
+        1.1682201650352651e-17,
+        6.581860607577808e-17,
+        1.6219664671778874e-17
+      ],
+      "new_sampled_errors": [
+        4.690396259350691e-17,
+        1.0522596152493965e-17,
+        4.491284985870976e-17,
+        1.078213307105039e-17,
+        4.151372114033361e-17,
+        9.890683563466308e-18
+      ],
+      "old_sampled_max_absolute": [
+        1.1151404043737308e-16,
+        4.8698638467092884e-17,
+        1.6801527535079417e-16,
+        4.236432480057224e-17,
+        1.9233924338621415e-16,
+        6.161648358852615e-17
+      ],
+      "new_sampled_max_absolute": [
+        1.1053056448765821e-16,
+        4.682528736027242e-17,
+        1.0208241586280127e-16,
+        3.500123458596174e-17,
+        9.41771158402707e-17,
+        2.8274850137274127e-17
+      ],
+      "worst_component_error_reduction_percent": 28.737532758585647,
+      "max_global_reference_error": 2.4506444844310146e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-sensitivity\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_compensated",
+      "old_method": "cupy",
+      "old_ms": 104.5018559999562,
+      "new_ms": 83.6177050000515,
+      "speedup": 1.2497575244368624,
+      "ci_low": 1.2363265797959235,
+      "ci_high": 1.2754889809659726,
+      "old_p95_ms": 106.12423560000934,
+      "new_p95_ms": 85.51807330002248,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 77.81917199997679,
+      "old_sampled_errors": [
+        4.435761756748673e-17,
+        9.002711499416191e-18,
+        7.367957981359155e-17,
+        8.52473820647488e-18,
+        6.671618919909806e-17,
+        8.724772440416387e-18
+      ],
+      "new_sampled_errors": [
+        4.432193176961463e-17,
+        3.673745898759679e-18,
+        5.901356665654967e-17,
+        4.8320649204096354e-18,
+        4.794266920801787e-17,
+        4.7247785637754685e-18
+      ],
+      "old_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        3.47812888545072e-17,
+        2.7035615705485656e-16,
+        3.4754751760312374e-17,
+        1.9881052298858569e-16,
+        3.44792994127418e-17
+      ],
+      "new_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        9.814141503729998e-18,
+        1.9966989370191328e-16,
+        1.810374153551907e-17,
+        1.4927837522945457e-16,
+        1.7078732173703065e-17
+      ],
+      "worst_component_error_reduction_percent": 19.905125944185244,
+      "max_global_reference_error": 2.3683135768042792e-17,
+      "configuration": {
+        "packed": false,
+        "capture": false
+      },
+      "source_report": "kaggle\\product-sensitivity\\kgf_product\\RESULTS.json"
+    }
+  ],
+  "t4_dual_gates": 6,
+  "all_selected": [
+    {
+      "platform": "RTX 3060",
+      "n": 10000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_fma",
+      "old_method": "torch",
+      "old_ms": 1.0040999986813404,
+      "new_ms": 0.2144999998563435,
+      "speedup": 4.681118878106357,
+      "ci_low": 4.4192647856414515,
+      "ci_high": 5.1293014120858516,
+      "old_p95_ms": 1.240979999420233,
+      "new_p95_ms": 0.22917999885976315,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 0.22570000146515667,
+      "old_sampled_errors": [
+        4.9067054400340605e-17
+      ],
+      "new_sampled_errors": [
+        4.9063264894347914e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "worst_component_error_reduction_percent": 0.007723116944768904,
+      "max_global_reference_error": 2.0218072905526672e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_fma",
+      "old_method": "cupy",
+      "old_ms": 3.6498000008577947,
+      "new_ms": 1.239600002008956,
+      "speedup": 2.9443368787856983,
+      "ci_low": 2.8046768651776355,
+      "ci_high": 3.3353733177038283,
+      "old_p95_ms": 5.497520000790245,
+      "new_p95_ms": 1.5657500014640373,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 1.1844000000564847,
+      "old_sampled_errors": [
+        4.6576090890556464e-17
+      ],
+      "new_sampled_errors": [
+        4.567644556504455e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "worst_component_error_reduction_percent": 1.9315603957100635,
+      "max_global_reference_error": 1.785937954168165e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_mixed",
+      "old_method": "cupy",
+      "old_ms": 33.3204000016849,
+      "new_ms": 13.21490000191261,
+      "speedup": 2.5214265712841106,
+      "ci_low": 2.1634076485350593,
+      "ci_high": 2.6211632723058087,
+      "old_p95_ms": 35.451040001862566,
+      "new_p95_ms": 14.927859998715576,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 12.92979999925592,
+      "old_sampled_errors": [
+        5.6586750879442e-17
+      ],
+      "new_sampled_errors": [
+        5.0912178199646025e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "worst_component_error_reduction_percent": 10.028094194497307,
+      "max_global_reference_error": 1.853511704942523e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "method": "fused_compensated",
+      "old_method": "torch",
+      "old_ms": 13.314600000740029,
+      "new_ms": 67.17899999785004,
+      "speedup": 0.19819586479653079,
+      "ci_low": 0.196535173257938,
+      "ci_high": 0.21918802264362122,
+      "old_p95_ms": 15.17358999881253,
+      "new_p95_ms": 70.35831999928632,
+      "accuracy_gate": true,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 62.6747999995132,
+      "old_sampled_errors": [
+        5.4596989245030915e-17
+      ],
+      "new_sampled_errors": [
+        5.169627070489707e-17
+      ],
+      "old_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "new_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "worst_component_error_reduction_percent": 5.3129642865752835,
+      "max_global_reference_error": 4.22568552995933e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_mixed",
+      "old_method": "cupy",
+      "old_ms": 8.430800000496674,
+      "new_ms": 5.249100002401974,
+      "speedup": 1.6061420046558006,
+      "ci_low": 1.5688338873714744,
+      "ci_high": 1.8072963262000432,
+      "old_p95_ms": 12.731540001550455,
+      "new_p95_ms": 5.297250000512577,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 5.164500002138084,
+      "old_sampled_errors": [
+        4.6974766885624817e-17,
+        1.382480056994655e-17,
+        6.039492062435442e-17,
+        1.1682201650352651e-17,
+        6.581860607577808e-17,
+        1.6219664671778874e-17
+      ],
+      "new_sampled_errors": [
+        4.690396259350691e-17,
+        1.0522596152493965e-17,
+        4.491284985870976e-17,
+        1.078213307105039e-17,
+        4.151372114033361e-17,
+        9.890683563466308e-18
+      ],
+      "old_sampled_max_absolute": [
+        1.1151404043737308e-16,
+        4.8698638467092884e-17,
+        1.6801527535079417e-16,
+        4.236432480057224e-17,
+        1.9233924338621415e-16,
+        6.161648358852615e-17
+      ],
+      "new_sampled_max_absolute": [
+        1.1053056448765821e-16,
+        4.682528736027242e-17,
+        1.0208241586280127e-16,
+        3.500123458596174e-17,
+        9.41771158402707e-17,
+        2.8274850137274127e-17
+      ],
+      "worst_component_error_reduction_percent": 28.737532758585647,
+      "max_global_reference_error": 2.4506444844310152e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_compensated",
+      "old_method": "cupy",
+      "old_ms": 82.06319999953848,
+      "new_ms": 93.09719999873778,
+      "speedup": 0.8814787125783708,
+      "ci_low": 0.8582122885346216,
+      "ci_high": 0.9363272952654349,
+      "old_p95_ms": 94.17911999844362,
+      "new_p95_ms": 101.33335000136867,
+      "accuracy_gate": true,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 85.8488000012585,
+      "old_sampled_errors": [
+        4.435761756748673e-17,
+        9.002711499416191e-18,
+        7.367957981359155e-17,
+        8.52473820647488e-18,
+        6.671618919909806e-17,
+        8.724772440416387e-18
+      ],
+      "new_sampled_errors": [
+        4.432193176961463e-17,
+        3.673745898759679e-18,
+        5.901356665654967e-17,
+        4.8320649204096354e-18,
+        4.794266920801787e-17,
+        4.7247785637754685e-18
+      ],
+      "old_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        3.47812888545072e-17,
+        2.7035615705485656e-16,
+        3.4754751760312374e-17,
+        1.9881052298858569e-16,
+        3.44792994127418e-17
+      ],
+      "new_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        9.814141503729998e-18,
+        1.9966989370191328e-16,
+        1.810374153551907e-17,
+        1.4927837522945457e-16,
+        1.7078732173703065e-17
+      ],
+      "worst_component_error_reduction_percent": 19.905125944185244,
+      "max_global_reference_error": 2.3683153045352427e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060 wide follow-up",
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "method": "fused_wide_final",
+      "old_method": "torch",
+      "old_ms": 12.887999997474253,
+      "new_ms": 7.8544999996665865,
+      "speedup": 1.6408428286996413,
+      "ci_low": 1.6347669620005898,
+      "ci_high": 1.6474358962626126,
+      "old_p95_ms": 13.040509999700589,
+      "new_p95_ms": 7.930089998262702,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 7.826300003216602,
+      "old_sampled_errors": [
+        5.4596989245030915e-17
+      ],
+      "new_sampled_errors": [
+        5.379316683527289e-17
+      ],
+      "old_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "new_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "worst_component_error_reduction_percent": 1.472283400373009,
+      "max_global_reference_error": 3.298339535570434e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "WIDE_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 10000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_fma",
+      "old_method": "torch",
+      "old_ms": 0.9443799999644398,
+      "new_ms": 0.2817999999820131,
+      "speedup": 3.351242015701626,
+      "ci_low": 2.6470763766766594,
+      "ci_high": 3.554849397065209,
+      "old_p95_ms": 1.0572281000179373,
+      "new_p95_ms": 0.40036890001147185,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 0.3521040000009634,
+      "old_sampled_errors": [
+        4.9067054400340605e-17
+      ],
+      "new_sampled_errors": [
+        4.9063264894347914e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "worst_component_error_reduction_percent": 0.007723116944768904,
+      "max_global_reference_error": 2.0218072905526672e-17,
+      "configuration": {
+        "packed": false,
+        "capture": false
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_fma",
+      "old_method": "cupy",
+      "old_ms": 4.334325999991506,
+      "new_ms": 1.159077000011166,
+      "speedup": 3.7394633833211692,
+      "ci_low": 3.6035300964726478,
+      "ci_high": 3.794145889649938,
+      "old_p95_ms": 4.369096799973704,
+      "new_p95_ms": 1.299991400003364,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 1.1405570000420084,
+      "old_sampled_errors": [
+        4.6576090890556464e-17
+      ],
+      "new_sampled_errors": [
+        4.567644556504455e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "worst_component_error_reduction_percent": 1.9315603957100635,
+      "max_global_reference_error": 1.7859379541681647e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_fma",
+      "old_method": "cupy",
+      "old_ms": 43.25848900003848,
+      "new_ms": 14.140727000039988,
+      "speedup": 3.0591417965933543,
+      "ci_low": 2.9269661006401866,
+      "ci_high": 3.1300812324126785,
+      "old_p95_ms": 44.17232799998487,
+      "new_p95_ms": 15.1760716000183,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 13.492122000002382,
+      "old_sampled_errors": [
+        5.6586750879442e-17
+      ],
+      "new_sampled_errors": [
+        5.0912178199646025e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "worst_component_error_reduction_percent": 10.028094194497307,
+      "max_global_reference_error": 1.853511704942516e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "method": "fused_compensated",
+      "old_method": "torch",
+      "old_ms": 15.719967999984874,
+      "new_ms": 58.529583999984425,
+      "speedup": 0.2685815774803569,
+      "ci_low": 0.2668885721343755,
+      "ci_high": 0.269292706411264,
+      "old_p95_ms": 15.938737400017544,
+      "new_p95_ms": 59.48993760003418,
+      "accuracy_gate": true,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 57.58087099997056,
+      "old_sampled_errors": [
+        5.4596989245030915e-17
+      ],
+      "new_sampled_errors": [
+        5.169627070489707e-17
+      ],
+      "old_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "new_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "worst_component_error_reduction_percent": 5.3129642865752835,
+      "max_global_reference_error": 4.225794164936754e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_mixed",
+      "old_method": "cupy",
+      "old_ms": 10.028472999977112,
+      "new_ms": 4.839038000000073,
+      "speedup": 2.072410466703704,
+      "ci_low": 2.053832619844741,
+      "ci_high": 2.071951127726306,
+      "old_p95_ms": 10.108783199996196,
+      "new_p95_ms": 4.888430099987318,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 4.660456999999951,
+      "old_sampled_errors": [
+        4.6974766885624817e-17,
+        1.382480056994655e-17,
+        6.039492062435442e-17,
+        1.1682201650352651e-17,
+        6.581860607577808e-17,
+        1.6219664671778874e-17
+      ],
+      "new_sampled_errors": [
+        4.690396259350691e-17,
+        1.0522596152493965e-17,
+        4.491284985870976e-17,
+        1.078213307105039e-17,
+        4.151372114033361e-17,
+        9.890683563466308e-18
+      ],
+      "old_sampled_max_absolute": [
+        1.1151404043737308e-16,
+        4.8698638467092884e-17,
+        1.6801527535079417e-16,
+        4.236432480057224e-17,
+        1.9233924338621415e-16,
+        6.161648358852615e-17
+      ],
+      "new_sampled_max_absolute": [
+        1.1053056448765821e-16,
+        4.682528736027242e-17,
+        1.0208241586280127e-16,
+        3.500123458596174e-17,
+        9.41771158402707e-17,
+        2.8274850137274127e-17
+      ],
+      "worst_component_error_reduction_percent": 28.737532758585647,
+      "max_global_reference_error": 2.4506444844310146e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-sensitivity\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_compensated",
+      "old_method": "cupy",
+      "old_ms": 104.5018559999562,
+      "new_ms": 83.6177050000515,
+      "speedup": 1.2497575244368624,
+      "ci_low": 1.2363265797959235,
+      "ci_high": 1.2754889809659726,
+      "old_p95_ms": 106.12423560000934,
+      "new_p95_ms": 85.51807330002248,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 77.81917199997679,
+      "old_sampled_errors": [
+        4.435761756748673e-17,
+        9.002711499416191e-18,
+        7.367957981359155e-17,
+        8.52473820647488e-18,
+        6.671618919909806e-17,
+        8.724772440416387e-18
+      ],
+      "new_sampled_errors": [
+        4.432193176961463e-17,
+        3.673745898759679e-18,
+        5.901356665654967e-17,
+        4.8320649204096354e-18,
+        4.794266920801787e-17,
+        4.7247785637754685e-18
+      ],
+      "old_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        3.47812888545072e-17,
+        2.7035615705485656e-16,
+        3.4754751760312374e-17,
+        1.9881052298858569e-16,
+        3.44792994127418e-17
+      ],
+      "new_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        9.814141503729998e-18,
+        1.9966989370191328e-16,
+        1.810374153551907e-17,
+        1.4927837522945457e-16,
+        1.7078732173703065e-17
+      ],
+      "worst_component_error_reduction_percent": 19.905125944185244,
+      "max_global_reference_error": 2.3683135768042792e-17,
+      "configuration": {
+        "packed": false,
+        "capture": false
+      },
+      "source_report": "kaggle\\product-sensitivity\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4 wide follow-up",
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "method": "fused_wide_final",
+      "old_method": "torch",
+      "old_ms": 14.216403999967042,
+      "new_ms": 9.179019000043809,
+      "speedup": 1.548793395013039,
+      "ci_low": 1.5407022881132655,
+      "ci_high": 1.549662047479793,
+      "old_p95_ms": 14.336299799975905,
+      "new_p95_ms": 9.289823199981129,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 9.070251999958145,
+      "old_sampled_errors": [
+        5.4596989245030915e-17
+      ],
+      "new_sampled_errors": [
+        5.379316683527289e-17
+      ],
+      "old_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "new_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "worst_component_error_reduction_percent": 1.472283400373009,
+      "max_global_reference_error": 3.298357041305123e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-wide\\kgf_product\\RESULTS.json"
+    }
+  ],
+  "all_methods": [
+    {
+      "platform": "RTX 3060",
+      "n": 10000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_fma",
+      "old_method": "torch",
+      "old_ms": 1.0040999986813404,
+      "new_ms": 0.2144999998563435,
+      "speedup": 4.681118878106357,
+      "ci_low": 4.4192647856414515,
+      "ci_high": 5.1293014120858516,
+      "old_p95_ms": 1.240979999420233,
+      "new_p95_ms": 0.22917999885976315,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 0.22570000146515667,
+      "old_sampled_errors": [
+        4.9067054400340605e-17
+      ],
+      "new_sampled_errors": [
+        4.9063264894347914e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "worst_component_error_reduction_percent": 0.007723116944768904,
+      "max_global_reference_error": 2.0218072905526672e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 10000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_compensated",
+      "old_method": "torch",
+      "old_ms": 1.0040999986813404,
+      "new_ms": 0.7145999989006668,
+      "speedup": 1.4051217467478831,
+      "ci_low": 1.2799705818709428,
+      "ci_high": 1.4062321312111832,
+      "old_p95_ms": 1.240979999420233,
+      "new_p95_ms": 0.9316100011346846,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 0.8206999991671182,
+      "old_sampled_errors": [
+        4.9067054400340605e-17
+      ],
+      "new_sampled_errors": [
+        4.8957199890132886e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "worst_component_error_reduction_percent": 0.2238864988947764,
+      "max_global_reference_error": 2.7194480126025798e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 10000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_mixed",
+      "old_method": "torch",
+      "old_ms": 1.0040999986813404,
+      "new_ms": 0.2147999985027127,
+      "speedup": 4.674581032032268,
+      "ci_low": 4.241625678339243,
+      "ci_high": 5.012091400235086,
+      "old_p95_ms": 1.240979999420233,
+      "new_p95_ms": 0.25434000053792255,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 0.2592000018921681,
+      "old_sampled_errors": [
+        4.9067054400340605e-17
+      ],
+      "new_sampled_errors": [
+        4.9063264894347914e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "worst_component_error_reduction_percent": 0.007723116944768904,
+      "max_global_reference_error": 2.0218072905526672e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 10000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_projected",
+      "old_method": "torch",
+      "old_ms": 1.0040999986813404,
+      "new_ms": 1.8855000016628765,
+      "speedup": 0.5325377872160147,
+      "ci_low": 0.5059400125572384,
+      "ci_high": 0.5777542873050392,
+      "old_p95_ms": 1.240979999420233,
+      "new_p95_ms": 3.3464000003732504,
+      "accuracy_gate": true,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 1.9609999981184956,
+      "old_sampled_errors": [
+        4.9067054400340605e-17
+      ],
+      "new_sampled_errors": [
+        4.9039818606483466e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "worst_component_error_reduction_percent": 0.05550729341713412,
+      "max_global_reference_error": 3.3316826147808004e-18,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_fma",
+      "old_method": "cupy",
+      "old_ms": 3.6498000008577947,
+      "new_ms": 1.239600002008956,
+      "speedup": 2.9443368787856983,
+      "ci_low": 2.8046768651776355,
+      "ci_high": 3.3353733177038283,
+      "old_p95_ms": 5.497520000790245,
+      "new_p95_ms": 1.5657500014640373,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 1.1844000000564847,
+      "old_sampled_errors": [
+        4.6576090890556464e-17
+      ],
+      "new_sampled_errors": [
+        4.567644556504455e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "worst_component_error_reduction_percent": 1.9315603957100635,
+      "max_global_reference_error": 1.785937954168165e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_compensated",
+      "old_method": "cupy",
+      "old_ms": 3.6498000008577947,
+      "new_ms": 5.195900001126574,
+      "speedup": 0.7024384611071124,
+      "ci_low": 0.6728788805733434,
+      "ci_high": 0.7854233123710643,
+      "old_p95_ms": 5.497520000790245,
+      "new_p95_ms": 6.984619998547713,
+      "accuracy_gate": true,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 5.207000001973938,
+      "old_sampled_errors": [
+        4.6576090890556464e-17
+      ],
+      "new_sampled_errors": [
+        4.5451522845954464e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "worst_component_error_reduction_percent": 2.4144749443324565,
+      "max_global_reference_error": 2.5029964975826347e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_mixed",
+      "old_method": "cupy",
+      "old_ms": 3.6498000008577947,
+      "new_ms": 1.2300999987928662,
+      "speedup": 2.967075851101091,
+      "ci_low": 2.779523805493985,
+      "ci_high": 3.322900581533323,
+      "old_p95_ms": 5.497520000790245,
+      "new_p95_ms": 2.197480000177152,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 1.1978999973507598,
+      "old_sampled_errors": [
+        4.6576090890556464e-17
+      ],
+      "new_sampled_errors": [
+        4.567644556504455e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "worst_component_error_reduction_percent": 1.9315603957100635,
+      "max_global_reference_error": 1.785937954168165e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_projected",
+      "old_method": "cupy",
+      "old_ms": 3.6498000008577947,
+      "new_ms": 14.940699998987839,
+      "speedup": 0.24428574304450604,
+      "ci_low": 0.23600634493580444,
+      "ci_high": 0.27143416857894487,
+      "old_p95_ms": 5.497520000790245,
+      "new_p95_ms": 15.559270001540426,
+      "accuracy_gate": false,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 14.540599997417303,
+      "old_sampled_errors": [
+        4.6576090890556464e-17
+      ],
+      "new_sampled_errors": [
+        4.7756321776220435e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "worst_component_error_reduction_percent": -2.533984417965107,
+      "max_global_reference_error": 3.6812403940114664e-18,
+      "configuration": {
+        "packed": false,
+        "capture": false
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_fma",
+      "old_method": "cupy",
+      "old_ms": 33.3204000016849,
+      "new_ms": 13.249999999970896,
+      "speedup": 2.5147471699440067,
+      "ci_low": 2.331378748908457,
+      "ci_high": 2.6055453566808042,
+      "old_p95_ms": 35.451040001862566,
+      "new_p95_ms": 14.833269998780452,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 13.026299999182811,
+      "old_sampled_errors": [
+        5.6586750879442e-17
+      ],
+      "new_sampled_errors": [
+        5.0912178199646025e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "worst_component_error_reduction_percent": 10.028094194497307,
+      "max_global_reference_error": 1.853511704942523e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_compensated",
+      "old_method": "cupy",
+      "old_ms": 33.3204000016849,
+      "new_ms": 51.7351000016788,
+      "speedup": 0.6440579026734974,
+      "ci_low": 0.5939111027694755,
+      "ci_high": 0.6218344581195588,
+      "old_p95_ms": 35.451040001862566,
+      "new_p95_ms": 57.94094000084442,
+      "accuracy_gate": true,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 50.817499999538995,
+      "old_sampled_errors": [
+        5.6586750879442e-17
+      ],
+      "new_sampled_errors": [
+        5.056666152321063e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "worst_component_error_reduction_percent": 10.638690616920499,
+      "max_global_reference_error": 2.5875024767440754e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_mixed",
+      "old_method": "cupy",
+      "old_ms": 33.3204000016849,
+      "new_ms": 13.21490000191261,
+      "speedup": 2.5214265712841106,
+      "ci_low": 2.1634076485350593,
+      "ci_high": 2.6211632723058087,
+      "old_p95_ms": 35.451040001862566,
+      "new_p95_ms": 14.927859998715576,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 12.92979999925592,
+      "old_sampled_errors": [
+        5.6586750879442e-17
+      ],
+      "new_sampled_errors": [
+        5.0912178199646025e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "worst_component_error_reduction_percent": 10.028094194497307,
+      "max_global_reference_error": 1.853511704942523e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_projected",
+      "old_method": "cupy",
+      "old_ms": 33.3204000016849,
+      "new_ms": 132.55190000199946,
+      "speedup": 0.25137625338589853,
+      "ci_low": 0.23731403254322564,
+      "ci_high": 0.25769310492883585,
+      "old_p95_ms": 35.451040001862566,
+      "new_p95_ms": 145.14761999926122,
+      "accuracy_gate": true,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 138.38230000328622,
+      "old_sampled_errors": [
+        5.6586750879442e-17
+      ],
+      "new_sampled_errors": [
+        5.18741344728227e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "worst_component_error_reduction_percent": 8.328126873125342,
+      "max_global_reference_error": 3.3972473085009028e-18,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "method": "fused_fma",
+      "old_method": "torch",
+      "old_ms": 13.314600000740029,
+      "new_ms": 19.616099998529535,
+      "speedup": 0.678758774768589,
+      "ci_low": 0.6557270398182709,
+      "ci_high": 0.7433943921472137,
+      "old_p95_ms": 15.17358999881253,
+      "new_p95_ms": 21.522299999560346,
+      "accuracy_gate": false,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 18.142600001738174,
+      "old_sampled_errors": [
+        5.4596989245030915e-17
+      ],
+      "new_sampled_errors": [
+        5.412023042044285e-17
+      ],
+      "old_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "new_sampled_max_absolute": [
+        2.4423774152543455e-16
+      ],
+      "worst_component_error_reduction_percent": 0.8732328122497246,
+      "max_global_reference_error": 3.180212497915848e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "method": "fused_compensated",
+      "old_method": "torch",
+      "old_ms": 13.314600000740029,
+      "new_ms": 67.17899999785004,
+      "speedup": 0.19819586479653079,
+      "ci_low": 0.196535173257938,
+      "ci_high": 0.21918802264362122,
+      "old_p95_ms": 15.17358999881253,
+      "new_p95_ms": 70.35831999928632,
+      "accuracy_gate": true,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 62.6747999995132,
+      "old_sampled_errors": [
+        5.4596989245030915e-17
+      ],
+      "new_sampled_errors": [
+        5.169627070489707e-17
+      ],
+      "old_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "new_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "worst_component_error_reduction_percent": 5.3129642865752835,
+      "max_global_reference_error": 4.22568552995933e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "method": "fused_mixed",
+      "old_method": "torch",
+      "old_ms": 13.314600000740029,
+      "new_ms": 19.521900001564063,
+      "speedup": 0.6820340233109116,
+      "ci_low": 0.6672200100567397,
+      "ci_high": 0.7964624007670443,
+      "old_p95_ms": 15.17358999881253,
+      "new_p95_ms": 21.344939999471535,
+      "accuracy_gate": false,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 18.12889999928302,
+      "old_sampled_errors": [
+        5.4596989245030915e-17
+      ],
+      "new_sampled_errors": [
+        5.412023042044285e-17
+      ],
+      "old_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "new_sampled_max_absolute": [
+        2.4423774152543455e-16
+      ],
+      "worst_component_error_reduction_percent": 0.8732328122497246,
+      "max_global_reference_error": 3.180212497915848e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "method": "fused_projected",
+      "old_method": "torch",
+      "old_ms": 13.314600000740029,
+      "new_ms": 22.28130000003148,
+      "speedup": 0.5975683645353376,
+      "ci_low": 0.5826326298499853,
+      "ci_high": 0.6954421872210225,
+      "old_p95_ms": 15.17358999881253,
+      "new_p95_ms": 24.200170000767685,
+      "accuracy_gate": false,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 20.63300000008894,
+      "old_sampled_errors": [
+        5.4596989245030915e-17
+      ],
+      "new_sampled_errors": [
+        5.4961595722468984e-17
+      ],
+      "old_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "new_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "worst_component_error_reduction_percent": -0.6678142558405931,
+      "max_global_reference_error": 5.029528249453535e-18,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_fma",
+      "old_method": "cupy",
+      "old_ms": 8.430800000496674,
+      "new_ms": 2.3093999989214353,
+      "speedup": 3.650645191146675,
+      "ci_low": 3.565531568269527,
+      "ci_high": 4.083240175756954,
+      "old_p95_ms": 12.731540001550455,
+      "new_p95_ms": 2.3794500004441943,
+      "accuracy_gate": false,
+      "speed_gate": true,
+      "dual_gate": false,
+      "pilot_ms": 2.051200001005782,
+      "old_sampled_errors": [
+        4.6974766885624817e-17,
+        1.382480056994655e-17,
+        6.039492062435442e-17,
+        1.1682201650352651e-17,
+        6.581860607577808e-17,
+        1.6219664671778874e-17
+      ],
+      "new_sampled_errors": [
+        4.690396259350691e-17,
+        1.0856154898403248e-17,
+        4.491284985870976e-17,
+        1.2349110076275783e-17,
+        4.151372114033361e-17,
+        1.1405201970774192e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.1151404043737308e-16,
+        4.8698638467092884e-17,
+        1.6801527535079417e-16,
+        4.236432480057224e-17,
+        1.9233924338621415e-16,
+        6.161648358852615e-17
+      ],
+      "new_sampled_max_absolute": [
+        1.1053056448765821e-16,
+        4.682528736027242e-17,
+        1.0208241586280127e-16,
+        3.500123458596174e-17,
+        9.41771158402707e-17,
+        4.034886299259967e-17
+      ],
+      "worst_component_error_reduction_percent": 28.737532758585647,
+      "max_global_reference_error": 2.4506444844310152e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_compensated",
+      "old_method": "cupy",
+      "old_ms": 8.430800000496674,
+      "new_ms": 8.699500001966953,
+      "speedup": 0.9691131672613913,
+      "ci_low": 0.9470194105236602,
+      "ci_high": 1.0881840681047708,
+      "old_p95_ms": 12.731540001550455,
+      "new_p95_ms": 10.330750000139233,
+      "accuracy_gate": false,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 8.694199997989926,
+      "old_sampled_errors": [
+        4.6974766885624817e-17,
+        1.382480056994655e-17,
+        6.039492062435442e-17,
+        1.1682201650352651e-17,
+        6.581860607577808e-17,
+        1.6219664671778874e-17
+      ],
+      "new_sampled_errors": [
+        4.660552613950654e-17,
+        9.104433345615467e-18,
+        4.383251240119591e-17,
+        6.067831848362205e-18,
+        4.14474749024493e-17,
+        6.245826142531873e-18
+      ],
+      "old_sampled_max_absolute": [
+        1.1151404043737308e-16,
+        4.8698638467092884e-17,
+        1.6801527535079417e-16,
+        4.236432480057224e-17,
+        1.9233924338621415e-16,
+        6.161648358852615e-17
+      ],
+      "new_sampled_max_absolute": [
+        1.11604654327122e-16,
+        4.682528736027242e-17,
+        1.0208241586280127e-16,
+        2.231894954905228e-17,
+        9.41771158402707e-17,
+        1.763847406421249e-17
+      ],
+      "worst_component_error_reduction_percent": 29.19095538752552,
+      "max_global_reference_error": 2.89941121450156e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_mixed",
+      "old_method": "cupy",
+      "old_ms": 8.430800000496674,
+      "new_ms": 5.249100002401974,
+      "speedup": 1.6061420046558006,
+      "ci_low": 1.5688338873714744,
+      "ci_high": 1.8072963262000432,
+      "old_p95_ms": 12.731540001550455,
+      "new_p95_ms": 5.297250000512577,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 5.164500002138084,
+      "old_sampled_errors": [
+        4.6974766885624817e-17,
+        1.382480056994655e-17,
+        6.039492062435442e-17,
+        1.1682201650352651e-17,
+        6.581860607577808e-17,
+        1.6219664671778874e-17
+      ],
+      "new_sampled_errors": [
+        4.690396259350691e-17,
+        1.0522596152493965e-17,
+        4.491284985870976e-17,
+        1.078213307105039e-17,
+        4.151372114033361e-17,
+        9.890683563466308e-18
+      ],
+      "old_sampled_max_absolute": [
+        1.1151404043737308e-16,
+        4.8698638467092884e-17,
+        1.6801527535079417e-16,
+        4.236432480057224e-17,
+        1.9233924338621415e-16,
+        6.161648358852615e-17
+      ],
+      "new_sampled_max_absolute": [
+        1.1053056448765821e-16,
+        4.682528736027242e-17,
+        1.0208241586280127e-16,
+        3.500123458596174e-17,
+        9.41771158402707e-17,
+        2.8274850137274127e-17
+      ],
+      "worst_component_error_reduction_percent": 28.737532758585647,
+      "max_global_reference_error": 2.4506444844310152e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_projected",
+      "old_method": "cupy",
+      "old_ms": 8.430800000496674,
+      "new_ms": 18.4726999978011,
+      "speedup": 0.4563924061723644,
+      "ci_low": 0.446589997478494,
+      "ci_high": 0.5140435299083705,
+      "old_p95_ms": 12.731540001550455,
+      "new_p95_ms": 19.991879999724915,
+      "accuracy_gate": false,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 18.45300000059069,
+      "old_sampled_errors": [
+        4.6974766885624817e-17,
+        1.382480056994655e-17,
+        6.039492062435442e-17,
+        1.1682201650352651e-17,
+        6.581860607577808e-17,
+        1.6219664671778874e-17
+      ],
+      "new_sampled_errors": [
+        4.6974766885624817e-17,
+        1.3775175290962358e-17,
+        4.4909577675396395e-17,
+        1.3503636052649745e-17,
+        4.1563556612855116e-17,
+        1.0100233175117834e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.1151404043737308e-16,
+        4.8698638467092884e-17,
+        1.6801527535079417e-16,
+        4.236432480057224e-17,
+        1.9233924338621415e-16,
+        6.161648358852615e-17
+      ],
+      "new_sampled_max_absolute": [
+        1.1151404043737308e-16,
+        4.8698638467092884e-17,
+        1.0208241586280127e-16,
+        4.236432480057224e-17,
+        9.41771158402707e-17,
+        2.8274850137274127e-17
+      ],
+      "worst_component_error_reduction_percent": 28.629957870055822,
+      "max_global_reference_error": 1.7932184777207944e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_fma",
+      "old_method": "cupy",
+      "old_ms": 82.06319999953848,
+      "new_ms": 24.426099997072015,
+      "speedup": 3.359652175720868,
+      "ci_low": 3.217530711925369,
+      "ci_high": 3.374853640381989,
+      "old_p95_ms": 94.17911999844362,
+      "new_p95_ms": 27.45560999974258,
+      "accuracy_gate": false,
+      "speed_gate": true,
+      "dual_gate": false,
+      "pilot_ms": 22.568000000319444,
+      "old_sampled_errors": [
+        4.435761756748673e-17,
+        9.002711499416191e-18,
+        7.367957981359155e-17,
+        8.52473820647488e-18,
+        6.671618919909806e-17,
+        8.724772440416387e-18
+      ],
+      "new_sampled_errors": [
+        4.4321968232838754e-17,
+        9.895791612507863e-18,
+        5.876100216679225e-17,
+        6.781455370062471e-18,
+        4.8633061318861337e-17,
+        6.684487613872558e-18
+      ],
+      "old_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        3.47812888545072e-17,
+        2.7035615705485656e-16,
+        3.4754751760312374e-17,
+        1.9881052298858569e-16,
+        3.44792994127418e-17
+      ],
+      "new_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        4.678952289229998e-17,
+        1.9966989370191328e-16,
+        3.210928159625209e-17,
+        1.4927837522945457e-16,
+        1.9552507258921932e-17
+      ],
+      "worst_component_error_reduction_percent": 20.247913580049072,
+      "max_global_reference_error": 2.0384908972567304e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_compensated",
+      "old_method": "cupy",
+      "old_ms": 82.06319999953848,
+      "new_ms": 93.09719999873778,
+      "speedup": 0.8814787125783708,
+      "ci_low": 0.8582122885346216,
+      "ci_high": 0.9363272952654349,
+      "old_p95_ms": 94.17911999844362,
+      "new_p95_ms": 101.33335000136867,
+      "accuracy_gate": true,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 85.8488000012585,
+      "old_sampled_errors": [
+        4.435761756748673e-17,
+        9.002711499416191e-18,
+        7.367957981359155e-17,
+        8.52473820647488e-18,
+        6.671618919909806e-17,
+        8.724772440416387e-18
+      ],
+      "new_sampled_errors": [
+        4.432193176961463e-17,
+        3.673745898759679e-18,
+        5.901356665654967e-17,
+        4.8320649204096354e-18,
+        4.794266920801787e-17,
+        4.7247785637754685e-18
+      ],
+      "old_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        3.47812888545072e-17,
+        2.7035615705485656e-16,
+        3.4754751760312374e-17,
+        1.9881052298858569e-16,
+        3.44792994127418e-17
+      ],
+      "new_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        9.814141503729998e-18,
+        1.9966989370191328e-16,
+        1.810374153551907e-17,
+        1.4927837522945457e-16,
+        1.7078732173703065e-17
+      ],
+      "worst_component_error_reduction_percent": 19.905125944185244,
+      "max_global_reference_error": 2.3683153045352427e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_mixed",
+      "old_method": "cupy",
+      "old_ms": 82.06319999953848,
+      "new_ms": 56.93070000052103,
+      "speedup": 1.4414577723229725,
+      "ci_low": 1.406692749436502,
+      "ci_high": 1.558904578476134,
+      "old_p95_ms": 94.17911999844362,
+      "new_p95_ms": 61.19473999860928,
+      "accuracy_gate": false,
+      "speed_gate": true,
+      "dual_gate": false,
+      "pilot_ms": 55.982199999562,
+      "old_sampled_errors": [
+        4.435761756748673e-17,
+        9.002711499416191e-18,
+        7.367957981359155e-17,
+        8.52473820647488e-18,
+        6.671618919909806e-17,
+        8.724772440416387e-18
+      ],
+      "new_sampled_errors": [
+        4.4321968232838754e-17,
+        9.453660910686022e-18,
+        5.876100216679225e-17,
+        5.826253160244204e-18,
+        4.8633061318861337e-17,
+        6.160959144103173e-18
+      ],
+      "old_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        3.47812888545072e-17,
+        2.7035615705485656e-16,
+        3.4754751760312374e-17,
+        1.9881052298858569e-16,
+        3.44792994127418e-17
+      ],
+      "new_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        4.678952289229998e-17,
+        1.9966989370191328e-16,
+        1.7984750659678753e-17,
+        1.4927837522945457e-16,
+        1.7078732173703065e-17
+      ],
+      "worst_component_error_reduction_percent": 20.247913580049072,
+      "max_global_reference_error": 2.0384908972567304e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_projected",
+      "old_method": "cupy",
+      "old_ms": 82.06319999953848,
+      "new_ms": 193.94159999865224,
+      "speedup": 0.4231335618562947,
+      "ci_low": 0.4118226854559639,
+      "ci_high": 0.45036091866070543,
+      "old_p95_ms": 94.17911999844362,
+      "new_p95_ms": 207.33519000059457,
+      "accuracy_gate": false,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 202.2268000000622,
+      "old_sampled_errors": [
+        4.435761756748673e-17,
+        9.002711499416191e-18,
+        7.367957981359155e-17,
+        8.52473820647488e-18,
+        6.671618919909806e-17,
+        8.724772440416387e-18
+      ],
+      "new_sampled_errors": [
+        4.435761756748673e-17,
+        9.163721038682173e-18,
+        5.876100216679225e-17,
+        7.847802180742116e-18,
+        4.8633061318861337e-17,
+        7.04452359765883e-18
+      ],
+      "old_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        3.47812888545072e-17,
+        2.7035615705485656e-16,
+        3.4754751760312374e-17,
+        1.9881052298858569e-16,
+        3.44792994127418e-17
+      ],
+      "new_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        3.47812888545072e-17,
+        1.9966989370191328e-16,
+        3.4754751760312374e-17,
+        1.4927837522945457e-16,
+        2.520803670304579e-17
+      ],
+      "worst_component_error_reduction_percent": 20.247913580049072,
+      "max_global_reference_error": 1.4821041556011712e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "PRODUCT_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "RTX 3060 wide follow-up",
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "method": "fused_wide_final",
+      "old_method": "torch",
+      "old_ms": 12.887999997474253,
+      "new_ms": 7.8544999996665865,
+      "speedup": 1.6408428286996413,
+      "ci_low": 1.6347669620005898,
+      "ci_high": 1.6474358962626126,
+      "old_p95_ms": 13.040509999700589,
+      "new_p95_ms": 7.930089998262702,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 7.826300003216602,
+      "old_sampled_errors": [
+        5.4596989245030915e-17
+      ],
+      "new_sampled_errors": [
+        5.379316683527289e-17
+      ],
+      "old_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "new_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "worst_component_error_reduction_percent": 1.472283400373009,
+      "max_global_reference_error": 3.298339535570434e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "WIDE_LOCAL_RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 10000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_fma",
+      "old_method": "torch",
+      "old_ms": 0.9443799999644398,
+      "new_ms": 0.2817999999820131,
+      "speedup": 3.351242015701626,
+      "ci_low": 2.6470763766766594,
+      "ci_high": 3.554849397065209,
+      "old_p95_ms": 1.0572281000179373,
+      "new_p95_ms": 0.40036890001147185,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 0.3521040000009634,
+      "old_sampled_errors": [
+        4.9067054400340605e-17
+      ],
+      "new_sampled_errors": [
+        4.9063264894347914e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "worst_component_error_reduction_percent": 0.007723116944768904,
+      "max_global_reference_error": 2.0218072905526672e-17,
+      "configuration": {
+        "packed": false,
+        "capture": false
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 10000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_compensated",
+      "old_method": "torch",
+      "old_ms": 0.9443799999644398,
+      "new_ms": 0.693515000023126,
+      "speedup": 1.3617297389861047,
+      "ci_low": 0.7554631717343097,
+      "ci_high": 1.3760835360210162,
+      "old_p95_ms": 1.0572281000179373,
+      "new_p95_ms": 1.3979864999953406,
+      "accuracy_gate": true,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 1.3976609999986067,
+      "old_sampled_errors": [
+        4.9067054400340605e-17
+      ],
+      "new_sampled_errors": [
+        4.8957199890132886e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "worst_component_error_reduction_percent": 0.2238864988947764,
+      "max_global_reference_error": 2.7194480126025798e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 10000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_mixed",
+      "old_method": "torch",
+      "old_ms": 0.9443799999644398,
+      "new_ms": 0.19529700000475714,
+      "speedup": 4.83560935365846,
+      "ci_low": 2.8208535644104717,
+      "ci_high": 4.841247670527907,
+      "old_p95_ms": 1.0572281000179373,
+      "new_p95_ms": 0.3748978999908559,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 0.3703419999965263,
+      "old_sampled_errors": [
+        4.9067054400340605e-17
+      ],
+      "new_sampled_errors": [
+        4.9063264894347914e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "worst_component_error_reduction_percent": 0.007723116944768904,
+      "max_global_reference_error": 2.0218072905526672e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 10000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_projected",
+      "old_method": "torch",
+      "old_ms": 0.9443799999644398,
+      "new_ms": 1.6794030000255589,
+      "speedup": 0.562330780610769,
+      "ci_low": 0.3145062634983703,
+      "ci_high": 0.5691914596344599,
+      "old_p95_ms": 1.0572281000179373,
+      "new_p95_ms": 3.3804163999946013,
+      "accuracy_gate": true,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 3.0793059999609795,
+      "old_sampled_errors": [
+        4.9067054400340605e-17
+      ],
+      "new_sampled_errors": [
+        4.9039818606483466e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.4027379302938423e-16
+      ],
+      "worst_component_error_reduction_percent": 0.05550729341713412,
+      "max_global_reference_error": 3.3316826147808004e-18,
+      "configuration": {
+        "packed": false,
+        "capture": false
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_fma",
+      "old_method": "cupy",
+      "old_ms": 4.334325999991506,
+      "new_ms": 1.159077000011166,
+      "speedup": 3.7394633833211692,
+      "ci_low": 3.6035300964726478,
+      "ci_high": 3.794145889649938,
+      "old_p95_ms": 4.369096799973704,
+      "new_p95_ms": 1.299991400003364,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 1.1405570000420084,
+      "old_sampled_errors": [
+        4.6576090890556464e-17
+      ],
+      "new_sampled_errors": [
+        4.567644556504455e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "worst_component_error_reduction_percent": 1.9315603957100635,
+      "max_global_reference_error": 1.7859379541681647e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_compensated",
+      "old_method": "cupy",
+      "old_ms": 4.334325999991506,
+      "new_ms": 4.848245000005136,
+      "speedup": 0.8939989625084778,
+      "ci_low": 0.8878527971278036,
+      "ci_high": 0.8993600652896445,
+      "old_p95_ms": 4.369096799973704,
+      "new_p95_ms": 4.900626999983615,
+      "accuracy_gate": true,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 4.7978310000189595,
+      "old_sampled_errors": [
+        4.6576090890556464e-17
+      ],
+      "new_sampled_errors": [
+        4.5451522845954464e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "worst_component_error_reduction_percent": 2.4144749443324565,
+      "max_global_reference_error": 2.5029964975826344e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_mixed",
+      "old_method": "cupy",
+      "old_ms": 4.334325999991506,
+      "new_ms": 1.1608410000008007,
+      "speedup": 3.733780939843197,
+      "ci_low": 3.648483981212567,
+      "ci_high": 3.7879495419880547,
+      "old_p95_ms": 4.369096799973704,
+      "new_p95_ms": 1.2923041000135527,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 1.1580379999713841,
+      "old_sampled_errors": [
+        4.6576090890556464e-17
+      ],
+      "new_sampled_errors": [
+        4.567644556504455e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "worst_component_error_reduction_percent": 1.9315603957100635,
+      "max_global_reference_error": 1.7859379541681647e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_projected",
+      "old_method": "cupy",
+      "old_ms": 4.334325999991506,
+      "new_ms": 13.243247999980667,
+      "speedup": 0.32728572326047456,
+      "ci_low": 0.3263413852026082,
+      "ci_high": 0.3283887018665244,
+      "old_p95_ms": 4.369096799973704,
+      "new_p95_ms": 13.39597550003191,
+      "accuracy_gate": false,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 13.213299000028655,
+      "old_sampled_errors": [
+        4.6576090890556464e-17
+      ],
+      "new_sampled_errors": [
+        4.7756321776220435e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.773868608429494e-16
+      ],
+      "worst_component_error_reduction_percent": -2.533984417965107,
+      "max_global_reference_error": 3.681240394011466e-18,
+      "configuration": {
+        "packed": false,
+        "capture": false
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_fma",
+      "old_method": "cupy",
+      "old_ms": 43.25848900003848,
+      "new_ms": 14.140727000039988,
+      "speedup": 3.0591417965933543,
+      "ci_low": 2.9269661006401866,
+      "ci_high": 3.1300812324126785,
+      "old_p95_ms": 44.17232799998487,
+      "new_p95_ms": 15.1760716000183,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 13.492122000002382,
+      "old_sampled_errors": [
+        5.6586750879442e-17
+      ],
+      "new_sampled_errors": [
+        5.0912178199646025e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "worst_component_error_reduction_percent": 10.028094194497307,
+      "max_global_reference_error": 1.853511704942516e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_compensated",
+      "old_method": "cupy",
+      "old_ms": 43.25848900003848,
+      "new_ms": 48.13530299998092,
+      "speedup": 0.8986852954899988,
+      "ci_low": 0.893979451075457,
+      "ci_high": 0.9107357255089971,
+      "old_p95_ms": 44.17232799998487,
+      "new_p95_ms": 49.206187900023224,
+      "accuracy_gate": true,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 47.230498999965675,
+      "old_sampled_errors": [
+        5.6586750879442e-17
+      ],
+      "new_sampled_errors": [
+        5.056666152321063e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "worst_component_error_reduction_percent": 10.638690616920499,
+      "max_global_reference_error": 2.5875026627609772e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_mixed",
+      "old_method": "cupy",
+      "old_ms": 43.25848900003848,
+      "new_ms": 14.498795000008613,
+      "speedup": 2.983592015751156,
+      "ci_low": 2.935448024459757,
+      "ci_high": 3.1245685571577533,
+      "old_p95_ms": 44.17232799998487,
+      "new_p95_ms": 15.125638500001058,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 13.502427999981137,
+      "old_sampled_errors": [
+        5.6586750879442e-17
+      ],
+      "new_sampled_errors": [
+        5.0912178199646025e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "worst_component_error_reduction_percent": 10.028094194497307,
+      "max_global_reference_error": 1.853511704942516e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": false,
+      "method": "fused_projected",
+      "old_method": "cupy",
+      "old_ms": 43.25848900003848,
+      "new_ms": 134.6160890000192,
+      "speedup": 0.32134709395718897,
+      "ci_low": 0.32108427712401216,
+      "ci_high": 0.3224743488218395,
+      "old_p95_ms": 44.17232799998487,
+      "new_p95_ms": 136.89602799999534,
+      "accuracy_gate": true,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 132.6741899999888,
+      "old_sampled_errors": [
+        5.6586750879442e-17
+      ],
+      "new_sampled_errors": [
+        5.18741344728227e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "new_sampled_max_absolute": [
+        1.9391229828817547e-16
+      ],
+      "worst_component_error_reduction_percent": 8.328126873125342,
+      "max_global_reference_error": 3.39724730850089e-18,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "method": "fused_fma",
+      "old_method": "torch",
+      "old_ms": 15.719967999984874,
+      "new_ms": 32.8028609999933,
+      "speedup": 0.4792255163349345,
+      "ci_low": 0.47615565394911474,
+      "ci_high": 0.48238674530028663,
+      "old_p95_ms": 15.938737400017544,
+      "new_p95_ms": 33.38306399999169,
+      "accuracy_gate": false,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 32.25771600000371,
+      "old_sampled_errors": [
+        5.4596989245030915e-17
+      ],
+      "new_sampled_errors": [
+        5.412023042044285e-17
+      ],
+      "old_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "new_sampled_max_absolute": [
+        2.4423774152543455e-16
+      ],
+      "worst_component_error_reduction_percent": 0.8732328122497246,
+      "max_global_reference_error": 3.180169566197561e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "method": "fused_compensated",
+      "old_method": "torch",
+      "old_ms": 15.719967999984874,
+      "new_ms": 58.529583999984425,
+      "speedup": 0.2685815774803569,
+      "ci_low": 0.2668885721343755,
+      "ci_high": 0.269292706411264,
+      "old_p95_ms": 15.938737400017544,
+      "new_p95_ms": 59.48993760003418,
+      "accuracy_gate": true,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 57.58087099997056,
+      "old_sampled_errors": [
+        5.4596989245030915e-17
+      ],
+      "new_sampled_errors": [
+        5.169627070489707e-17
+      ],
+      "old_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "new_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "worst_component_error_reduction_percent": 5.3129642865752835,
+      "max_global_reference_error": 4.225794164936754e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "method": "fused_mixed",
+      "old_method": "torch",
+      "old_ms": 15.719967999984874,
+      "new_ms": 32.70036600002868,
+      "speedup": 0.48072758573928764,
+      "ci_low": 0.47853487812582307,
+      "ci_high": 0.48220957154415267,
+      "old_p95_ms": 15.938737400017544,
+      "new_p95_ms": 33.36919230000035,
+      "accuracy_gate": false,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 32.259156999998595,
+      "old_sampled_errors": [
+        5.4596989245030915e-17
+      ],
+      "new_sampled_errors": [
+        5.412023042044285e-17
+      ],
+      "old_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "new_sampled_max_absolute": [
+        2.4423774152543455e-16
+      ],
+      "worst_component_error_reduction_percent": 0.8732328122497246,
+      "max_global_reference_error": 3.180169566197561e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "method": "fused_projected",
+      "old_method": "torch",
+      "old_ms": 15.719967999984874,
+      "new_ms": 30.520123000030708,
+      "speedup": 0.5150689595834544,
+      "ci_low": 0.5128706731449741,
+      "ci_high": 0.5165146815271284,
+      "old_p95_ms": 15.938737400017544,
+      "new_p95_ms": 30.975232400027153,
+      "accuracy_gate": false,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 30.085420999967027,
+      "old_sampled_errors": [
+        5.4596989245030915e-17
+      ],
+      "new_sampled_errors": [
+        5.4961595722468984e-17
+      ],
+      "old_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "new_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "worst_component_error_reduction_percent": -0.6678142558405931,
+      "max_global_reference_error": 5.0295282494535264e-18,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-filters\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_fma",
+      "old_method": "cupy",
+      "old_ms": 10.028472999977112,
+      "new_ms": 2.120337999997446,
+      "speedup": 4.729657724376581,
+      "ci_low": 4.521381793332133,
+      "ci_high": 5.0292580945228105,
+      "old_p95_ms": 10.108783199996196,
+      "new_p95_ms": 2.3896199000034812,
+      "accuracy_gate": false,
+      "speed_gate": true,
+      "dual_gate": false,
+      "pilot_ms": 1.9016950000150246,
+      "old_sampled_errors": [
+        4.6974766885624817e-17,
+        1.382480056994655e-17,
+        6.039492062435442e-17,
+        1.1682201650352651e-17,
+        6.581860607577808e-17,
+        1.6219664671778874e-17
+      ],
+      "new_sampled_errors": [
+        4.690396259350691e-17,
+        1.0856154898403248e-17,
+        4.491284985870976e-17,
+        1.2349110076275783e-17,
+        4.151372114033361e-17,
+        1.1405201970774192e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.1151404043737308e-16,
+        4.8698638467092884e-17,
+        1.6801527535079417e-16,
+        4.236432480057224e-17,
+        1.9233924338621415e-16,
+        6.161648358852615e-17
+      ],
+      "new_sampled_max_absolute": [
+        1.1053056448765821e-16,
+        4.682528736027242e-17,
+        1.0208241586280127e-16,
+        3.500123458596174e-17,
+        9.41771158402707e-17,
+        4.034886299259967e-17
+      ],
+      "worst_component_error_reduction_percent": 28.737532758585647,
+      "max_global_reference_error": 2.4506444844310146e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-sensitivity\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_compensated",
+      "old_method": "cupy",
+      "old_ms": 10.028472999977112,
+      "new_ms": 7.862408999983472,
+      "speedup": 1.2754962251389101,
+      "ci_low": 1.2704117367217251,
+      "ci_high": 1.2800951633955124,
+      "old_p95_ms": 10.108783199996196,
+      "new_p95_ms": 7.94154640002489,
+      "accuracy_gate": false,
+      "speed_gate": true,
+      "dual_gate": false,
+      "pilot_ms": 7.87167200002159,
+      "old_sampled_errors": [
+        4.6974766885624817e-17,
+        1.382480056994655e-17,
+        6.039492062435442e-17,
+        1.1682201650352651e-17,
+        6.581860607577808e-17,
+        1.6219664671778874e-17
+      ],
+      "new_sampled_errors": [
+        4.660552613950654e-17,
+        9.104433345615467e-18,
+        4.383251240119591e-17,
+        6.067831848362205e-18,
+        4.14474749024493e-17,
+        6.245826142531873e-18
+      ],
+      "old_sampled_max_absolute": [
+        1.1151404043737308e-16,
+        4.8698638467092884e-17,
+        1.6801527535079417e-16,
+        4.236432480057224e-17,
+        1.9233924338621415e-16,
+        6.161648358852615e-17
+      ],
+      "new_sampled_max_absolute": [
+        1.11604654327122e-16,
+        4.682528736027242e-17,
+        1.0208241586280127e-16,
+        2.231894954905228e-17,
+        9.41771158402707e-17,
+        1.763847406421249e-17
+      ],
+      "worst_component_error_reduction_percent": 29.19095538752552,
+      "max_global_reference_error": 2.89941121450156e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-sensitivity\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_mixed",
+      "old_method": "cupy",
+      "old_ms": 10.028472999977112,
+      "new_ms": 4.839038000000073,
+      "speedup": 2.072410466703704,
+      "ci_low": 2.053832619844741,
+      "ci_high": 2.071951127726306,
+      "old_p95_ms": 10.108783199996196,
+      "new_p95_ms": 4.888430099987318,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 4.660456999999951,
+      "old_sampled_errors": [
+        4.6974766885624817e-17,
+        1.382480056994655e-17,
+        6.039492062435442e-17,
+        1.1682201650352651e-17,
+        6.581860607577808e-17,
+        1.6219664671778874e-17
+      ],
+      "new_sampled_errors": [
+        4.690396259350691e-17,
+        1.0522596152493965e-17,
+        4.491284985870976e-17,
+        1.078213307105039e-17,
+        4.151372114033361e-17,
+        9.890683563466308e-18
+      ],
+      "old_sampled_max_absolute": [
+        1.1151404043737308e-16,
+        4.8698638467092884e-17,
+        1.6801527535079417e-16,
+        4.236432480057224e-17,
+        1.9233924338621415e-16,
+        6.161648358852615e-17
+      ],
+      "new_sampled_max_absolute": [
+        1.1053056448765821e-16,
+        4.682528736027242e-17,
+        1.0208241586280127e-16,
+        3.500123458596174e-17,
+        9.41771158402707e-17,
+        2.8274850137274127e-17
+      ],
+      "worst_component_error_reduction_percent": 28.737532758585647,
+      "max_global_reference_error": 2.4506444844310146e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-sensitivity\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 100000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_projected",
+      "old_method": "cupy",
+      "old_ms": 10.028472999977112,
+      "new_ms": 17.099432000009074,
+      "speedup": 0.586479890090606,
+      "ci_low": 0.5839377686992537,
+      "ci_high": 0.5887139845793932,
+      "old_p95_ms": 10.108783199996196,
+      "new_p95_ms": 17.24243830000205,
+      "accuracy_gate": false,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 17.059228999983134,
+      "old_sampled_errors": [
+        4.6974766885624817e-17,
+        1.382480056994655e-17,
+        6.039492062435442e-17,
+        1.1682201650352651e-17,
+        6.581860607577808e-17,
+        1.6219664671778874e-17
+      ],
+      "new_sampled_errors": [
+        4.6974766885624817e-17,
+        1.3775175290962358e-17,
+        4.4909577675396395e-17,
+        1.3503636052649745e-17,
+        4.1563556612855116e-17,
+        1.0100233175117834e-17
+      ],
+      "old_sampled_max_absolute": [
+        1.1151404043737308e-16,
+        4.8698638467092884e-17,
+        1.6801527535079417e-16,
+        4.236432480057224e-17,
+        1.9233924338621415e-16,
+        6.161648358852615e-17
+      ],
+      "new_sampled_max_absolute": [
+        1.1151404043737308e-16,
+        4.8698638467092884e-17,
+        1.0208241586280127e-16,
+        4.236432480057224e-17,
+        9.41771158402707e-17,
+        2.8274850137274127e-17
+      ],
+      "worst_component_error_reduction_percent": 28.629957870055822,
+      "max_global_reference_error": 1.793218477720794e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-sensitivity\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_fma",
+      "old_method": "cupy",
+      "old_ms": 104.5018559999562,
+      "new_ms": 25.836103999949955,
+      "speedup": 4.044799324238617,
+      "ci_low": 3.9459789409048667,
+      "ci_high": 4.185495540397764,
+      "old_p95_ms": 106.12423560000934,
+      "new_p95_ms": 26.72233249998044,
+      "accuracy_gate": false,
+      "speed_gate": true,
+      "dual_gate": false,
+      "pilot_ms": 23.219309000012345,
+      "old_sampled_errors": [
+        4.435761756748673e-17,
+        9.002711499416191e-18,
+        7.367957981359155e-17,
+        8.52473820647488e-18,
+        6.671618919909806e-17,
+        8.724772440416387e-18
+      ],
+      "new_sampled_errors": [
+        4.4321968232838754e-17,
+        9.895791612507863e-18,
+        5.876100216679225e-17,
+        6.781455370062471e-18,
+        4.8633061318861337e-17,
+        6.684487613872558e-18
+      ],
+      "old_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        3.47812888545072e-17,
+        2.7035615705485656e-16,
+        3.4754751760312374e-17,
+        1.9881052298858569e-16,
+        3.44792994127418e-17
+      ],
+      "new_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        4.678952289229998e-17,
+        1.9966989370191328e-16,
+        3.210928159625209e-17,
+        1.4927837522945457e-16,
+        1.9552507258921932e-17
+      ],
+      "worst_component_error_reduction_percent": 20.247913580049072,
+      "max_global_reference_error": 2.038490897256736e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-sensitivity\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_compensated",
+      "old_method": "cupy",
+      "old_ms": 104.5018559999562,
+      "new_ms": 83.6177050000515,
+      "speedup": 1.2497575244368624,
+      "ci_low": 1.2363265797959235,
+      "ci_high": 1.2754889809659726,
+      "old_p95_ms": 106.12423560000934,
+      "new_p95_ms": 85.51807330002248,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 77.81917199997679,
+      "old_sampled_errors": [
+        4.435761756748673e-17,
+        9.002711499416191e-18,
+        7.367957981359155e-17,
+        8.52473820647488e-18,
+        6.671618919909806e-17,
+        8.724772440416387e-18
+      ],
+      "new_sampled_errors": [
+        4.432193176961463e-17,
+        3.673745898759679e-18,
+        5.901356665654967e-17,
+        4.8320649204096354e-18,
+        4.794266920801787e-17,
+        4.7247785637754685e-18
+      ],
+      "old_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        3.47812888545072e-17,
+        2.7035615705485656e-16,
+        3.4754751760312374e-17,
+        1.9881052298858569e-16,
+        3.44792994127418e-17
+      ],
+      "new_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        9.814141503729998e-18,
+        1.9966989370191328e-16,
+        1.810374153551907e-17,
+        1.4927837522945457e-16,
+        1.7078732173703065e-17
+      ],
+      "worst_component_error_reduction_percent": 19.905125944185244,
+      "max_global_reference_error": 2.3683135768042792e-17,
+      "configuration": {
+        "packed": false,
+        "capture": false
+      },
+      "source_report": "kaggle\\product-sensitivity\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_mixed",
+      "old_method": "cupy",
+      "old_ms": 104.5018559999562,
+      "new_ms": 53.21526599993831,
+      "speedup": 1.9637570918104092,
+      "ci_low": 1.9491997951700255,
+      "ci_high": 2.0379024847249188,
+      "old_p95_ms": 106.12423560000934,
+      "new_p95_ms": 53.94229660000747,
+      "accuracy_gate": false,
+      "speed_gate": true,
+      "dual_gate": false,
+      "pilot_ms": 48.664185999996334,
+      "old_sampled_errors": [
+        4.435761756748673e-17,
+        9.002711499416191e-18,
+        7.367957981359155e-17,
+        8.52473820647488e-18,
+        6.671618919909806e-17,
+        8.724772440416387e-18
+      ],
+      "new_sampled_errors": [
+        4.4321968232838754e-17,
+        9.453660910686022e-18,
+        5.876100216679225e-17,
+        5.826253160244204e-18,
+        4.8633061318861337e-17,
+        6.160959144103173e-18
+      ],
+      "old_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        3.47812888545072e-17,
+        2.7035615705485656e-16,
+        3.4754751760312374e-17,
+        1.9881052298858569e-16,
+        3.44792994127418e-17
+      ],
+      "new_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        4.678952289229998e-17,
+        1.9966989370191328e-16,
+        1.7984750659678753e-17,
+        1.4927837522945457e-16,
+        1.7078732173703065e-17
+      ],
+      "worst_component_error_reduction_percent": 20.247913580049072,
+      "max_global_reference_error": 2.038490897256736e-17,
+      "configuration": {
+        "packed": false,
+        "capture": false
+      },
+      "source_report": "kaggle\\product-sensitivity\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4",
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": true,
+      "method": "fused_projected",
+      "old_method": "cupy",
+      "old_ms": 104.5018559999562,
+      "new_ms": 182.0046980000143,
+      "speedup": 0.5741712007892675,
+      "ci_low": 0.566818945006315,
+      "ci_high": 0.5794034543183921,
+      "old_p95_ms": 106.12423560000934,
+      "new_p95_ms": 185.79929410000204,
+      "accuracy_gate": false,
+      "speed_gate": false,
+      "dual_gate": false,
+      "pilot_ms": 173.8166430000092,
+      "old_sampled_errors": [
+        4.435761756748673e-17,
+        9.002711499416191e-18,
+        7.367957981359155e-17,
+        8.52473820647488e-18,
+        6.671618919909806e-17,
+        8.724772440416387e-18
+      ],
+      "new_sampled_errors": [
+        4.435761756748673e-17,
+        9.163721038682173e-18,
+        5.876100216679225e-17,
+        7.847802180742116e-18,
+        4.8633061318861337e-17,
+        7.04452359765883e-18
+      ],
+      "old_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        3.47812888545072e-17,
+        2.7035615705485656e-16,
+        3.4754751760312374e-17,
+        1.9881052298858569e-16,
+        3.44792994127418e-17
+      ],
+      "new_sampled_max_absolute": [
+        2.0883538617776965e-16,
+        3.47812888545072e-17,
+        1.9966989370191328e-16,
+        3.4754751760312374e-17,
+        1.4927837522945457e-16,
+        2.520803670304579e-17
+      ],
+      "worst_component_error_reduction_percent": 20.247913580049072,
+      "max_global_reference_error": 1.4821015571880685e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-sensitivity\\kgf_product\\RESULTS.json"
+    },
+    {
+      "platform": "T4 wide follow-up",
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "method": "fused_wide_final",
+      "old_method": "torch",
+      "old_ms": 14.216403999967042,
+      "new_ms": 9.179019000043809,
+      "speedup": 1.548793395013039,
+      "ci_low": 1.5407022881132655,
+      "ci_high": 1.549662047479793,
+      "old_p95_ms": 14.336299799975905,
+      "new_p95_ms": 9.289823199981129,
+      "accuracy_gate": true,
+      "speed_gate": true,
+      "dual_gate": true,
+      "pilot_ms": 9.070251999958145,
+      "old_sampled_errors": [
+        5.4596989245030915e-17
+      ],
+      "new_sampled_errors": [
+        5.379316683527289e-17
+      ],
+      "old_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "new_sampled_max_absolute": [
+        2.1124577537198403e-16
+      ],
+      "worst_component_error_reduction_percent": 1.472283400373009,
+      "max_global_reference_error": 3.298357041305123e-17,
+      "configuration": {
+        "packed": false,
+        "capture": true
+      },
+      "source_report": "kaggle\\product-wide\\kgf_product\\RESULTS.json"
+    }
+  ],
+  "limits": [
+    "One constructed asymmetric graph family with geometrically decaying constructed coefficients",
+    "Full FP64 CPU reference checks for every output; 384-bit truth checks on first 16 rows, not all vertices",
+    "Resident validated-input compute; excludes I/O, finite-state checks and compilation/JIT",
+    "Profile selection is reconstructed from recorded pilots; policy and wide follow-up were developed after exploratory results",
+    "No current native-cuGraph PageRank comparison, broad ranking rerun, customer savings or global SOTA claim"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "core": {
+    "run": 29,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true
+  },
+  "prototype": {
+    "run": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true
+  }
+}

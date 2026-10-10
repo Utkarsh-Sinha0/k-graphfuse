@@ -1,0 +1,33 @@
+{
+  "family": "memory-pressure",
+  "cases": [],
+  "matrix_cases": [
+    {
+      "name": "Feature workspace n=1000000 q=16",
+      "n": 1000000,
+      "q": 16,
+      "goal": 1e-08
+    },
+    {
+      "name": "Feature workspace n=1000000 q=32",
+      "n": 1000000,
+      "q": 32,
+      "goal": 1e-08
+    },
+    {
+      "name": "Feature workspace n=500000 q=64",
+      "n": 500000,
+      "q": 64,
+      "goal": 1e-08
+    },
+    {
+      "name": "Feature workspace n=250000 q=128",
+      "n": 250000,
+      "q": 128,
+      "goal": 1e-08
+    }
+  ],
+  "unrun": [
+    "Graphs requiring genuine out-of-core/distributed graph storage; no such K GraphFuse backend exists"
+  ]
+}

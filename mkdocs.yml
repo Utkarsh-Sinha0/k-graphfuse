@@ -1,5 +1,5 @@
 site_name: K GraphFuse
-site_description: Sparse graph polynomial filters, directional sensitivities and CUDA execution, with scoped PageRank benchmarks and reproducible evidence.
+site_description: Sparse graph polynomial filters and CUDA sensitivities with audited native cuGraph comparisons, precision GPU benchmarks, raw timings, and reproducible evidence.
 site_author: Utkarsh Sinha
 site_url: https://utkarsh-sinha0.github.io/k-graphfuse/
 repo_url: https://github.com/Utkarsh-Sinha0/k-graphfuse
@@ -61,12 +61,16 @@ nav:
   - Concepts:
       - Graph and accuracy contracts: concepts/contracts.md
       - Mathematical derivation: concepts/mathematics.md
+      - Similarity and precision: concepts/precision.md
       - Design and performance: concepts/design.md
   - Reference:
       - Python API: reference/api.md
       - Limitations and support: reference/limitations.md
   - Benchmarks:
       - Results and competitors: benchmarks/results.md
+      - Native cuGraph comparisons: benchmarks/cugraph.md
+      - Precision GPU experiment: benchmarks/precision-gpu.md
+      - Original reference experiment: benchmarks/historical-reference.md
       - Measurement methodology: benchmarks/methodology.md
       - Reproduce and audit: benchmarks/reproduce.md
   - Project:

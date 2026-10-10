@@ -12,13 +12,19 @@ K GraphFuse turns a sequence of compatible graph filters into an ordered matrix 
 
 The intended opportunity is repeated graph computation on a reused operator. Compilation, graph conversion and GPU preparation are additional costs. Matching a mathematical operation alone does not establish a production speedup: include downstream quality, transfers, projection, updates and writeback in your evaluation.
 
-## What the measurement shows
+## Audited performance evidence
 
-On one public ten-update PageRank reference task, the best accepted configuration used **21.28% less median warm compute time than native NVIDIA cuGraph on the same Tesla T4**. Observed total memory peaks were lower and both outputs passed the reference accuracy check. Aggregate L1 error was higher. The benchmark used the full polynomial with zero truncation; it does not show a theorem-driven degree reduction.
+| Study | Outcome | Read the matching contract |
+|---|---|---|
+| Native cuGraph ranking | 59/89 strong speed wins; 26/89 speed-and-error wins | [Native cuGraph comparison](benchmarks/cugraph.md) |
+| Strongest tested controls | 33/85 overall and 38/85 GPU speed-gate passes | [Comparator selection](benchmarks/cugraph.md#compare-against-the-strongest-tested-alternative) |
+| Precision GPU experiment | 6/6 speed/accuracy gates, 1.25–3.74x | [Filters, derivatives and sampled high-precision accuracy](benchmarks/precision-gpu.md) |
 
-![Same-device PageRank comparison, including measured latency, sampled memory and accuracy tradeoffs](assets/k_native_comparison.png)
+The native denominator includes four K accuracy failures. The precision study compares against FP64 CuPy/PyTorch on a constructed asymmetric family, not native cuGraph. Its source is an experimental implementation outside the installed package API. These studies establish scoped measured advantages; they do not establish global leadership or customer savings.
 
-Read the [results](benchmarks/results.md) before reusing a number. The earlier 19-workload suite did not pass its strongest GPU improvement gate on any complete workload. Independent replication, global SOTA, customer quality and cloud-bill savings remain open.
+![Audited precision GPU resident-compute and sampled-accuracy results with workload limitations](assets/precision_t4_comparison.png)
+
+Inspect [all results](benchmarks/results.md), including Graph500, repeated-reference and complete-workflow losses. The original one-run 21.28% native advantage and the older zero-pass 19-workload study remain available with their original contracts.
 
 ## Start with your task
 

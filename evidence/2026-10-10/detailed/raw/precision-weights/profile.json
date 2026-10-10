@@ -1,0 +1,155 @@
+{
+  "family": "precision-weights",
+  "cases": [
+    {
+      "name": "Precision goal=0.0001 weights=ordinary",
+      "n": 50000,
+      "weighted": true,
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 0.0001,
+      "weight_pattern": "ordinary"
+    },
+    {
+      "name": "Precision goal=0.0001 weights=wide-range",
+      "n": 50000,
+      "weighted": true,
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 0.0001,
+      "weight_pattern": "wide-range"
+    },
+    {
+      "name": "Precision goal=0.0001 weights=dominant-edge",
+      "n": 50000,
+      "weighted": true,
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 0.0001,
+      "weight_pattern": "dominant-edge"
+    },
+    {
+      "name": "Precision goal=1e-06 weights=ordinary",
+      "n": 50000,
+      "weighted": true,
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-06,
+      "weight_pattern": "ordinary"
+    },
+    {
+      "name": "Precision goal=1e-06 weights=wide-range",
+      "n": 50000,
+      "weighted": true,
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-06,
+      "weight_pattern": "wide-range"
+    },
+    {
+      "name": "Precision goal=1e-06 weights=dominant-edge",
+      "n": 50000,
+      "weighted": true,
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-06,
+      "weight_pattern": "dominant-edge"
+    },
+    {
+      "name": "Precision goal=1e-08 weights=ordinary",
+      "n": 50000,
+      "weighted": true,
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-08,
+      "weight_pattern": "ordinary"
+    },
+    {
+      "name": "Precision goal=1e-08 weights=wide-range",
+      "n": 50000,
+      "weighted": true,
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-08,
+      "weight_pattern": "wide-range"
+    },
+    {
+      "name": "Precision goal=1e-08 weights=dominant-edge",
+      "n": 50000,
+      "weighted": true,
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-08,
+      "weight_pattern": "dominant-edge"
+    },
+    {
+      "name": "Precision goal=1e-10 weights=ordinary",
+      "n": 50000,
+      "weighted": true,
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-10,
+      "weight_pattern": "ordinary"
+    },
+    {
+      "name": "Precision goal=1e-10 weights=wide-range",
+      "n": 50000,
+      "weighted": true,
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-10,
+      "weight_pattern": "wide-range"
+    },
+    {
+      "name": "Precision goal=1e-10 weights=dominant-edge",
+      "n": 50000,
+      "weighted": true,
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-10,
+      "weight_pattern": "dominant-edge"
+    },
+    {
+      "name": "Precision goal=1e-12 weights=ordinary",
+      "n": 50000,
+      "weighted": true,
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-12,
+      "weight_pattern": "ordinary"
+    },
+    {
+      "name": "Precision goal=1e-12 weights=wide-range",
+      "n": 50000,
+      "weighted": true,
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-12,
+      "weight_pattern": "wide-range"
+    },
+    {
+      "name": "Precision goal=1e-12 weights=dominant-edge",
+      "n": 50000,
+      "weighted": true,
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-12,
+      "weight_pattern": "dominant-edge"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+suite,case,vertices,entries,task,goal,K_status,native_accepted,reference,sample_count,median_ms,p95_ms,validation_note
+other-calculations,BFS / fewest hops,5000,59932,other_calculations,,NOT_IMPLEMENTED,True,Independent SciPy/NetworkX,155,2.66114999999445,2.8026022999938505,
+other-calculations,Shortest weighted routes,5000,59932,other_calculations,,NOT_IMPLEMENTED,True,Independent SciPy/NetworkX,155,9.654235999960292,10.317806699958965,
+other-calculations,Connected groups,5000,59932,other_calculations,,NOT_IMPLEMENTED,True,Independent SciPy/NetworkX,155,14.105353999980252,14.62913839994826,
+other-calculations,Triangle counting,5000,59932,other_calculations,,NOT_IMPLEMENTED,True,Independent SciPy/NetworkX,155,3.728469999941808,4.254249399923537,
+other-calculations,Community detection,5000,59932,other_calculations,,NOT_IMPLEMENTED,True,Structural validity only,155,62.12685400009832,65.17663860005314,Vertex coverage and finite modularity only; no independent optimality claim

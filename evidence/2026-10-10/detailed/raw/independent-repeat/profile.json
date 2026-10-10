@@ -1,0 +1,36 @@
+{
+  "family": "independent-repeat",
+  "cases": [
+    {
+      "name": "Independent directed weighted repeat",
+      "n": 100000,
+      "weighted": true,
+      "personal": true,
+      "cold": true
+    },
+    {
+      "name": "Independent undirected personalized repeat",
+      "n": 100000,
+      "shape": "undirected",
+      "personal": true,
+      "converge": true,
+      "goal": 1e-08
+    },
+    {
+      "name": "Independent strict precision repeat",
+      "n": 50000,
+      "weighted": true,
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-10,
+      "weight_pattern": "wide-range"
+    },
+    {
+      "name": "Independent large scale repeat",
+      "n": 1000000,
+      "degree": 5,
+      "weighted": true
+    }
+  ]
+}

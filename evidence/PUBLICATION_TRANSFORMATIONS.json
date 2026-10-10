@@ -19,5 +19,28 @@
   },
   {
     "change": "K GraphFuse namespace and documentation added; eight historical mathematical modules remain byte-identical"
+  },
+  {
+    "file": "evidence/2026-10-10/",
+    "change": "Added separate 15-suite study and derived native comparison counts; original historical evidence is preserved"
+  },
+  {
+    "file": "experiments/precision_gpu/",
+    "change": "Published experimental source and numerical records; excluded private notebook account metadata, installation/kernel logs and cache files"
+  },
+  {
+    "file": "experiments/precision_gpu/audit_product.py",
+    "change": "Public derived audit uses the true 10 percent latency threshold (1/0.9 speed ratio) instead of the exploratory 1.1 ratio. Selected six T4 wins remain unchanged; raw samples and exact timed sources are unchanged"
+  },
+  {
+    "file": "experiments/precision_gpu/README.md",
+    "change": "Updated publication status and public-file descriptions; historical private package checksum is replaced by a public manifest"
+  },
+  {
+    "file": "docs/benchmarks/historical-reference.md",
+    "change": "Retained original reference documentation with a historical-study banner; added later repeat losses in new benchmark pages"
+  },
+  {
+    "change": "Added machine-readable claims, case denominators, losses and version distinctions. Experimental files preserve bytes in Git; installed numerical core remains unchanged"
   }
 ]

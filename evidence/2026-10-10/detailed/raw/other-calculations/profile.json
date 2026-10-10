@@ -1,0 +1,9 @@
+{
+  "family": "other-calculations",
+  "cases": [],
+  "other_algorithms": true,
+  "unrun": [
+    "K GraphFuse BFS, SSSP, connected components, triangles and community detection are not implemented; native baselines only",
+    "Nonlinear GNN training, database transactions, maximum flow and graph matching are different algorithms, not supported by this implementation"
+  ]
+}

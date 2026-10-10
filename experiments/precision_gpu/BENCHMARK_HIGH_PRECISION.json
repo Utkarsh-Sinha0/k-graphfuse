@@ -1,0 +1,939 @@
+{
+  "status": "complete",
+  "scope": "First 16 output rows of each exact six-case large-benchmark input. Degree-48 finite influence cones fit in the first 64 rows of this specific forward-coupled operator; not exhaustive high-precision verification of every vertex.",
+  "precision_bits": [
+    256,
+    384
+  ],
+  "cases": [
+    {
+      "n": 10000,
+      "q": 4,
+      "sensitivity": false,
+      "theta": "0",
+      "oracle_window_discrepancy": 9.962421719243474e-78,
+      "methods": [
+        {
+          "method": "released",
+          "quality": {
+            "error_per_input_norm": [
+              4.9067054400340605e-17
+            ],
+            "max_absolute_error": [
+              1.4027379302938423e-16
+            ]
+          }
+        },
+        {
+          "method": "metric",
+          "quality": {
+            "error_per_input_norm": [
+              1.1122225829205618e-11
+            ],
+            "max_absolute_error": [
+              4.044891407882402e-11
+            ]
+          }
+        },
+        {
+          "method": "metric_12",
+          "quality": {
+            "error_per_input_norm": [
+              1.0077647508634183e-15
+            ],
+            "max_absolute_error": [
+              2.5762324922111858e-15
+            ]
+          }
+        },
+        {
+          "method": "metric_14",
+          "quality": {
+            "error_per_input_norm": [
+              4.9067054400340605e-17
+            ],
+            "max_absolute_error": [
+              1.4027379302938423e-16
+            ]
+          }
+        },
+        {
+          "method": "metric_16",
+          "quality": {
+            "error_per_input_norm": [
+              4.9039818606483466e-17
+            ],
+            "max_absolute_error": [
+              1.4027379302938423e-16
+            ]
+          }
+        },
+        {
+          "method": "metric_full",
+          "quality": {
+            "error_per_input_norm": [
+              4.9039818606483466e-17
+            ],
+            "max_absolute_error": [
+              1.4027379302938423e-16
+            ]
+          }
+        }
+      ],
+      "normalization": "Frobenius norm of the first 16 input rows; sampled-row error, distinct from full-graph error",
+      "nearest_float64_floor": {
+        "error_per_input_norm": [
+          4.880776006341719e-17
+        ],
+        "max_absolute_error": [
+          1.4027379302938423e-16
+        ]
+      }
+    },
+    {
+      "n": 100000,
+      "q": 4,
+      "sensitivity": false,
+      "theta": "0",
+      "oracle_window_discrepancy": 1.467559508886711e-77,
+      "methods": [
+        {
+          "method": "released",
+          "quality": {
+            "error_per_input_norm": [
+              4.6576090890556464e-17
+            ],
+            "max_absolute_error": [
+              1.773868608429494e-16
+            ]
+          }
+        },
+        {
+          "method": "metric",
+          "quality": {
+            "error_per_input_norm": [
+              2.570010264950581e-11
+            ],
+            "max_absolute_error": [
+              1.1074142141300633e-10
+            ]
+          }
+        },
+        {
+          "method": "metric_12",
+          "quality": {
+            "error_per_input_norm": [
+              1.283281885860069e-15
+            ],
+            "max_absolute_error": [
+              3.3659858421582146e-15
+            ]
+          }
+        },
+        {
+          "method": "metric_14",
+          "quality": {
+            "error_per_input_norm": [
+              4.6576090890556464e-17
+            ],
+            "max_absolute_error": [
+              1.773868608429494e-16
+            ]
+          }
+        },
+        {
+          "method": "metric_16",
+          "quality": {
+            "error_per_input_norm": [
+              4.7756321776220435e-17
+            ],
+            "max_absolute_error": [
+              1.773868608429494e-16
+            ]
+          }
+        },
+        {
+          "method": "metric_full",
+          "quality": {
+            "error_per_input_norm": [
+              4.7756321776220435e-17
+            ],
+            "max_absolute_error": [
+              1.773868608429494e-16
+            ]
+          }
+        }
+      ],
+      "normalization": "Frobenius norm of the first 16 input rows; sampled-row error, distinct from full-graph error",
+      "nearest_float64_floor": {
+        "error_per_input_norm": [
+          4.5363958429865294e-17
+        ],
+        "max_absolute_error": [
+          1.773868608429494e-16
+        ]
+      }
+    },
+    {
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": false,
+      "theta": "0",
+      "oracle_window_discrepancy": 1.6151669483631459e-77,
+      "methods": [
+        {
+          "method": "released",
+          "quality": {
+            "error_per_input_norm": [
+              5.6586750879442e-17
+            ],
+            "max_absolute_error": [
+              1.9391229828817547e-16
+            ]
+          }
+        },
+        {
+          "method": "metric",
+          "quality": {
+            "error_per_input_norm": [
+              2.7126827432621704e-11
+            ],
+            "max_absolute_error": [
+              7.14425165866702e-11
+            ]
+          }
+        },
+        {
+          "method": "metric_12",
+          "quality": {
+            "error_per_input_norm": [
+              2.079622451258475e-15
+            ],
+            "max_absolute_error": [
+              5.793867663438251e-15
+            ]
+          }
+        },
+        {
+          "method": "metric_14",
+          "quality": {
+            "error_per_input_norm": [
+              5.6586750879442e-17
+            ],
+            "max_absolute_error": [
+              1.9391229828817547e-16
+            ]
+          }
+        },
+        {
+          "method": "metric_16",
+          "quality": {
+            "error_per_input_norm": [
+              5.18741344728227e-17
+            ],
+            "max_absolute_error": [
+              1.9391229828817547e-16
+            ]
+          }
+        },
+        {
+          "method": "metric_full",
+          "quality": {
+            "error_per_input_norm": [
+              5.18741344728227e-17
+            ],
+            "max_absolute_error": [
+              1.9391229828817547e-16
+            ]
+          }
+        }
+      ],
+      "normalization": "Frobenius norm of the first 16 input rows; sampled-row error, distinct from full-graph error",
+      "nearest_float64_floor": {
+        "error_per_input_norm": [
+          5.0543549421951725e-17
+        ],
+        "max_absolute_error": [
+          1.9391229828817547e-16
+        ]
+      }
+    },
+    {
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "theta": "0",
+      "oracle_window_discrepancy": 2.4868257826683253e-77,
+      "methods": [
+        {
+          "method": "released",
+          "quality": {
+            "error_per_input_norm": [
+              5.4596989245030915e-17
+            ],
+            "max_absolute_error": [
+              2.1124577537198403e-16
+            ]
+          }
+        },
+        {
+          "method": "metric",
+          "quality": {
+            "error_per_input_norm": [
+              6.778346923469681e-11
+            ],
+            "max_absolute_error": [
+              2.6829332555002877e-10
+            ]
+          }
+        },
+        {
+          "method": "metric_12",
+          "quality": {
+            "error_per_input_norm": [
+              3.914135221376878e-15
+            ],
+            "max_absolute_error": [
+              1.363343333043336e-14
+            ]
+          }
+        },
+        {
+          "method": "metric_14",
+          "quality": {
+            "error_per_input_norm": [
+              6.502876475907712e-17
+            ],
+            "max_absolute_error": [
+              2.594141092850366e-16
+            ]
+          }
+        },
+        {
+          "method": "metric_16",
+          "quality": {
+            "error_per_input_norm": [
+              5.4961595722468984e-17
+            ],
+            "max_absolute_error": [
+              2.1124577537198403e-16
+            ]
+          }
+        },
+        {
+          "method": "metric_full",
+          "quality": {
+            "error_per_input_norm": [
+              5.4961595722468984e-17
+            ],
+            "max_absolute_error": [
+              2.1124577537198403e-16
+            ]
+          }
+        }
+      ],
+      "normalization": "Frobenius norm of the first 16 input rows; sampled-row error, distinct from full-graph error",
+      "nearest_float64_floor": {
+        "error_per_input_norm": [
+          5.1149874323794485e-17
+        ],
+        "max_absolute_error": [
+          2.1124577537198403e-16
+        ]
+      }
+    },
+    {
+      "n": 100000,
+      "q": 4,
+      "sensitivity": true,
+      "theta": "-1/64",
+      "oracle_window_discrepancy": 9.268260322434603e-78,
+      "methods": [
+        {
+          "method": "released",
+          "quality": {
+            "error_per_input_norm": [
+              6.039492062435442e-17,
+              1.2232154590553795e-17
+            ],
+            "max_absolute_error": [
+              1.6801527535079417e-16,
+              4.236432480057224e-17
+            ]
+          }
+        },
+        {
+          "method": "metric",
+          "quality": {
+            "error_per_input_norm": [
+              4.8685735235699975e-12,
+              6.969579872751965e-11
+            ],
+            "max_absolute_error": [
+              1.3308887059417943e-11,
+              2.0315306110027838e-10
+            ]
+          }
+        },
+        {
+          "method": "metric_12",
+          "quality": {
+            "error_per_input_norm": [
+              7.245249889625563e-17,
+              6.51121233441156e-16
+            ],
+            "max_absolute_error": [
+              2.0689698668905808e-16,
+              1.560167465491463e-15
+            ]
+          }
+        },
+        {
+          "method": "metric_14",
+          "quality": {
+            "error_per_input_norm": [
+              5.996597644293924e-17,
+              1.3465530178137285e-17
+            ],
+            "max_absolute_error": [
+              1.6801527535079417e-16,
+              4.236432480057224e-17
+            ]
+          }
+        },
+        {
+          "method": "metric_16",
+          "quality": {
+            "error_per_input_norm": [
+              6.039492062435442e-17,
+              1.2106366181862414e-17
+            ],
+            "max_absolute_error": [
+              1.6801527535079417e-16,
+              4.236432480057224e-17
+            ]
+          }
+        },
+        {
+          "method": "metric_full",
+          "quality": {
+            "error_per_input_norm": [
+              6.039492062435442e-17,
+              1.2106366181862414e-17
+            ],
+            "max_absolute_error": [
+              1.6801527535079417e-16,
+              4.236432480057224e-17
+            ]
+          }
+        }
+      ],
+      "normalization": "Frobenius norm of the first 16 input rows; sampled-row error, distinct from full-graph error",
+      "nearest_float64_floor": {
+        "error_per_input_norm": [
+          4.383251240119591e-17,
+          4.597083575331947e-18
+        ],
+        "max_absolute_error": [
+          1.0208241586280127e-16,
+          2.0509916645296088e-17
+        ]
+      }
+    },
+    {
+      "n": 100000,
+      "q": 4,
+      "sensitivity": true,
+      "theta": "0",
+      "oracle_window_discrepancy": 9.700236880967387e-78,
+      "methods": [
+        {
+          "method": "released",
+          "quality": {
+            "error_per_input_norm": [
+              4.6974766885624817e-17,
+              1.382480056994655e-17
+            ],
+            "max_absolute_error": [
+              1.1151404043737308e-16,
+              4.8698638467092884e-17
+            ]
+          }
+        },
+        {
+          "method": "metric",
+          "quality": {
+            "error_per_input_norm": [
+              4.033032023836379e-12,
+              4.6788797613190866e-11
+            ],
+            "max_absolute_error": [
+              1.101928307197897e-11,
+              1.3214520849274333e-10
+            ]
+          }
+        },
+        {
+          "method": "metric_12",
+          "quality": {
+            "error_per_input_norm": [
+              5.1592543770576625e-17,
+              3.908827601731703e-16
+            ],
+            "max_absolute_error": [
+              1.2689472338564705e-16,
+              9.407423096950956e-16
+            ]
+          }
+        },
+        {
+          "method": "metric_14",
+          "quality": {
+            "error_per_input_norm": [
+              4.690012112724013e-17,
+              1.4054230663020157e-17
+            ],
+            "max_absolute_error": [
+              1.1151404043737308e-16,
+              4.8698638467092884e-17
+            ]
+          }
+        },
+        {
+          "method": "metric_16",
+          "quality": {
+            "error_per_input_norm": [
+              4.6974766885624817e-17,
+              1.3818404264764965e-17
+            ],
+            "max_absolute_error": [
+              1.1151404043737308e-16,
+              4.8698638467092884e-17
+            ]
+          }
+        },
+        {
+          "method": "metric_full",
+          "quality": {
+            "error_per_input_norm": [
+              4.6974766885624817e-17,
+              1.3818404264764965e-17
+            ],
+            "max_absolute_error": [
+              1.1151404043737308e-16,
+              4.8698638467092884e-17
+            ]
+          }
+        }
+      ],
+      "normalization": "Frobenius norm of the first 16 input rows; sampled-row error, distinct from full-graph error",
+      "nearest_float64_floor": {
+        "error_per_input_norm": [
+          4.642373097983304e-17,
+          4.435526748348706e-18
+        ],
+        "max_absolute_error": [
+          1.1053056448765821e-16,
+          1.084526752537302e-17
+        ]
+      }
+    },
+    {
+      "n": 100000,
+      "q": 4,
+      "sensitivity": true,
+      "theta": "1/64",
+      "oracle_window_discrepancy": 8.676291320679987e-78,
+      "methods": [
+        {
+          "method": "released",
+          "quality": {
+            "error_per_input_norm": [
+              6.581860607577808e-17,
+              1.6733548297101653e-17
+            ],
+            "max_absolute_error": [
+              1.9233924338621415e-16,
+              7.067343946991599e-17
+            ]
+          }
+        },
+        {
+          "method": "metric",
+          "quality": {
+            "error_per_input_norm": [
+              3.494665767044413e-12,
+              2.931539784592447e-11
+            ],
+            "max_absolute_error": [
+              9.490325701676209e-12,
+              8.082357169862263e-11
+            ]
+          }
+        },
+        {
+          "method": "metric_12",
+          "quality": {
+            "error_per_input_norm": [
+              6.735079484675293e-17,
+              2.2004691583141454e-16
+            ],
+            "max_absolute_error": [
+              1.9233924338621415e-16,
+              5.428734505171772e-16
+            ]
+          }
+        },
+        {
+          "method": "metric_14",
+          "quality": {
+            "error_per_input_norm": [
+              6.581860607577808e-17,
+              1.898845042168681e-17
+            ],
+            "max_absolute_error": [
+              1.9233924338621415e-16,
+              7.067343946991599e-17
+            ]
+          }
+        },
+        {
+          "method": "metric_16",
+          "quality": {
+            "error_per_input_norm": [
+              6.581860607577808e-17,
+              1.6862341600374114e-17
+            ],
+            "max_absolute_error": [
+              1.9233924338621415e-16,
+              7.067343946991599e-17
+            ]
+          }
+        },
+        {
+          "method": "metric_full",
+          "quality": {
+            "error_per_input_norm": [
+              6.581860607577808e-17,
+              1.6862341600374114e-17
+            ],
+            "max_absolute_error": [
+              1.9233924338621415e-16,
+              7.067343946991599e-17
+            ]
+          }
+        }
+      ],
+      "normalization": "Frobenius norm of the first 16 input rows; sampled-row error, distinct from full-graph error",
+      "nearest_float64_floor": {
+        "error_per_input_norm": [
+          4.1416192268234026e-17,
+          5.0746345979791684e-18
+        ],
+        "max_absolute_error": [
+          9.41771158402707e-17,
+          1.5162288238658158e-17
+        ]
+      }
+    },
+    {
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": true,
+      "theta": "-1/64",
+      "oracle_window_discrepancy": 1.3186999479424794e-77,
+      "methods": [
+        {
+          "method": "released",
+          "quality": {
+            "error_per_input_norm": [
+              7.367957981359155e-17,
+              9.342506762950272e-18
+            ],
+            "max_absolute_error": [
+              2.7035615705485656e-16,
+              3.4754751760312374e-17
+            ]
+          }
+        },
+        {
+          "method": "metric",
+          "quality": {
+            "error_per_input_norm": [
+              2.6461666881659458e-12,
+              4.09482193101255e-11
+            ],
+            "max_absolute_error": [
+              9.463219928385538e-12,
+              1.4047395898430352e-10
+            ]
+          }
+        },
+        {
+          "method": "metric_12",
+          "quality": {
+            "error_per_input_norm": [
+              7.538000756760276e-17,
+              3.5146577511546334e-16
+            ],
+            "max_absolute_error": [
+              2.7035615705485656e-16,
+              1.3163558839929182e-15
+            ]
+          }
+        },
+        {
+          "method": "metric_14",
+          "quality": {
+            "error_per_input_norm": [
+              7.367957981359155e-17,
+              1.0746995147848236e-17
+            ],
+            "max_absolute_error": [
+              2.7035615705485656e-16,
+              3.4754751760312374e-17
+            ]
+          }
+        },
+        {
+          "method": "metric_16",
+          "quality": {
+            "error_per_input_norm": [
+              7.367957981359155e-17,
+              9.411058619397996e-18
+            ],
+            "max_absolute_error": [
+              2.7035615705485656e-16,
+              3.4754751760312374e-17
+            ]
+          }
+        },
+        {
+          "method": "metric_full",
+          "quality": {
+            "error_per_input_norm": [
+              7.367957981359155e-17,
+              9.424113347692284e-18
+            ],
+            "max_absolute_error": [
+              2.7035615705485656e-16,
+              3.4754751760312374e-17
+            ]
+          }
+        }
+      ],
+      "normalization": "Frobenius norm of the first 16 input rows; sampled-row error, distinct from full-graph error",
+      "nearest_float64_floor": {
+        "error_per_input_norm": [
+          5.849663448457243e-17,
+          3.193996719554044e-18
+        ],
+        "max_absolute_error": [
+          1.9966989370191328e-16,
+          1.1047236751430868e-17
+        ]
+      }
+    },
+    {
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": true,
+      "theta": "0",
+      "oracle_window_discrepancy": 1.1063307107366299e-77,
+      "methods": [
+        {
+          "method": "released",
+          "quality": {
+            "error_per_input_norm": [
+              4.435761756748673e-17,
+              9.002711499416191e-18
+            ],
+            "max_absolute_error": [
+              2.0883538617776965e-16,
+              3.47812888545072e-17
+            ]
+          }
+        },
+        {
+          "method": "metric",
+          "quality": {
+            "error_per_input_norm": [
+              2.2246544824591678e-12,
+              2.7416598737735435e-11
+            ],
+            "max_absolute_error": [
+              7.636476714010353e-12,
+              9.52168662251529e-11
+            ]
+          }
+        },
+        {
+          "method": "metric_12",
+          "quality": {
+            "error_per_input_norm": [
+              4.492016179520678e-17,
+              2.146565959015174e-16
+            ],
+            "max_absolute_error": [
+              2.0883538617776965e-16,
+              7.845704731955277e-16
+            ]
+          }
+        },
+        {
+          "method": "metric_14",
+          "quality": {
+            "error_per_input_norm": [
+              4.435761756748673e-17,
+              9.691406487665713e-18
+            ],
+            "max_absolute_error": [
+              2.0883538617776965e-16,
+              3.47812888545072e-17
+            ]
+          }
+        },
+        {
+          "method": "metric_16",
+          "quality": {
+            "error_per_input_norm": [
+              4.435761756748673e-17,
+              9.012563607899986e-18
+            ],
+            "max_absolute_error": [
+              2.0883538617776965e-16,
+              3.47812888545072e-17
+            ]
+          }
+        },
+        {
+          "method": "metric_full",
+          "quality": {
+            "error_per_input_norm": [
+              4.435761756748673e-17,
+              9.012563607899986e-18
+            ],
+            "max_absolute_error": [
+              2.0883538617776965e-16,
+              3.47812888545072e-17
+            ]
+          }
+        }
+      ],
+      "normalization": "Frobenius norm of the first 16 input rows; sampled-row error, distinct from full-graph error",
+      "nearest_float64_floor": {
+        "error_per_input_norm": [
+          4.432193176961463e-17,
+          3.027202354829166e-18
+        ],
+        "max_absolute_error": [
+          2.0883538617776965e-16,
+          9.814141503729998e-18
+        ]
+      }
+    },
+    {
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": true,
+      "theta": "1/64",
+      "oracle_window_discrepancy": 8.484548455388009e-78,
+      "methods": [
+        {
+          "method": "released",
+          "quality": {
+            "error_per_input_norm": [
+              6.671618919909806e-17,
+              8.753834234005601e-18
+            ],
+            "max_absolute_error": [
+              1.9881052298858569e-16,
+              3.44792994127418e-17
+            ]
+          }
+        },
+        {
+          "method": "metric",
+          "quality": {
+            "error_per_input_norm": [
+              1.9623925307192107e-12,
+              1.7073917389192254e-11
+            ],
+            "max_absolute_error": [
+              6.7968625393082625e-12,
+              6.04983091101532e-11
+            ]
+          }
+        },
+        {
+          "method": "metric_12",
+          "quality": {
+            "error_per_input_norm": [
+              6.810849393190559e-17,
+              1.2504943150166947e-16
+            ],
+            "max_absolute_error": [
+              1.9881052298858569e-16,
+              4.452666016242203e-16
+            ]
+          }
+        },
+        {
+          "method": "metric_14",
+          "quality": {
+            "error_per_input_norm": [
+              6.671618919909806e-17,
+              8.706360410532447e-18
+            ],
+            "max_absolute_error": [
+              1.9881052298858569e-16,
+              3.44792994127418e-17
+            ]
+          }
+        },
+        {
+          "method": "metric_16",
+          "quality": {
+            "error_per_input_norm": [
+              6.671618919909806e-17,
+              8.76299582057715e-18
+            ],
+            "max_absolute_error": [
+              1.9881052298858569e-16,
+              3.44792994127418e-17
+            ]
+          }
+        },
+        {
+          "method": "metric_full",
+          "quality": {
+            "error_per_input_norm": [
+              6.671618919909806e-17,
+              8.76299582057715e-18
+            ],
+            "max_absolute_error": [
+              1.9881052298858569e-16,
+              3.44792994127418e-17
+            ]
+          }
+        }
+      ],
+      "normalization": "Frobenius norm of the first 16 input rows; sampled-row error, distinct from full-graph error",
+      "nearest_float64_floor": {
+        "error_per_input_norm": [
+          4.794266920801787e-17,
+          3.4545503628688237e-18
+        ],
+        "max_absolute_error": [
+          1.4927837522945457e-16,
+          1.2543539274152928e-17
+        ]
+      }
+    }
+  ],
+  "source_hashes": {
+    "check_benchmark_high_precision.py": "d04c0774fc94f05cba0c9d8fe5425d589aeec8248167f53480aa319574d70c90",
+    "check_high_precision.py": "3e2b9dc26f8451b7bf2af37f8fd8e8ec795939d4331a605a1ca89cca77ef4ef5",
+    "metric_prototype.py": "466767d0875d33f73de2967a3814801513c6c415a3f11cc418ae47c3b1a4ae54"
+  }
+}

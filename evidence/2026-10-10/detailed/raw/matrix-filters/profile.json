@@ -1,0 +1,48 @@
+{
+  "family": "matrix-filters",
+  "cases": [],
+  "matrix_cases": [
+    {
+      "name": "Polynomial filter n=10000 q=4",
+      "n": 10000,
+      "q": 4,
+      "nonnormal": false,
+      "goal": 1e-08
+    },
+    {
+      "name": "Polynomial filter n=100000 q=8",
+      "n": 100000,
+      "q": 8,
+      "nonnormal": false,
+      "goal": 1e-08
+    },
+    {
+      "name": "Polynomial filter n=1000000 q=4",
+      "n": 1000000,
+      "q": 4,
+      "nonnormal": false,
+      "goal": 1e-08
+    },
+    {
+      "name": "Polynomial filter n=100000 q=16",
+      "n": 100000,
+      "q": 16,
+      "nonnormal": true,
+      "goal": 1e-08
+    },
+    {
+      "name": "Polynomial filter n=100000 q=4",
+      "n": 100000,
+      "q": 4,
+      "nonnormal": true,
+      "goal": 1e-12
+    },
+    {
+      "name": "Polynomial filter n=100000 q=4",
+      "n": 100000,
+      "q": 4,
+      "nonnormal": false,
+      "goal": 0.0001
+    }
+  ]
+}

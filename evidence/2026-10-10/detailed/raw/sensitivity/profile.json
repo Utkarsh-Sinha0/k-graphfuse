@@ -1,0 +1,46 @@
+{
+  "family": "sensitivity",
+  "cases": [],
+  "matrix_cases": [
+    {
+      "name": "Affine value and derivative n=10000 q=4",
+      "n": 10000,
+      "q": 4,
+      "nonnormal": true,
+      "sensitivity": true,
+      "goal": 1e-08
+    },
+    {
+      "name": "Affine value and derivative n=100000 q=4",
+      "n": 100000,
+      "q": 4,
+      "nonnormal": true,
+      "sensitivity": true,
+      "goal": 1e-08
+    },
+    {
+      "name": "Affine value and derivative n=1000000 q=4",
+      "n": 1000000,
+      "q": 4,
+      "nonnormal": true,
+      "sensitivity": true,
+      "goal": 1e-08
+    },
+    {
+      "name": "Affine value and derivative n=100000 q=16",
+      "n": 100000,
+      "q": 16,
+      "nonnormal": true,
+      "sensitivity": true,
+      "goal": 1e-08
+    },
+    {
+      "name": "Affine value and derivative n=1000000 q=8",
+      "n": 1000000,
+      "q": 8,
+      "nonnormal": true,
+      "sensitivity": true,
+      "goal": 1e-08
+    }
+  ]
+}

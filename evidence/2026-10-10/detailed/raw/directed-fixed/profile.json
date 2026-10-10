@@ -1,0 +1,89 @@
+{
+  "family": "directed-fixed",
+  "cases": [
+    {
+      "name": "Directed n=1000 weighted=False personalized=False",
+      "n": 1000,
+      "weighted": false,
+      "personal": false,
+      "cold": true
+    },
+    {
+      "name": "Directed n=1000 weighted=False personalized=True",
+      "n": 1000,
+      "weighted": false,
+      "personal": true,
+      "cold": true
+    },
+    {
+      "name": "Directed n=1000 weighted=True personalized=False",
+      "n": 1000,
+      "weighted": true,
+      "personal": false,
+      "cold": true
+    },
+    {
+      "name": "Directed n=1000 weighted=True personalized=True",
+      "n": 1000,
+      "weighted": true,
+      "personal": true,
+      "cold": true
+    },
+    {
+      "name": "Directed n=100000 weighted=False personalized=False",
+      "n": 100000,
+      "weighted": false,
+      "personal": false,
+      "cold": true
+    },
+    {
+      "name": "Directed n=100000 weighted=False personalized=True",
+      "n": 100000,
+      "weighted": false,
+      "personal": true,
+      "cold": true
+    },
+    {
+      "name": "Directed n=100000 weighted=True personalized=False",
+      "n": 100000,
+      "weighted": true,
+      "personal": false,
+      "cold": true
+    },
+    {
+      "name": "Directed n=100000 weighted=True personalized=True",
+      "n": 100000,
+      "weighted": true,
+      "personal": true,
+      "cold": true
+    },
+    {
+      "name": "Directed n=1000000 weighted=False personalized=False",
+      "n": 1000000,
+      "weighted": false,
+      "personal": false,
+      "cold": false
+    },
+    {
+      "name": "Directed n=1000000 weighted=False personalized=True",
+      "n": 1000000,
+      "weighted": false,
+      "personal": true,
+      "cold": false
+    },
+    {
+      "name": "Directed n=1000000 weighted=True personalized=False",
+      "n": 1000000,
+      "weighted": true,
+      "personal": false,
+      "cold": false
+    },
+    {
+      "name": "Directed n=1000000 weighted=True personalized=True",
+      "n": 1000000,
+      "weighted": true,
+      "personal": true,
+      "cold": false
+    }
+  ]
+}

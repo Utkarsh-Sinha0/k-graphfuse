@@ -1,0 +1,110 @@
+{
+  "family": "hard-graphs",
+  "cases": [
+    {
+      "name": "Topology chain",
+      "n": 100000,
+      "shape": "chain",
+      "personal": true,
+      "cold": true
+    },
+    {
+      "name": "Topology hub",
+      "n": 100000,
+      "shape": "hub",
+      "personal": true,
+      "cold": true
+    },
+    {
+      "name": "Topology disconnected",
+      "n": 100000,
+      "shape": "disconnected",
+      "personal": true,
+      "cold": true
+    },
+    {
+      "name": "Topology dangling",
+      "n": 100000,
+      "shape": "dangling",
+      "personal": true,
+      "cold": true
+    },
+    {
+      "name": "Topology isolated",
+      "n": 100000,
+      "shape": "isolated",
+      "personal": true,
+      "cold": true
+    },
+    {
+      "name": "Topology empty",
+      "n": 100000,
+      "shape": "empty",
+      "personal": true,
+      "cold": true
+    },
+    {
+      "name": "Topology dense",
+      "n": 2000,
+      "shape": "dense",
+      "personal": true,
+      "cold": true
+    },
+    {
+      "name": "Dead ends fraction=0.01 personal=False",
+      "n": 100000,
+      "personal": false,
+      "dangling_fraction": 0.01,
+      "cold": true
+    },
+    {
+      "name": "Dead ends fraction=0.01 personal=True",
+      "n": 100000,
+      "personal": true,
+      "dangling_fraction": 0.01,
+      "cold": true
+    },
+    {
+      "name": "Dead ends fraction=0.25 personal=False",
+      "n": 100000,
+      "personal": false,
+      "dangling_fraction": 0.25,
+      "cold": true
+    },
+    {
+      "name": "Dead ends fraction=0.25 personal=True",
+      "n": 100000,
+      "personal": true,
+      "dangling_fraction": 0.25,
+      "cold": true
+    },
+    {
+      "name": "Dead ends fraction=0.75 personal=False",
+      "n": 100000,
+      "personal": false,
+      "dangling_fraction": 0.75,
+      "cold": true
+    },
+    {
+      "name": "Dead ends fraction=0.75 personal=True",
+      "n": 100000,
+      "personal": true,
+      "dangling_fraction": 0.75,
+      "cold": true
+    },
+    {
+      "name": "Isolated fraction=0.1",
+      "n": 100000,
+      "personal": true,
+      "isolated_fraction": 0.1,
+      "cold": true
+    },
+    {
+      "name": "Isolated fraction=0.75",
+      "n": 100000,
+      "personal": true,
+      "isolated_fraction": 0.75,
+      "cold": true
+    }
+  ]
+}

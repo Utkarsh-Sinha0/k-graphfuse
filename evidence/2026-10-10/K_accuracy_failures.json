@@ -1,0 +1,50 @@
+[
+  {
+    "suite": "public-snap",
+    "case": "Public web-Google converged personalized",
+    "vertices": "875713",
+    "entries": "5105039",
+    "task": "converged PageRank",
+    "goal": "1e-06",
+    "status": "recorded",
+    "error": "",
+    "K_status": "NO_ACCEPTED_K_CONFIRMATION",
+    "accepted_control_groups": "NATIVE_GPU"
+  },
+  {
+    "suite": "public-snap",
+    "case": "Public roadNet-CA converged personalized",
+    "vertices": "1965206",
+    "entries": "5533214",
+    "task": "converged PageRank",
+    "goal": "1e-06",
+    "status": "recorded",
+    "error": "",
+    "K_status": "NO_ACCEPTED_K_CONFIRMATION",
+    "accepted_control_groups": "NATIVE_GPU"
+  },
+  {
+    "suite": "precision-weights",
+    "case": "Precision goal=0.0001 weights=wide-range",
+    "vertices": "50000",
+    "entries": "299977",
+    "task": "converged PageRank",
+    "goal": "0.0001",
+    "status": "recorded",
+    "error": "",
+    "K_status": "NO_ACCEPTED_K_CONFIRMATION",
+    "accepted_control_groups": "NATIVE_GPU"
+  },
+  {
+    "suite": "precision-weights",
+    "case": "Precision goal=1e-06 weights=wide-range",
+    "vertices": "50000",
+    "entries": "299977",
+    "task": "converged PageRank",
+    "goal": "1e-06",
+    "status": "recorded",
+    "error": "",
+    "K_status": "NO_ACCEPTED_K_CONFIRMATION",
+    "accepted_control_groups": "NATIVE_GPU"
+  }
+]

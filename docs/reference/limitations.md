@@ -25,6 +25,10 @@ CI status is visible in the repository. CUDA tests skip on CPU-only CI; a green 
 
 The same-T4 reference result is a scoped competitive advantage. It does not establish wider uniqueness, global SOTA, universal precision improvement, database-service replacement, revenue or bill savings. The earlier complete suite passed zero of 19 strongest GPU improvement gates. Best-candidate selection and within-run intervals do not replace independent runs.
 
+The newer 15-suite study passes 59 native speed gates among 89 attempted cases, or 26 when both observed error measures must also be no worse. Four K accuracy failures remain. Against the strongest tested overall control it passes 33/85 comparable cases. A later confirmation of the original reference graph favors cuGraph; Graph500 and complete file/rebuild workflows also favor native. Read the [native comparison](../benchmarks/cugraph.md) before reusing its totals.
+
+The [precision experiment](../benchmarks/precision-gpu.md) passes six constructed T4 cases against equivalent FP64 CuPy/PyTorch controls. It has 1–16-channel and diagonal-direction limits, sampled high-precision truth on 16 rows, and separate timed/repaired source versions. Its later repaired API did not receive a new full large latency run. Its local RTX 3060 million-vertex derivative does not pass the speed gate. These experimental functions are outside the installed package API.
+
 Sampled memory may miss peaks and includes inherited/library allocations. GPU-preparation measurements exclude CPU normalization/compiler work. Sampled average board power was higher; integrated energy was not measured. Customer projections remain models until measured.
 
 ## Operational limits

@@ -1,5 +1,25 @@
 # Benchmark methodology
 
+## Choose the study contract
+
+| Study | Task | Accuracy reference | Timing and uncertainty |
+|---|---|---|---|
+| [Broad native comparison](cugraph.md) | Fixed-update or converged rankings under each recorded graph contract | Full reference outputs; L1 and maximum relative error | Five paired blocks of 31 samples; bootstrap pooled medians |
+| [Precision GPU experiment](precision-gpu.md) | Matrix-valued polynomial filters and affine derivatives | Full FP64 CPU check plus independent 256/384-bit truth on 16 rows | Five blocks of 31 samples; bootstrap block medians; seven pilot samples/configuration |
+| [Original reference task](historical-reference.md) | Exactly ten global probability PageRank updates | Downloaded official Graphalytics per-vertex reference | 31 warm / 11 host-output samples; one-run sample bootstrap |
+
+A graph vertex is one operator row; a channel is one feature column. FP32 and FP64 mean 32-bit and 64-bit floating-point execution. Acceptance, precision, output coordinates, graph normalization and timing boundaries must match the selected study. A rank calculation, an arbitrary polynomial filter and a shortest-path query are different tasks.
+
+The broad study has 89 native-control cases: 85 with accepted K confirmations and four K accuracy failures. A strong speed win requires K median at most 90% of the comparator median, a descriptive interval above one and no p95 regression. The stricter native comparison additionally checks both observed reference error measures. Include failures in an attempted-case denominator; do not report only a favorable subset.
+
+The precision study selects the fastest accuracy-eligible pilot profile and compares it with the fastest accepted held-out control. The policy was reconstructed after exploration, and the wide follow-up followed initial losses. Its published audit applies the 10% latency threshold; all six selected T4 results pass. An earlier exploratory audit used a 1.1 speedup threshold, equivalent to about 9.09% less latency. The public audit correction does not change the six selected T4 wins. Raw samples and timed source versions are unchanged.
+
+Do not pool independent studies as additional native-cuGraph wins. A public graph or a large vertex count does not remove selection bias or establish a production-quality outcome.
+
+The documentation uses descriptive task names, explicit preconditions, consistent units and accessible figures, following the [Google developer documentation style guidance](https://developers.google.com/style/highlights). Separating profiling, correctness and timing boundaries follows the practical evaluation approach in the [NVIDIA CUDA Best Practices Guide](https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/). These are documentation and engineering references, not vendor endorsements of K GraphFuse.
+
+## Original reference protocol
+
 The public-reference protocol was saved before receiving the final timing result. The numerical core remains unchanged. The fixtures compare final original probability vectors; an independent SciPy iteration checks the polynomial before timed GPU execution. This is a Graphalytics reference task, not an officially audited benchmark submission.
 
 ## Workload contract

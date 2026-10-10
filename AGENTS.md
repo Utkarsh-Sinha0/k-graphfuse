@@ -10,6 +10,8 @@ Use this file to find implementation and verification context. It does not ask a
 - `examples/`: small executable checks of the public API.
 - `docs/`: installation, tutorials, task guides, concepts, API and benchmark contracts.
 - `evidence/`: immutable historical scientific records and frozen run bootstraps; historical Sinha naming is intentional.
+- `evidence/2026-10-10/`: 15-suite raw records, all competitors, accuracy failures, and native comparison counts.
+- `experiments/precision_gpu/`: experimental fused GPU source, timed snapshots, sampled high-precision references, and separate checked-API tests; outside the installed package API.
 - `benchmarks/verify_evidence.py`: offline source/statistics/claim audit; does not rerun large GPU benchmarks.
 - `docs/claims.json`: bounded claims with source paths and limitations.
 
@@ -19,6 +21,6 @@ Run `python -m unittest discover -s tests -v`, the CPU examples, `python benchma
 
 ## Editing rules
 
-Preserve unrelated work, MIT notices and historical evidence. Add a separate run identity for new experiments. Do not claim global SOTA, universal superiority, novel priority, customer savings or guaranteed search ranking. The same-T4 21.28% median benefit has a narrow ten-update PageRank scope; the earlier 19-workload suite passes zero strongest GPU gates. Conditional mathematical certificates exclude executor roundoff.
+Preserve unrelated work, MIT notices and historical evidence. Add a separate run identity for new experiments. Do not claim global SOTA, universal superiority, novel priority, customer savings or guaranteed search ranking. The same-T4 21.28% median benefit has a narrow ten-update PageRank scope; a later confirmation on that graph favors cuGraph. The earlier 19-workload suite passes zero strongest GPU gates. The newer broad suite has 59 native speed-gate wins among 89 attempted cases (85 comparable, four K accuracy failures), including 26 wins with both reference errors no worse. Six precision-experiment wins compare against FP64 CuPy/PyTorch, not native cuGraph. Conditional mathematical certificates exclude executor roundoff.
 
 Publication must exclude secrets, private contact information, identifying host paths and account screenshots. Requested visible author credit is documented in NOTICE/CITATION.cff; do not convert it into an additional mandatory Apache restriction.

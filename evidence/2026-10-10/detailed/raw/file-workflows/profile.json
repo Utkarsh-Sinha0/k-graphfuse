@@ -1,0 +1,12 @@
+{
+  "family": "file-workflows",
+  "cases": [
+    {
+      "name": "File workflow warm stage context",
+      "n": 20000,
+      "weighted": true,
+      "cold": true
+    }
+  ],
+  "file_pipeline": true
+}

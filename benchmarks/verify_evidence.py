@@ -24,3 +24,4 @@ assert values["broader_gate"] == 0 and values["complete_inequality"] == 2
 assert math.isclose(values["job_impact"], values["same_t4_median"]/2, rel_tol=1e-12)
 assert "global SOTA" in claims["unestablished"]
 print("PASS: byte-identical released numerical core and bounded claims ledger.")
+runpy.run_path(str(Path(__file__).with_name("_verify_extended.py")), run_name="__main__")

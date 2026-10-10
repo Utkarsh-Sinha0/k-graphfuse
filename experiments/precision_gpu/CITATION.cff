@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite K GraphFuse when using the implementation or benchmark evidence."
+type: software
+title: "K GraphFuse: experimental precision GPU upgrade and benchmark evidence"
+authors:
+  - family-names: Sinha
+    given-names: Utkarsh
+version: "precision-experiment-2026-10-10"
+url: "https://utkarsh-sinha0.github.io/k-graphfuse/"
+repository-code: "https://github.com/Utkarsh-Sinha0/k-graphfuse"
+license:
+  - Apache-2.0
+  - MIT
+abstract: "Experimental similarity-aware sparse polynomial filters, fused CUDA execution and directional sensitivities. Includes scoped constructed-workload evidence; the public repository link refers to the installed API; experimental source and evidence are published separately."
+keywords:
+  - graph analytics
+  - PageRank
+  - sparse matrices
+  - polynomial filters
+  - CUDA

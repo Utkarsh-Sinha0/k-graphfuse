@@ -1,0 +1,161 @@
+{
+  "family": "public-snap",
+  "cases": [
+    {
+      "name": "Public ca-GrQc ten-step global",
+      "n": 100000,
+      "dataset": {
+        "name": "ca-GrQc",
+        "url": "https://snap.stanford.edu/data/ca-GrQc.txt.gz",
+        "undirected": true
+      },
+      "personal": false,
+      "personal_mode": "single",
+      "converge": false,
+      "goal": 1e-06
+    },
+    {
+      "name": "Public ca-GrQc converged personalized",
+      "n": 100000,
+      "dataset": {
+        "name": "ca-GrQc",
+        "url": "https://snap.stanford.edu/data/ca-GrQc.txt.gz",
+        "undirected": true
+      },
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-06
+    },
+    {
+      "name": "Public facebook_combined ten-step global",
+      "n": 100000,
+      "dataset": {
+        "name": "facebook_combined",
+        "url": "https://snap.stanford.edu/data/facebook_combined.txt.gz",
+        "undirected": true
+      },
+      "personal": false,
+      "personal_mode": "single",
+      "converge": false,
+      "goal": 1e-06
+    },
+    {
+      "name": "Public facebook_combined converged personalized",
+      "n": 100000,
+      "dataset": {
+        "name": "facebook_combined",
+        "url": "https://snap.stanford.edu/data/facebook_combined.txt.gz",
+        "undirected": true
+      },
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-06
+    },
+    {
+      "name": "Public web-Google ten-step global",
+      "n": 100000,
+      "dataset": {
+        "name": "web-Google",
+        "url": "https://snap.stanford.edu/data/web-Google.txt.gz",
+        "undirected": false
+      },
+      "personal": false,
+      "personal_mode": "single",
+      "converge": false,
+      "goal": 1e-06
+    },
+    {
+      "name": "Public web-Google converged personalized",
+      "n": 100000,
+      "dataset": {
+        "name": "web-Google",
+        "url": "https://snap.stanford.edu/data/web-Google.txt.gz",
+        "undirected": false
+      },
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-06
+    },
+    {
+      "name": "Public com-dblp.ungraph ten-step global",
+      "n": 100000,
+      "dataset": {
+        "name": "com-dblp.ungraph",
+        "url": "https://snap.stanford.edu/data/bigdata/communities/com-dblp.ungraph.txt.gz",
+        "undirected": true
+      },
+      "personal": false,
+      "personal_mode": "single",
+      "converge": false,
+      "goal": 1e-06
+    },
+    {
+      "name": "Public com-dblp.ungraph converged personalized",
+      "n": 100000,
+      "dataset": {
+        "name": "com-dblp.ungraph",
+        "url": "https://snap.stanford.edu/data/bigdata/communities/com-dblp.ungraph.txt.gz",
+        "undirected": true
+      },
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-06
+    },
+    {
+      "name": "Public com-youtube.ungraph ten-step global",
+      "n": 100000,
+      "dataset": {
+        "name": "com-youtube.ungraph",
+        "url": "https://snap.stanford.edu/data/bigdata/communities/com-youtube.ungraph.txt.gz",
+        "undirected": true
+      },
+      "personal": false,
+      "personal_mode": "single",
+      "converge": false,
+      "goal": 1e-06
+    },
+    {
+      "name": "Public com-youtube.ungraph converged personalized",
+      "n": 100000,
+      "dataset": {
+        "name": "com-youtube.ungraph",
+        "url": "https://snap.stanford.edu/data/bigdata/communities/com-youtube.ungraph.txt.gz",
+        "undirected": true
+      },
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-06
+    },
+    {
+      "name": "Public roadNet-CA ten-step global",
+      "n": 100000,
+      "dataset": {
+        "name": "roadNet-CA",
+        "url": "https://snap.stanford.edu/data/roadNet-CA.txt.gz",
+        "undirected": true
+      },
+      "personal": false,
+      "personal_mode": "single",
+      "converge": false,
+      "goal": 1e-06
+    },
+    {
+      "name": "Public roadNet-CA converged personalized",
+      "n": 100000,
+      "dataset": {
+        "name": "roadNet-CA",
+        "url": "https://snap.stanford.edu/data/roadNet-CA.txt.gz",
+        "undirected": true
+      },
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "goal": 1e-06
+    }
+  ]
+}

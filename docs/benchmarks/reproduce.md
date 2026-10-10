@@ -12,6 +12,44 @@ python benchmarks/verify_evidence.py
 
 The audit checks the publication manifest, unchanged module/frozen-runner hashes, all recorded sample statistics, candidate acceptance, comparator selection, bootstrap intervals, claim calculations and earlier-suite verdicts. It does not rerun GPU timings. Private account metadata, screenshots and installation logs are intentionally excluded; the transformation ledger records the public copy changes.
 
+The extended audit also checks all 15 broad-suite source snapshots, 111 case records and 235 confirmed comparison rows; recomputes native denominators and the 59 speed / 26 speed-and-error wins; and reruns the precision study's offline derivation in a temporary copy. It verifies experimental package completeness and checks that the tested API hashes match the published source. CPU CI performs this audit without installing cuGraph, CuPy or PyTorch.
+
+## Check the experimental GPU API
+
+The experimental source is separate from the installed `k_graphfuse` package. Install the recorded compatible CUDA dependencies, then run from the experiment directory:
+
+```sh
+cd experiments/precision_gpu
+python verify_package.py
+python run_tests.py
+```
+
+The GPU regression runner requires a real CUDA device and fails on skipped checks. It initializes PyTorch first, runs 29 core tests and then 14 upgrade tests in the same process to exercise compiler/header and stream interoperability. It writes a new local test record; that result is not a new large benchmark. Read the [experiment usage instructions](https://github.com/Utkarsh-Sinha0/k-graphfuse/blob/main/experiments/precision_gpu/README.md) before execution.
+
+## Reproduce frozen precision timings
+
+Use a disposable Linux CUDA environment. The recorded T4 builds are CuPy 14.2.0 and PyTorch 2.11.0+cu128, with NumPy 2.1.3, SciPy 1.16.3, Mpmath 1.3.0 and threadpoolctl. Install a matching CUDA-enabled PyTorch build separately. No private notebook account or credential is needed to run the frozen scripts locally.
+
+Materialize the main frozen source into an empty workspace, preserving the included core layout:
+
+```sh
+mkdir -p /tmp/kgf-product/source /tmp/kgf-product/results
+cp -R experiments/precision_gpu/source/core /tmp/kgf-product/source/core
+cp experiments/precision_gpu/source/product_v1/* /tmp/kgf-product/
+cd /tmp/kgf-product
+export KGF_PRODUCT_OUTPUT=/tmp/kgf-product/results
+export KGF_PRODUCT_CASES='[[10000,4,false],[100000,4,false],[1000000,4,false],[100000,16,false]]'
+python benchmark_product_cloud.py
+```
+
+For sensitivities, create a second empty workspace with the same main/core files and set `KGF_PRODUCT_CASES='[[100000,4,true],[1000000,4,true]]'`.
+
+For the wide follow-up, create a third empty workspace. Copy the main source first, then overlay `source/wide_v1` so its exact wide executor and script replace their main versions; set `KGF_PRODUCT_CASES='[[100000,16,false]]'`. The recorded wide snapshot intentionally reuses some unchanged main/core files. Use the source hashes in the returned reports to verify the materialized version. The initial wide filter in the first run preserves the losing profiles; the third run supplies the selected wide confirmation.
+
+The frozen timed code predates the final default-stream interoperability repair. Use the current checked API for application evaluation, and the frozen code only to reproduce its recorded experiment in a suitable environment. New hardware, builds, input values or preparation paths require a new run identity. Captured timing replays theta zero; endpoint accuracy checks are separate.
+
+For the broad suite, each `evidence/2026-10-10/detailed/raw/<suite>/run.py` is a standalone frozen Linux/Kaggle bootstrap. It can install/download benchmark dependencies and datasets in a disposable workspace. Review the corresponding `profile.json` before running it. Parallel workers must use separate GPUs or isolated runs; timing simultaneous jobs on one GPU can create contention.
+
 ## Audit the saved released CPU scores
 
 The repository includes the wrapper's generated `arcade_scores.bin` and timings. Obtain `datagen-7_5-fb-PR` from the [official Graphalytics dataset archive](https://datasets.ldbcouncil.org/graphalytics/datagen-7_5-fb.tar.zst), respecting its dataset terms, then run:

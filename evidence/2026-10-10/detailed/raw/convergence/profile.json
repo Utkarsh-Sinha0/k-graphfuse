@@ -1,0 +1,156 @@
+{
+  "family": "convergence",
+  "cases": [
+    {
+      "name": "Convergence beta=0.5 n=10000 shape=random",
+      "n": 10000,
+      "shape": "random",
+      "weighted": true,
+      "personal": true,
+      "converge": true,
+      "beta": 0.5,
+      "goal": 1e-08,
+      "cold": true
+    },
+    {
+      "name": "Convergence beta=0.85 n=10000 shape=random",
+      "n": 10000,
+      "shape": "random",
+      "weighted": true,
+      "personal": true,
+      "converge": true,
+      "beta": 0.85,
+      "goal": 1e-08,
+      "cold": true
+    },
+    {
+      "name": "Convergence beta=0.95 n=10000 shape=random",
+      "n": 10000,
+      "shape": "random",
+      "weighted": true,
+      "personal": true,
+      "converge": true,
+      "beta": 0.95,
+      "goal": 1e-08,
+      "cold": true
+    },
+    {
+      "name": "Convergence beta=0.5 n=10000 shape=undirected",
+      "n": 10000,
+      "shape": "undirected",
+      "weighted": true,
+      "personal": true,
+      "converge": true,
+      "beta": 0.5,
+      "goal": 1e-08,
+      "cold": true
+    },
+    {
+      "name": "Convergence beta=0.85 n=10000 shape=undirected",
+      "n": 10000,
+      "shape": "undirected",
+      "weighted": true,
+      "personal": true,
+      "converge": true,
+      "beta": 0.85,
+      "goal": 1e-08,
+      "cold": true
+    },
+    {
+      "name": "Convergence beta=0.95 n=10000 shape=undirected",
+      "n": 10000,
+      "shape": "undirected",
+      "weighted": true,
+      "personal": true,
+      "converge": true,
+      "beta": 0.95,
+      "goal": 1e-08,
+      "cold": true
+    },
+    {
+      "name": "Convergence beta=0.5 n=100000 shape=random",
+      "n": 100000,
+      "shape": "random",
+      "weighted": true,
+      "personal": true,
+      "converge": true,
+      "beta": 0.5,
+      "goal": 1e-08,
+      "cold": false
+    },
+    {
+      "name": "Convergence beta=0.85 n=100000 shape=random",
+      "n": 100000,
+      "shape": "random",
+      "weighted": true,
+      "personal": true,
+      "converge": true,
+      "beta": 0.85,
+      "goal": 1e-08,
+      "cold": false
+    },
+    {
+      "name": "Convergence beta=0.95 n=100000 shape=random",
+      "n": 100000,
+      "shape": "random",
+      "weighted": true,
+      "personal": true,
+      "converge": true,
+      "beta": 0.95,
+      "goal": 1e-08,
+      "cold": false
+    },
+    {
+      "name": "Convergence beta=0.5 n=100000 shape=undirected",
+      "n": 100000,
+      "shape": "undirected",
+      "weighted": true,
+      "personal": true,
+      "converge": true,
+      "beta": 0.5,
+      "goal": 1e-08,
+      "cold": false
+    },
+    {
+      "name": "Convergence beta=0.85 n=100000 shape=undirected",
+      "n": 100000,
+      "shape": "undirected",
+      "weighted": true,
+      "personal": true,
+      "converge": true,
+      "beta": 0.85,
+      "goal": 1e-08,
+      "cold": false
+    },
+    {
+      "name": "Convergence beta=0.95 n=100000 shape=undirected",
+      "n": 100000,
+      "shape": "undirected",
+      "weighted": true,
+      "personal": true,
+      "converge": true,
+      "beta": 0.95,
+      "goal": 1e-08,
+      "cold": false
+    },
+    {
+      "name": "Slow restart beta=.99 directed",
+      "n": 2000,
+      "shape": "chain",
+      "personal": true,
+      "personal_mode": "single",
+      "converge": true,
+      "beta": 0.99,
+      "goal": 1e-08
+    },
+    {
+      "name": "Slow restart beta=.99 undirected",
+      "n": 10000,
+      "shape": "undirected",
+      "personal": true,
+      "converge": true,
+      "beta": 0.99,
+      "goal": 1e-08
+    }
+  ]
+}

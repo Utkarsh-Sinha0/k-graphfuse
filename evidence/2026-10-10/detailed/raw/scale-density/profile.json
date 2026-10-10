@@ -1,0 +1,47 @@
+{
+  "family": "scale-density",
+  "cases": [
+    {
+      "name": "Scale n=1000 degree=5",
+      "n": 1000,
+      "degree": 5,
+      "weighted": true
+    },
+    {
+      "name": "Scale n=10000 degree=5",
+      "n": 10000,
+      "degree": 5,
+      "weighted": true
+    },
+    {
+      "name": "Scale n=100000 degree=5",
+      "n": 100000,
+      "degree": 5,
+      "weighted": true
+    },
+    {
+      "name": "Scale n=1000000 degree=5",
+      "n": 1000000,
+      "degree": 5,
+      "weighted": true
+    },
+    {
+      "name": "Scale n=5000000 degree=5",
+      "n": 5000000,
+      "degree": 5,
+      "weighted": true
+    },
+    {
+      "name": "Scale n=100000 degree=64",
+      "n": 100000,
+      "degree": 64,
+      "weighted": true
+    },
+    {
+      "name": "Scale n=500000 degree=32",
+      "n": 500000,
+      "degree": 32,
+      "weighted": true
+    }
+  ]
+}

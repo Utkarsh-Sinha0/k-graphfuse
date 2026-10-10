@@ -1,6 +1,7 @@
 * text=auto eol=lf
 # Preserve scientific evidence bytes and avoid enormous generated-line diffs.
 evidence/** -text -diff
+experiments/** -text
 src/c2fuse.py -text
 src/sparse_c2fuse.py -text
 src/fast_bounds.py -text
@@ -10,4 +11,5 @@ src/local_c2fuse.py -text
 src/ppr_certificate.py -text
 src/cuda_c2fuse.py -text
 *.png binary
+*.svg -diff
 *.bin binary

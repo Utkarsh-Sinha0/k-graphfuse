@@ -1,66 +1,38 @@
 ---
-description: Evidence-backed K GraphFuse PageRank comparison with native cuGraph, observed memory peaks, accuracy tradeoffs, broader negative results and public product context.
+title: K GraphFuse benchmark evidence — cuGraph, precision filters and sensitivity
+description: Compare native NVIDIA cuGraph, tuned FP64 GPU controls, latency, sampled memory and numerical accuracy using raw records, audited gates, failures and reproducibility.
 ---
 # Benchmark results and competitors
 
-**Measured advantage:** on one matched public Graphalytics PageRank task, K GraphFuse has lower median warm compute time than native cuGraph on the same T4, lower observed total memory peaks, and accepted output accuracy. This is a scoped result. It does not establish a unique market position or global SOTA.
+K GraphFuse has measured advantages on specific repeated graph calculations. The published studies use different task contracts and source versions; select the matching comparison before reusing a result.
 
-## Same-device native cuGraph comparison
+## Published results
 
-The task is `datagen-7_5-fb`: 633,432 vertices, 34,185,747 source edges, 68,371,494 symmetrized operator entries, global undirected unweighted PageRank, uniform start, damping 0.85, exactly ten updates. Probability output is timed. Zero truncation retains the full finite polynomial. Measurements were recorded on 9 October 2026.
+| Study | Main result | Comparator and scope |
+|---|---|---|
+| [Broad native cuGraph study](cugraph.md) | **59/89 strong speed wins**, including **26/89 speed-and-error wins** | 85 directly comparable cases plus four K accuracy failures |
+| [Strongest tested alternatives](cugraph.md#compare-against-the-strongest-tested-alternative) | **33/85 overall**, **38/85 GPU** speed-gate wins | Fastest accepted tested backend, including CPU where measured |
+| [Precision GPU experiment](precision-gpu.md) | **6/6** speed-and-sampled-accuracy gates; **1.25–3.74x** | Equivalent FP64 CuPy/PyTorch controls; constructed filters and derivatives |
+| [Original reference experiment](historical-reference.md) | Eight favorable latency/memory/error observations out of nine | One same-T4 ten-update PageRank setup; aggregate L1 error worse |
 
-Best accepted K configuration: `torch.float32`, unpacked, eager (`capture=False`). Comparator: native `pylibcugraph 26.10.0` FP32 with cached graph and outgoing weight sums. Both run on Tesla T4 device 0 of the same machine. Only one GPU is used.
+“Speed-and-error win” in the broad suite means the strong speed gate plus no worse recorded L1 and maximum-relative reference error. It does not include every resource or downstream quality metric. The precision study uses an independent high-precision sampled oracle and a different error contract.
 
-| Metric | K GraphFuse | Native cuGraph | Interpretation |
-|---|---:|---:|---|
-| Warm compute median | 49.905806 ms | 63.397649 ms | 21.28% lower; 1.270346× ratio |
-| Warm compute p95 | 49.983254 ms | 67.156270 ms | 25.57% lower |
-| Compute + host output median | 50.421915 ms | 63.465624 ms | 20.55% lower |
-| Compute + host output p95 | 51.358547 ms | 68.483130 ms | 25.01% lower |
-| First call after GPU preparation | 61.941168 ms | 70.695178 ms | 12.38% lower; one observation |
-| Sampled total device peak | 1,284,702,208 B | 2,970,812,416 B | 56.76% lower observed total use |
-| Sampled process RSS peak | 4,920,475,648 B | 7,672,205,312 B | 35.87% lower observed process use |
-| Worst per-vertex relative error | 2.520975e-7 | 4.527438e-7 | Both below the `1e-4` acceptance gate |
-| Aggregate L1 error | 4.903210e-8 | 4.498058e-8 | K is 9.01% higher |
-| Sampled mean board power | 59.5755 W | 41.8442 W | K is higher; query energy was not integrated |
+![Six audited precision GPU comparisons with explicit timing and accuracy scope](../assets/precision_t4_comparison.png)
 
-There are 31 synchronized warm and 11 host-output samples per GPU configuration. The descriptive within-run 95% bootstrap interval for the median ratio is **1.249605–1.298629×**, using 5,000 resamples and seed `20261009`. Selection among configurations is not corrected in this interval. No cross-run variance is estimated. All 11 measured configurations, including the CPU product, pass the downloaded per-vertex reference; 27 original tests pass with zero skips.
+## Where the evidence is strongest
 
-![Same-T4 latency, sampled memory and accuracy results](../assets/k_native_comparison.png)
+- Repeated resident ranking stages have native cuGraph speed wins on several public graphs. Stronger CuPy controls still lead on some of those same graphs.
+- The precision experiment provides speed plus sampled numerical accuracy for low-channel sparse polynomial filters and diagonal-parameter derivatives on the constructed asymmetric family.
+- The original reference run records lower sampled total GPU/process memory, with short-peak and inherited-allocation limitations.
 
-## Released CPU product on the same host
+Use [application fit](../guides/applications.md) to translate a calculation-stage result into a pilot. Production benefit depends on the time spent in that stage, graph updates, transfers, concurrency and downstream quality.
 
-Unmodified ArcadeDB **26.10.1** embedded PageRank, using the released engine and normal Graph Analytical View, records median **920.849188 ms** and p95 **964.995717 ms** on four logical Xeon host processors. Maximum relative reference error is `4.987509e-15`. Preparation takes about `164.12 s` and is separate.
+## Results that limit the claim
 
-The ratio to the T4 result is approximately `18.45×` on this machine. This is a CPU-to-GPU deployment comparison with different processors and preparation scopes; it is not a pure algorithm comparison or an industry-wide product speedup. CPU peak memory and query energy were not measured. Keep CPU and GPU execution classes visible.
+Native cuGraph is **2.72x faster on Graph500-22**. A later datagen confirmation also favors native cuGraph, despite the original 21.28% K median advantage on that graph. Full file-processing and rebuild workflows favor native cuGraph. Four broad ranking cases fail K accuracy confirmation. K does not implement BFS, shortest paths, components, triangles or Louvain.
 
-## Public product scores: separate hardware
+The older 19-workload study passed zero strongest GPU gates under its separate contracts. Its raw records remain published rather than replaced by newer wins. Neither study establishes global SOTA, absence of alternatives, integrated energy savings or customer value.
 
-The [pinned vendor-published Graphalytics comparison](https://github.com/ArcadeData/ldbc_graphalytics_platforms_arcadedb/blob/22d125d87ddbfd028ca2c50df6c5d000546349f9/README.md) reports Apple M5 Pro, 48 GB RAM, Temurin 25 and product-specific configurations. These are publisher results, not independently certified submissions. The [methodology](https://github.com/ArcadeData/ldbc_graphalytics_platforms_arcadedb/blob/22d125d87ddbfd028ca2c50df6c5d000546349f9/docs/benchmark-graphalytics-multivendor.md) explains product adaptations and excluded failures.
+## Audit trail
 
-| Published product/configuration | Reported task time | Qualification |
-|---|---:|---|
-| ArcadeDB 26.10.1 released embedded | 86 ms | Apple M5 Pro result; not the local Xeon result |
-| ArcadeDB 26.11.1 development snapshot | 85 ms | Unreleased snapshot, separate status |
-| ArcadeDB Docker | 119 ms | Container setup differs |
-| Neo4j 2026.09.0 / GDS | 6,840 ms | Two GDS runs combined to match the reference |
-| Memgraph 3.13.1 / MAGE | 4,230 ms | Publisher configuration |
-| HugeGraph | 2,450 ms | Publisher configuration |
-| Kuzu, archived | 850 ms | Archived project; lifecycle differs |
-| ArangoDB 3.11, legacy | 70,300 ms | Legacy configuration; not current default |
-
-No speedup ratio divides a public Apple score by K GraphFuse's T4 timing. DuckPGQ and FalkorDB results that failed the reference are not accepted performance rankings. The raw public catalogue preserves statuses and unmeasured tasks. K GraphFuse has no exact matched `graph500-22` score in this release.
-
-![Public product context with hardware and lifecycle labels](../assets/k_public_context.png)
-
-## Broader suite and negative evidence
-
-The earlier three-run suite completes **19 unique workloads**, preserving **20 historical case records**, **466 candidates**, **283 accepted**, **27 not run**, and **18 exceptions**; remaining candidates fail acceptance. Its strongest all-controls GPU gate requires at least 10% lower median than the best accepted GPU control, a descriptive interval above one, and no p95 regression. **Zero of 19 complete workloads pass this gate.** The largest completed graph has five million vertices and 34,999,980 stored entries; it is a synthetic scale control.
-
-Some older native-library comparisons used a symmetric-output adapter or sequential query batches. They are not the same contract as the native probability result above and are not substituted for it. Large same-library ratios should not be read as public product leadership.
-
-## Reuse this claim accurately
-
-> K GraphFuse recorded 21.28% lower median warm compute time than native NVIDIA cuGraph on the same Tesla T4 for the tested ten-update Graphalytics PageRank workload. Observed total memory peaks were lower, and both outputs passed the reference check. Wider performance leadership and customer savings remain unestablished.
-
-Attach the graph, hardware, versions, timing boundary and limitations whenever reproducing the number. [Methodology](methodology.md) · [Audit and reproduction](reproduce.md) · [Machine-readable claims](../claims.json) · [Raw repository evidence](https://github.com/Utkarsh-Sinha0/k-graphfuse/tree/main/evidence).
+Every study links raw samples, configurations, acceptance criteria, failed candidates and frozen source versions. Run `python benchmarks/verify_evidence.py` to check archived statistics, source hashes and claim counts without rerunning the GPU experiments. [Methodology](methodology.md) · [Reproduce and audit](reproduce.md) · [Claims ledger](../claims.json) · [Support limits](../reference/limitations.md).

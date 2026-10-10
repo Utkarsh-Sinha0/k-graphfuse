@@ -1,0 +1,53 @@
+{
+  "family": "locality",
+  "cases": [
+    {
+      "name": "Localized finite propagation n=100000 shape=chain",
+      "n": 100000,
+      "shape": "chain",
+      "personal": true,
+      "personal_mode": "single",
+      "local": true
+    },
+    {
+      "name": "Localized finite propagation n=100000 shape=hub",
+      "n": 100000,
+      "shape": "hub",
+      "personal": true,
+      "personal_mode": "single",
+      "local": true
+    },
+    {
+      "name": "Localized finite propagation n=100000 shape=random",
+      "n": 100000,
+      "shape": "random",
+      "personal": true,
+      "personal_mode": "single",
+      "local": true
+    },
+    {
+      "name": "Localized finite propagation n=1000000 shape=chain",
+      "n": 1000000,
+      "shape": "chain",
+      "personal": true,
+      "personal_mode": "single",
+      "local": true
+    },
+    {
+      "name": "Localized finite propagation n=1000000 shape=hub",
+      "n": 1000000,
+      "shape": "hub",
+      "personal": true,
+      "personal_mode": "single",
+      "local": true
+    },
+    {
+      "name": "Localized finite propagation n=1000000 shape=random",
+      "n": 1000000,
+      "shape": "random",
+      "personal": true,
+      "personal_mode": "single",
+      "local": true
+    }
+  ]
+}

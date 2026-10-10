@@ -1,0 +1,12 @@
+{
+  "family": "dynamic-rebuild",
+  "cases": [
+    {
+      "name": "Warm baseline before frequent rebuilds",
+      "n": 10000,
+      "weighted": true,
+      "cold": true
+    }
+  ],
+  "dynamic": true
+}

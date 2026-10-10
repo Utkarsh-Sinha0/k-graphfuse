@@ -1,0 +1,32 @@
+{
+  "scope": "Pilot only, no held-out comparison",
+  "degree": 16,
+  "quality": {
+    "error_per_input_norm": [
+      5.379316683527289e-17
+    ],
+    "max_absolute_error": [
+      2.1124577537198403e-16
+    ]
+  },
+  "median_ms": 11.017799995897803,
+  "samples_ms": [
+    11.172799997439142,
+    11.192199999641161,
+    11.075900001742411,
+    11.137999994389247,
+    10.919300002569798,
+    11.128499994811136,
+    11.017799995897803,
+    10.957099999359343,
+    10.94530000409577,
+    9.626000006392132,
+    8.799800001725089
+  ],
+  "source_hashes": {
+    "probe_wide_final.py": "3643ac39f7d39c8e655d70db982aedea125f02dfbc1a350969aab865c109216d",
+    "fused_dd.py": "334ae42dd68dcdb96d11985389b46e45fb595bb008c10e5275dc123e3e822712",
+    "fused_acc.py": "24eb61aee7b8ed6cfb887784c801f73da90ef034b9e244ede33497a60943c9ea",
+    "fused_acc.cu": "c46c66aa36e0d7fb513e748a3ef37e60eed3b1cefbe764b4cf7b73589d78d1f0"
+  }
+}

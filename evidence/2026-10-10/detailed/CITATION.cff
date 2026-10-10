@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Please cite K GraphFuse when using the implementation or benchmark evidence."
+type: software
+title: "K GraphFuse: sparse graph polynomial plans and CUDA execution"
+authors:
+  - family-names: Sinha
+    given-names: Utkarsh
+version: 0.1.0
+date-released: 2026-10-10
+url: "https://utkarsh-sinha0.github.io/k-graphfuse/"
+repository-code: "https://github.com/Utkarsh-Sinha0/k-graphfuse"
+license:
+  - Apache-2.0
+  - MIT
+abstract: "Reusable sparse linear graph filters, directional sensitivities, and optional CUDA evaluation. Includes scoped PageRank benchmark evidence and reproducibility materials."
+keywords:
+  - graph analytics
+  - PageRank
+  - sparse matrices
+  - polynomial filters
+  - CUDA

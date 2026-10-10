@@ -15,23 +15,23 @@ K GraphFuse compiles compatible linear graph stages into one ordered matrix poly
 
 It is useful when repeated graph ranking or linear propagation consumes a meaningful part of a workload. It requires matching graph semantics, independent accuracy checks, and enough repeated calls to recover preparation costs. Nonlinear graph neural networks, shortest paths, general graph transactions, and arbitrary dynamic topology updates are separate tasks.
 
-## Measured competitive advantage
+## Audited benchmark evidence
 
-On the public Graphalytics `datagen-7_5-fb` ten-update PageRank task, the fastest accepted K GraphFuse configuration had **21.28% lower median warm compute time** than native NVIDIA `pylibcugraph 26.10.0` on the **same Tesla T4**. Final probability-score conversion is included in timing. Both outputs pass the same official per-vertex reference check.
+| Study | Measured result | Comparison contract |
+|---|---|---|
+| Native NVIDIA cuGraph ranking study | **59/89 strong speed wins**, including **26/89 speed-and-error wins** | 85 comparable cases and four K accuracy failures |
+| Strongest tested alternatives | **33/85 overall**, **38/85 GPU** speed-gate wins | Fastest accepted recorded control, including CPU where measured |
+| Experimental precision GPU filters | **6/6** combined speed/accuracy gates; **1.25–3.74x** | Equivalent tuned FP64 CuPy/PyTorch; constructed sparse filters and derivatives |
 
-| Metric | K GraphFuse | Native cuGraph | Observed change |
-|---|---:|---:|---:|
-| Warm median compute | 49.906 ms | 63.398 ms | 21.28% lower |
-| Warm p95 compute | 49.983 ms | 67.156 ms | 25.57% lower |
-| Median compute + host output | 50.422 ms | 63.466 ms | 20.55% lower |
-| Sampled total device-memory peak | 1.285 GB | 2.971 GB | 56.76% lower |
-| Sampled process RSS peak | 4.920 GB | 7.672 GB | 35.87% lower |
+Strong native speed wins require at least 10% lower median, an interval above one, and no p95 regression. The 26 speed-and-error wins also have no worse recorded L1 and maximum-relative error; all 26 use matching precision. These counts do not establish better energy, memory or complete application runtime on every case.
 
-**Scope:** 633,432 vertices, 34,185,747 source edges, undirected unweighted graph, uniform start, damping 0.85, exactly ten updates; 31 synchronized warm samples. Memory is sampled total use at 20 ms intervals and may miss peaks. This is one workload and a configuration selection within one run. Aggregate L1 error is 9.01% higher, although both outputs pass the reference. Energy and cloud-bill savings are unmeasured. Global SOTA is unestablished; the earlier 19-workload suite passed zero of its strongest all-controls GPU improvement gates.
+[Native cuGraph metrics and all losses](docs/benchmarks/cugraph.md) · [Precision GPU latency, p95 and high-precision accuracy](docs/benchmarks/precision-gpu.md) · [Measurement contracts](docs/benchmarks/methodology.md)
 
-[Read the complete comparison and limitations](docs/benchmarks/results.md). Raw identifiers retain the historical name **Sinha GraphFuse**; the eight numerical core modules are byte-identical after the K GraphFuse rebrand.
+![K GraphFuse precision GPU comparison: six constructed T4 workloads, 1.25–3.74x speedups, explicit sampled-accuracy and timing scope](docs/assets/precision_t4_comparison.png)
 
-![K GraphFuse same-T4 PageRank latency, sampled memory and accuracy comparison with native cuGraph; benefits are scoped to one reference workload](docs/assets/k_native_comparison.png)
+The original same-T4 `datagen-7_5-fb` experiment recorded 21.28% lower median compute and lower sampled total memory peaks, but aggregate L1 error was worse. A later longer confirmation on that graph favors cuGraph. Native cuGraph is 2.72x faster on Graph500-22, and complete file/rebuild workflows also favor native. The older 19-workload suite passed zero strongest GPU gates under its separate protocol. [Historical reference result](docs/benchmarks/historical-reference.md).
+
+The new fused implementation lives in [experiments/precision_gpu](experiments/precision_gpu/README.md), separate from the installed `k_graphfuse` 0.1.0 API. Its repaired checked API passed 43 combined CPU/GPU tests; performance belongs to separately frozen timed versions. Raw samples, rejected configurations, code hashes and offline audits are included. Global SOTA, customer savings and integrated energy savings remain unestablished.
 
 ## Install and run
 

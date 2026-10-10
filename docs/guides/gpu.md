@@ -50,3 +50,9 @@ For a sensitivity plan with radius `h`, pass `theta` only inside `[-h,h]`. Chang
 Warm up first. Synchronize before and after wall-time measurements. Report preparation, first call, resident compute, input transfer and host output separately. Validate the final externally consumed score coordinates inside the timed call. Compare accepted outputs under identical graph semantics and tolerance.
 
 CPU compilation and graph normalization are not included in the saved GPU preparation number. Sampled memory is total device/process use, not isolated operator allocation. Read the [benchmark methodology](../benchmarks/methodology.md) for the measured scope.
+
+## Evaluate the precision experiment
+
+The [precision GPU study](../benchmarks/precision-gpu.md) publishes a separate fused CuPy/CUDA implementation for 1–16 FP64 channels and diagonal affine directions. Its checked root API includes the compiler/header and stream-order repairs; its measured large-run versions are frozen separately. These functions are not exports of the installed `k_graphfuse.gpu` namespace.
+
+Use the [experimental source and examples](https://github.com/Utkarsh-Sinha0/k-graphfuse/blob/main/experiments/precision_gpu/README.md) when evaluating that mechanism. Keep each prepared workspace serialized, validate before capture, and remember that `checked=False` returns reused buffers. Matching a captured input shape does not guarantee that a changed parameter or graph is reflected in a captured replay.

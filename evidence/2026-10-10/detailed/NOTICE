@@ -1,0 +1,21 @@
+K GraphFuse
+Copyright 2026 Utkarsh Sinha and contributors
+Project creator and maintainer: Utkarsh Sinha
+https://github.com/Utkarsh-Sinha0/k-graphfuse
+
+The new package namespace, documentation, examples and repository infrastructure
+are licensed under the Apache License, Version 2.0.
+
+The eight historical C2Fuse Python modules and their original tests and benchmark
+fixtures retain the MIT notice: Copyright (c) 2026 Research-to-product contributors.
+The original notice is reproduced in LICENSES/MIT.txt. These pre-existing grants
+remain available; this release does not revoke or narrow them.
+
+The product was measured as Sinha GraphFuse. K GraphFuse is the public product
+name for that same numerical implementation. Mathematical sources and external
+datasets, libraries and vendors are attributed in the documentation. Their names
+do not imply affiliation or endorsement.
+
+Requested public acknowledgment: "Powered by K GraphFuse by Utkarsh Sinha"
+with a link to the repository, and a citation using CITATION.cff. This visible
+credit is a request, not an additional license restriction.

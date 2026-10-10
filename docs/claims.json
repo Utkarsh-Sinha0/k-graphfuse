@@ -37,7 +37,8 @@
       "value": 0,
       "unit": "passes among 19 complete strongest-control GPU gates",
       "source": "evidence/SINHA_GRAPHFUSE_COMPARISONS.csv",
-      "limitations": "Different suite and gates than the matched public-reference task"
+      "limitations": "Different suite and gates than the matched public-reference task",
+      "scope": "Historical 19-workload large/community/scale study; not the newer 15-suite study"
     },
     {
       "id": "job_impact",
@@ -54,6 +55,80 @@
       "unit": "complete inequality constant",
       "source": "docs/concepts/mathematics.md",
       "limitations": "Depends on cited manuscript; public PageRank uses zero truncation and demonstrates no degree reduction"
+    },
+    {
+      "id": "native_speed_wins_20261010",
+      "kind": "measurement",
+      "value": 59,
+      "denominator": 89,
+      "comparable_cases": 85,
+      "accuracy_failures": 4,
+      "unit": "strong speed-gate wins",
+      "source": "evidence/2026-10-10/comparison_summary.json",
+      "scope": "Recorded resident ranking comparisons against accepted native cuGraph",
+      "limitations": "59/85 comparable; four additional K accuracy failures counted as non-wins; not the fastest-control or full-workflow count"
+    },
+    {
+      "id": "native_speed_error_wins_20261010",
+      "kind": "measurement",
+      "value": 26,
+      "denominator": 89,
+      "unit": "speed and two-error wins",
+      "source": "evidence/2026-10-10/native_comparisons.csv",
+      "scope": "Strong speed gate plus recorded aggregate L1 and maximum-relative errors no worse; all 26 same precision",
+      "limitations": "Rounded reference errors; no all-resource or downstream-quality claim"
+    },
+    {
+      "id": "strongest_overall_wins_20261010",
+      "kind": "measurement",
+      "value": 33,
+      "denominator": 85,
+      "unit": "strong speed-gate wins",
+      "source": "evidence/2026-10-10/detailed/verification_summary.json",
+      "scope": "Fastest accepted tested CPU/GPU control where measured",
+      "limitations": "No exhaustive global SOTA comparison; CPU size limits apply"
+    },
+    {
+      "id": "strongest_gpu_wins_20261010",
+      "kind": "measurement",
+      "value": 38,
+      "denominator": 85,
+      "unit": "strong GPU speed-gate wins",
+      "source": "evidence/2026-10-10/detailed/verification_summary.json",
+      "scope": "Fastest accepted tested GPU control",
+      "limitations": "Different count from native-only comparisons"
+    },
+    {
+      "id": "precision_dual_gates_20261010",
+      "kind": "measurement",
+      "value": 6,
+      "denominator": 6,
+      "unit": "speed and sampled-accuracy passes",
+      "source": "experiments/precision_gpu/PRODUCT_VERIFIED.json",
+      "scope": "Constructed 10k–1m-vertex FP64 polynomial filters and derivatives, 4/16 channels, Tesla T4",
+      "limitations": "CuPy/PyTorch controls, not native cuGraph; first 16 rows use high-precision truth; later repaired API not fully retimed"
+    },
+    {
+      "id": "precision_speedup_range_20261010",
+      "kind": "measurement",
+      "value": [
+        1.2497575244368624,
+        3.7394633833211692
+      ],
+      "unit": "control median / selected median",
+      "source": "experiments/precision_gpu/PRODUCT_VERIFIED.json",
+      "scope": "Six selected T4 cases; full samples and p95 retained",
+      "limitations": "Resident compute; validation, I/O, preparation and JIT excluded; profile policy reconstructed after exploration"
+    },
+    {
+      "id": "original_favorable_metrics",
+      "kind": "measurement",
+      "value": 8,
+      "denominator": 9,
+      "unit": "favorable observations",
+      "source": "evidence/measured_metrics.csv",
+      "scope": "Original matched ten-update T4 reference task; five latency, two sampled-memory and two error measures",
+      "limitations": "Correlated measurements of one setup; aggregate L1 error worse, sampled power higher; later confirmation loses on median"
     }
   ],
   "unestablished": [
@@ -64,5 +139,6 @@
     "cloud-bill savings",
     "customer production quality",
     "guaranteed search or AI ranking"
-  ]
+  ],
+  "evidence_updated": "2026-10-10"
 }

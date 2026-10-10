@@ -1,0 +1,56 @@
+{
+  "native_cugraph": {
+    "attempted_cases": 89,
+    "comparable_cases": 85,
+    "lower_median": 65,
+    "speed_gate_wins": 59,
+    "both_reference_errors_no_worse": 47,
+    "speed_and_both_reference_errors_wins": 26,
+    "K_accuracy_failures": 4,
+    "same_precision_cases": 76,
+    "same_precision_speed_wins": 51,
+    "same_precision_speed_and_error_wins": 26
+  },
+  "strongest_tested_overall": {
+    "wins": 33,
+    "cases": 85
+  },
+  "strongest_tested_gpu": {
+    "wins": 38,
+    "cases": 85
+  },
+  "original_single_workload_metrics": {
+    "eligible": 9,
+    "favorable": 8,
+    "excluded": [
+      "Frontend preparation: scopes differ",
+      "Sampled board power: no integrated energy measurement"
+    ]
+  },
+  "new_precision_portfolio": {
+    "cases": 6,
+    "dual_gate_wins": 6,
+    "comparator": "Tuned equivalent FP64 CuPy/PyTorch; not native cuGraph"
+  },
+  "source_sha256": {
+    "evidence/2026-10-10/detailed/confirmed_comparisons.csv": "e804941feae32a48126246c10bd74cb2f8b74bbf5a41705c6b3dfe00adb850ae",
+    "evidence/2026-10-10/detailed/case_coverage.csv": "21702c9a1085bff8bb72886df24cf4ff2bca6aecbcdee5d992f0957a360b2007",
+    "evidence/2026-10-10/detailed/verification_summary.json": "6822b19f88d0851d21beb7589e565805d38ea8ea7dc2350bd737b5fd1327d5ef",
+    "evidence/2026-10-10/detailed/workflow_diagnostics.csv": "b1d87ad62dd772124af084102d33f8e3337c86579165e567e677afb50d65ab0a",
+    "evidence/measured_metrics.csv": "4c7924e4c2ee171c348ed905bc16dcbd5c91a7fcc9bffdace391b5ebdb4c84b3",
+    "experiments/precision_gpu/PRODUCT_VERIFIED.json": "fc696f0c195b3bad4c2f01132c67df3ad186b9354d3a332d7415e954e5978ce5"
+  },
+  "limits": [
+    "Recounts completed measurements; no new benchmark run",
+    "Counted speed gate: source-defined 10% median bar, confidence and p95; all compared candidates accuracy-accepted",
+    "Two-error screen: recorded L1 and maximum relative reference errors, not an arbitrary-precision oracle",
+    "Warm compute results do not imply faster complete file/rebuild workflows",
+    "The latest precision upgrade has not rerun the broad native-cuGraph ranking suite",
+    "Eight favorable original-workload metrics are correlated observations, not eight independent replications"
+  ],
+  "publication": {
+    "date": "2026-10-10",
+    "raw_samples_changed": false,
+    "precision_audit": "Public reconstruction enforces <=0.9 control median; selected six T4 results unchanged"
+  }
+}
