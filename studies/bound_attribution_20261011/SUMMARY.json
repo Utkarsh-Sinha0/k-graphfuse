@@ -1,0 +1,418 @@
+{
+  "analysis_date": "2026-10-11",
+  "measurement_date": "2026-10-10",
+  "source_sha256": {
+    "evidence/2026-10-10/detailed/raw/matrix-filters/results.json": "469cca676801f43e4e8c0f0a68a0b4df9073b8568962cad4d234bc9ceb46b7a1",
+    "evidence/2026-10-10/detailed/raw/matrix-filters/source-manifest.json": "930ba004925811f656e1a73eaf12ac0875b7b9c0e9431ae677c6a5378d78c887",
+    "evidence/2026-10-10/detailed/raw/matrix-filters/run.py": "86f009259e7f53c358ca498497df6b9cffa242f08132ee70f7cd4a20eaf067d5",
+    "evidence/2026-10-10/detailed/raw/sensitivity/results.json": "cbbebe26c18e906d3243b2af768415090b8de6f62faa9564ff2874972e1b5216",
+    "evidence/2026-10-10/detailed/raw/sensitivity/source-manifest.json": "930ba004925811f656e1a73eaf12ac0875b7b9c0e9431ae677c6a5378d78c887",
+    "evidence/2026-10-10/detailed/raw/sensitivity/run.py": "431142025976a4ee2f6c06864964c6a266a8fe43ac6fcb72c803ec8616c7eb4e",
+    "experiments/precision_gpu/LOCAL_RESULTS.json": "248f61a04a4a28bf5b906eef065654cdcead9ea8bd02576bc5d48f50c7818d7a",
+    "studies/bound_attribution_20261011/cpu_sparse_original.json": "5b8c1ff51af52a6dcdfe59f2b9579f3e9b17ffc813f475d3248820e7f8d85db1"
+  },
+  "driver_sha256": "26e86ebdd3ef340487f471829634adc2155eba4a745e621d002edcf4ce5a65fe",
+  "matched_fp64_pairs": [
+    {
+      "case": "Polynomial filter n=100000 q=4",
+      "vertices": 100000,
+      "channels": 4,
+      "budget": 1e-12,
+      "old_degree": 23,
+      "new_degree": 22,
+      "packed": false,
+      "capture": false,
+      "old_median_ms": 20.4309949999697,
+      "new_median_ms": 19.54496600001221,
+      "time_reduction_pct": 4.336690405723276,
+      "old_p95_ms": 22.78915900001266,
+      "new_p95_ms": 20.017298500022207,
+      "old_error": [
+        0.0
+      ],
+      "new_error": [
+        0.0
+      ],
+      "source": "evidence/2026-10-10/detailed/raw/matrix-filters/results.json",
+      "operator_sha256": "bf2e4b20578c967317afde979ca54980bb3eb788ca9b3388cd6f0b78a5994f86",
+      "input_sha256": "3adee257603197e66cab97e12485d3a688df22de5ad641257f36a2ab1bfaeb20"
+    },
+    {
+      "case": "Polynomial filter n=100000 q=4",
+      "vertices": 100000,
+      "channels": 4,
+      "budget": 1e-12,
+      "old_degree": 23,
+      "new_degree": 22,
+      "packed": false,
+      "capture": true,
+      "old_median_ms": 20.535759000040343,
+      "new_median_ms": 19.544406000022718,
+      "time_reduction_pct": 4.827447575790488,
+      "old_p95_ms": 20.963351999967017,
+      "new_p95_ms": 19.82921950002492,
+      "old_error": [
+        0.0
+      ],
+      "new_error": [
+        0.0
+      ],
+      "source": "evidence/2026-10-10/detailed/raw/matrix-filters/results.json",
+      "operator_sha256": "bf2e4b20578c967317afde979ca54980bb3eb788ca9b3388cd6f0b78a5994f86",
+      "input_sha256": "3adee257603197e66cab97e12485d3a688df22de5ad641257f36a2ab1bfaeb20"
+    },
+    {
+      "case": "Polynomial filter n=100000 q=4",
+      "vertices": 100000,
+      "channels": 4,
+      "budget": 1e-12,
+      "old_degree": 23,
+      "new_degree": 22,
+      "packed": true,
+      "capture": false,
+      "old_median_ms": 11.152210999966883,
+      "new_median_ms": 10.721182999986922,
+      "time_reduction_pct": 3.864955567835293,
+      "old_p95_ms": 11.533735000000434,
+      "new_p95_ms": 11.041427999998632,
+      "old_error": [
+        0.0
+      ],
+      "new_error": [
+        0.0
+      ],
+      "source": "evidence/2026-10-10/detailed/raw/matrix-filters/results.json",
+      "operator_sha256": "bf2e4b20578c967317afde979ca54980bb3eb788ca9b3388cd6f0b78a5994f86",
+      "input_sha256": "3adee257603197e66cab97e12485d3a688df22de5ad641257f36a2ab1bfaeb20"
+    },
+    {
+      "case": "Polynomial filter n=100000 q=4",
+      "vertices": 100000,
+      "channels": 4,
+      "budget": 1e-12,
+      "old_degree": 23,
+      "new_degree": 22,
+      "packed": true,
+      "capture": true,
+      "old_median_ms": 11.12937300001704,
+      "new_median_ms": 10.73311699997248,
+      "time_reduction_pct": 3.5604521480585904,
+      "old_p95_ms": 11.238557500007573,
+      "new_p95_ms": 10.812076500030798,
+      "old_error": [
+        0.0
+      ],
+      "new_error": [
+        0.0
+      ],
+      "source": "evidence/2026-10-10/detailed/raw/matrix-filters/results.json",
+      "operator_sha256": "bf2e4b20578c967317afde979ca54980bb3eb788ca9b3388cd6f0b78a5994f86",
+      "input_sha256": "3adee257603197e66cab97e12485d3a688df22de5ad641257f36a2ab1bfaeb20"
+    },
+    {
+      "case": "Affine value and derivative n=1000000 q=8",
+      "vertices": 1000000,
+      "channels": 8,
+      "budget": 1e-08,
+      "old_degree": 19,
+      "new_degree": 18,
+      "packed": false,
+      "capture": false,
+      "old_median_ms": 320.8973270000115,
+      "new_median_ms": 303.71395300016957,
+      "time_reduction_pct": 5.354788760780583,
+      "old_p95_ms": 321.7647725000461,
+      "new_p95_ms": 304.4405005000499,
+      "old_error": [
+        3.7830905956097057e-19,
+        7.524220943659036e-19
+      ],
+      "new_error": [
+        1.2421993289848932e-18,
+        2.3202630174914058e-18
+      ],
+      "source": "evidence/2026-10-10/detailed/raw/sensitivity/results.json",
+      "operator_sha256": "8361a0c8ef26b09473e8188c03f9950c3f8cdef20db4982ac6583812a4d39325",
+      "input_sha256": "07165a8f27e7edabcf17b9631a29d2d3df17546986dd6df31f8b798b4f4fdd06"
+    },
+    {
+      "case": "Affine value and derivative n=1000000 q=8",
+      "vertices": 1000000,
+      "channels": 8,
+      "budget": 1e-08,
+      "old_degree": 19,
+      "new_degree": 18,
+      "packed": false,
+      "capture": true,
+      "old_median_ms": 317.27857399982895,
+      "new_median_ms": 303.9921360000335,
+      "time_reduction_pct": 4.18762535153181,
+      "old_p95_ms": 318.6427585000047,
+      "new_p95_ms": 304.5811844999662,
+      "old_error": [
+        3.7830905956097057e-19,
+        7.524220943659036e-19
+      ],
+      "new_error": [
+        1.2421993289848932e-18,
+        2.3202630174914058e-18
+      ],
+      "source": "evidence/2026-10-10/detailed/raw/sensitivity/results.json",
+      "operator_sha256": "8361a0c8ef26b09473e8188c03f9950c3f8cdef20db4982ac6583812a4d39325",
+      "input_sha256": "07165a8f27e7edabcf17b9631a29d2d3df17546986dd6df31f8b798b4f4fdd06"
+    },
+    {
+      "case": "Affine value and derivative n=1000000 q=8",
+      "vertices": 1000000,
+      "channels": 8,
+      "budget": 1e-08,
+      "old_degree": 19,
+      "new_degree": 18,
+      "packed": true,
+      "capture": false,
+      "old_median_ms": 249.91986799977894,
+      "new_median_ms": 239.61700899985772,
+      "time_reduction_pct": 4.122464965422568,
+      "old_p95_ms": 250.56621199996698,
+      "new_p95_ms": 240.17454749991884,
+      "old_error": [
+        3.7830905956097057e-19,
+        7.524220943659036e-19
+      ],
+      "new_error": [
+        1.2421993289848932e-18,
+        2.3202630174914058e-18
+      ],
+      "source": "evidence/2026-10-10/detailed/raw/sensitivity/results.json",
+      "operator_sha256": "8361a0c8ef26b09473e8188c03f9950c3f8cdef20db4982ac6583812a4d39325",
+      "input_sha256": "07165a8f27e7edabcf17b9631a29d2d3df17546986dd6df31f8b798b4f4fdd06"
+    },
+    {
+      "case": "Affine value and derivative n=1000000 q=8",
+      "vertices": 1000000,
+      "channels": 8,
+      "budget": 1e-08,
+      "old_degree": 19,
+      "new_degree": 18,
+      "packed": true,
+      "capture": true,
+      "old_median_ms": 250.31619900005353,
+      "new_median_ms": 238.44398699998237,
+      "time_reduction_pct": 4.7428860167649916,
+      "old_p95_ms": 250.61914199989133,
+      "new_p95_ms": 238.7393125000017,
+      "old_error": [
+        3.7830905956097057e-19,
+        7.524220943659036e-19
+      ],
+      "new_error": [
+        1.2421993289848932e-18,
+        2.3202630174914058e-18
+      ],
+      "source": "evidence/2026-10-10/detailed/raw/sensitivity/results.json",
+      "operator_sha256": "8361a0c8ef26b09473e8188c03f9950c3f8cdef20db4982ac6583812a4d39325",
+      "input_sha256": "07165a8f27e7edabcf17b9631a29d2d3df17546986dd6df31f8b798b4f4fdd06"
+    }
+  ],
+  "examined_workload_records": 11,
+  "degree_reducing_records": 2,
+  "all_degree_cases": [
+    {
+      "case": "Polynomial filter n=10000 q=4",
+      "vertices": 10000,
+      "channels": 4,
+      "budget": 1e-08,
+      "old_degree": 10,
+      "new_degree": 10,
+      "source": "evidence/2026-10-10/detailed/raw/matrix-filters/results.json",
+      "operator_sha256": "46166a9c3b950c28ff8550689cdb469431651c88dbe5a1fe884d81703f184677",
+      "input_sha256": "42235eaefda208198032b4dd1ee32043bb02d52872d73818e672147ec2aa0327"
+    },
+    {
+      "case": "Polynomial filter n=100000 q=8",
+      "vertices": 100000,
+      "channels": 8,
+      "budget": 1e-08,
+      "old_degree": 10,
+      "new_degree": 10,
+      "source": "evidence/2026-10-10/detailed/raw/matrix-filters/results.json",
+      "operator_sha256": "34014004c02e3e2c6fde09e30888cc3b04c48cca6cb8cf772bac3d591686f66c",
+      "input_sha256": "4bb4625c398ab85d3ad296ebf4574a68e6c5da4e5f0f3bace50b5b824b5d4105"
+    },
+    {
+      "case": "Polynomial filter n=1000000 q=4",
+      "vertices": 1000000,
+      "channels": 4,
+      "budget": 1e-08,
+      "old_degree": 10,
+      "new_degree": 10,
+      "source": "evidence/2026-10-10/detailed/raw/matrix-filters/results.json",
+      "operator_sha256": "b95efcffdb7bd35f4b05bee3a473eb1a6a965d066674453a1f604af0f8f74c3b",
+      "input_sha256": "f094ad45888c448b8c05587af016152a885f331dccd76d4d5fe69068c2082e0a"
+    },
+    {
+      "case": "Polynomial filter n=100000 q=16",
+      "vertices": 100000,
+      "channels": 16,
+      "budget": 1e-08,
+      "old_degree": 16,
+      "new_degree": 16,
+      "source": "evidence/2026-10-10/detailed/raw/matrix-filters/results.json",
+      "operator_sha256": "bf2e4b20578c967317afde979ca54980bb3eb788ca9b3388cd6f0b78a5994f86",
+      "input_sha256": "7c1c51032bcaa2fd1542a8821d44389720f165f65a67b2fee42f09a769d92ca8"
+    },
+    {
+      "case": "Polynomial filter n=100000 q=4",
+      "vertices": 100000,
+      "channels": 4,
+      "budget": 1e-12,
+      "old_degree": 23,
+      "new_degree": 22,
+      "source": "evidence/2026-10-10/detailed/raw/matrix-filters/results.json",
+      "operator_sha256": "bf2e4b20578c967317afde979ca54980bb3eb788ca9b3388cd6f0b78a5994f86",
+      "input_sha256": "3adee257603197e66cab97e12485d3a688df22de5ad641257f36a2ab1bfaeb20"
+    },
+    {
+      "case": "Polynomial filter n=100000 q=4",
+      "vertices": 100000,
+      "channels": 4,
+      "budget": 0.0001,
+      "old_degree": 4,
+      "new_degree": 4,
+      "source": "evidence/2026-10-10/detailed/raw/matrix-filters/results.json",
+      "operator_sha256": "34014004c02e3e2c6fde09e30888cc3b04c48cca6cb8cf772bac3d591686f66c",
+      "input_sha256": "3adee257603197e66cab97e12485d3a688df22de5ad641257f36a2ab1bfaeb20"
+    },
+    {
+      "case": "Affine value and derivative n=10000 q=4",
+      "vertices": 10000,
+      "channels": 4,
+      "budget": 1e-08,
+      "old_degree": 18,
+      "new_degree": 18,
+      "source": "evidence/2026-10-10/detailed/raw/sensitivity/results.json",
+      "operator_sha256": "566401536986fbec7ebcaf63f9935d3c670263cf386e7d88bd0c6b2fef735e94",
+      "input_sha256": "ea1d838f13dc69880f9f36f397e9d8290853ceffc3a32a733b035dd98979b8f1"
+    },
+    {
+      "case": "Affine value and derivative n=100000 q=4",
+      "vertices": 100000,
+      "channels": 4,
+      "budget": 1e-08,
+      "old_degree": 18,
+      "new_degree": 18,
+      "source": "evidence/2026-10-10/detailed/raw/sensitivity/results.json",
+      "operator_sha256": "bf2e4b20578c967317afde979ca54980bb3eb788ca9b3388cd6f0b78a5994f86",
+      "input_sha256": "ed9cd2b0e75467e2991ef9b958326fc6d24185ec60b32d0a592698b7b0ca285a"
+    },
+    {
+      "case": "Affine value and derivative n=1000000 q=4",
+      "vertices": 1000000,
+      "channels": 4,
+      "budget": 1e-08,
+      "old_degree": 18,
+      "new_degree": 18,
+      "source": "evidence/2026-10-10/detailed/raw/sensitivity/results.json",
+      "operator_sha256": "8361a0c8ef26b09473e8188c03f9950c3f8cdef20db4982ac6583812a4d39325",
+      "input_sha256": "8d9980562fca226df866e15cbcad6f1aba29082aa012a237d5d1f5c6f8c191ec"
+    },
+    {
+      "case": "Affine value and derivative n=100000 q=16",
+      "vertices": 100000,
+      "channels": 16,
+      "budget": 1e-08,
+      "old_degree": 19,
+      "new_degree": 19,
+      "source": "evidence/2026-10-10/detailed/raw/sensitivity/results.json",
+      "operator_sha256": "bf2e4b20578c967317afde979ca54980bb3eb788ca9b3388cd6f0b78a5994f86",
+      "input_sha256": "2d0723d67233266a23016693b73738c6ead2ea2e62b52295cffe428b854fd6f3"
+    },
+    {
+      "case": "Affine value and derivative n=1000000 q=8",
+      "vertices": 1000000,
+      "channels": 8,
+      "budget": 1e-08,
+      "old_degree": 19,
+      "new_degree": 18,
+      "source": "evidence/2026-10-10/detailed/raw/sensitivity/results.json",
+      "operator_sha256": "8361a0c8ef26b09473e8188c03f9950c3f8cdef20db4982ac6583812a4d39325",
+      "input_sha256": "07165a8f27e7edabcf17b9631a29d2d3df17546986dd6df31f8b798b4f4fdd06"
+    }
+  ],
+  "constant_value_tail_factor_reduction_pct": 17.157287525380983,
+  "median_time_reduction_range_pct": [
+    3.5604521480585904,
+    5.354788760780583
+  ],
+  "laptop_gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "laptop_constant_cases": [
+    {
+      "n": 10000,
+      "q": 4,
+      "sensitivity": false,
+      "degrees": {
+        "released": 15,
+        "older_bound": 15,
+        "metric": 9
+      }
+    },
+    {
+      "n": 100000,
+      "q": 4,
+      "sensitivity": false,
+      "degrees": {
+        "released": 15,
+        "older_bound": 15,
+        "metric": 9
+      }
+    },
+    {
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": false,
+      "degrees": {
+        "released": 15,
+        "older_bound": 15,
+        "metric": 9
+      }
+    },
+    {
+      "n": 100000,
+      "q": 16,
+      "sensitivity": false,
+      "degrees": {
+        "released": 16,
+        "older_bound": 16,
+        "metric": 9
+      }
+    },
+    {
+      "n": 100000,
+      "q": 4,
+      "sensitivity": true,
+      "degrees": {
+        "released": 18,
+        "older_bound": 18,
+        "metric": 10
+      }
+    },
+    {
+      "n": 1000000,
+      "q": 4,
+      "sensitivity": true,
+      "degrees": {
+        "released": 18,
+        "older_bound": 18,
+        "metric": 10
+      }
+    }
+  ],
+  "cpu_degree_boundary": {
+    "new_degree": 8,
+    "older_complete_bound_degree": 9,
+    "classical_norm_degree": 10,
+    "deliberately_selected_budget": 2.8361371852467578e-05
+  },
+  "exact_degree_9_to_8_latency_found": false,
+  "scope": "Two constructed T4 workloads; four matched packing/capture settings each; 31 consecutive synchronized samples/configuration, shuffled configuration order. Observed comparisons below the 10% strong-speed bar; no paired multi-block interval or independent repeat. Truncation certificates exclude execution rounding. This analysis creates no new GPU timing."
+}

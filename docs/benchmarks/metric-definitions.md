@@ -49,3 +49,7 @@ The precision point estimate is the ratio of pooled medians. Its recorded bootst
 Use the same clearly labeled conversion for every case. Select a primary metric because it matches the user's decision, and retain the paired unit and absolute measurements. Choosing whichever percentage looks larger without its definition would conceal the baseline.
 
 Read the [measurement methods](methodology.md), [research manuscript](../research/paper.md) and [limitations](../reference/limitations.md) before reusing a claim. Numeric figure inputs and source hashes are in [presentation_metrics.json](../assets/presentation_metrics.json); the [offline audit](reproduce.md) checks them against the recorded measurements.
+
+## Certificate factors versus measured latency
+
+Replacing the value-tail factor 1+sqrt(2) with 2 tightens that same nonzero residual certificate by 17.1573%; this is not 17.1573% faster computation. The [bound attribution](../research/bound-attribution.md) records 3.56–5.35% less observed median time in eight matched T4 configurations where degree decreases. Degree is discrete, and the ordinary norm branch can dominate; nine of eleven examined records do not change degree. No interval or laptop 9→8 latency is inferred.

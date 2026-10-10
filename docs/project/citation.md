@@ -26,7 +26,7 @@ Add the actual release/commit used in reproducible studies. Raw experiments reta
 
 ## Cite the technical manuscript
 
-The [research manuscript](../research/paper.md) is a technical preprint draft dated 10 October 2026. It has not been peer-reviewed or submitted as a journal publication, and has no assigned DOI. Cite the actual revision used:
+The [research manuscript](../research/paper.md) is a technical preprint draft first posted 10 October 2026 and revised 11 October 2026. It has not been peer-reviewed or submitted as a journal publication, and has no assigned DOI. Cite the actual revision used:
 
 ```bibtex
 @misc{sinha2026similaritygraphfuse,
@@ -34,7 +34,7 @@ The [research manuscript](../research/paper.md) is a technical preprint draft da
   title  = {{K GraphFuse}: Similarity-Aware Sparse Polynomial Evaluation
             with Selective GPU Compensation},
   year   = {2026},
-  note   = {Technical manuscript, preprint draft, 10 October 2026},
+  note   = {Technical manuscript, preprint draft, revised 11 October 2026},
   url    = {https://utkarsh-sinha0.github.io/k-graphfuse/research/paper/}
 }
 ```
@@ -50,3 +50,5 @@ Preserve the applicable copyright, license and NOTICE information when redistrib
 ## Scientific and external attribution
 
 The derivation attributes the complete-inequality manuscript, Crouzeix–Palencia and derivative prior art. Graphalytics, SNAP, NVIDIA, ArcadeDB, PyTorch and other external materials retain their owners' terms. Data and vendor binaries are acquired separately. Their names indicate provenance and comparison, not affiliation or endorsement. See [mathematics](../concepts/mathematics.md) and [benchmark results](../benchmarks/results.md).
+
+The revised manuscript separates the supplied OpenAI theorem from K GraphFuse's computational application and measured attribution. Cite the underlying theorem and the software when using this numerical approach. No original-theorem authorship or worldwide-first algorithm claim is implied.

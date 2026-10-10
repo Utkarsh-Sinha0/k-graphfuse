@@ -39,3 +39,7 @@ Sampled memory may miss peaks and includes inherited/library allocations. GPU-pr
 Plans are not a secure boundary against hostile in-process mutation. One CUDA executor cannot be shared concurrently. Arbitrary graph changes require a new plan. Benchmark runners download vendor artifacts and datasets and use a disposable Linux workspace; they are manual research fixtures and do not execute during package installation.
 
 Read the [accuracy contract](../concepts/contracts.md), [benchmark methodology](../benchmarks/methodology.md) and [application gates](../guides/applications.md) before production evaluation.
+
+## Theorem-bound attribution update
+
+The [theorem-bound attribution analysis](https://utkarsh-sinha0.github.io/k-graphfuse/research/bound-attribution/) separates the new complete-Crouzeix bound from balancing and GPU fusion. **Two of 11 legacy T4 workload records reduce degree: 23→22 and 19→18.** Across all eight accepted matched FP64 configurations in those two records, the new-bound plan records **3.56–5.35% less median resident time**, with lower observed p95. This is single-run evidence below the separate 10% strong-speed gate. The exact CPU 9→8 boundary is untimed; the checked laptop old/new-bound cases retain equal degrees.

@@ -6,12 +6,12 @@
 \hypersetup{colorlinks=false}
 \title{K GraphFuse: Similarity-Aware Sparse Polynomial Evaluation with Selective GPU Compensation}
 \author{Utkarsh Sinha}
-\date{10 October 2026}
+\date{11 October 2026}
 
 \begin{document}
 \maketitle
 \begin{center}
-\emph{Technical research manuscript / preprint draft, 10 October 2026; not peer-reviewed.}
+\emph{Technical research manuscript / preprint draft, revised 11 October 2026; not peer-reviewed.}
 \end{center}
 
 \begin{abstract}
@@ -20,6 +20,7 @@ We study finite matrix-valued sparse polynomial actions and fixed affine directi
 A publicly frozen repaired implementation is confirmed on six graph families, ten fixtures, two independent input/coefficient seeds per device and two GPU architectures. Additional packed-balanced CuPy controls are frozen before separate fresh-seed runs. Under matching original-coordinate budgets and matching selected degrees, 18/20 pooled device--fixture comparisons pass the strong speed gate, with 36.88--83.71\% less resident compute time in those wins; R-MAT instead uses 55.52\% more time on RTX and 2.21\% more on T4. Every large output passes full FP64 CPU checks, with separate complete 64-row 256/384-bit checks. Same-backend comparisons show balancing can reduce degree 22 to 13, or increase degree 20 to 24 and slow execution.
 
 A complete MovieLens 1M recommendation workflow preserves Recall@10, nDCG@10 and all top-10 lists. Against an algebraically equivalent specialized scalar-restart control, K uses 7.13\% more pooled-median request time on RTX and practically ties T4; no end-to-end median speed gain is confirmed. Historical six-case T4 measurements and the separate native-cuGraph study remain distinct. This study does not compare these polynomial cases with native cuGraph, establish exhaustive SOTA, prove universal execution accuracy or change the installed K GraphFuse core.
+A retrospective source-checked attribution of eleven earlier T4 workload records identifies two theorem-dependent degree reductions, 23$\to$22 and 19$\to$18. All eight accepted matching FP64 packing/capture configurations in those two cases record 3.56--5.35\% less median time. Nine records retain the same degree. These are single-run observations; the exact CPU 9$\to$8 boundary is untimed and the checked laptop constant comparisons have equal degrees. This demonstrates an application of the supplied theorem, without establishing worldwide-first algorithmic priority.
 \end{abstract}
 
 \noindent\textbf{Keywords:} sparse graph filters; matrix polynomials; similarity scaling; numerical range; Horner evaluation; directional sensitivity; compensated arithmetic; CUDA
@@ -271,11 +272,45 @@ The precision experiment has no native-cuGraph control. A separate K GraphFuse P
 
 The separate study also has losses: native cuGraph was 2.72 times faster on Graph500-22; the later datagen confirmation measured K at 56.089 ms versus 54.667 ms for native; and full file-import and changing-graph rebuild workflows favored native cuGraph. The earlier 19-workload suite passed zero strongest GPU gates under its protocol. K GraphFuse does not implement BFS, SSSP, connected components, triangle counting, or Louvain. The native context provides scope and negative evidence, not corroboration of the precision-GPU results.
 
+\subsection{Isolated theorem-bound attribution in earlier runs}
+
+This analysis uses existing 10 October 2026 Tesla T4 runs, re-examined on 11 October. Authenticated read-only access checked ten completed relevant Kaggle kernels and retrieved thirteen JSON outputs. The two degree-changing cases and every candidate sample exactly match the already published raw records. No new GPU timing was generated.
+
+The immutable source constructs both plans from the same stored operator, feature matrix, rational coefficient matrices, error budget and affine direction/interval where applicable. It changes only the complete-bound constant: older 1+sqrt\_upper(2) versus default 2. Both plans use the same PyTorch evaluator. FP64 pairs match packing and CUDA capture. All four execution settings are retained; rejected FP32 settings are excluded. Source manifests and encoded run sources are audited without executing the GPU code.
+
+The examined matrix-filter/sensitivity records contain eleven workloads. Two change retained degree and nine do not. The eight timing pairs are four configurations of each degree-changing workload, not eight independent graphs. Each configuration has 31 consecutive synchronized samples; configuration order is shuffled. There is no paired repeated-block or independent-repeat interval for these measurements. The extraction is retrospective; it is not a newly predeclared confirmation experiment.
+
+Two of eleven legacy workload records reduce degree; nine do not. All eight accepted matched FP64 configurations in those two records show 3.56--5.35\% less observed median resident time, with lower observed p95. These are below the 10\% strong-speed gate and add no native-cuGraph wins.
+
+\begin{center}\small\begin{tabular}{lrrrr}\toprule
+Task / packing / capture & Degree & Old ms & New ms & Less time \\
+\midrule
+Polynomial / 0 / 0 & 23 to 22 & 20.431 & 19.545 & 4.34\% \\
+Polynomial / 0 / 1 & 23 to 22 & 20.536 & 19.544 & 4.83\% \\
+Polynomial / 1 / 0 & 23 to 22 & 11.152 & 10.721 & 3.86\% \\
+Polynomial / 1 / 1 & 23 to 22 & 11.129 & 10.733 & 3.56\% \\
+Sensitivity / 0 / 0 & 19 to 18 & 320.897 & 303.714 & 5.35\% \\
+Sensitivity / 0 / 1 & 19 to 18 & 317.279 & 303.992 & 4.19\% \\
+Sensitivity / 1 / 0 & 19 to 18 & 249.920 & 239.617 & 4.12\% \\
+Sensitivity / 1 / 1 & 19 to 18 & 250.316 & 238.444 & 4.74\% \\
+\bottomrule\end{tabular}\end{center}
+
+The CPU sparse record already demonstrates a degree-only boundary: older complete bound 9, new complete bound 8, ordinary norm bound 10, at selected tolerance 2.8361371852467578e-05. This boundary deliberately crosses a degree threshold. It contains no latency samples.
+
+For the RTX 3060 Laptop GPU's six explicit old/new-constant cases, the recorded degrees match: 15/15 for four-channel polynomial cases, 16/16 for the sixteen-channel case and 18/18 for value-plus-derivative cases. Their similarity-aware degrees of 9 or 10 involve a coordinate change and cannot be relabeled as a constant-only 9$\to$8 comparison. A literal degree-9-versus-8 GPU time, or an isolated laptop degree-changing time, remains absent from the checked records.
+
+The stronger theorem is attributed to OpenAI. K GraphFuse's supported contribution is a computational application: an explicit truncation planner and inspectable integration, with evidence that the strengthened bound can remove a propagation stage and reduce observed GPU time on the stated inputs. This sharpens the research-paper contribution beyond aggregate benchmark gains. Worldwide-first application, a fundamentally new general algorithm and global SOTA remain unestablished. The similarity-transfer proof is supporting elementary analysis; it is not the source theorem.
+
+The same nonzero value-tail residual has a 17.1573\% smaller numerical-range factor under constant two than under 1+sqrt(2). This is not a runtime or floating-accuracy percentage. Complete medians, p95 and normalized CPU differences are in the public attribution report.
+\url{https://utkarsh-sinha0.github.io/k-graphfuse/research/bound-attribution/}
+
+The comparison changes the implemented general bound. It does not rule out sharper preexisting class-specific bounds for these operators; that review is required before claiming the new general theorem was necessary to certify the tested inputs.
+
 \section{Limitations and threats to validity}
 
 Workload coverage. Historical six-case results use one constructed family. New confirmation covers six synthetic families, ten fixtures, two fresh coefficient/input seeds per phase and two devices. MovieLens adds one real-data fixed-model application. These are targeted numerical workloads, not broad graph-algorithm or production coverage.
 
-Selection and uncertainty. Historical profile selection follows exploration. The new repaired profile/protocol is publicly frozen before confirmation. Packed-balanced and scalar-restart controls were identified during review and separately frozen before fresh confirmation, rather than being retrospectively folded into the initial protocol. Bootstrap intervals use paired blocks and the same pooled-median estimator; they are descriptive and do not adjust multiple comparisons or observed control selection. Both devices remain author-controlled.
+Selection and uncertainty. Historical profile selection follows exploration. The new repaired profile/protocol is publicly frozen before confirmation. Packed-balanced and scalar-restart controls were identified during review and separately frozen before fresh confirmation, rather than being retrospectively folded into the initial protocol. Bootstrap intervals use paired blocks and the same pooled-median estimator; they are descriptive and do not adjust multiple comparisons or observed control selection. Both devices remain author-controlled. The separate retrospective attribution uses two degree-changing records out of eleven and lacks repeated-block or independent-repeat confirmation.
 
 Accuracy and certificate scope. Large references are FP64 CPU arithmetic. Historical high-precision checks sample the first 16 rows; new high-precision checks cover whole separate 64-row fixtures. Neither proves every large output at arbitrary precision or every input/parameter. The additional rounding-screen allowance is empirical. The complete constant-two Crouzeix result is a pinned external premise. The elementary transfer proof and exact coefficient bounds do not bound execution roundoff, and dyadic balancing is heuristic.
 
@@ -292,14 +327,14 @@ The method may lose on already balanced operators, wider channels, different har
 
 \section{Conclusion}
 
-K GraphFuse documents an integration and an empirical regime map for finite sparse polynomial actions and fixed affine sensitivities. New frozen, matching-budget confirmation supports execution gains across several low-channel regimes while exposing harmful balancing, R-MAT losses and no confirmed end-to-end median advantage in a specialized recommendation workflow. These negative results sharpen the practical boundary. The historical six T4 cases recorded 19.98\%--73.26\% lower pooled-median latency and 24.98\%--273.95\% higher derived reciprocal-latency rate. The latter is computed from latency ratios, not measured throughput. Those selected historical results are retained separately rather than used to override stronger controls.
+K GraphFuse documents an integration and an empirical regime map for finite sparse polynomial actions and fixed affine sensitivities. New frozen, matching-budget confirmation supports execution gains across several low-channel regimes while exposing harmful balancing, R-MAT losses and no confirmed end-to-end median advantage in a specialized recommendation workflow. These negative results sharpen the practical boundary. The separate old/new-bound analysis identifies a modest theorem-dependent computational benefit in two legacy T4 workloads; nine records retain the same degree. The historical six T4 cases recorded 19.98\%--73.26\% lower pooled-median latency and 24.98\%--273.95\% higher derived reciprocal-latency rate. The latter is computed from latency ratios, not measured throughput. Those selected historical results are retained separately rather than used to override stronger controls.
 
 
 \section*{Reproducibility and artifact status}
 
 The audited record is \url{experiments/precision_gpu/PRODUCT_VERIFIED.json}; the mathematical derivation and premise ledger are \url{experiments/precision_gpu/DERIVATION.md} and \url{experiments/precision_gpu/RESEARCH.md}. Timed sources are \url{experiments/precision_gpu/source/product_v1} and \url{experiments/precision_gpu/source/wide_v1}. The later checked API at \url{experiments/precision_gpu/source/repaired_api} passed 29 core plus 14 upgrade checks but does not retime the six cases. The repository's offline evidence audit can check recorded results without launching a GPU benchmark. No private host paths, account screenshots, or contact details are included. No DOI, publication venue, or acceptance is asserted for this manuscript.
 
-\section*{New confirmation and assistance}
+\section*{New confirmation, bound attribution and assistance}
 Artifacts are frozen and hashed under \url{studies/controlled_20261010/}; new runs use the repaired sources and do not retime historical cases. Codex assisted implementation, analysis, figures and manuscript drafting; earlier drafting used native Luna subagents. Utkarsh Sinha is the attributed human author. Automated checks and AI assistance do not constitute independent scientific peer review.
 
 \begin{thebibliography}{99}

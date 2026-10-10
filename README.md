@@ -19,11 +19,16 @@ It is useful when repeated graph ranking or linear propagation consumes a meanin
 
 ## Audited benchmark evidence
 
+The [theorem-bound attribution analysis](https://utkarsh-sinha0.github.io/k-graphfuse/research/bound-attribution/) separates the new complete-Crouzeix bound from balancing and GPU fusion. **Two of 11 legacy T4 workload records reduce degree: 23→22 and 19→18.** Across all eight accepted matched FP64 configurations in those two records, the new-bound plan records **3.56–5.35% less median resident time**, with lower observed p95. This is single-run evidence below the separate 10% strong-speed gate. The exact CPU 9→8 boundary is untimed; the checked laptop old/new-bound cases retain equal degrees.
+
+![Isolated old/new theorem-bound timings: all eight FP64 settings in the two degree-changing T4 records](docs/assets/bound_attribution.png)
+
 The new [controlled confirmation](https://utkarsh-sinha0.github.io/k-graphfuse/research/controlled-study/) uses the repaired implementation across six graph families and two GPUs. Matching-budget, matching-degree packed-balanced CuPy comparisons pass the strong speed gate in **18/20 pooled device–fixture comparisons**, with **36.88–83.71% less resident time in the wins**. R-MAT loses on both devices. MovieLens recommendation quality matches exactly, but specialized scalar-restart CuPy removes the application median speed advantage: K uses **7.13% more time on RTX** and practically ties T4. These are scoped experimental results, separate from native-cuGraph PageRank and the installed API.
 
 
 | Study | Measured result | Comparison contract |
 |---|---|---|
+| [Theorem-bound attribution](docs/research/bound-attribution.md) | **3.56–5.35% less observed median time** in eight matched FP64 settings; two of eleven legacy records reduce degree | Older 1+sqrt(2) versus new constant 2, same backend/settings; single-run evidence below the 10% strong-speed bar |
 | Native NVIDIA cuGraph ranking study | **66.3% (59/89 attempted) strong speed wins**, including **29.2% (26/89) with both reference errors no worse** | 85 comparable cases and four K accuracy failures, counted as non-wins |
 | Strongest tested alternatives | **38.8% (33/85) overall**, **44.7% (38/85) GPU** speed-gate wins | Fastest accepted recorded control, including CPU where measured |
 | Experimental precision GPU filters | **~20.0–73.3% less median compute time** (1.25–3.74x; **~25.0–273.9% higher derived serial compute rate**) | Equivalent tuned FP64 CuPy/PyTorch; constructed sparse filters and derivatives |

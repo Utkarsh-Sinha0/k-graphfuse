@@ -57,3 +57,7 @@ For the separate 100k four-channel precision filter, the control/K medians were 
 6. Calculate money from observed billable resource use and actual provider pricing after measuring the full workflow.
 
 Lower sampled memory suggests a capacity investigation. It does not guarantee a larger graph will fit or that a cheaper instance will suffice. Higher sampled board power means energy savings require integrated query measurements. No high-frequency trading alpha, trading profit, database transaction speedup or universal nonlinear-model acceleration is claimed.
+
+## Theorem-bound attribution update
+
+The [theorem-bound attribution analysis](https://utkarsh-sinha0.github.io/k-graphfuse/research/bound-attribution/) separates the new complete-Crouzeix bound from balancing and GPU fusion. **Two of 11 legacy T4 workload records reduce degree: 23→22 and 19→18.** Across all eight accepted matched FP64 configurations in those two records, the new-bound plan records **3.56–5.35% less median resident time**, with lower observed p95. This is single-run evidence below the separate 10% strong-speed gate. The exact CPU 9→8 boundary is untimed; the checked laptop old/new-bound cases retain equal degrees.

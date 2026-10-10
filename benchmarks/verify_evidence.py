@@ -28,3 +28,4 @@ assert "global SOTA" in claims["unestablished"]
 print("PASS: byte-identical released numerical core and bounded claims ledger.")
 runpy.run_path(str(Path(__file__).with_name("_verify_extended.py")), run_name="__main__")
 subprocess.run([sys.executable, str(root / 'studies/controlled_20261010/analyse.py'), '--verify'], check=True)
+subprocess.run([sys.executable, str(root / 'studies/bound_attribution_20261011/extract.py'), '--verify'], check=True)

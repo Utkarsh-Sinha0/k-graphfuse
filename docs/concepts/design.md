@@ -27,3 +27,7 @@ The older sensitivity control includes a one-million-vertex case with degree `18
 `prepare_local` adds a CSC index. `evaluate_local` discovers nodes reachable within the retained degree and returns sparse COO output. The neighborhood can cover the whole graph; the implementation falls back to global evaluation after the selected set exceeds one quarter of vertices. It does not guarantee sublinear work on arbitrary graphs.
 
 See [API reference](../reference/api.md), [mathematics](mathematics.md) and [measurement methods](../benchmarks/methodology.md).
+
+## Bound constants and discrete work
+
+The [bound-attribution analysis](../research/bound-attribution.md) holds the backend, graph, inputs and budget fixed while changing the planner's numerical-range constant. Two of eleven legacy records lose one propagation stage; nine retain the same degree. This can reduce a constant amount of work without changing the asymptotic complexity. The 17.1573% value-tail factor reduction and 3.56–5.35% observed latency reductions are different quantities. The exact 9→8 GPU time remains unmeasured.

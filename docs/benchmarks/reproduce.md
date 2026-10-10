@@ -109,3 +109,11 @@ The ordinary offline CI audit needs none of these rendering libraries. It checks
 ## Publish a replication
 
 Record the commit, actual library builds, device/driver, graph and input hashes, complete configuration search, accuracy gates, preparation scopes, all samples, rejected candidates, resource method and run status. Use repeated independent runs and randomized order for a stronger performance study. Do not replace old evidence with a new result; add a separate run identity.
+
+## Audit theorem-dependent work and timing
+
+```sh
+python studies/bound_attribution_20261011/extract.py --verify
+```
+
+This offline audit decodes immutable runner sources, checks manifests and all matched FP64 medians/p95, and verifies equal-degree laptop controls and the untimed CPU boundary. It preserves all four execution settings for both changed-degree records. It does not create a 9→8 time or independent hardware repeat. [Full attribution report](../research/bound-attribution.md).

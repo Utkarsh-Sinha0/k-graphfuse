@@ -1,5 +1,7 @@
 # K GraphFuse
 
+The [theorem-bound attribution analysis](https://utkarsh-sinha0.github.io/k-graphfuse/research/bound-attribution/) separates the new complete-Crouzeix bound from balancing and GPU fusion. **Two of 11 legacy T4 workload records reduce degree: 23→22 and 19→18.** Across all eight accepted matched FP64 configurations in those two records, the new-bound plan records **3.56–5.35% less median resident time**, with lower observed p95. This is single-run evidence below the separate 10% strong-speed gate. The exact CPU 9→8 boundary is untimed; the checked laptop old/new-bound cases retain equal degrees.
+
 The new [controlled confirmation](https://utkarsh-sinha0.github.io/k-graphfuse/research/controlled-study/) uses the repaired implementation across six graph families and two GPUs. Matching-budget, matching-degree packed-balanced CuPy comparisons pass the strong speed gate in **18/20 pooled device–fixture comparisons**, with **36.88–83.71% less resident time in the wins**. R-MAT loses on both devices. MovieLens recommendation quality matches exactly, but specialized scalar-restart CuPy removes the application median speed advantage: K uses **7.13% more time on RTX** and practically ties T4. These are scoped experimental results, separate from native-cuGraph PageRank and the installed API.
 
 
@@ -8,6 +10,8 @@ The new [controlled confirmation](https://utkarsh-sinha0.github.io/k-graphfuse/r
 Published native ranking study: 66.3% of 89 attempted cases (59/89) pass the strong speed gate; 29.2% (26/89) also have both reference errors no worse. There are 85 comparable cases and four K accuracy failures, counted as non-wins. Strongest tested control wins: 38.8% overall (33/85), 44.7% GPU (38/85). Separate precision GPU experiment: six of six speed and sampled-accuracy gates; about 20.0–73.3% less median compute time (1.25–3.74x control/K), equivalent to 25.0–273.9% higher derived serial rate, versus equivalent tuned FP64 CuPy/PyTorch on constructed filters and derivatives; not native cuGraph. Here s = baseline median/K median, time reduction = 100 × (1 − 1/s), and derived reciprocal-latency serial rate increase = 100 × (s − 1); it is not measured concurrent throughput. Frozen timed source and later checked-API source are separate. Full-workflow losses, unsupported algorithms and all candidates remain visible. Global SOTA, energy and customer savings are unestablished. The original one-run result was 21.28% less median compute time (63.398 ms native / 49.906 ms K; s=1.2703x), or 27.03% higher derived serial rate; the historical zero-pass 19-workload suite retains its original contract.
 
 ## Documentation
+
+- [Theorem-bound attribution](https://utkarsh-sinha0.github.io/k-graphfuse/research/bound-attribution/): all eight matched old/new-bound timing pairs, 2/11 degree-changing records, CPU/laptop limitations and priority boundary
 
 - [Controlled study](https://utkarsh-sinha0.github.io/k-graphfuse/research/controlled-study/): matching budgets/degrees, two devices, component comparisons and application counterexample
 - [Closest methods](https://utkarsh-sinha0.github.io/k-graphfuse/research/closest-methods/): prior art and exact contribution boundary

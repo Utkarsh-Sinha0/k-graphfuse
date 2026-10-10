@@ -100,3 +100,7 @@ Best-fit hypotheses are repeated low-channel sparse linear graph features, asymm
 - [Final API test record](https://github.com/Utkarsh-Sinha0/k-graphfuse/blob/main/experiments/precision_gpu/FINAL_LOCAL_TESTS.json)
 
 Run the [offline audit](reproduce.md) before making a new GPU execution. Keep the frozen timed sources and current API results separate.
+
+## Theorem-bound attribution update
+
+The [theorem-bound attribution analysis](https://utkarsh-sinha0.github.io/k-graphfuse/research/bound-attribution/) separates the new complete-Crouzeix bound from balancing and GPU fusion. **Two of 11 legacy T4 workload records reduce degree: 23→22 and 19→18.** Across all eight accepted matched FP64 configurations in those two records, the new-bound plan records **3.56–5.35% less median resident time**, with lower observed p95. This is single-run evidence below the separate 10% strong-speed gate. The exact CPU 9→8 boundary is untimed; the checked laptop old/new-bound cases retain equal degrees.

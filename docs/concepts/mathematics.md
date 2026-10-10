@@ -157,3 +157,7 @@ The complete `K=2` premise replaces the older `1+sqrt(2)` constant from [Crouzei
 Block triangular derivative identities and numerical-range derivative analysis are established techniques. [Crouzeix and Kressner](https://arxiv.org/abs/2007.09784) provide relevant bivariate matrix-function prior art. The scaled application and implementation are not a proof of worldwide priority. The older complete constant also permits a weaker lifted bound.
 
 The measured public PageRank result uses zero truncation and demonstrates no manuscript-driven degree reduction. Family 107 rectangular multiplication is not implemented. See [results](../benchmarks/results.md), [accuracy contracts](contracts.md) and [support limits](../reference/limitations.md).
+
+## Theorem-bound attribution update
+
+The [theorem-bound attribution analysis](https://utkarsh-sinha0.github.io/k-graphfuse/research/bound-attribution/) separates the new complete-Crouzeix bound from balancing and GPU fusion. **Two of 11 legacy T4 workload records reduce degree: 23→22 and 19→18.** Across all eight accepted matched FP64 configurations in those two records, the new-bound plan records **3.56–5.35% less median resident time**, with lower observed p95. This is single-run evidence below the separate 10% strong-speed gate. The exact CPU 9→8 boundary is untimed; the checked laptop old/new-bound cases retain equal degrees.

@@ -195,6 +195,46 @@
       "source": "studies/controlled_20261010/SUMMARY.json",
       "scope": "256 MovieLens 1M users, fixed finite diffusion; Recall@10=0.0587420862 and nDCG@10=0.0944984887; not recommendation quality SOTA",
       "limitations": "Author-controlled two-device study; descriptive intervals, full FP64 checks and separate small arbitrary-precision checks; no universal accuracy, independent replication, cold-start or customer-cost claim"
+    },
+    {
+      "id": "bound_attribution_time_range_20261011",
+      "kind": "measurement",
+      "value": [
+        3.5604521480585904,
+        5.354788760780583
+      ],
+      "unit": "percent less observed median resident time",
+      "source": "studies/bound_attribution_20261011/SUMMARY.json",
+      "scope": "Eight accepted matched FP64 packing/capture settings in two degree-changing T4 workloads; 31 samples/configuration; not a 10% strong-speed pass",
+      "limitations": "Retrospective existing-data analysis; no independent repeat or paired-block interval; exact 9-to-8 GPU time absent and checked laptop old/new constants retain equal degrees. No new theorem authorship, algorithmic priority, native-cuGraph win or customer saving."
+    },
+    {
+      "id": "bound_attribution_matched_pairs_20261011",
+      "kind": "measurement",
+      "value": 8,
+      "unit": "accepted matched timing pairs",
+      "source": "studies/bound_attribution_20261011/SUMMARY.json",
+      "scope": "Four settings in each of two constructed workloads; two of eleven examined records change degree; not eight independent graphs",
+      "limitations": "Retrospective existing-data analysis; no independent repeat or paired-block interval; exact 9-to-8 GPU time absent and checked laptop old/new constants retain equal degrees. No new theorem authorship, algorithmic priority, native-cuGraph win or customer saving."
+    },
+    {
+      "id": "bound_attribution_degree_reductions_20261011",
+      "kind": "measurement",
+      "value": 2,
+      "unit": "workload records with reduced degree",
+      "source": "studies/bound_attribution_20261011/SUMMARY.json",
+      "scope": "Eleven examined legacy matrix-filter/sensitivity records; nine unchanged; separate from the controlled study",
+      "limitations": "Retrospective existing-data analysis; no independent repeat or paired-block interval; exact 9-to-8 GPU time absent and checked laptop old/new constants retain equal degrees. No new theorem authorship, algorithmic priority, native-cuGraph win or customer saving.",
+      "denominator": 11
+    },
+    {
+      "id": "bound_attribution_factor_reduction_20261011",
+      "kind": "mathematical deduction",
+      "value": 17.157287525380983,
+      "unit": "percent smaller numerical-range value-tail factor",
+      "source": "studies/bound_attribution_20261011/SUMMARY.json",
+      "scope": "Fixed nonzero residual and geometry: 1+sqrt(2) to 2; ordinary norm branch may dominate; not a timing or execution-error percentage",
+      "limitations": "Retrospective existing-data analysis; no independent repeat or paired-block interval; exact 9-to-8 GPU time absent and checked laptop old/new constants retain equal degrees. No new theorem authorship, algorithmic priority, native-cuGraph win or customer saving."
     }
   ],
   "unestablished": [
@@ -206,5 +246,5 @@
     "customer production quality",
     "guaranteed search or AI ranking"
   ],
-  "evidence_updated": "2026-10-10"
+  "evidence_updated": "2026-10-11"
 }

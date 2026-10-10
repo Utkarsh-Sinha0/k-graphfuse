@@ -145,3 +145,9 @@ The offline audit needs only the installed CPU dependencies. GPU reproduction ad
 Repeated low-channel sparse polynomial kernels are credible targets for evaluation where this exact numerical contract matches. R-MAT and the specialized recommendation control demonstrate why resident kernel gains cannot be converted directly into universal workflow or money claims. Energy, allocator peaks in this new study, concurrent service capacity, fully cold requests and customer bills are unmeasured. LAPACK DGEBAL, GE-SpMM, FusedMM and Chebyshev/Clenshaw-specific executors have not been run as equivalent controls; this is not exhaustive SOTA. The small arbitrary-precision tests and large FP64 checks do not replace an all-input execution-roundoff certificate.
 
 Codex assisted implementation, analysis, graphics and manuscript drafting. Sources, output checks and audit records are supplied for inspection. This assistance and automated verification do not constitute scientific peer review or an external replication.
+
+## Separate recovered theorem attribution
+
+The [theorem-bound attribution analysis](https://utkarsh-sinha0.github.io/k-graphfuse/research/bound-attribution/) separates the new complete-Crouzeix bound from balancing and GPU fusion. **Two of 11 legacy T4 workload records reduce degree: 23→22 and 19→18.** Across all eight accepted matched FP64 configurations in those two records, the new-bound plan records **3.56–5.35% less median resident time**, with lower observed p95. This is single-run evidence below the separate 10% strong-speed gate. The exact CPU 9→8 boundary is untimed; the checked laptop old/new-bound cases retain equal degrees.
+
+The ten-fixture controlled study uses the constant-two planner for its component controls. The retrospective legacy attribution therefore has its own inputs, timing protocol and denominator; it is not an additional controlled-study or native-cuGraph win.

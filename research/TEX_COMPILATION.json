@@ -1,9 +1,9 @@
 {
   "status": "success",
-  "date": "2026-10-10",
+  "date": "2026-10-11",
   "source": "research/k-graphfuse-paper.tex",
-  "source_sha256": "b379ec5ee17d4cb7ff9342892f0d82a684ea1d1d1e1771bb1141167c78e4d932",
+  "source_sha256": "78a7e1149310cc25335d760b6775a89ea58f9e22a03df3ffded75dcda8449468",
   "compiler": "Codex desktop built-in LaTeX compiler",
-  "reported_result": "The revised controlled-study source compiled successfully with the desktop editor compiler.",
+  "reported_result": "The revised theorem-bound attribution manuscript compiled successfully with the desktop editor compiler.",
   "scope": "Standalone source compilation; the distributed PDF is independently rendered from Markdown. No mathematical peer review implied."
 }

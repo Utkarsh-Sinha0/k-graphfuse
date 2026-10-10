@@ -1,5 +1,13 @@
 # Release notes
 
+## Theorem-bound attribution and manuscript revision — 11 October 2026
+
+- Adds a retrospective analysis of existing T4 measurements: two of eleven workload records reduce degree (23→22, 19→18), with 3.56–5.35% less observed median time across all eight matched FP64 settings.
+- Records all medians, p95 and normalized output differences; pins source/sample provenance and separates the 17.1573% value-certificate factor from measured speed.
+- Makes the untimed CPU 9→8 boundary and equal-degree laptop constant controls explicit. There is no new GPU run or algorithm implementation.
+- Revises README, overview, benchmark methods/results, mathematical/contribution documentation, claims, agent navigation and the paper/PDF/LaTeX; adds a reproducible PNG/SVG chart and CPU audit.
+- Retains independent-repeat/priority gaps, R-MAT and recommendation losses, all frozen sources and installed 0.1.0 API. These observations are below the 10% strong-speed bar and add no native-cuGraph wins.
+
 ## Frozen controlled study and revised manuscript — 10 October 2026
 
 - Confirms repaired source on six graph families, ten fixtures, two fresh input/coefficient seeds per phase and RTX 3060 Laptop / Tesla T4; all source freezes precede their confirmation runs.

@@ -13,6 +13,7 @@ Use this file to find implementation and verification context. It does not ask a
 - `evidence/2026-10-10/`: 15-suite raw records, all competitors, accuracy failures, and native comparison counts.
 - `experiments/precision_gpu/`: experimental fused GPU source, timed snapshots, sampled high-precision references, and separate checked-API tests; outside the installed package API.
 - `studies/controlled_20261010/`: immutable method freezes, repaired two-device runs, matched-degree controls, complete MovieLens workflow and CPU recomputation; retain R-MAT/application losses.
+- `studies/bound_attribution_20261011/`: eight matched T4 old/new-bound pairs in two of eleven legacy records; CPU 9→8 boundary is untimed and laptop constant controls retain equal degrees. Keep this separate from 10% speed-gate wins.
 - `benchmarks/verify_evidence.py`: offline source/statistics/claim audit; does not rerun large GPU benchmarks.
 - `docs/claims.json`: bounded claims with source paths and limitations.
 

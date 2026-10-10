@@ -1,0 +1,10 @@
+{
+  "source_sha256": {
+    "studies/bound_attribution_20261011/SUMMARY.json": "d543461cf78534ef03617496d5b494fabf48e4ead4135a8daaa01aa95f74ba41",
+    "studies/bound_attribution_20261011/figure.py": "d59d0d8f80741f15937995aa567dd7dd7b7fc12ba1b10a4c226a422f88de3094"
+  },
+  "artifact_sha256": {
+    "docs/assets/bound_attribution.png": "72d439d56f8a9cbbf08d8053568720a0293a45670ee7fc08ce9dfb8b298ead35",
+    "docs/assets/bound_attribution.svg": "f4e2f2ff734adeaeb8fc0058bb5dfba4b6acf7bc23b5fcff68fd4f81d770d944"
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-09",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+  "numpy": "2.2.6",
+  "scipy": "1.18.1",
+  "seed": 20261009,
+  "timing": "Seven warmed CPU runs per method, interleaved in seeded random order; median/min/max; one BLAS thread",
+  "scope": "Synthetic kernels; full and classical-cut sparse Horner controls; no industrial/SOTA claim",
+  "certificate": "Exact-arithmetic truncation; floating conversion and rounding excluded",
+  "memory": "CSR buffers measured; hypothetical dense bytes calculated; no peak-RSS measurement",
+  "constant_only_boundary": {
+    "new_degree": 8,
+    "older_complete_bound_degree": 9,
+    "classical_norm_degree": 10,
+    "deliberately_selected_budget": 2.8361371852467578e-05
+  },
+  "results": [
+    {
+      "case": "directed sparse graph",
+      "vertices": 10000,
+      "stored_nonzeros": 69968,
+      "channels": 4,
+      "full_degree": 48,
+      "selected_degree": 7,
+      "older_complete_bound_degree": 7,
+      "classical_norm_degree": 7,
+      "bound_method": "classical norm",
+      "budget": 1e-08,
+      "exact_truncation_bound": 6.222400541390654e-09,
+      "observed_error_per_input_norm": 1.050467364749642e-11,
+      "compile_seconds": 1.2203810999926645,
+      "full_sparse_horner_seconds": {
+        "median": 0.014060000015888363,
+        "min": 0.013789499993436038,
+        "max": 0.01899559999583289
+      },
+      "optimized_sparse_horner_seconds": {
+        "median": 0.002445900026941672,
+        "min": 0.0023336000158451498,
+        "max": 0.005346000019926578
+      },
+      "classical_cut_sparse_horner_seconds": {
+        "median": 0.0023585000017192215,
+        "min": 0.002315299992915243,
+        "max": 0.003867699997499585
+      },
+      "speedup_vs_full_sparse_horner": 5.748395216900521,
+      "speedup_vs_classical_cut": 0.9642667221637286,
+      "break_even_repeated_calls": 106,
+      "stored_csr_operator_bytes": 1199496,
+      "dense_float64_operator_bytes_calculated_not_allocated": 800000000,
+      "input_state_bytes": 320000
+    },
+    {
+      "case": "directed sparse graph",
+      "vertices": 100000,
+      "stored_nonzeros": 699974,
+      "channels": 4,
+      "full_degree": 48,
+      "selected_degree": 8,
+      "older_complete_bound_degree": 8,
+      "classical_norm_degree": 8,
+      "bound_method": "classical norm",
+      "budget": 1e-08,
+      "exact_truncation_bound": 1.0519900593230785e-09,
+      "observed_error_per_input_norm": 5.813628793492753e-13,
+      "compile_seconds": 13.05954180000117,
+      "full_sparse_horner_seconds": {
+        "median": 0.3374156000209041,
+        "min": 0.32802600000286475,
+        "max": 0.36341029999312013
+      },
+      "optimized_sparse_horner_seconds": {
+        "median": 0.056360999995376915,
+        "min": 0.050191699992865324,
+        "max": 0.06428069999674335
+      },
+      "classical_cut_sparse_horner_seconds": {
+        "median": 0.061786700010998175,
+        "min": 0.05280400000629015,
+        "max": 0.07020340001326986
+      },
+      "speedup_vs_full_sparse_horner": 5.986685829715247,
+      "speedup_vs_classical_cut": 1.096266922447549,
+      "break_even_repeated_calls": 47,
+      "stored_csr_operator_bytes": 11999592,
+      "dense_float64_operator_bytes_calculated_not_allocated": 80000000000,
+      "input_state_bytes": 3200000
+    },
+    {
+      "case": "coupled nonnormal directed graph",
+      "vertices": 100000,
+      "stored_nonzeros": 200000,
+      "channels": 4,
+      "full_degree": 48,
+      "selected_degree": 15,
+      "older_complete_bound_degree": 15,
+      "classical_norm_degree": 20,
+      "bound_method": "complete Crouzeix",
+      "budget": 1e-08,
+      "exact_truncation_bound": 4.644013073747741e-09,
+      "observed_error_per_input_norm": 3.6654473179145875e-17,
+      "compile_seconds": 4.068275800003903,
+      "full_sparse_horner_seconds": {
+        "median": 0.16542740000295453,
+        "min": 0.14498709997860715,
+        "max": 0.1848984000098426
+      },
+      "optimized_sparse_horner_seconds": {
+        "median": 0.05161439999938011,
+        "min": 0.04807620000792667,
+        "max": 0.05872390000149608
+      },
+      "classical_cut_sparse_horner_seconds": {
+        "median": 0.07011030000285245,
+        "min": 0.05922519997693598,
+        "max": 0.07649320000200532
+      },
+      "speedup_vs_full_sparse_horner": 3.205062928270818,
+      "speedup_vs_classical_cut": 1.3583476704891364,
+      "break_even_repeated_calls": 36,
+      "stored_csr_operator_bytes": 4000008,
+      "dense_float64_operator_bytes_calculated_not_allocated": 80000000000,
+      "input_state_bytes": 3200000
+    },
+    {
+      "case": "no removable tail",
+      "vertices": 10000,
+      "stored_nonzeros": 10000,
+      "channels": 4,
+      "full_degree": 16,
+      "selected_degree": 16,
+      "older_complete_bound_degree": 16,
+      "classical_norm_degree": 16,
+      "bound_method": "classical norm",
+      "budget": 0.0,
+      "exact_truncation_bound": 0.0,
+      "observed_error_per_input_norm": 0.0,
+      "compile_seconds": 0.13209800000186078,
+      "full_sparse_horner_seconds": {
+        "median": 0.0015140000032261014,
+        "min": 0.0014918000088073313,
+        "max": 0.0020388000120874494
+      },
+      "optimized_sparse_horner_seconds": {
+        "median": 0.0015271000156644732,
+        "min": 0.0015128000231925398,
+        "max": 0.0020634999964386225
+      },
+      "classical_cut_sparse_horner_seconds": {
+        "median": 0.0014987000031396747,
+        "min": 0.0014856999914627522,
+        "max": 0.0017657999997027218
+      },
+      "speedup_vs_full_sparse_horner": 0.9914216408198571,
+      "speedup_vs_classical_cut": 0.981402650623089,
+      "break_even_repeated_calls": null,
+      "stored_csr_operator_bytes": 240008,
+      "dense_float64_operator_bytes_calculated_not_allocated": 800000000,
+      "input_state_bytes": 320000
+    }
+  ]
+}

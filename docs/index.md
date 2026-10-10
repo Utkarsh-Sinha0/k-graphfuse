@@ -17,6 +17,10 @@ K GraphFuse turns a sequence of compatible graph filters into an ordered matrix 
 
 The intended opportunity is repeated graph computation on a reused operator. Compilation, graph conversion and GPU preparation are additional costs. Matching a mathematical operation alone does not establish a production speedup: include downstream quality, transfers, projection, updates and writeback in your evaluation.
 
+## Theorem-dependent computation findings
+
+The [theorem-bound attribution analysis](https://utkarsh-sinha0.github.io/k-graphfuse/research/bound-attribution/) separates the new complete-Crouzeix bound from balancing and GPU fusion. **Two of 11 legacy T4 workload records reduce degree: 23→22 and 19→18.** Across all eight accepted matched FP64 configurations in those two records, the new-bound plan records **3.56–5.35% less median resident time**, with lower observed p95. This is single-run evidence below the separate 10% strong-speed gate. The exact CPU 9→8 boundary is untimed; the checked laptop old/new-bound cases retain equal degrees.
+
 ## Audited performance evidence
 
 | Study | Outcome | Read the matching contract |

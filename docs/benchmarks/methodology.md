@@ -4,6 +4,7 @@
 
 | Study | Task | Accuracy reference | Timing and uncertainty |
 |---|---|---|---|
+| [Theorem-bound attribution](../research/bound-attribution.md) | Same-backend old/new constant; packing/capture matched | Full FP64 CPU reference; both FP64 gates pass | 31 consecutive samples/configuration, shuffled configuration order; no paired repeated-block interval |
 | [Broad native comparison](cugraph.md) | Fixed-update or converged rankings under each recorded graph contract | Full reference outputs; L1 and maximum relative error | Five paired blocks of 31 samples; bootstrap pooled medians |
 | [Precision GPU experiment](precision-gpu.md) | Matrix-valued polynomial filters and affine derivatives | Full FP64 CPU check plus independent 256/384-bit truth on 16 rows | Five blocks of 31 samples; bootstrap block medians; seven pilot samples/configuration |
 | [Original reference task](historical-reference.md) | Exactly ten global probability PageRank updates | Downloaded official Graphalytics per-vertex reference | 31 warm / 11 host-output samples; one-run sample bootstrap |
@@ -64,3 +65,7 @@ The scoped improvement gate is a median at least 10% lower than the accepted com
 ## Provenance and earlier suite
 
 Raw records retain **Sinha GraphFuse** names. Public K GraphFuse core files match the recorded module hashes. The earlier large/community/scale suite keeps all candidates, rejected outputs, exceptions and the incomplete original case. Its stronger controls and different accuracy/task contracts explain why its verdict differs from the scoped public-reference comparison. Refer to original protocol copies and candidate tables in the [evidence folder](https://github.com/Utkarsh-Sinha0/k-graphfuse/tree/main/evidence).
+
+## Attribution denominators
+
+The retrospective bound analysis examines eleven legacy workload records: two reduce degree, nine do not. It reports all four accepted matching FP64 settings for each changed-degree record. Eight positive timing comparisons are two workloads, not eight independent datasets. Their 3.56–5.35% observed changes do not pass the separate 10% strong-speed bar and add no native comparison wins.

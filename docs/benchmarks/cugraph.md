@@ -115,3 +115,7 @@ The stricter error screen compares the worst recorded block L1 and maximum-relat
 - [Full workflow diagnostics](https://github.com/Utkarsh-Sinha0/k-graphfuse/blob/main/evidence/2026-10-10/detailed/workflow_diagnostics.csv)
 
 Run `python benchmarks/verify_evidence.py` from a repository checkout. See [methodology](methodology.md), [reproduction](reproduce.md), and [application fit](../guides/applications.md).
+
+## Separate theorem-bound evidence
+
+The [old/new-bound attribution](../research/bound-attribution.md) compares the same FP64 PyTorch backend with different complete-bound constants. Its eight 3.56–5.35% observed timing reductions occur in two degree-changing records out of eleven examined matrix/sensitivity workloads. These are not native-cuGraph comparisons, do not pass the separate 10% strong-speed bar and add no native wins.

@@ -48,6 +48,7 @@ EXPECTED_FIGURES = (
     "graphfuse_pipeline.png",
     "controlled_matched_degrees.png",
     "controlled_application.png",
+    "bound_attribution.png",
 )
 INK = colors.HexColor("#17243A")
 MUTED = colors.HexColor("#5C6878")
@@ -590,6 +591,12 @@ def parse_result_table(tables: list[list[list[str]]]) -> list[list[str]]:
     raise AssertionError("The six-row workload results table is missing")
 
 
+def parse_bound_table(tables: list[list[list[str]]]) -> list[list[str]]:
+    rows = next(rows for rows in tables if rows and plain_text(rows[0][0]).lower().startswith('workload / fp64 setting'))
+    assert len(rows) == 9, 'The eight matched bound-attribution rows are missing'
+    return [[plain_text(cell) for cell in row] for row in rows[1:]]
+
+
 def validate_pdf(
     path: Path,
     result_rows: list[list[str]],
@@ -623,6 +630,9 @@ def validate_pdf(
         "7.13%",
         "specialized scalar-restart control",
         "no end-to-end median speed gain is confirmed",
+        "3.56–5.35%",
+        "nine do not",
+        "the cpu sparse record already demonstrates a degree-only boundary",
     )
     missing = [phrase for phrase in required if normalized(phrase) not in text]
     if missing:
@@ -675,6 +685,7 @@ def write_record(parser: PaperHTML, page_count: int, link_count: int) -> None:
 {chr(10).join(f"  - `{source}` → `{target}`" for source, target in parser.relative_links.items())}
 - Initial YAML frontmatter is omitted from page content and retained in the source hash.
 - Result table: {len(parse_result_table(parser.tables))} data rows; all row cells verified in extracted PDF text
+- Bound-attribution table: {len(parse_bound_table(parser.tables))} matched data rows; all row cells verified in extracted PDF text
 - Equations rendered with MathText: {parser.math_rendered}; monospaced fallback formulas: {len(parser.math_fallbacks)}
 - Fallback formulas (whitespace compacted here; exact source formulas remain visible in monospaced PDF text): {fallback_list}
 - Renderer font resources: DejaVu Serif, DejaVu Sans, DejaVu Sans Mono from Matplotlib's installed font bundle
@@ -730,7 +741,7 @@ def main() -> None:
             canvas.setLineWidth(0.4)
             canvas.line(47, letter[1] - 37, letter[0] - 47, letter[1] - 37)
             canvas.line(47, 35, letter[0] - 47, 35)
-            canvas.drawString(47, 23, "10 October 2026  |  Preprint draft")
+            canvas.drawString(47, 23, "11 October 2026  |  Preprint draft")
             canvas.drawRightString(letter[0] - 47, 23, f"Page {document.page}")
             canvas.restoreState()
 
@@ -748,7 +759,7 @@ def main() -> None:
             author="Utkarsh Sinha", subject="Technical preprint draft; not peer-reviewed",
         )
         doc.build(parser.story, onFirstPage=decorate, onLaterPages=decorate)
-        pages, links = validate_pdf(PDF, result_rows, set(expected_links.values()), parser.rendered_formulas)
+        pages, links = validate_pdf(PDF, result_rows + parse_bound_table(parser.tables), set(expected_links.values()), parser.rendered_formulas)
         write_record(parser, pages, links)
         print(f"Rendered {PDF.relative_to(ROOT)}: {pages} pages; {len(result_rows)} benchmark rows; "
               f"{parser.math_rendered} equations rendered, {len(parser.math_fallbacks)} monospaced fallbacks; {links} links.")
