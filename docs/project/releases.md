@@ -1,5 +1,13 @@
 # Release notes
 
+## Research manuscript and presentation update — 10 October 2026
+
+- Adds a technical research manuscript with a proof of similarity error transfer, coupled derivative recurrence, coefficient-encoding bound, reproducible methods, results and limitations; its status is an unreviewed preprint draft.
+- Adds a downloadable PDF, standalone LaTeX source and three reproducible PNG/SVG figures: precision percentages, native win coverage and the evaluation pipeline.
+- Presents latency reductions beside accurately labeled derived serial-rate increases. The six selected precision cases show 19.98–73.26% less median time and 24.98–273.95% higher derived rate against FP64 CuPy/PyTorch controls.
+- Adds [metric definitions](../benchmarks/metric-definitions.md), figure source hashes, PDF provenance and offline presentation checks. [Detailed results](../benchmarks/results.md) and the [manuscript](../research/paper.md) retain negative results and comparator scope.
+- Reuses the recorded evidence. This documentation update runs no new large GPU benchmark and makes no change to the installed API or package version.
+
 ## Evidence and documentation update — 10 October 2026
 
 - Publishes 15 complete benchmark suites, 111 case records, 2,190 configurations and all accepted/rejected outcomes.

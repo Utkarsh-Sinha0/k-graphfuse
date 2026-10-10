@@ -9,12 +9,12 @@ The benchmark supports a repeated graph-computation opportunity. It does not est
 
 | Candidate project | Matching measured component | Why evaluate K | What must still be measured |
 |---|---|---|---|
-| Resident ranking refresh service | Fixed-update centrality on a reused graph | Facebook graph: 2.76x versus native, 2.22x versus fastest recorded control | Real graph distributions, output budget, freshness and complete request latency |
-| Batch link/citation feature worker | PageRank stage | Several public graph stages beat native by about 1.9–2.9x | Faster CuPy alternatives still lead on some of those cases |
-| Low-channel diffusion or graph-feature engine | Sparse matrix-valued polynomial, 4/16 FP64 channels | Precision experiment: 1.55–3.74x with sampled accuracy gates | Actual operators/coefficient spectra, channels, transfers and build cost |
-| Network/simulation sensitivity sweeps | Value plus derivative for one diagonal-node parameter direction | Precision experiment: 1.25–2.07x with sampled accuracy gates | Engineering truth, parameter interval, derivative quality and scheduling |
+| Resident ranking refresh service | Fixed-update centrality on a reused graph | Facebook: **63.7% less median compute time** vs native (1.700/0.617 ms; `s=2.755x`; **175.5% higher derived serial rate**); vs fastest CuPy: **54.9% less** (1.366/0.617 ms; `s=2.215x`; **121.5% higher derived rate**) | Real graph distributions, output budget, freshness and complete request latency |
+| Batch link/citation feature worker | PageRank stage | Selected public graphs: **47.8–65.0% less median compute time** (native/K `s=1.91–2.86x`; **91.5–185.6% higher derived serial rate**) | Faster CuPy alternatives still lead on some of those cases |
+| Low-channel diffusion or graph-feature engine | Sparse matrix-valued polynomial, 4/16 FP64 channels | Precision experiment: **35.4–73.3% less median compute time** (`s=1.55–3.74x`; **54.9–273.9% higher derived serial rate**) with sampled accuracy gates | Actual operators/coefficient spectra, channels, transfers and build cost |
+| Network/simulation sensitivity sweeps | Value plus derivative for one diagonal-node parameter direction | Precision experiment: **20.0–51.7% less median compute time** (`s=1.25–2.07x`; **25.0–107.2% higher derived serial rate**) with sampled accuracy gates | Engineering truth, parameter interval, derivative quality and scheduling |
 
-The first two rows use the [native ranking study](../benchmarks/cugraph.md). The last two use the [constructed precision experiment](../benchmarks/precision-gpu.md) against equivalent CuPy/PyTorch controls. The latter is experimental source outside the installed API. None is a measured customer deployment.
+The first two rows use the [native ranking study](../benchmarks/cugraph.md); the latter two use the [constructed precision experiment](../benchmarks/precision-gpu.md) against equivalent tuned FP64 CuPy/PyTorch controls. Each `s` is the control median divided by the K median; time reduction is `100 × (1 − 1/s)` and derived reciprocal-latency serial rate increase is `100 × (s − 1)`. This rate is not measured concurrent throughput. The precision implementation is experimental source outside the installed API. None of these results is a customer deployment.
 
 Favor a pilot whose graph stays resident and whose repeated compatible calculation dominates runtime. A fast resident stage cannot compensate automatically for import, conversion, arbitrary graph changes, cold calls or writeback. Recorded complete file and rebuild workflows favored native cuGraph. For BFS, shortest paths, components, triangles or Louvain, K has no implemented comparison.
 
@@ -38,9 +38,9 @@ For planning only, let `f` be the fraction of original job time spent in graph c
 new_job_time / old_job_time = (1-f) + f/s
 ```
 
-At `f=0.5`, the model predicts **10.64% shorter total job time**. At `f=0.1`, it predicts about **2.13%**. These are Amdahl calculations, not customer measurements. Transfer overhead, graph rebuilding, queues and parallel overlap can change the result.
+The measured stage medians were 63.398 ms native / 49.906 ms K (`s=1.270346x`): **21.28% less compute time**, equivalent to **27.03% higher derived stage serial rate**. At `f=0.5`, the model predicts **10.64% less total job time** and **11.91% higher derived reciprocal-latency job rate**. At `f=0.1`, it predicts **2.13% less total time** and **2.17% higher derived job rate**. These are Amdahl projections, not customer measurements. Transfer overhead, graph rebuilding, queues and parallel overlap can change the result.
 
-For the separate 100k four-channel precision filter, the recorded stage ratio is about `3.74`. If that exact matching stage occupied half the original job and all other costs stayed constant, the model would predict about **36.6% shorter total time**. This is a planning illustration, not measured money, instance capacity or customer latency. Include every new overhead before using a projection in a business case.
+For the separate 100k four-channel precision filter, the control/K medians were 4.334/1.159 ms (`s=3.739463x`): **73.26% less stage compute time** and **273.95% higher derived stage serial rate**. If that exact matching stage occupied half the original job and all other costs stayed constant, the model predicts **36.63% less total job time** and **57.80% higher derived reciprocal-latency job rate**. These are planning illustrations, not measured throughput, money, instance capacity or customer latency. Include every new overhead before using a projection in a business case.
 
 ![Modeled whole-job latency and potential application gates, clearly distinguished from customer measurements](../assets/k_real_world_impact.png)
 

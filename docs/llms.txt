@@ -2,7 +2,7 @@
 
 > Sparse graph polynomial plans, directional sensitivities and optional CUDA execution. Created by Utkarsh Sinha. Evaluation release 0.1.0; Apache 2.0 with preserved historical MIT components.
 
-Published native ranking study: 59/89 strong speed wins; 26/89 also have both reference errors no worse. There are 85 comparable cases and four K accuracy failures. Strongest tested control wins: 33/85 overall, 38/85 GPU. Separate precision GPU experiment: 6/6 speed and sampled-accuracy gates, 1.25–3.74x versus FP64 CuPy/PyTorch on constructed filters and derivatives; not native cuGraph. Frozen timed source and later checked-API source are separate. Full-workflow losses, unsupported algorithms and all candidates remain visible. Global SOTA, energy and customer savings are unestablished. The original one-run 21.28% native result and historical zero-pass 19-workload suite are retained under their original contracts.
+Published native ranking study: 66.3% of 89 attempted cases (59/89) pass the strong speed gate; 29.2% (26/89) also have both reference errors no worse. There are 85 comparable cases and four K accuracy failures, counted as non-wins. Strongest tested control wins: 38.8% overall (33/85), 44.7% GPU (38/85). Separate precision GPU experiment: six of six speed and sampled-accuracy gates; about 20.0–73.3% less median compute time (1.25–3.74x control/K), equivalent to 25.0–273.9% higher derived serial rate, versus equivalent tuned FP64 CuPy/PyTorch on constructed filters and derivatives; not native cuGraph. Here s = baseline median/K median, time reduction = 100 × (1 − 1/s), and derived reciprocal-latency serial rate increase = 100 × (s − 1); it is not measured concurrent throughput. Frozen timed source and later checked-API source are separate. Full-workflow losses, unsupported algorithms and all candidates remain visible. Global SOTA, energy and customer savings are unestablished. The original one-run result was 21.28% less median compute time (63.398 ms native / 49.906 ms K; s=1.2703x), or 27.03% higher derived serial rate; the historical zero-pass 19-workload suite retains its original contract.
 
 ## Documentation
 
@@ -15,6 +15,8 @@ Published native ranking study: 59/89 strong speed wins; 26/89 also have both re
 - [Results](https://utkarsh-sinha0.github.io/k-graphfuse/benchmarks/results/): competitors and negative evidence
 - [Native cuGraph](https://utkarsh-sinha0.github.io/k-graphfuse/benchmarks/cugraph/): counts, precision, metrics and losses
 - [Precision GPU](https://utkarsh-sinha0.github.io/k-graphfuse/benchmarks/precision-gpu/): profiles, high-precision oracle and frozen source
+- [Research paper](https://utkarsh-sinha0.github.io/k-graphfuse/research/paper/): derivations, precision results and scope
+- [Metric definitions](https://utkarsh-sinha0.github.io/k-graphfuse/benchmarks/metric-definitions/): median latency ratios, time reductions and derived serial rates
 - [Similarity derivation](https://utkarsh-sinha0.github.io/k-graphfuse/concepts/precision/): coordinate error and coupled execution
 - [Methods](https://utkarsh-sinha0.github.io/k-graphfuse/benchmarks/methodology/): accuracy gates and timing boundaries
 - [Reproduce](https://utkarsh-sinha0.github.io/k-graphfuse/benchmarks/reproduce/): offline audit and frozen experiments

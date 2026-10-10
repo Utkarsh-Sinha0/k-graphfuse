@@ -1,0 +1,239 @@
+{
+  "artifact_sha256": {
+    "docs/assets/graphfuse_pipeline.png": "1efc5a8b531382eebcaf74912dcd1d9af9d27abec7cca032a530759b1fba1d20",
+    "docs/assets/graphfuse_pipeline.svg": "b81452278c10b22410151bdf2781827e49ad19992969e7fc9addaba3c727b5cf",
+    "docs/assets/native_win_coverage.png": "9b6dc4638979cf4fcb403aac6409d86f93efd4362241e44d0984f55b4cbeee35",
+    "docs/assets/native_win_coverage.svg": "72ebc86ee24e614ca822f5c8d9360a8d6cc0327bddd0ab63824277003e9de29d",
+    "docs/assets/precision_percent_comparison.png": "fd4b626de368627f3d2df30c30f1ebbc872d74a4028ad277a2d0bd5e7f36c444",
+    "docs/assets/precision_percent_comparison.svg": "203c5f90cba9b435dfa4f125029f04e99a8dfc067825853bec713febfe2cb2a1"
+  },
+  "artifacts": [
+    "docs/assets/precision_percent_comparison.png",
+    "docs/assets/precision_percent_comparison.svg",
+    "docs/assets/native_win_coverage.png",
+    "docs/assets/native_win_coverage.svg",
+    "docs/assets/graphfuse_pipeline.png",
+    "docs/assets/graphfuse_pipeline.svg"
+  ],
+  "native_coverage": {
+    "K_accuracy_failures": 4,
+    "attempted_cases": 89,
+    "both_reference_errors_no_worse": 47,
+    "comparable_cases": 85,
+    "limit": "Eight favorable original-workload metrics are correlated observations, not independent replications.",
+    "lower_median": 65,
+    "original_single_workload_metrics": {
+      "eligible": 9,
+      "excluded": [
+        "Frontend preparation: scopes differ",
+        "Sampled board power: no integrated energy measurement"
+      ],
+      "favorable": 8
+    },
+    "precision_portfolio_separate": {
+      "cases": 6,
+      "comparator": "Tuned equivalent FP64 CuPy/PyTorch; not native cuGraph",
+      "dual_gate_wins": 6
+    },
+    "same_precision_cases": 76,
+    "same_precision_speed_and_error_wins": 26,
+    "same_precision_speed_wins": 51,
+    "source": "evidence/2026-10-10/comparison_summary.json",
+    "speed_and_both_reference_errors_wins": 26,
+    "speed_gate_wins": 59,
+    "strongest_tested_gpu": {
+      "cases": 85,
+      "wins": 38
+    },
+    "strongest_tested_overall": {
+      "cases": 85,
+      "wins": 33
+    }
+  },
+  "pipeline": {
+    "channel_support": [
+      1,
+      16
+    ],
+    "gpu_direction": "diagonal affine direction",
+    "performance_api_separation": "Timings use frozen experimental sources; checked/repaired API tests are separate correctness evidence.",
+    "tested_condition_penalty": 8,
+    "tested_family": "One constructed asymmetric family; outgoing couplings 1 and 1/64"
+  },
+  "precision_portfolio": {
+    "cases": [
+      {
+        "calculation": "value only",
+        "ci_speedup_ratio": [
+          2.6470763766766594,
+          3.554849397065209
+        ],
+        "compute_time_reduction_ci_percent": [
+          62.222472732143984,
+          71.86941306639956
+        ],
+        "compute_time_reduction_percent": 70.16031682239944,
+        "control": "torch",
+        "derived_serial_compute_rate_increase_percent": 235.1242015701626,
+        "derived_serial_rate_increase_ci_percent": [
+          164.70763766766595,
+          255.48493970652092
+        ],
+        "dual_gate": true,
+        "method": "fused_fma",
+        "n": 10000,
+        "new_ms": 0.2817999999820131,
+        "old_ms": 0.9443799999644398,
+        "q": 4,
+        "speedup_ratio": 3.351242015701626
+      },
+      {
+        "calculation": "value only",
+        "ci_speedup_ratio": [
+          3.6035300964726478,
+          3.794145889649938
+        ],
+        "compute_time_reduction_ci_percent": [
+          72.24943393760302,
+          73.64360704400157
+        ],
+        "compute_time_reduction_percent": 73.2581951608292,
+        "control": "cupy",
+        "derived_serial_compute_rate_increase_percent": 273.9463383321169,
+        "derived_serial_rate_increase_ci_percent": [
+          260.3530096472648,
+          279.4145889649938
+        ],
+        "dual_gate": true,
+        "method": "fused_fma",
+        "n": 100000,
+        "new_ms": 1.159077000011166,
+        "old_ms": 4.334325999991506,
+        "q": 4,
+        "speedup_ratio": 3.7394633833211692
+      },
+      {
+        "calculation": "value only",
+        "ci_speedup_ratio": [
+          2.9269661006401866,
+          3.1300812324126785
+        ],
+        "compute_time_reduction_ci_percent": [
+          65.83493058627225,
+          68.05194735380091
+        ],
+        "compute_time_reduction_percent": 67.31109355200222,
+        "control": "cupy",
+        "derived_serial_compute_rate_increase_percent": 205.91417965933542,
+        "derived_serial_rate_increase_ci_percent": [
+          192.69661006401867,
+          213.00812324126787
+        ],
+        "dual_gate": true,
+        "method": "fused_fma",
+        "n": 1000000,
+        "new_ms": 14.140727000039988,
+        "old_ms": 43.25848900003848,
+        "q": 4,
+        "speedup_ratio": 3.0591417965933543
+      },
+      {
+        "calculation": "value only",
+        "ci_speedup_ratio": [
+          1.5407022881132655,
+          1.549662047479793
+        ],
+        "compute_time_reduction_ci_percent": [
+          35.09453398523904,
+          35.46980119786153
+        ],
+        "compute_time_reduction_percent": 35.433608948753225,
+        "control": "torch",
+        "derived_serial_compute_rate_increase_percent": 54.8793395013039,
+        "derived_serial_rate_increase_ci_percent": [
+          54.07022881132655,
+          54.966204747979305
+        ],
+        "dual_gate": true,
+        "method": "fused_wide_final",
+        "n": 100000,
+        "new_ms": 9.179019000043809,
+        "old_ms": 14.216403999967042,
+        "q": 16,
+        "speedup_ratio": 1.548793395013039
+      },
+      {
+        "calculation": "value + derivative",
+        "ci_speedup_ratio": [
+          2.053832619844741,
+          2.071951127726306
+        ],
+        "compute_time_reduction_ci_percent": [
+          51.310540579709226,
+          51.736313341648724
+        ],
+        "compute_time_reduction_percent": 51.74701073621959,
+        "control": "cupy",
+        "derived_serial_compute_rate_increase_percent": 107.24104667037042,
+        "derived_serial_rate_increase_ci_percent": [
+          105.38326198447412,
+          107.19511277263058
+        ],
+        "dual_gate": true,
+        "method": "fused_mixed",
+        "n": 100000,
+        "new_ms": 4.839038000000073,
+        "old_ms": 10.028472999977112,
+        "q": 4,
+        "speedup_ratio": 2.072410466703704
+      },
+      {
+        "calculation": "value + derivative",
+        "ci_speedup_ratio": [
+          1.2363265797959235,
+          1.2754889809659726
+        ],
+        "compute_time_reduction_ci_percent": [
+          19.115222762171236,
+          21.59869548675639
+        ],
+        "compute_time_reduction_percent": 19.984478553101926,
+        "control": "cupy",
+        "derived_serial_compute_rate_increase_percent": 24.97575244368624,
+        "derived_serial_rate_increase_ci_percent": [
+          23.632657979592352,
+          27.548898096597263
+        ],
+        "dual_gate": true,
+        "method": "fused_compensated",
+        "n": 1000000,
+        "new_ms": 83.6177050000515,
+        "old_ms": 104.5018559999562,
+        "q": 4,
+        "speedup_ratio": 1.2497575244368624
+      }
+    ],
+    "comparator_scope": "Tuned equivalent FP64 CuPy/PyTorch controls; not native cuGraph",
+    "point_and_interval_estimands": "Point uses pooled median ratio; interval bootstraps paired ratios of median block medians",
+    "protocol": {
+      "confirmation_samples_per_case": 155,
+      "randomized_confirmation_blocks": 5,
+      "samples_per_block": 31
+    },
+    "source": "experiments/precision_gpu/PRODUCT_VERIFIED.json",
+    "timing_scope": "Resident compute; similarity input/output scaling and owned GPU output copy included; validation, preparation, JIT and host transfer excluded"
+  },
+  "schema_version": 1,
+  "source_sha256": {
+    "docs/benchmarks/precision-gpu.md": "5163dfe4d330416d1f44331e59b5b800c596abc7e34084858808b3423c48208e",
+    "evidence/2026-10-10/comparison_summary.json": "42db8539bf07aa0057b9d66bfa3edfc28b54e8204b8f3d88ffe7736b695b5dc9",
+    "evidence/2026-10-10/detailed/case_coverage.csv": "21702c9a1085bff8bb72886df24cf4ff2bca6aecbcdee5d992f0957a360b2007",
+    "evidence/2026-10-10/detailed/confirmed_comparisons.csv": "e804941feae32a48126246c10bd74cb2f8b74bbf5a41705c6b3dfe00adb850ae",
+    "evidence/2026-10-10/detailed/verification_summary.json": "6822b19f88d0851d21beb7589e565805d38ea8ea7dc2350bd737b5fd1327d5ef",
+    "evidence/2026-10-10/detailed/workflow_diagnostics.csv": "b1d87ad62dd772124af084102d33f8e3337c86579165e567e677afb50d65ab0a",
+    "evidence/measured_metrics.csv": "4c7924e4c2ee171c348ed905bc16dcbd5c91a7fcc9bffdace391b5ebdb4c84b3",
+    "experiments/precision_gpu/DERIVATION.md": "6fd26d5e25bc3ad9f4c8fd51c391fceed6f86719419c4cc2f949da5741bd22a3",
+    "experiments/precision_gpu/PRODUCT_RESULTS.md": "35116d1448b8dd0e7da0e617560d5529cad25f5cf09385481649b9963985cc78",
+    "experiments/precision_gpu/PRODUCT_VERIFIED.json": "fc696f0c195b3bad4c2f01132c67df3ad186b9354d3a332d7415e954e5978ce5"
+  }
+}

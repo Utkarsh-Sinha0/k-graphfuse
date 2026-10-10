@@ -129,6 +129,30 @@
       "source": "evidence/measured_metrics.csv",
       "scope": "Original matched ten-update T4 reference task; five latency, two sampled-memory and two error measures",
       "limitations": "Correlated measurements of one setup; aggregate L1 error worse, sampled power higher; later confirmation loses on median"
+    },
+    {
+      "id": "precision_time_reduction_range_20261010",
+      "kind": "derived measurement",
+      "value": [
+        19.984478553101926,
+        73.2581951608292
+      ],
+      "unit": "percent less median compute time",
+      "source": "experiments/precision_gpu/PRODUCT_VERIFIED.json",
+      "scope": "Six constructed Tesla T4 cases against tuned FP64 CuPy/PyTorch controls, not native cuGraph",
+      "limitations": "Two conversions of the same isolated resident latency ratios; not observed concurrent throughput, end-to-end capacity or customer savings"
+    },
+    {
+      "id": "precision_derived_rate_range_20261010",
+      "kind": "derived measurement",
+      "value": [
+        24.97575244368624,
+        273.9463383321169
+      ],
+      "unit": "percent higher derived reciprocal-latency serial compute rate",
+      "source": "experiments/precision_gpu/PRODUCT_VERIFIED.json",
+      "scope": "Six constructed Tesla T4 cases against tuned FP64 CuPy/PyTorch controls, not native cuGraph",
+      "limitations": "Two conversions of the same isolated resident latency ratios; not observed concurrent throughput, end-to-end capacity or customer savings"
     }
   ],
   "unestablished": [

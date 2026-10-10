@@ -87,6 +87,23 @@ python evidence/sinha_benchmark_evidence/scale-gpu/run.py
 
 Use separate disposable runs because output locations can overlap. The original large run contains historical community URL failures and a time-limited checkpoint; it is preserved verbatim rather than repaired under the same identity. Recovery runs cover the missing workloads. Read the protocol copies before interpreting any partial result.
 
+## Rebuild the publication figures and PDF
+
+The presentation scripts reuse saved evidence; they do not execute GPU benchmarks. In a working Python environment, install the rendering tools separately from the lightweight package:
+
+```sh
+python -m pip install matplotlib markdown reportlab pymupdf pillow pyyaml
+python benchmarks/make_presentation_figures.py
+python benchmarks/render_research_paper.py
+python benchmarks/verify_evidence.py
+```
+
+The figure script checks source hashes, derives all displayed percentages from absolute medians and includes an arithmetic self-check. It writes three PNG/SVG pairs and `docs/assets/presentation_metrics.json`. Regenerate it after a referenced precision documentation change.
+
+The PDF renderer reads `docs/research/paper.md`, uses the installed Matplotlib DejaVu fonts, resolves links to the public site, and checks all six result rows, scope text, references and page bounds. Its hashes and dependency versions are in [PDF_RENDERING.md](https://github.com/Utkarsh-Sinha0/k-graphfuse/blob/main/research/PDF_RENDERING.md). The PDF is independently rendered from Markdown; it is not compiled from the [standalone LaTeX source](https://github.com/Utkarsh-Sinha0/k-graphfuse/blob/main/research/k-graphfuse-paper.tex). ReportLab invariant mode removes changing PDF timestamps; use the recorded rendering versions for byte replication. MathText equations are images, so the web manuscript and LaTeX provide accessible/editable mathematical source.
+
+The ordinary offline CI audit needs none of these rendering libraries. It checks figure inputs and conversions, structured percentage claims and saved manuscript/PDF hashes. The web math integration follows [Material for MkDocs' MathJax instructions](https://squidfunk.github.io/mkdocs-material/reference/math/), with a pinned MathJax 3.2.2 browser script.
+
 ## Publish a replication
 
 Record the commit, actual library builds, device/driver, graph and input hashes, complete configuration search, accuracy gates, preparation scopes, all samples, rejected candidates, resource method and run status. Use repeated independent runs and randomized order for a stronger performance study. Do not replace old evidence with a new result; add a separate run identity.

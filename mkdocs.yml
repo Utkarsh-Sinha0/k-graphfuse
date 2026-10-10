@@ -43,10 +43,15 @@ markdown_extensions:
       permalink: true
   - pymdownx.superfences
   - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.highlight:
       anchor_linenums: true
 extra_css:
   - assets/styles.css
+extra_javascript:
+  - assets/mathjax.js
+  - https://unpkg.com/mathjax@3.2.2/es5/tex-mml-chtml.js
 nav:
   - Overview: index.md
   - Get started:
@@ -72,7 +77,10 @@ nav:
       - Precision GPU experiment: benchmarks/precision-gpu.md
       - Original reference experiment: benchmarks/historical-reference.md
       - Measurement methodology: benchmarks/methodology.md
+      - Metric definitions: benchmarks/metric-definitions.md
       - Reproduce and audit: benchmarks/reproduce.md
+  - Research:
+      - Technical manuscript: research/paper.md
   - Project:
       - Citation and licenses: project/citation.md
       - Contributing: project/contributing.md

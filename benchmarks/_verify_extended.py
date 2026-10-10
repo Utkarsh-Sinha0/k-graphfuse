@@ -1,6 +1,6 @@
 """Read-only extended evidence audit; no CUDA imports or timing executions."""
 from pathlib import Path
-import csv, hashlib, json, math, runpy, shutil, subprocess, sys, tempfile
+import csv, hashlib, json, math, re, runpy, shutil, subprocess, sys, tempfile
 
 repo=Path(__file__).resolve().parents[1]
 detail=repo/'evidence/2026-10-10/detailed'
@@ -76,3 +76,47 @@ for identity,value,denominator in (('native_speed_wins_20261010',59,89),('native
 equal(claims['precision_speedup_range_20261010']['value'],[min(r['speedup'] for r in expected['t4_cases']),max(r['speedup'] for r in expected['t4_cases'])])
 for c in claims.values():assert (repo/c['source']).exists(),c['source']
 print('PASS: 59/89 native speed wins, 26/89 speed/error wins, four failures, six precision gates and structured claims.')
+
+# Check published conversions against absolute timings, independent of rendering libraries.
+presentation=json.loads((repo/'docs/assets/presentation_metrics.json').read_text(encoding='utf-8'))
+for name,digest in presentation['source_sha256'].items():
+    path=(repo/name).resolve();assert path.is_relative_to(repo)
+    assert hashlib.sha256(path.read_bytes()).hexdigest()==digest,name
+for name in presentation['artifacts']:assert (repo/name).is_file(),name
+assert set(presentation['artifact_sha256'])==set(presentation['artifacts'])
+for name,digest in presentation['artifact_sha256'].items():
+    assert hashlib.sha256((repo/name).read_bytes()).hexdigest()==digest,name
+for key,value in counts.items():assert presentation['native_coverage'][key]==value,key
+shown=presentation['precision_portfolio']['cases']
+assert len(shown)==len(expected['t4_cases'])
+for saved,displayed in zip(expected['t4_cases'],shown):
+    assert (saved['n'],saved['q'],saved['old_ms'],saved['new_ms'])==(
+        displayed['n'],displayed['q'],displayed['old_ms'],displayed['new_ms'])
+    ratio=saved['old_ms']/saved['new_ms']
+    equal(displayed['speedup_ratio'],ratio)
+    equal(displayed['compute_time_reduction_percent'],100*(1-1/ratio))
+    equal(displayed['derived_serial_compute_rate_increase_percent'],100*(ratio-1))
+    intervals=[saved['ci_low'],saved['ci_high']]
+    equal(displayed['ci_speedup_ratio'],intervals)
+    equal(displayed['compute_time_reduction_ci_percent'],[100*(1-1/r) for r in intervals])
+    equal(displayed['derived_serial_rate_increase_ci_percent'],[100*(r-1) for r in intervals])
+for identity,field in (
+    ('precision_time_reduction_range_20261010','compute_time_reduction_percent'),
+    ('precision_derived_rate_range_20261010','derived_serial_compute_rate_increase_percent')):
+    equal(claims[identity]['value'],[min(r[field] for r in shown),max(r[field] for r in shown)])
+assert math.isclose(100*(1.21-1),21) and math.isclose(100*(1-1/1.21),17.35537190082645)
+record=(repo/'research/PDF_RENDERING.md').read_text(encoding='utf-8')
+for label,name in (('Source','docs/research/paper.md'),('PDF','docs/research/k-graphfuse-paper.pdf')):
+    digest=re.search(label+r' SHA-256: `([0-9a-f]{64})`',record)
+    assert digest and hashlib.sha256((repo/name).read_bytes()).hexdigest()==digest[1],name
+pdf_figures=re.findall(r'`(docs/assets/[^`]+)` — SHA-256 `([0-9a-f]{64})`',record)
+assert {name for name,_ in pdf_figures}=={name for name in presentation['artifacts'] if name.endswith('.png')}
+for name,digest in pdf_figures:
+    assert hashlib.sha256((repo/name).read_bytes()).hexdigest()==digest,name
+tex_record=json.loads((repo/'research/TEX_COMPILATION.json').read_text(encoding='utf-8'))
+assert tex_record['status']=='success'
+assert hashlib.sha256((repo/tex_record['source']).read_bytes()).hexdigest()==tex_record['source_sha256']
+paper=(repo/'docs/research/paper.md').read_text(encoding='utf-8')
+assert 'not peer-reviewed' in paper and 'Metric definitions' in paper
+assert 'timing' in paper and '\\theta=0' in paper
+print('PASS: percentage figures, native coverage, interval conversions, manuscript/PDF provenance and claim ranges.')

@@ -16,7 +16,7 @@ Best accepted K configuration: `torch.float32`, unpacked, eager (`capture=False`
 
 | Metric | K GraphFuse | Native cuGraph | Interpretation |
 |---|---:|---:|---|
-| Warm compute median | 49.905806 ms | 63.397649 ms | 21.28% lower; 1.270346× ratio |
+| Warm compute median | 49.905806 ms | 63.397649 ms | 21.28% less time; 27.03% higher derived serial rate; 1.270346× ratio |
 | Warm compute p95 | 49.983254 ms | 67.156270 ms | 25.57% lower |
 | Compute + host output median | 50.421915 ms | 63.465624 ms | 20.55% lower |
 | Compute + host output p95 | 51.358547 ms | 68.483130 ms | 25.01% lower |
@@ -52,7 +52,7 @@ The [pinned vendor-published Graphalytics comparison](https://github.com/ArcadeD
 | Kuzu, archived | 850 ms | Archived project; lifecycle differs |
 | ArangoDB 3.11, legacy | 70,300 ms | Legacy configuration; not current default |
 
-No speedup ratio divides a public Apple score by K GraphFuse's T4 timing. DuckPGQ and FalkorDB results that failed the reference are not accepted performance rankings. The raw public catalogue preserves statuses and unmeasured tasks. K GraphFuse has no exact matched `graph500-22` score in this release.
+No speedup ratio divides a public Apple score by K GraphFuse's T4 timing. DuckPGQ and FalkorDB results that failed the reference are not accepted performance rankings. The raw public catalogue preserves statuses and unmeasured tasks. This original snapshot has no exact matched `graph500-22` score; the [later native comparison](cugraph.md) records that graph and favors native cuGraph.
 
 ![Public product context with hardware and lifecycle labels](../assets/k_public_context.png)
 
@@ -64,6 +64,6 @@ Some older native-library comparisons used a symmetric-output adapter or sequent
 
 ## Reuse this claim accurately
 
-> K GraphFuse recorded 21.28% lower median warm compute time than native NVIDIA cuGraph on the same Tesla T4 for the tested ten-update Graphalytics PageRank workload. Observed total memory peaks were lower, and both outputs passed the reference check. Wider performance leadership and customer savings remain unestablished.
+> K GraphFuse recorded 21.28% less median warm compute time, equivalent to 27.03% higher derived serial compute rate, than native NVIDIA cuGraph on the same Tesla T4 for the original ten-update Graphalytics PageRank workload. Observed total memory peaks were lower, and both outputs passed the reference check. A later longer confirmation favors cuGraph. Wider performance leadership and customer savings remain unestablished.
 
-Attach the graph, hardware, versions, timing boundary and limitations whenever reproducing the number. [Methodology](methodology.md) · [Audit and reproduction](reproduce.md) · [Machine-readable claims](../claims.json) · [Raw repository evidence](https://github.com/Utkarsh-Sinha0/k-graphfuse/tree/main/evidence).
+Attach the graph, hardware, versions, timing boundary and limitations whenever reproducing the number. [Metric definitions](metric-definitions.md) · [Methodology](methodology.md) · [Audit and reproduction](reproduce.md) · [Machine-readable claims](../claims.json) · [Raw repository evidence](https://github.com/Utkarsh-Sinha0/k-graphfuse/tree/main/evidence).

@@ -11,5 +11,6 @@ src/local_c2fuse.py -text
 src/ppr_certificate.py -text
 src/cuda_c2fuse.py -text
 *.png binary
+*.pdf binary
 *.svg -diff
 *.bin binary

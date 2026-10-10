@@ -1,33 +1,33 @@
 ---
 title: Precision GPU graph filters — speed, accuracy, derivatives and reproducibility
-description: Six audited FP64 sparse polynomial and sensitivity cases on Tesla T4: 1.25–3.74x speedups, sampled 384-bit accuracy checks, frozen sources, p95, and reproducibility.
+description: Six audited FP64 sparse polynomial and sensitivity cases on Tesla T4: about 20.0–73.3% less median compute time (1.25–3.74x), sampled 384-bit accuracy checks, frozen sources, p95, and reproducibility.
 ---
 # Precision GPU experiment
 
-The experimental K GraphFuse portfolio passes speed and sampled-accuracy gates on **six of six constructed T4 cases**, with **1.25–3.74x speedups** against the fastest accepted equivalent FP64 CuPy/PyTorch control. This is a sparse polynomial and directional-sensitivity study. It does not compare native cuGraph PageRank or replace the installed `k_graphfuse` API.
+The experimental K GraphFuse portfolio passes speed and sampled-accuracy gates on **six of six constructed T4 cases**, with **about 20.0–73.3% less median compute time** (`s=1.250–3.739x`, control median / K median) and **about 25.0–273.9% higher derived reciprocal-latency serial compute rate** against the fastest accepted equivalent FP64 CuPy/PyTorch control. The rate is calculated from isolated median latency, not measured concurrent throughput. This is a sparse polynomial and directional-sensitivity study. It does not compare native cuGraph PageRank or replace the installed `k_graphfuse` API.
 
 ## Latency and tail latency
 
 All columns are resident compute. Selected configurations include an owned GPU output copy and input/output similarity scaling.
 
-| Vertices | Channels | Calculation | Control | Control median ms | K median ms | Speedup | Block 95% interval | Control p95 ms | K p95 ms |
-|---:|---:|---|---|---:|---:|---:|---|---:|---:|
-| 10,000 | 4 | Filter | torch | 0.944 | 0.282 | 3.35x | 2.65–3.55x | 1.057 | 0.400 |
-| 100,000 | 4 | Filter | cupy | 4.334 | 1.159 | 3.74x | 3.60–3.79x | 4.369 | 1.300 |
-| 1,000,000 | 4 | Filter | cupy | 43.258 | 14.141 | 3.06x | 2.93–3.13x | 44.172 | 15.176 |
-| 100,000 | 16 | Filter | torch | 14.216 | 9.179 | 1.55x | 1.54–1.55x | 14.336 | 9.290 |
-| 100,000 | 4 | Value + derivative | cupy | 10.028 | 4.839 | 2.07x | 2.05–2.07x | 10.109 | 4.888 |
-| 1,000,000 | 4 | Value + derivative | cupy | 104.502 | 83.618 | 1.25x | 1.24–1.28x | 106.124 | 85.518 |
+| Vertices | Channels | Calculation | Control | Control median ms | K median ms | Compute time lower | Derived serial rate higher | `s` (control/K) | Block 95% interval | Control p95 ms | K p95 ms |
+|---:|---:|---|---|---:|---:|---:|---:|---:|---|---:|---:|
+| 10,000 | 4 | Filter | torch | 0.944 | 0.282 | 70.2% | 235.1% | 3.351x | 2.65–3.55x | 1.057 | 0.400 |
+| 100,000 | 4 | Filter | cupy | 4.334 | 1.159 | 73.3% | 273.9% | 3.739x | 3.60–3.79x | 4.369 | 1.300 |
+| 1,000,000 | 4 | Filter | cupy | 43.258 | 14.141 | 67.3% | 205.9% | 3.059x | 2.93–3.13x | 44.172 | 15.176 |
+| 100,000 | 16 | Filter | torch | 14.216 | 9.179 | 35.4% | 54.9% | 1.549x | 1.54–1.55x | 14.336 | 9.290 |
+| 100,000 | 4 | Value + derivative | cupy | 10.028 | 4.839 | 51.7% | 107.2% | 2.072x | 2.05–2.07x | 10.109 | 4.888 |
+| 1,000,000 | 4 | Value + derivative | cupy | 104.502 | 83.618 | 20.0% | 25.0% | 1.250x | 1.24–1.28x | 106.124 | 85.518 |
 
-![Six constructed T4 cases comparing resident speed and sampled numerical error; scope and excluded costs appear in the figure](../assets/precision_t4_comparison.png)
+![Six constructed Tesla T4 cases: 20.0–73.3% lower median compute time and 25.0–273.9% higher derived serial rate versus tuned FP64 CuPy or PyTorch, with sampled numerical error and timing scope](../assets/precision_percent_comparison.png)
 
-Median ratios use all 155 confirmation samples. The displayed interval bootstraps the ratio of median block medians, a different estimator; it need not contain the pooled-median ratio. Intervals describe within-run block variability, not an independently replicated hardware population.
+Here `s = control median / K median`; compute-time reduction is `100 × (1 − 1/s)`, and derived reciprocal-latency serial compute-rate increase is `100 × (s − 1)`. Median ratios use all 155 confirmation samples. The displayed interval bootstraps the ratio of median block medians, a different estimator; it need not contain the pooled-median ratio. Intervals describe within-run block variability, not an independently replicated hardware population.
 
 ## Numerical accuracy
 
-Every sampled output/derivative Frobenius and maximum-absolute error must be no worse than the fastest control, with at least one improvement. The percentage below compares the largest sampled Frobenius component; it is not an improvement percentage for every vertex or for downstream model quality.
+Every sampled output/derivative Frobenius and maximum-absolute error must be no worse than the fastest control, with at least one improvement. The percentages below are decreases in the largest sampled Frobenius error component; they are not improvements for every vertex or for downstream model quality.
 
-| Workload | Decrease in largest sampled Frobenius component |
+| Workload | Largest sampled Frobenius error decrease |
 |---|---:|
 | 10,000 vertices, 4 channels, filter | 0.0077% |
 | 100,000 vertices, 4 channels, filter | 1.9316% |

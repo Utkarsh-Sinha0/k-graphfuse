@@ -9,9 +9,11 @@ If this project supports your product or research, please credit **K GraphFuse b
 [![Docs](https://img.shields.io/badge/docs-technical_reference-2e7d32)](https://utkarsh-sinha0.github.io/k-graphfuse/)
 [![License](https://img.shields.io/badge/license-Apache_2.0_%2B_MIT-blue)](LICENSE)
 
-[Documentation](https://utkarsh-sinha0.github.io/k-graphfuse/) · [Quickstart](docs/getting-started/quickstart.md) · [API reference](docs/reference/api.md) · [Benchmark evidence](docs/benchmarks/results.md) · [Reproduce](docs/benchmarks/reproduce.md)
+[Documentation](https://utkarsh-sinha0.github.io/k-graphfuse/) · [Quickstart](docs/getting-started/quickstart.md) · [API reference](docs/reference/api.md) · [Benchmark evidence](docs/benchmarks/results.md) · [Metric definitions](docs/benchmarks/metric-definitions.md) · [Research paper](docs/research/paper.md) · [Reproduce](docs/benchmarks/reproduce.md)
 
 K GraphFuse compiles compatible linear graph stages into one ordered matrix polynomial, then evaluates it with sparse Horner recurrences. Reuse a copied operator and compiled plan across inputs. Optional backends cover CUDA execution, symmetric restarted resolvents, sparse local propagation, and derivatives with respect to one affine graph parameter.
+
+![K GraphFuse compiles compatible linear stages into an ordered polynomial, then reuses a sparse operator and plan for evaluation](docs/assets/graphfuse_pipeline.png)
 
 It is useful when repeated graph ranking or linear propagation consumes a meaningful part of a workload. It requires matching graph semantics, independent accuracy checks, and enough repeated calls to recover preparation costs. Nonlinear graph neural networks, shortest paths, general graph transactions, and arbitrary dynamic topology updates are separate tasks.
 
@@ -19,17 +21,17 @@ It is useful when repeated graph ranking or linear propagation consumes a meanin
 
 | Study | Measured result | Comparison contract |
 |---|---|---|
-| Native NVIDIA cuGraph ranking study | **59/89 strong speed wins**, including **26/89 speed-and-error wins** | 85 comparable cases and four K accuracy failures |
-| Strongest tested alternatives | **33/85 overall**, **38/85 GPU** speed-gate wins | Fastest accepted recorded control, including CPU where measured |
-| Experimental precision GPU filters | **6/6** combined speed/accuracy gates; **1.25–3.74x** | Equivalent tuned FP64 CuPy/PyTorch; constructed sparse filters and derivatives |
+| Native NVIDIA cuGraph ranking study | **66.3% (59/89 attempted) strong speed wins**, including **29.2% (26/89) with both reference errors no worse** | 85 comparable cases and four K accuracy failures, counted as non-wins |
+| Strongest tested alternatives | **38.8% (33/85) overall**, **44.7% (38/85) GPU** speed-gate wins | Fastest accepted recorded control, including CPU where measured |
+| Experimental precision GPU filters | **~20.0–73.3% less median compute time** (1.25–3.74x; **~25.0–273.9% higher derived serial compute rate**) | Equivalent tuned FP64 CuPy/PyTorch; constructed sparse filters and derivatives |
 
-Strong native speed wins require at least 10% lower median, an interval above one, and no p95 regression. The 26 speed-and-error wins also have no worse recorded L1 and maximum-relative error; all 26 use matching precision. These counts do not establish better energy, memory or complete application runtime on every case.
+For latency comparisons, `s = baseline median / K median`; compute-time reduction is `100 × (1 − 1/s)`, and the derived reciprocal-latency serial compute-rate increase is `100 × (s − 1)`. This rate is calculated from isolated median latency, not measured concurrent throughput. Strong native speed wins require at least 10% lower median, an interval above one, and no p95 regression. The 26 speed-and-error wins also have no worse recorded L1 and maximum-relative error; all 26 use matching precision. These counts do not establish better energy, memory or complete application runtime on every case.
 
 [Native cuGraph metrics and all losses](docs/benchmarks/cugraph.md) · [Precision GPU latency, p95 and high-precision accuracy](docs/benchmarks/precision-gpu.md) · [Measurement contracts](docs/benchmarks/methodology.md)
 
-![K GraphFuse precision GPU comparison: six constructed T4 workloads, 1.25–3.74x speedups, explicit sampled-accuracy and timing scope](docs/assets/precision_t4_comparison.png)
+![Six constructed Tesla T4 workloads: about 20.0–73.3% lower median compute time and 25.0–273.9% higher derived serial rate versus tuned FP64 CuPy or PyTorch, with sampled-accuracy scope](docs/assets/precision_percent_comparison.png)
 
-The original same-T4 `datagen-7_5-fb` experiment recorded 21.28% lower median compute and lower sampled total memory peaks, but aggregate L1 error was worse. A later longer confirmation on that graph favors cuGraph. Native cuGraph is 2.72x faster on Graph500-22, and complete file/rebuild workflows also favor native. The older 19-workload suite passed zero strongest GPU gates under its separate protocol. [Historical reference result](docs/benchmarks/historical-reference.md).
+The original same-T4 `datagen-7_5-fb` experiment recorded **21.28% less median compute time** (63.398 ms native / 49.906 ms K; `s=1.2703x`) or **27.03% higher derived serial rate**; sampled total GPU and process-memory peaks were 56.76% and 35.87% lower, while aggregate L1 error was worse. A later longer confirmation on that graph favors cuGraph. **Native cuGraph was 2.72x faster on the recorded Graph500-22 workload.** Complete file/rebuild workflows also favored native; see [all measured losses](docs/benchmarks/cugraph.md#negative-results-and-unsupported-tasks). The older 19-workload suite passed zero strongest GPU gates under its separate protocol. [Historical reference result](docs/benchmarks/historical-reference.md).
 
 The new fused implementation lives in [experiments/precision_gpu](experiments/precision_gpu/README.md), separate from the installed `k_graphfuse` 0.1.0 API. Its repaired checked API passed 43 combined CPU/GPU tests; performance belongs to separately frozen timed versions. Raw samples, rejected configurations, code hashes and offline audits are included. Global SOTA, customer savings and integrated energy savings remain unestablished.
 

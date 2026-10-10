@@ -16,6 +16,8 @@ The precision study selects the fastest accuracy-eligible pilot profile and comp
 
 Do not pool independent studies as additional native-cuGraph wins. A public graph or a large vertex count does not remove selection bias or establish a production-quality outcome.
 
+The [metric definitions](metric-definitions.md) specify time reductions, derived serial rates, accuracy reductions and coverage percentages. Paired percentage units describe one latency ratio; they are not independent wins. The [technical manuscript](../research/paper.md) states the precision experiment's mathematical assumptions and method.
+
 The documentation uses descriptive task names, explicit preconditions, consistent units and accessible figures, following the [Google developer documentation style guidance](https://developers.google.com/style/highlights). Separating profiling, correctness and timing boundaries follows the practical evaluation approach in the [NVIDIA CUDA Best Practices Guide](https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/). These are documentation and engineering references, not vendor endorsements of K GraphFuse.
 
 ## Original reference protocol

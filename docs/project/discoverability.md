@@ -8,6 +8,8 @@ The [official Google guidance for AI search features](https://developers.google.
 
 ## Public distribution assets
 
+The [research manuscript](../research/paper.md) has a descriptive title, author, date, abstract, keywords, linked primary references, HTML equations, text result tables and a downloadable PDF. The [metric definitions](../benchmarks/metric-definitions.md) make percentage units explicit. Reproducible PNG/SVG figures have source hashes and accompanying numeric data. Accessible, source-backed content helps readers evaluate the work; preprint status and limitations remain visible.
+
 Use the README, evidence tables, released package and scoped visual charts to explain the project. Describe the matching task and link the limitations when sharing a benchmark. Repository topics cover graph analytics, PageRank, sparse matrices, CUDA, reproducible research and polynomial filters. Independent replications and useful integrations can add evidence over time; invented customers and keyword stuffing cannot.
 
 Outreach, paid marketing and external submissions are not performed automatically by this repository. Keep the project description consistent with the actual release and measured results.

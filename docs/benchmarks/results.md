@@ -10,26 +10,28 @@ K GraphFuse has measured advantages on specific repeated graph calculations. The
 
 | Study | Main result | Comparator and scope |
 |---|---|---|
-| [Broad native cuGraph study](cugraph.md) | **59/89 strong speed wins**, including **26/89 speed-and-error wins** | 85 directly comparable cases plus four K accuracy failures |
-| [Strongest tested alternatives](cugraph.md#compare-against-the-strongest-tested-alternative) | **33/85 overall**, **38/85 GPU** speed-gate wins | Fastest accepted tested backend, including CPU where measured |
-| [Precision GPU experiment](precision-gpu.md) | **6/6** speed-and-sampled-accuracy gates; **1.25–3.74x** | Equivalent FP64 CuPy/PyTorch controls; constructed filters and derivatives |
+| [Broad native cuGraph study](cugraph.md) | **66.3% (59/89 attempted) strong speed wins**, including **29.2% (26/89) speed-and-error wins** | 85 comparable cases plus four K accuracy failures, counted as non-wins |
+| [Strongest tested alternatives](cugraph.md#compare-against-the-strongest-tested-alternative) | **38.8% (33/85) overall**, **44.7% (38/85) GPU** speed-gate wins | Fastest accepted tested backend, including CPU where measured |
+| [Precision GPU experiment](precision-gpu.md) | **Six of six** speed-and-sampled-accuracy gates; **~20.0–73.3% less median compute time** (1.25–3.74x), **~25.0–273.9% higher derived serial rate** | Equivalent tuned FP64 CuPy/PyTorch controls; constructed filters and derivatives |
 | [Original reference experiment](historical-reference.md) | Eight favorable latency/memory/error observations out of nine | One same-T4 ten-update PageRank setup; aggregate L1 error worse |
 
-“Speed-and-error win” in the broad suite means the strong speed gate plus no worse recorded L1 and maximum-relative reference error. It does not include every resource or downstream quality metric. The precision study uses an independent high-precision sampled oracle and a different error contract.
+For compute comparisons, `s = baseline median / K median`; time reduction is `100 × (1 − 1/s)`, and the derived reciprocal-latency serial rate increase is `100 × (s − 1)`. This rate comes from isolated median latency, not measured concurrent throughput. “Speed-and-error win” in the broad suite means the strong speed gate plus no worse recorded L1 and maximum-relative reference error. It does not include every resource or downstream quality metric. The precision study uses an independent high-precision sampled oracle and a different error contract.
 
-![Six audited precision GPU comparisons with explicit timing and accuracy scope](../assets/precision_t4_comparison.png)
+![Six constructed Tesla T4 workloads: about 20.0–73.3% lower median compute time and 25.0–273.9% higher derived serial rate versus tuned FP64 CuPy or PyTorch, with sampled-accuracy scope](../assets/precision_percent_comparison.png)
+
+![Native comparison coverage: 59 of 89 attempted cases pass the strong speed gate, 26 also pass both error comparisons, and four cases fail K accuracy confirmation](../assets/native_win_coverage.png)
 
 ## Where the evidence is strongest
 
-- Repeated resident ranking stages have native cuGraph speed wins on several public graphs. Stronger CuPy controls still lead on some of those same graphs.
-- The precision experiment provides speed plus sampled numerical accuracy for low-channel sparse polynomial filters and diagonal-parameter derivatives on the constructed asymmetric family.
+- Repeated resident ranking stages reduce median compute time by 47.8–65.0% on several selected public graphs versus native cuGraph (`s=1.91–2.86x`, or 91.5–185.6% higher derived serial rate). Stronger CuPy controls still lead on some of those same graphs.
+- The precision experiment records 20.0–73.3% lower median compute time and 25.0–273.9% higher derived serial rate, with sampled numerical accuracy gates, for constructed low-channel sparse polynomial filters and diagonal-parameter derivatives.
 - The original reference run records lower sampled total GPU/process memory, with short-peak and inherited-allocation limitations.
 
 Use [application fit](../guides/applications.md) to translate a calculation-stage result into a pilot. Production benefit depends on the time spent in that stage, graph updates, transfers, concurrency and downstream quality.
 
 ## Results that limit the claim
 
-Native cuGraph is **2.72x faster on Graph500-22**. A later datagen confirmation also favors native cuGraph, despite the original 21.28% K median advantage on that graph. Full file-processing and rebuild workflows favor native cuGraph. Four broad ranking cases fail K accuracy confirmation. K does not implement BFS, shortest paths, components, triangles or Louvain.
+On Graph500-22, K’s `s=0.368x` relative to native means 172.0% more median compute time and 63.2% lower derived serial rate; native’s reciprocal-median rate was 2.72x K’s. A later datagen confirmation also favors native cuGraph, despite the original one-run 21.28% lower K median compute time (63.398 ms native /49.906 ms K; `s=1.2703x`, or 27.03% higher derived serial rate). Full file-processing and rebuild workflows favor native cuGraph. Four broad ranking cases fail K accuracy confirmation. K does not implement BFS, shortest paths, components, triangles or Louvain.
 
 The older 19-workload study passed zero strongest GPU gates under its separate contracts. Its raw records remain published rather than replaced by newer wins. Neither study establishes global SOTA, absence of alternatives, integrated energy savings or customer value.
 

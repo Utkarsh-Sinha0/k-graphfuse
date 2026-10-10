@@ -6,6 +6,8 @@ description: Coordinate error transfer, dyadic balancing, coupled derivatives, c
 
 This experimental implementation is a derived application of a stated research theorem and classical matrix balancing. It is not a claim of a new balancing theorem, an optimal similarity construction, or global state of the art. The tested released numerical core is unchanged.
 
+The [technical manuscript](../research/paper.md) presents this derivation as a research document with proofs, methods, six-case results, limitations and references. Its status is an unreviewed preprint draft.
+
 ## Contract
 
 For a real stored sparse operator A, features X in R^(n x q), and exactly fused ordered matrix coefficients C_k, compute

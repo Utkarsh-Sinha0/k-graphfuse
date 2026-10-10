@@ -1,5 +1,9 @@
 # Design and performance
 
+![Ordered coefficient fusion, similarity scaling, sparse GPU evaluation and accuracy and timing checks](../assets/graphfuse_pipeline.png)
+
+The figure describes the [experimental precision path](precision.md). The [technical manuscript](../research/paper.md) states its exact identities, conditional error transfer, implementation costs and measured scope.
+
 ## Compile compatible stages
 
 The compiler convolves channel coefficients in stage order using exact rational arithmetic. It computes geometry bounds and selects a retained degree under the requested budget. Exact cancellation can remove terms; conservative bounds or strict tolerances can retain the full degree. Fusion can also increase degree. It is not an optimal approximation across every polynomial representation.

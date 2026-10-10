@@ -24,6 +24,23 @@ GitHub's **Cite this repository** control uses `CITATION.cff`. A reusable BibTeX
 
 Add the actual release/commit used in reproducible studies. Raw experiments retain the earlier Sinha GraphFuse name for traceability; this is the same numerical core under a new public brand.
 
+## Cite the technical manuscript
+
+The [research manuscript](../research/paper.md) is a technical preprint draft dated 10 October 2026. It has not been peer-reviewed or submitted as a journal publication, and has no assigned DOI. Cite the actual revision used:
+
+```bibtex
+@misc{sinha2026similaritygraphfuse,
+  author = {Sinha, Utkarsh},
+  title  = {{K GraphFuse}: Similarity-Aware Sparse Polynomial Evaluation
+            with Selective GPU Compensation},
+  year   = {2026},
+  note   = {Technical manuscript, preprint draft, 10 October 2026},
+  url    = {https://utkarsh-sinha0.github.io/k-graphfuse/research/paper/}
+}
+```
+
+The [PDF](../research/k-graphfuse-paper.pdf) and [editable LaTeX source](https://github.com/Utkarsh-Sinha0/k-graphfuse/blob/main/research/k-graphfuse-paper.tex) accompany the web manuscript. Use the software citation as well when reproducing its code.
+
 ## License scope
 
 New namespace, documentation, examples and repository infrastructure use [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). The historical numerical modules, original tests and benchmark fixtures retain the original MIT grant in `LICENSES/MIT.txt`. The distribution carries both notices; the SPDX expression is `Apache-2.0 AND MIT`.
