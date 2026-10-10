@@ -81,6 +81,8 @@ nav:
       - Reproduce and audit: benchmarks/reproduce.md
   - Research:
       - Technical manuscript: research/paper.md
+      - Controlled study: research/controlled-study.md
+      - Closest methods: research/closest-methods.md
   - Project:
       - Citation and licenses: project/citation.md
       - Contributing: project/contributing.md

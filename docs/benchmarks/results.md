@@ -4,6 +4,9 @@ description: Compare native NVIDIA cuGraph, tuned FP64 GPU controls, latency, sa
 ---
 # Benchmark results and competitors
 
+The new [controlled confirmation](https://utkarsh-sinha0.github.io/k-graphfuse/research/controlled-study/) uses the repaired implementation across six graph families and two GPUs. Matching-budget, matching-degree packed-balanced CuPy comparisons pass the strong speed gate in **18/20 pooled device–fixture comparisons**, with **36.88–83.71% less resident time in the wins**. R-MAT loses on both devices. MovieLens recommendation quality matches exactly, but specialized scalar-restart CuPy removes the application median speed advantage: K uses **7.13% more time on RTX** and practically ties T4. These are scoped experimental results, separate from native-cuGraph PageRank and the installed API.
+
+
 K GraphFuse has measured advantages on specific repeated graph calculations. The published studies use different task contracts and source versions; select the matching comparison before reusing a result.
 
 ## Published results

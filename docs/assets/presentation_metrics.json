@@ -225,7 +225,7 @@
   },
   "schema_version": 1,
   "source_sha256": {
-    "docs/benchmarks/precision-gpu.md": "5163dfe4d330416d1f44331e59b5b800c596abc7e34084858808b3423c48208e",
+    "docs/benchmarks/precision-gpu.md": "ed713a3c11df074aec2d1f0c4dffceb2e90ec1263656b2c3a6bce4ad70cc287b",
     "evidence/2026-10-10/comparison_summary.json": "42db8539bf07aa0057b9d66bfa3edfc28b54e8204b8f3d88ffe7736b695b5dc9",
     "evidence/2026-10-10/detailed/case_coverage.csv": "21702c9a1085bff8bb72886df24cf4ff2bca6aecbcdee5d992f0957a360b2007",
     "evidence/2026-10-10/detailed/confirmed_comparisons.csv": "e804941feae32a48126246c10bd74cb2f8b74bbf5a41705c6b3dfe00adb850ae",

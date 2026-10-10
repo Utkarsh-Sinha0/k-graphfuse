@@ -4,6 +4,8 @@ import hashlib
 import json
 import math
 import runpy
+import subprocess
+import sys
 
 root = Path(__file__).resolve().parents[1]
 runpy.run_path(str(Path(__file__).with_name("_verify_public.py")), run_name="__main__")
@@ -25,3 +27,4 @@ assert math.isclose(values["job_impact"], values["same_t4_median"]/2, rel_tol=1e
 assert "global SOTA" in claims["unestablished"]
 print("PASS: byte-identical released numerical core and bounded claims ledger.")
 runpy.run_path(str(Path(__file__).with_name("_verify_extended.py")), run_name="__main__")
+subprocess.run([sys.executable, str(root / 'studies/controlled_20261010/analyse.py'), '--verify'], check=True)

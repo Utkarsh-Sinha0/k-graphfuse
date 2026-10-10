@@ -105,7 +105,7 @@
       "denominator": 6,
       "unit": "speed and sampled-accuracy passes",
       "source": "experiments/precision_gpu/PRODUCT_VERIFIED.json",
-      "scope": "Constructed 10k–1m-vertex FP64 polynomial filters and derivatives, 4/16 channels, Tesla T4",
+      "scope": "Constructed 10k\u20131m-vertex FP64 polynomial filters and derivatives, 4/16 channels, Tesla T4",
       "limitations": "CuPy/PyTorch controls, not native cuGraph; first 16 rows use high-precision truth; later repaired API not fully retimed"
     },
     {
@@ -153,6 +153,48 @@
       "source": "experiments/precision_gpu/PRODUCT_VERIFIED.json",
       "scope": "Six constructed Tesla T4 cases against tuned FP64 CuPy/PyTorch controls, not native cuGraph",
       "limitations": "Two conversions of the same isolated resident latency ratios; not observed concurrent throughput, end-to-end capacity or customer savings"
+    },
+    {
+      "id": "controlled_packed_balanced_strong_speed_20261010",
+      "kind": "measurement",
+      "value": 18,
+      "unit": "strong speed wins among 20 pooled device-fixture comparisons",
+      "source": "studies/controlled_20261010/SUMMARY.json",
+      "scope": "Matched-budget and matched-degree packed-balanced CuPy controls; ten fixtures from six families on two GPUs; not native cuGraph or exhaustive SOTA",
+      "limitations": "Author-controlled two-device study; descriptive intervals, full FP64 checks and separate small arbitrary-precision checks; no universal accuracy, independent replication, cold-start or customer-cost claim"
+    },
+    {
+      "id": "controlled_packed_balanced_time_range_20261010",
+      "kind": "measurement",
+      "value": [
+        36.88137721440219,
+        83.71266921830164
+      ],
+      "unit": "percent less resident compute time in 18 winning comparisons",
+      "source": "studies/controlled_20261010/SUMMARY.json",
+      "scope": "Positive subset only; R-MAT uses 55.52% more time on RTX and 2.21% more on T4",
+      "limitations": "Author-controlled two-device study; descriptive intervals, full FP64 checks and separate small arbitrary-precision checks; no universal accuracy, independent replication, cold-start or customer-cost claim"
+    },
+    {
+      "id": "controlled_application_time_reduction_20261010",
+      "kind": "measurement",
+      "value": [
+        -7.131392515329038,
+        0.07124116904921873
+      ],
+      "unit": "percent lower pooled-median request time, RTX then T4",
+      "source": "studies/controlled_20261010/SUMMARY.json",
+      "scope": "Specialized scalar-restart CuPy comparison; RTX is slower, T4 is a practical tie; both intervals include one",
+      "limitations": "Author-controlled two-device study; descriptive intervals, full FP64 checks and separate small arbitrary-precision checks; no universal accuracy, independent replication, cold-start or customer-cost claim"
+    },
+    {
+      "id": "controlled_application_top10_agreement_20261010",
+      "kind": "measurement",
+      "value": 1.0,
+      "unit": "fraction exact agreement",
+      "source": "studies/controlled_20261010/SUMMARY.json",
+      "scope": "256 MovieLens 1M users, fixed finite diffusion; Recall@10=0.0587420862 and nDCG@10=0.0944984887; not recommendation quality SOTA",
+      "limitations": "Author-controlled two-device study; descriptive intervals, full FP64 checks and separate small arbitrary-precision checks; no universal accuracy, independent replication, cold-start or customer-cost claim"
     }
   ],
   "unestablished": [

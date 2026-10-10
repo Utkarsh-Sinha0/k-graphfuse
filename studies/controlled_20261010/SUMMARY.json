@@ -1,0 +1,6232 @@
+{
+  "study_id": "kgf-controlled-20261010-v1",
+  "primary": [
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "control": "cupy_identity_packed",
+      "control_ms": 5.32535,
+      "k_ms": 0.96165,
+      "control_p95_ms": 7.86382,
+      "k_p95_ms": 0.984635,
+      "ratio": 5.537721624291582,
+      "ratio_ci95": [
+        5.488128022749368,
+        5.873957393024623
+      ],
+      "time_reduction_pct": 81.94203197911875,
+      "derived_rate_increase_pct": 453.77216242915824,
+      "control_degree": [
+        22,
+        22
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 0.0,
+      "k_error": 1.8617226544975876e-15
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "balanced",
+      "n": 100000,
+      "q": 4,
+      "control": "cupy_identity_packed",
+      "control_ms": 7.0883,
+      "k_ms": 2.04885,
+      "control_p95_ms": 10.231735,
+      "k_p95_ms": 2.36233,
+      "ratio": 3.4596480952729585,
+      "ratio_ci95": [
+        3.3999099111157385,
+        3.793084924549495
+      ],
+      "time_reduction_pct": 71.09532610075759,
+      "derived_rate_increase_pct": 245.96480952729584,
+      "control_degree": [
+        30,
+        30
+      ],
+      "k_degree": [
+        30,
+        30
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.4154177296933596e-14,
+      "k_error": 1.4154172078532745e-14
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "grid",
+      "n": 65536,
+      "q": 4,
+      "control": "cupy_identity_packed",
+      "control_ms": 3.657,
+      "k_ms": 0.8705,
+      "control_p95_ms": 5.4251249999999995,
+      "k_p95_ms": 0.895265,
+      "ratio": 4.201033888569787,
+      "ratio_ci95": [
+        3.8857071750143213,
+        4.456830824249691
+      ],
+      "time_reduction_pct": 76.19633579436696,
+      "derived_rate_increase_pct": 320.1033888569787,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.1996155140384089e-14,
+      "k_error": 1.1996165141704065e-14
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "control": "cupy_identity_packed",
+      "control_ms": 7.1959,
+      "k_ms": 1.69305,
+      "control_p95_ms": 7.694405,
+      "k_p95_ms": 1.77589,
+      "ratio": 4.250258409379522,
+      "ratio_ci95": [
+        4.227206054916687,
+        4.282667689221874
+      ],
+      "time_reduction_pct": 76.47201878847677,
+      "derived_rate_increase_pct": 325.0258409379522,
+      "control_degree": [
+        20,
+        20
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.2228380619190701e-17,
+      "k_error": 1.4687682104713448e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "rmat",
+      "n": 65536,
+      "q": 4,
+      "control": "cupy_identity_packed",
+      "control_ms": 10.131499999999999,
+      "k_ms": 14.7552,
+      "control_p95_ms": 10.84825,
+      "k_p95_ms": 14.86956,
+      "ratio": 0.686639286488831,
+      "ratio_ci95": [
+        0.6834773076562322,
+        0.6882881783418762
+      ],
+      "time_reduction_pct": -45.6368750925332,
+      "derived_rate_increase_pct": -31.3360713511169,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 8.476204724330552e-18,
+      "k_error": 1.263585991012428e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4,
+      "control": "cupy_identity_packed",
+      "control_ms": 11.68625,
+      "k_ms": 2.25645,
+      "control_p95_ms": 12.460675,
+      "k_p95_ms": 2.848835,
+      "ratio": 5.1790423009594715,
+      "ratio_ci95": [
+        5.099021140467066,
+        5.215066449989983
+      ],
+      "time_reduction_pct": 80.69141084607979,
+      "derived_rate_increase_pct": 417.9042300959471,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 3.262043151343605e-17,
+      "k_error": 3.8458717176154575e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 16384,
+      "q": 16,
+      "control": "torch_identity_packed_captured",
+      "control_ms": 3.02475,
+      "k_ms": 1.1298,
+      "control_p95_ms": 3.15342,
+      "k_p95_ms": 1.205285,
+      "ratio": 2.677243759957515,
+      "ratio_ci95": [
+        2.6561796508714455,
+        2.700156144822306
+      ],
+      "time_reduction_pct": 62.648152739895856,
+      "derived_rate_increase_pct": 167.7243759957515,
+      "control_degree": [
+        23,
+        23
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 2.161334067853038e-19,
+      "k_error": 3.943173485863956e-15
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 16384,
+      "q": 16,
+      "control": "torch_identity_packed_captured",
+      "control_ms": 4.6668,
+      "k_ms": 2.3808499999999997,
+      "control_p95_ms": 4.86369,
+      "k_p95_ms": 2.5255199999999998,
+      "ratio": 1.9601402860322998,
+      "ratio_ci95": [
+        1.9418623952195202,
+        1.974131942429741
+      ],
+      "time_reduction_pct": 48.9832433359047,
+      "derived_rate_increase_pct": 96.01402860322999,
+      "control_degree": [
+        20,
+        20
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.868853578594821e-17,
+      "k_error": 2.139245376079278e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true,
+      "control": "cupy_identity_packed",
+      "control_ms": 12.6283,
+      "k_ms": 4.2212,
+      "control_p95_ms": 17.857714999999995,
+      "k_p95_ms": 4.67089,
+      "ratio": 2.991637449066616,
+      "ratio_ci95": [
+        2.833199090306074,
+        3.285162269160562
+      ],
+      "time_reduction_pct": 66.57348970170173,
+      "derived_rate_increase_pct": 199.16374490666163,
+      "control_degree": [
+        26,
+        26
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 0.0,
+      "k_error": 3.5165655044205883e-16
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true,
+      "control": "cupy_identity_packed",
+      "control_ms": 16.6319,
+      "k_ms": 12.6273,
+      "control_p95_ms": 18.96228,
+      "k_p95_ms": 14.51933,
+      "ratio": 1.3171382639202365,
+      "ratio_ci95": [
+        1.2574972409236889,
+        1.3784142294869055
+      ],
+      "time_reduction_pct": 24.07782634575726,
+      "derived_rate_increase_pct": 31.71382639202365,
+      "control_degree": [
+        23,
+        23
+      ],
+      "k_degree": [
+        28,
+        28
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.2228380619190701e-17,
+      "k_error": 1.4687682104713448e-17
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "control": "cupy_identity_packed",
+      "control_ms": 6.9070385000000005,
+      "k_ms": 0.912051,
+      "control_p95_ms": 7.5289348,
+      "k_p95_ms": 0.935963,
+      "ratio": 7.573083632384593,
+      "ratio_ci95": [
+        7.42923855946652,
+        7.607081485253033
+      ],
+      "time_reduction_pct": 86.79533927601533,
+      "derived_rate_increase_pct": 657.3083632384593,
+      "control_degree": [
+        22,
+        22
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 0.0,
+      "k_error": 1.8617226544975872e-15
+    },
+    {
+      "device": "T4",
+      "family": "balanced",
+      "n": 100000,
+      "q": 4,
+      "control": "cupy_identity_packed",
+      "control_ms": 9.2718865,
+      "k_ms": 1.955469,
+      "control_p95_ms": 10.374019050000001,
+      "k_p95_ms": 2.5323072,
+      "ratio": 4.741515462530984,
+      "ratio_ci95": [
+        4.5502142277811455,
+        4.806958729139543
+      ],
+      "time_reduction_pct": 78.9096965326312,
+      "derived_rate_increase_pct": 374.1515462530984,
+      "control_degree": [
+        30,
+        30
+      ],
+      "k_degree": [
+        30,
+        30
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.4154177296933592e-14,
+      "k_error": 1.4154172078532742e-14
+    },
+    {
+      "device": "T4",
+      "family": "grid",
+      "n": 65536,
+      "q": 4,
+      "control": "cupy_identity_packed",
+      "control_ms": 3.6745435000000004,
+      "k_ms": 0.841826,
+      "control_p95_ms": 4.1275597,
+      "k_p95_ms": 0.85016525,
+      "ratio": 4.364967938742686,
+      "ratio_ci95": [
+        4.285186407545249,
+        4.389823220201091
+      ],
+      "time_reduction_pct": 77.09032428109778,
+      "derived_rate_increase_pct": 336.49679387426863,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.1996154863805246e-14,
+      "k_error": 1.1996164873760871e-14
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "control": "cupy_identity_packed",
+      "control_ms": 9.4849175,
+      "k_ms": 1.7137275,
+      "control_p95_ms": 10.0416608,
+      "k_p95_ms": 2.06335705,
+      "ratio": 5.534670768835769,
+      "ratio_ci95": [
+        5.153057348617281,
+        5.603953897682523
+      ],
+      "time_reduction_pct": 81.93207795428901,
+      "derived_rate_increase_pct": 453.46707688357685,
+      "control_degree": [
+        20,
+        20
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.222838061919071e-17,
+      "k_error": 1.468768210471346e-17
+    },
+    {
+      "device": "T4",
+      "family": "rmat",
+      "n": 65536,
+      "q": 4,
+      "control": "cupy_identity_packed",
+      "control_ms": 12.9953085,
+      "k_ms": 12.488983000000001,
+      "control_p95_ms": 13.7683915,
+      "k_p95_ms": 13.00872005,
+      "ratio": 1.0405417718960783,
+      "ratio_ci95": [
+        1.034454637107985,
+        1.0549364259736878
+      ],
+      "time_reduction_pct": 3.896217623460041,
+      "derived_rate_increase_pct": 4.054177189607833,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 8.522422762941978e-18,
+      "k_error": 1.263585991012429e-17
+    },
+    {
+      "device": "T4",
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4,
+      "control": "cupy_identity_packed",
+      "control_ms": 16.0655565,
+      "k_ms": 2.4266685,
+      "control_p95_ms": 16.86072175,
+      "k_p95_ms": 3.4561613999999996,
+      "ratio": 6.620416632926995,
+      "ratio_ci95": [
+        6.513227008412417,
+        6.905825785333565
+      ],
+      "time_reduction_pct": 84.8952104460247,
+      "derived_rate_increase_pct": 562.0416632926995,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 3.262043151343607e-17,
+      "k_error": 3.8458717176154606e-17
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 16384,
+      "q": 16,
+      "control": "torch_identity_packed",
+      "control_ms": 3.3156025,
+      "k_ms": 1.1621155,
+      "control_p95_ms": 3.63262075,
+      "k_p95_ms": 1.17352185,
+      "ratio": 2.8530748449702283,
+      "ratio_ci95": [
+        2.839626053578846,
+        2.9251286454376575
+      ],
+      "time_reduction_pct": 64.95009579706856,
+      "derived_rate_increase_pct": 185.30748449702284,
+      "control_degree": [
+        23,
+        23
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 2.1613340678530384e-19,
+      "k_error": 3.9431703809129705e-15
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 16384,
+      "q": 16,
+      "control": "torch_identity_packed",
+      "control_ms": 4.9588905,
+      "k_ms": 2.6305625,
+      "control_p95_ms": 5.4238003,
+      "k_p95_ms": 3.00112595,
+      "ratio": 1.8851065123904107,
+      "ratio_ci95": [
+        1.849812806624486,
+        1.920000778286297
+      ],
+      "time_reduction_pct": 46.95259957847425,
+      "derived_rate_increase_pct": 88.51065123904107,
+      "control_degree": [
+        20,
+        20
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.8688448615269898e-17,
+      "k_error": 2.1387989525835933e-17
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true,
+      "control": "cupy_identity_packed",
+      "control_ms": 16.009771999999998,
+      "k_ms": 4.2325254999999995,
+      "control_p95_ms": 16.3127159,
+      "k_p95_ms": 4.5882123,
+      "ratio": 3.7825577187898807,
+      "ratio_ci95": [
+        3.7187724261711197,
+        3.819479546337033
+      ],
+      "time_reduction_pct": 73.56286210696817,
+      "derived_rate_increase_pct": 278.25577187898807,
+      "control_degree": [
+        26,
+        26
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 0.0,
+      "k_error": 3.516565504420588e-16
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true,
+      "control": "cupy_identity_packed",
+      "control_ms": 21.2138055,
+      "k_ms": 14.7846345,
+      "control_p95_ms": 22.14854965,
+      "k_p95_ms": 15.726548849999999,
+      "ratio": 1.43485491643368,
+      "ratio_ci95": [
+        1.417189353881913,
+        1.4445398824891131
+      ],
+      "time_reduction_pct": 30.306542595575326,
+      "derived_rate_increase_pct": 43.48549164336799,
+      "control_degree": [
+        23,
+        23
+      ],
+      "k_degree": [
+        28,
+        28
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.222838061919071e-17,
+      "k_error": 1.468768210471346e-17
+    }
+  ],
+  "packed_balanced": [
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "control": "cupy_iterated_packed",
+      "control_ms": 3.58465,
+      "k_ms": 1.0779,
+      "control_p95_ms": 6.167854999999999,
+      "k_p95_ms": 1.286325,
+      "ratio": 3.325586789127006,
+      "ratio_ci95": [
+        3.0164864651606242,
+        3.433142668518362
+      ],
+      "time_reduction_pct": 69.93011870057049,
+      "derived_rate_increase_pct": 232.5586789127006,
+      "control_degree": [
+        13,
+        13
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 2.097292550270982e-15,
+      "k_error": 2.097297571548884e-15
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "balanced",
+      "n": 100000,
+      "q": 4,
+      "control": "cupy_onepass_packed",
+      "control_ms": 6.9124,
+      "k_ms": 2.0141,
+      "control_p95_ms": 12.309660000000001,
+      "k_p95_ms": 2.6858549999999997,
+      "ratio": 3.43200436919716,
+      "ratio_ci95": [
+        3.3795745670393353,
+        3.6206536856745473
+      ],
+      "time_reduction_pct": 70.86250795671548,
+      "derived_rate_increase_pct": 243.200436919716,
+      "control_degree": [
+        30,
+        30
+      ],
+      "k_degree": [
+        30,
+        30
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.3891524878353955e-14,
+      "k_error": 1.3891520316832623e-14
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "grid",
+      "n": 65536,
+      "q": 4,
+      "control": "cupy_onepass_packed",
+      "control_ms": 3.78085,
+      "k_ms": 0.84975,
+      "control_p95_ms": 6.145794999999999,
+      "k_p95_ms": 0.97299,
+      "ratio": 4.449367461017946,
+      "ratio_ci95": [
+        4.266335803296082,
+        4.833215602516261
+      ],
+      "time_reduction_pct": 77.5248951955248,
+      "derived_rate_increase_pct": 344.9367461017946,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.2999683904799163e-14,
+      "k_error": 1.2999663440182756e-14
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "control": "cupy_onepass_packed",
+      "control_ms": 7.94785,
+      "k_ms": 1.69465,
+      "control_p95_ms": 8.559565,
+      "k_p95_ms": 1.7896899999999998,
+      "ratio": 4.689965479597557,
+      "ratio_ci95": [
+        4.655820333998822,
+        4.721166656797726
+      ],
+      "time_reduction_pct": 78.67788143963462,
+      "derived_rate_increase_pct": 368.99654795975573,
+      "control_degree": [
+        24,
+        24
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.286482459779172e-17,
+      "k_error": 1.5667975095251175e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "rmat",
+      "n": 65536,
+      "q": 4,
+      "control": "cupy_onepass_packed",
+      "control_ms": 9.40355,
+      "k_ms": 14.624099999999999,
+      "control_p95_ms": 11.493425,
+      "k_p95_ms": 14.68916,
+      "ratio": 0.643017348076121,
+      "ratio_ci95": [
+        0.642187126106724,
+        0.6464388387699189
+      ],
+      "time_reduction_pct": -55.51679950656931,
+      "derived_rate_increase_pct": -35.6982651923879,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        64.0,
+        64.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 8.941440701150037e-18,
+      "k_error": 1.3218698368801921e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4,
+      "control": "cupy_iterated_packed",
+      "control_ms": 10.7017,
+      "k_ms": 2.24945,
+      "control_p95_ms": 12.271474999999999,
+      "k_p95_ms": 2.45981,
+      "ratio": 4.75747404921203,
+      "ratio_ci95": [
+        4.652486284201336,
+        4.806167186127852
+      ],
+      "time_reduction_pct": 78.98044235962512,
+      "derived_rate_increase_pct": 375.74740492120304,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1024.0,
+        1024.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 3.398457080934305e-17,
+      "k_error": 3.985889315604611e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 16384,
+      "q": 16,
+      "control": "cupy_onepass_packed",
+      "control_ms": 3.11095,
+      "k_ms": 1.1191499999999999,
+      "control_p95_ms": 4.36726,
+      "k_p95_ms": 1.478675,
+      "ratio": 2.779743555376849,
+      "ratio_ci95": [
+        2.1046209943201744,
+        2.883434802120412
+      ],
+      "time_reduction_pct": 64.02545846124174,
+      "derived_rate_increase_pct": 177.9743555376849,
+      "control_degree": [
+        13,
+        13
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.9943175882352434e-15,
+      "k_error": 3.994243140782548e-15
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 16384,
+      "q": 16,
+      "control": "cupy_onepass_packed",
+      "control_ms": 7.69755,
+      "k_ms": 2.3292,
+      "control_p95_ms": 8.470040000000001,
+      "k_p95_ms": 2.373675,
+      "ratio": 3.304804224626481,
+      "ratio_ci95": [
+        3.290446808997747,
+        3.3217253175797685
+      ],
+      "time_reduction_pct": 69.74102149385193,
+      "derived_rate_increase_pct": 230.48042246264808,
+      "control_degree": [
+        24,
+        24
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.7738241750504217e-17,
+      "k_error": 2.1921158608718606e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true,
+      "control": "cupy_iterated_packed",
+      "control_ms": 8.0016,
+      "k_ms": 4.04715,
+      "control_p95_ms": 12.070415,
+      "k_p95_ms": 4.080385,
+      "ratio": 1.9770949927726917,
+      "ratio_ci95": [
+        1.8918021917219352,
+        2.2836098538710985
+      ],
+      "time_reduction_pct": 49.42074085182963,
+      "derived_rate_increase_pct": 97.70949927726917,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.794599247609463e-16,
+      "k_error": 3.79552601052656e-16
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true,
+      "control": "cupy_onepass_packed",
+      "control_ms": 17.99865,
+      "k_ms": 11.3605,
+      "control_p95_ms": 20.192764999999998,
+      "k_p95_ms": 11.4373,
+      "ratio": 1.584318471898244,
+      "ratio_ci95": [
+        1.5794266198235727,
+        1.5877253264259663
+      ],
+      "time_reduction_pct": 36.88137721440219,
+      "derived_rate_increase_pct": 58.431847189824396,
+      "control_degree": [
+        28,
+        28
+      ],
+      "k_degree": [
+        28,
+        28
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.286482459779172e-17,
+      "k_error": 1.5667975095251175e-17
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "control": "cupy_onepass_packed",
+      "control_ms": 3.967949,
+      "k_ms": 1.0508229999999998,
+      "control_p95_ms": 5.9948871,
+      "k_p95_ms": 2.23752955,
+      "ratio": 3.776039352012661,
+      "ratio_ci95": [
+        2.7883643259343613,
+        4.085974271704043
+      ],
+      "time_reduction_pct": 73.51722514578691,
+      "derived_rate_increase_pct": 277.6039352012661,
+      "control_degree": [
+        13,
+        13
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 2.0972923223710265e-15,
+      "k_error": 2.097297439510509e-15
+    },
+    {
+      "device": "T4",
+      "family": "balanced",
+      "n": 100000,
+      "q": 4,
+      "control": "cupy_onepass_packed",
+      "control_ms": 8.9900005,
+      "k_ms": 1.948414,
+      "control_p95_ms": 9.37150935,
+      "k_p95_ms": 2.20360615,
+      "ratio": 4.61400939430737,
+      "ratio_ci95": [
+        4.588911801949526,
+        4.631389970217691
+      ],
+      "time_reduction_pct": 78.3268755101849,
+      "derived_rate_increase_pct": 361.400939430737,
+      "control_degree": [
+        30,
+        30
+      ],
+      "k_degree": [
+        30,
+        30
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.3891525417548862e-14,
+      "k_error": 1.3891520856027706e-14
+    },
+    {
+      "device": "T4",
+      "family": "grid",
+      "n": 65536,
+      "q": 4,
+      "control": "cupy_iterated_packed",
+      "control_ms": 3.487138,
+      "k_ms": 0.8471249999999999,
+      "control_p95_ms": 3.6667518,
+      "k_p95_ms": 0.85146755,
+      "ratio": 4.116438542127786,
+      "ratio_ci95": [
+        4.10483710921072,
+        4.1548619228755275
+      ],
+      "time_reduction_pct": 75.70715583954521,
+      "derived_rate_increase_pct": 311.6438542127786,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.2999683768942616e-14,
+      "k_error": 1.2999663463506624e-14
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "control": "cupy_onepass_packed",
+      "control_ms": 10.5371655,
+      "k_ms": 1.716223,
+      "control_p95_ms": 11.032336299999999,
+      "k_p95_ms": 1.8616072,
+      "ratio": 6.139741455510152,
+      "ratio_ci95": [
+        5.969192034907394,
+        6.177411324155066
+      ],
+      "time_reduction_pct": 83.71266921830164,
+      "derived_rate_increase_pct": 513.9741455510152,
+      "control_degree": [
+        24,
+        24
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.286482459779172e-17,
+      "k_error": 1.5667998558987467e-17
+    },
+    {
+      "device": "T4",
+      "family": "rmat",
+      "n": 65536,
+      "q": 4,
+      "control": "cupy_iterated_packed",
+      "control_ms": 11.820753,
+      "k_ms": 12.0815845,
+      "control_p95_ms": 12.84347885,
+      "k_p95_ms": 12.1820514,
+      "ratio": 0.9784108202032605,
+      "ratio_ci95": [
+        0.9737077310179452,
+        0.981547317044101
+      ],
+      "time_reduction_pct": -2.20655570757633,
+      "derived_rate_increase_pct": -2.1589179796739466,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1024.0,
+        1024.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 8.997207018173754e-18,
+      "k_error": 1.3218698368801921e-17
+    },
+    {
+      "device": "T4",
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4,
+      "control": "cupy_onepass_packed",
+      "control_ms": 14.623928500000002,
+      "k_ms": 2.4015560000000002,
+      "control_p95_ms": 15.344891,
+      "k_p95_ms": 2.9113855,
+      "ratio": 6.089355609446542,
+      "ratio_ci95": [
+        6.044907512748322,
+        6.416058055659265
+      ],
+      "time_reduction_pct": 83.57790110913083,
+      "derived_rate_increase_pct": 508.93556094465424,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        64.0,
+        64.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 3.398457080934305e-17,
+      "k_error": 3.985889315604611e-17
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 16384,
+      "q": 16,
+      "control": "cupy_onepass_packed",
+      "control_ms": 2.125625,
+      "k_ms": 1.1581359999999998,
+      "control_p95_ms": 2.2941236000000003,
+      "k_p95_ms": 1.1681349,
+      "ratio": 1.8353846180414046,
+      "ratio_ci95": [
+        1.8253629159540878,
+        1.8585600622109286
+      ],
+      "time_reduction_pct": 45.515507203763605,
+      "derived_rate_increase_pct": 83.53846180414047,
+      "control_degree": [
+        13,
+        13
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.994317823633257e-15,
+      "k_error": 3.994243338175231e-15
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 16384,
+      "q": 16,
+      "control": "cupy_onepass_packed",
+      "control_ms": 8.6199215,
+      "k_ms": 2.5577165,
+      "control_p95_ms": 9.089078650000001,
+      "k_p95_ms": 2.81794035,
+      "ratio": 3.370162994999641,
+      "ratio_ci95": [
+        3.2527771967435566,
+        3.386157053893804
+      ],
+      "time_reduction_pct": 70.32784463292386,
+      "derived_rate_increase_pct": 237.0162994999641,
+      "control_degree": [
+        24,
+        24
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.7738241750504217e-17,
+      "k_error": 2.1921158608718606e-17
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true,
+      "control": "cupy_iterated_packed",
+      "control_ms": 8.490701,
+      "k_ms": 3.899825,
+      "control_p95_ms": 8.92018915,
+      "k_p95_ms": 4.3079118,
+      "ratio": 2.1772005154077427,
+      "ratio_ci95": [
+        2.1555804852789704,
+        2.190334831285155
+      ],
+      "time_reduction_pct": 54.06945786926192,
+      "derived_rate_increase_pct": 117.72005154077428,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.7946022061763403e-16,
+      "k_error": 3.7955268677106007e-16
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true,
+      "control": "cupy_onepass_packed",
+      "control_ms": 24.4789125,
+      "k_ms": 13.90352,
+      "control_p95_ms": 25.575072499999997,
+      "k_p95_ms": 15.04247075,
+      "ratio": 1.760626985108807,
+      "ratio_ci95": [
+        1.7580506324288223,
+        1.7635064229151907
+      ],
+      "time_reduction_pct": 43.20205197024174,
+      "derived_rate_increase_pct": 76.0626985108807,
+      "control_degree": [
+        28,
+        28
+      ],
+      "k_degree": [
+        28,
+        28
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.286482459779172e-17,
+      "k_error": 1.5667998558987467e-17
+    }
+  ],
+  "components": [
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 17.259149999999998,
+      "k_ms": 10.2995,
+      "control_p95_ms": 17.47053,
+      "k_p95_ms": 10.418,
+      "ratio": 1.6757269770377201,
+      "ratio_ci95": [
+        1.6729446906731582,
+        1.6814900333196936
+      ],
+      "time_reduction_pct": 40.32440763305261,
+      "derived_rate_increase_pct": 67.57269770377201,
+      "control_degree": [
+        22,
+        22
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 0.0,
+      "k_error": 1.861747866631254e-15
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 1.5955,
+      "k_ms": 1.01865,
+      "control_p95_ms": 1.62563,
+      "k_p95_ms": 1.11116,
+      "ratio": 1.5662887154567318,
+      "ratio_ci95": [
+        1.5574576644479246,
+        1.5799105535625957
+      ],
+      "time_reduction_pct": 36.15481040426198,
+      "derived_rate_increase_pct": 56.62887154567318,
+      "control_degree": [
+        22,
+        22
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 1.8755477356223437e-17,
+      "k_error": 1.8617226544975876e-15
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 17.259149999999998,
+      "k_ms": 1.5955,
+      "control_p95_ms": 17.47053,
+      "k_p95_ms": 1.62563,
+      "ratio": 10.817392666875588,
+      "ratio_ci95": [
+        10.777279035656354,
+        10.864366223789435
+      ],
+      "time_reduction_pct": 90.75562817404102,
+      "derived_rate_increase_pct": 981.7392666875587,
+      "control_degree": [
+        22,
+        22
+      ],
+      "k_degree": [
+        22,
+        22
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 0.0,
+      "k_error": 1.8755477356223437e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 10.2995,
+      "k_ms": 1.01865,
+      "control_p95_ms": 10.418,
+      "k_p95_ms": 1.11116,
+      "ratio": 10.110931134344476,
+      "ratio_ci95": [
+        10.050119915814204,
+        10.185706415344375
+      ],
+      "time_reduction_pct": 90.1097140637895,
+      "derived_rate_increase_pct": 911.0931134344476,
+      "control_degree": [
+        13,
+        13
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 1.861747866631254e-15,
+      "k_error": 1.8617226544975876e-15
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 10.2995,
+      "k_ms": 10.26445,
+      "control_p95_ms": 10.418,
+      "k_p95_ms": 10.378915,
+      "ratio": 1.0034146983033674,
+      "ratio_ci95": [
+        0.998157373632192,
+        1.0082430476786481
+      ],
+      "time_reduction_pct": 0.3403077819311595,
+      "derived_rate_increase_pct": 0.34146983033673806,
+      "control_degree": [
+        13,
+        13
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 1.861747866631254e-15,
+      "k_error": 1.861747866631254e-15
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 1.01865,
+      "k_ms": 4.19495,
+      "control_p95_ms": 1.11116,
+      "k_p95_ms": 4.25112,
+      "ratio": 0.24282768566967425,
+      "ratio_ci95": [
+        0.24120057137818762,
+        0.2436325479347515
+      ],
+      "time_reduction_pct": -311.8146566534138,
+      "derived_rate_increase_pct": -75.71723143303257,
+      "control_degree": [
+        13,
+        13
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 1.8617226544975876e-15,
+      "k_error": 1.861730702064594e-15
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "balanced",
+      "n": 100000,
+      "q": 4,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 23.484,
+      "k_ms": 23.5321,
+      "control_p95_ms": 23.698045,
+      "k_p95_ms": 23.78371,
+      "ratio": 0.9979559835288819,
+      "ratio_ci95": [
+        0.9965076360982275,
+        1.0010135703441243
+      ],
+      "time_reduction_pct": -0.2048203031851381,
+      "derived_rate_increase_pct": -0.20440164711180708,
+      "control_degree": [
+        30,
+        30
+      ],
+      "k_degree": [
+        30,
+        30
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.4154177296933596e-14,
+      "k_error": 1.4154177296933596e-14
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "balanced",
+      "n": 100000,
+      "q": 4,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 2.12465,
+      "k_ms": 2.1266,
+      "control_p95_ms": 2.354335,
+      "k_p95_ms": 2.292275,
+      "ratio": 0.9990830433555912,
+      "ratio_ci95": [
+        0.991248645221317,
+        1.0055712677618591
+      ],
+      "time_reduction_pct": -0.09177982255899053,
+      "derived_rate_increase_pct": -0.09169566444088284,
+      "control_degree": [
+        30,
+        30
+      ],
+      "k_degree": [
+        30,
+        30
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.4154172078532745e-14,
+      "k_error": 1.4154172078532745e-14
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "balanced",
+      "n": 100000,
+      "q": 4,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 23.484,
+      "k_ms": 2.12465,
+      "control_p95_ms": 23.698045,
+      "k_p95_ms": 2.354335,
+      "ratio": 11.053114630645048,
+      "ratio_ci95": [
+        11.020672501583876,
+        11.105646457958954
+      ],
+      "time_reduction_pct": 90.95277635837165,
+      "derived_rate_increase_pct": 1005.3114630645048,
+      "control_degree": [
+        30,
+        30
+      ],
+      "k_degree": [
+        30,
+        30
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.4154177296933596e-14,
+      "k_error": 1.4154172078532745e-14
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "balanced",
+      "n": 100000,
+      "q": 4,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 23.5321,
+      "k_ms": 2.1266,
+      "control_p95_ms": 23.78371,
+      "k_p95_ms": 2.292275,
+      "ratio": 11.065597667638485,
+      "ratio_ci95": [
+        10.981373557040707,
+        11.143755615453728
+      ],
+      "time_reduction_pct": 90.96298247925174,
+      "derived_rate_increase_pct": 1006.5597667638485,
+      "control_degree": [
+        30,
+        30
+      ],
+      "k_degree": [
+        30,
+        30
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.4154177296933596e-14,
+      "k_error": 1.4154172078532745e-14
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "balanced",
+      "n": 100000,
+      "q": 4,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 23.5321,
+      "k_ms": 23.5137,
+      "control_p95_ms": 23.78371,
+      "k_p95_ms": 23.78901,
+      "ratio": 1.000782522529419,
+      "ratio_ci95": [
+        0.9984094953975305,
+        1.0029889510995678
+      ],
+      "time_reduction_pct": 0.0781910666706187,
+      "derived_rate_increase_pct": 0.07825225294189053,
+      "control_degree": [
+        30,
+        30
+      ],
+      "k_degree": [
+        30,
+        30
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.4154177296933596e-14,
+      "k_error": 1.4154177296933596e-14
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "balanced",
+      "n": 100000,
+      "q": 4,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 2.1266,
+      "k_ms": 9.24805,
+      "control_p95_ms": 2.292275,
+      "k_p95_ms": 9.353625,
+      "ratio": 0.22995117889717293,
+      "ratio_ci95": [
+        0.22864650353053126,
+        0.23139247905436125
+      ],
+      "time_reduction_pct": -334.8749177090191,
+      "derived_rate_increase_pct": -77.00488211028271,
+      "control_degree": [
+        30,
+        30
+      ],
+      "k_degree": [
+        30,
+        30
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.4154172078532745e-14,
+      "k_error": 1.4154168968994138e-14
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "grid",
+      "n": 65536,
+      "q": 4,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 9.05865,
+      "k_ms": 9.047450000000001,
+      "control_p95_ms": 9.15372,
+      "k_p95_ms": 9.285585,
+      "ratio": 1.00123791786636,
+      "ratio_ci95": [
+        0.9933445540851238,
+        1.0039192675176865
+      ],
+      "time_reduction_pct": 0.1236387320406318,
+      "derived_rate_increase_pct": 0.1237917866359961,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.1996155140384089e-14,
+      "k_error": 1.1996155140384089e-14
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "grid",
+      "n": 65536,
+      "q": 4,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 0.92065,
+      "k_ms": 0.91925,
+      "control_p95_ms": 0.969055,
+      "k_p95_ms": 1.09566,
+      "ratio": 1.0015229806907804,
+      "ratio_ci95": [
+        0.9938009787928221,
+        1.0085338604307894
+      ],
+      "time_reduction_pct": 0.1520664747732492,
+      "derived_rate_increase_pct": 0.15229806907803844,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.1996165141704065e-14,
+      "k_error": 1.1996165141704065e-14
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "grid",
+      "n": 65536,
+      "q": 4,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 9.05865,
+      "k_ms": 0.92065,
+      "control_p95_ms": 9.15372,
+      "k_p95_ms": 0.969055,
+      "ratio": 9.839406940748384,
+      "ratio_ci95": [
+        9.794074626057016,
+        9.894957250671915
+      ],
+      "time_reduction_pct": 89.83678583453384,
+      "derived_rate_increase_pct": 883.9406940748385,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.1996155140384089e-14,
+      "k_error": 1.1996165141704065e-14
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "grid",
+      "n": 65536,
+      "q": 4,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 9.047450000000001,
+      "k_ms": 0.91925,
+      "control_p95_ms": 9.285585,
+      "k_p95_ms": 1.09566,
+      "ratio": 9.842208322001634,
+      "ratio_ci95": [
+        9.801273466489398,
+        9.926303844697882
+      ],
+      "time_reduction_pct": 89.83967858346827,
+      "derived_rate_increase_pct": 884.2208322001634,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.1996155140384089e-14,
+      "k_error": 1.1996165141704065e-14
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "grid",
+      "n": 65536,
+      "q": 4,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 9.047450000000001,
+      "k_ms": 9.0391,
+      "control_p95_ms": 9.285585,
+      "k_p95_ms": 9.16354,
+      "ratio": 1.0009237645340798,
+      "ratio_ci95": [
+        0.997583161008588,
+        1.0073193958453295
+      ],
+      "time_reduction_pct": 0.09229119807239172,
+      "derived_rate_increase_pct": 0.09237645340798295,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.1996155140384089e-14,
+      "k_error": 1.1996155140384089e-14
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "grid",
+      "n": 65536,
+      "q": 4,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 0.91925,
+      "k_ms": 4.57555,
+      "control_p95_ms": 1.09566,
+      "k_p95_ms": 4.64731,
+      "ratio": 0.20090480925790344,
+      "ratio_ci95": [
+        0.19994327231470774,
+        0.2024357026503175
+      ],
+      "time_reduction_pct": -397.74816426434586,
+      "derived_rate_increase_pct": -79.90951907420965,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.1996165141704065e-14,
+      "k_error": 1.1996096649015921e-14
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 14.29985,
+      "k_ms": 17.141849999999998,
+      "control_p95_ms": 14.574435,
+      "k_p95_ms": 17.483495,
+      "ratio": 0.8342069263235883,
+      "ratio_ci95": [
+        0.8281923501050172,
+        0.8385977131920199
+      ],
+      "time_reduction_pct": -19.874334346164456,
+      "derived_rate_increase_pct": -16.57930736764117,
+      "control_degree": [
+        20,
+        20
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.2228380619190701e-17,
+      "k_error": 1.2228380619190701e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 1.4945499999999998,
+      "k_ms": 1.7694,
+      "control_p95_ms": 1.5652549999999998,
+      "k_p95_ms": 1.99852,
+      "ratio": 0.8446648581440035,
+      "ratio_ci95": [
+        0.8381458276008912,
+        0.8495043896913056
+      ],
+      "time_reduction_pct": -18.39015088153626,
+      "derived_rate_increase_pct": -15.53351418559965,
+      "control_degree": [
+        20,
+        20
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.4687682104713448e-17,
+      "k_error": 1.4687682104713448e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 14.29985,
+      "k_ms": 1.4945499999999998,
+      "control_p95_ms": 14.574435,
+      "k_p95_ms": 1.5652549999999998,
+      "ratio": 9.567997055970025,
+      "ratio_ci95": [
+        9.519345853525307,
+        9.625335120643433
+      ],
+      "time_reduction_pct": 89.54849176739617,
+      "derived_rate_increase_pct": 856.7997055970025,
+      "control_degree": [
+        20,
+        20
+      ],
+      "k_degree": [
+        20,
+        20
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.2228380619190701e-17,
+      "k_error": 1.4687682104713448e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 17.141849999999998,
+      "k_ms": 1.7694,
+      "control_p95_ms": 17.483495,
+      "k_p95_ms": 1.99852,
+      "ratio": 9.687945066124108,
+      "ratio_ci95": [
+        9.625866245985689,
+        9.745107706096226
+      ],
+      "time_reduction_pct": 89.6778935762476,
+      "derived_rate_increase_pct": 868.7945066124108,
+      "control_degree": [
+        24,
+        24
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.2228380619190701e-17,
+      "k_error": 1.4687682104713448e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 17.141849999999998,
+      "k_ms": 22.83015,
+      "control_p95_ms": 17.483495,
+      "k_p95_ms": 23.167095,
+      "ratio": 0.7508426357251266,
+      "ratio_ci95": [
+        0.7462108842648834,
+        0.7552279994743527
+      ],
+      "time_reduction_pct": -33.18369954234812,
+      "derived_rate_increase_pct": -24.915736427487346,
+      "control_degree": [
+        24,
+        24
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 1.2228380619190701e-17,
+      "k_error": 1.2228380619190701e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 1.7694,
+      "k_ms": 10.428249999999998,
+      "control_p95_ms": 1.99852,
+      "k_p95_ms": 10.526665,
+      "ratio": 0.16967372282022394,
+      "ratio_ci95": [
+        0.16912106278943914,
+        0.17450965045213787
+      ],
+      "time_reduction_pct": -489.3664519046003,
+      "derived_rate_increase_pct": -83.0326277179776,
+      "control_degree": [
+        24,
+        24
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.4687682104713448e-17,
+      "k_error": 1.6607081590386038e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "rmat",
+      "n": 65536,
+      "q": 4,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 21.59675,
+      "k_ms": 21.394199999999998,
+      "control_p95_ms": 22.28316,
+      "k_p95_ms": 22.14267,
+      "ratio": 1.009467519234185,
+      "ratio_ci95": [
+        1.0006376984924152,
+        1.0222231578356455
+      ],
+      "time_reduction_pct": 0.9378725965712542,
+      "derived_rate_increase_pct": 0.9467519234185096,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 8.444006421915107e-18,
+      "k_error": 8.433871219546498e-18
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "rmat",
+      "n": 65536,
+      "q": 4,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 15.0419,
+      "k_ms": 15.037700000000001,
+      "control_p95_ms": 15.265835,
+      "k_p95_ms": 15.1733,
+      "ratio": 1.0002792980309487,
+      "ratio_ci95": [
+        0.9988506128957245,
+        1.0047828032838353
+      ],
+      "time_reduction_pct": 0.027922004533986744,
+      "derived_rate_increase_pct": 0.027929803094872696,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 1.263585991012428e-17,
+      "k_error": 1.263585991012428e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "rmat",
+      "n": 65536,
+      "q": 4,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 21.59675,
+      "k_ms": 15.0419,
+      "control_p95_ms": 22.28316,
+      "k_p95_ms": 15.265835,
+      "ratio": 1.4357727414754784,
+      "ratio_ci95": [
+        1.421713257818386,
+        1.4537694927883336
+      ],
+      "time_reduction_pct": 30.351094493384412,
+      "derived_rate_increase_pct": 43.57727414754784,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 8.444006421915107e-18,
+      "k_error": 1.263585991012428e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "rmat",
+      "n": 65536,
+      "q": 4,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 21.394199999999998,
+      "k_ms": 15.037700000000001,
+      "control_p95_ms": 22.14267,
+      "k_p95_ms": 15.1733,
+      "ratio": 1.4227042699348966,
+      "ratio_ci95": [
+        1.420438325353598,
+        1.4279172762068895
+      ],
+      "time_reduction_pct": 29.711323629768806,
+      "derived_rate_increase_pct": 42.270426993489664,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        64.0,
+        64.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 8.433871219546498e-18,
+      "k_error": 1.263585991012428e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "rmat",
+      "n": 65536,
+      "q": 4,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 21.394199999999998,
+      "k_ms": 21.47015,
+      "control_p95_ms": 22.14267,
+      "k_p95_ms": 22.36315,
+      "ratio": 0.9964625305365821,
+      "ratio_ci95": [
+        0.9938310029265572,
+        1.0005192703082642
+      ],
+      "time_reduction_pct": -0.3550027577567949,
+      "derived_rate_increase_pct": -0.35374694634179304,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        64.0,
+        64.0
+      ],
+      "k_penalty": [
+        1024.0,
+        1024.0
+      ],
+      "control_error": 8.433871219546498e-18,
+      "k_error": 8.433792619388857e-18
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "rmat",
+      "n": 65536,
+      "q": 4,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 15.037700000000001,
+      "k_ms": 59.32625,
+      "control_p95_ms": 15.1733,
+      "k_p95_ms": 59.98662,
+      "ratio": 0.25347464233791955,
+      "ratio_ci95": [
+        0.25227838032773625,
+        0.25436697860170854
+      ],
+      "time_reduction_pct": -294.51678115669284,
+      "derived_rate_increase_pct": -74.65253576620805,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        64.0,
+        64.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 1.263585991012428e-17,
+      "k_error": 1.6044647633732935e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 22.8898,
+      "k_ms": 23.1584,
+      "control_p95_ms": 24.296174999999998,
+      "k_p95_ms": 25.70944,
+      "ratio": 0.9884016166919994,
+      "ratio_ci95": [
+        0.9689788592280275,
+        1.003060273326744
+      ],
+      "time_reduction_pct": -1.1734484355477193,
+      "derived_rate_increase_pct": -1.159838330800056,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 3.262043151343605e-17,
+      "k_error": 3.262043151343605e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 2.3404,
+      "k_ms": 2.3489500000000003,
+      "control_p95_ms": 2.8537549999999996,
+      "k_p95_ms": 2.83872,
+      "ratio": 0.9963600757785391,
+      "ratio_ci95": [
+        0.9897562535995472,
+        1.006032343629674
+      ],
+      "time_reduction_pct": -0.3653221671509277,
+      "derived_rate_increase_pct": -0.3639924221460866,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 3.8458717176154575e-17,
+      "k_error": 3.8458717176154575e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 22.8898,
+      "k_ms": 2.3404,
+      "control_p95_ms": 24.296174999999998,
+      "k_p95_ms": 2.8537549999999996,
+      "ratio": 9.780293966843276,
+      "ratio_ci95": [
+        9.70251920943608,
+        9.921339379741664
+      ],
+      "time_reduction_pct": 89.77535845660512,
+      "derived_rate_increase_pct": 878.0293966843276,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 3.262043151343605e-17,
+      "k_error": 3.8458717176154575e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 23.1584,
+      "k_ms": 2.3489500000000003,
+      "control_p95_ms": 25.70944,
+      "k_p95_ms": 2.83872,
+      "ratio": 9.85904340237127,
+      "ratio_ci95": [
+        9.782262726065126,
+        10.066338502237626
+      ],
+      "time_reduction_pct": 89.85702811938648,
+      "derived_rate_increase_pct": 885.904340237127,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        64.0,
+        64.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 3.262043151343605e-17,
+      "k_error": 3.8458717176154575e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 23.1584,
+      "k_ms": 23.2252,
+      "control_p95_ms": 25.70944,
+      "k_p95_ms": 24.49251,
+      "ratio": 0.9971238137884711,
+      "ratio_ci95": [
+        0.9933886468146668,
+        1.0131385228902148
+      ],
+      "time_reduction_pct": -0.2884482520381315,
+      "derived_rate_increase_pct": -0.2876186211528853,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        64.0,
+        64.0
+      ],
+      "k_penalty": [
+        1024.0,
+        1024.0
+      ],
+      "control_error": 3.262043151343605e-17,
+      "k_error": 3.262043151343605e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 2.3489500000000003,
+      "k_ms": 13.937100000000001,
+      "control_p95_ms": 2.83872,
+      "k_p95_ms": 14.962775,
+      "ratio": 0.16853936615221246,
+      "ratio_ci95": [
+        0.16278246396866825,
+        0.1702860642996623
+      ],
+      "time_reduction_pct": -493.3331914259562,
+      "derived_rate_increase_pct": -83.14606338477876,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        64.0,
+        64.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 3.8458717176154575e-17,
+      "k_error": 4.298445981923637e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 16384,
+      "q": 16,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 6.5237,
+      "k_ms": 3.92985,
+      "control_p95_ms": 9.389665,
+      "k_p95_ms": 6.644279999999998,
+      "ratio": 1.66003791493314,
+      "ratio_ci95": [
+        1.4566451628700383,
+        1.855826840597909
+      ],
+      "time_reduction_pct": 39.76041203611448,
+      "derived_rate_increase_pct": 66.003791493314,
+      "control_degree": [
+        23,
+        23
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 0.0,
+      "k_error": 3.943185920798109e-15
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 16384,
+      "q": 16,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 1.87215,
+      "k_ms": 1.3204500000000001,
+      "control_p95_ms": 1.97452,
+      "k_p95_ms": 1.40686,
+      "ratio": 1.417812109508122,
+      "ratio_ci95": [
+        1.3914470851671716,
+        1.4594713846399376
+      ],
+      "time_reduction_pct": 29.468792564698333,
+      "derived_rate_increase_pct": 41.781210950812195,
+      "control_degree": [
+        23,
+        23
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.100328225598564e-17,
+      "k_error": 3.943173485863956e-15
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 16384,
+      "q": 16,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 6.5237,
+      "k_ms": 1.87215,
+      "control_p95_ms": 9.389665,
+      "k_p95_ms": 1.97452,
+      "ratio": 3.4846032636273803,
+      "ratio_ci95": [
+        3.2960868641817993,
+        3.636388529644618
+      ],
+      "time_reduction_pct": 71.30232843325106,
+      "derived_rate_increase_pct": 248.46032636273802,
+      "control_degree": [
+        23,
+        23
+      ],
+      "k_degree": [
+        23,
+        23
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 0.0,
+      "k_error": 3.100328225598564e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 16384,
+      "q": 16,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 3.92985,
+      "k_ms": 1.3204500000000001,
+      "control_p95_ms": 6.644279999999998,
+      "k_p95_ms": 1.40686,
+      "ratio": 2.976144496194479,
+      "ratio_ci95": [
+        2.71555389632732,
+        3.2769872148098447
+      ],
+      "time_reduction_pct": 66.39948089621741,
+      "derived_rate_increase_pct": 197.6144496194479,
+      "control_degree": [
+        13,
+        13
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.943185920798109e-15,
+      "k_error": 3.943173485863956e-15
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 16384,
+      "q": 16,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 3.92985,
+      "k_ms": 3.28715,
+      "control_p95_ms": 6.644279999999998,
+      "k_p95_ms": 6.388214999999999,
+      "ratio": 1.1955189145612461,
+      "ratio_ci95": [
+        1.0256235577733224,
+        1.3831566227711678
+      ],
+      "time_reduction_pct": 16.354313777879568,
+      "derived_rate_increase_pct": 19.551891456124615,
+      "control_degree": [
+        13,
+        13
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.943185920798109e-15,
+      "k_error": 3.943185920798109e-15
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 16384,
+      "q": 16,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 1.3204500000000001,
+      "k_ms": 2.15695,
+      "control_p95_ms": 1.40686,
+      "k_p95_ms": 2.238955,
+      "ratio": 0.6121838707434109,
+      "ratio_ci95": [
+        0.5955475621963123,
+        0.6229607963700543
+      ],
+      "time_reduction_pct": -63.349615661327576,
+      "derived_rate_increase_pct": -38.78161292565891,
+      "control_degree": [
+        13,
+        13
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.943173485863956e-15,
+      "k_error": 3.943195648094916e-15
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 16384,
+      "q": 16,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 8.260200000000001,
+      "k_ms": 9.90395,
+      "control_p95_ms": 9.97086,
+      "k_p95_ms": 11.31591,
+      "ratio": 0.8340308664724682,
+      "ratio_ci95": [
+        0.8284459669208637,
+        0.8408457159534594
+      ],
+      "time_reduction_pct": -19.899639233916844,
+      "derived_rate_increase_pct": -16.596913352753184,
+      "control_degree": [
+        20,
+        20
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.7953504605432574e-17,
+      "k_error": 1.7953504605432574e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 16384,
+      "q": 16,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 2.4768499999999998,
+      "k_ms": 2.5737,
+      "control_p95_ms": 2.65625,
+      "k_p95_ms": 2.827,
+      "ratio": 0.9623693515172708,
+      "ratio_ci95": [
+        0.9534091788561256,
+        0.9769129566153519
+      ],
+      "time_reduction_pct": -3.910208530997039,
+      "derived_rate_increase_pct": -3.7630648482729234,
+      "control_degree": [
+        20,
+        20
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 2.139245376079278e-17,
+      "k_error": 2.139245376079278e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 16384,
+      "q": 16,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 8.260200000000001,
+      "k_ms": 2.4768499999999998,
+      "control_p95_ms": 9.97086,
+      "k_p95_ms": 2.65625,
+      "ratio": 3.334961745765792,
+      "ratio_ci95": [
+        3.2683891483380147,
+        3.3971313373231644
+      ],
+      "time_reduction_pct": 70.01464855572506,
+      "derived_rate_increase_pct": 233.49617457657922,
+      "control_degree": [
+        20,
+        20
+      ],
+      "k_degree": [
+        20,
+        20
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.7953504605432574e-17,
+      "k_error": 2.139245376079278e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 16384,
+      "q": 16,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 9.90395,
+      "k_ms": 2.5737,
+      "control_p95_ms": 11.31591,
+      "k_p95_ms": 2.827,
+      "ratio": 3.848136923495357,
+      "ratio_ci95": [
+        3.818509277028142,
+        3.876975076050655
+      ],
+      "time_reduction_pct": 74.01339869446029,
+      "derived_rate_increase_pct": 284.8136923495357,
+      "control_degree": [
+        24,
+        24
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.7953504605432574e-17,
+      "k_error": 2.139245376079278e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 16384,
+      "q": 16,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 9.90395,
+      "k_ms": 13.2041,
+      "control_p95_ms": 11.31591,
+      "k_p95_ms": 15.271315,
+      "ratio": 0.7500662672957642,
+      "ratio_ci95": [
+        0.7386892092914623,
+        0.7610164590578082
+      ],
+      "time_reduction_pct": -33.32155352157473,
+      "derived_rate_increase_pct": -24.99337327042358,
+      "control_degree": [
+        24,
+        24
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 1.7953504605432574e-17,
+      "k_error": 1.7953504605432574e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 16384,
+      "q": 16,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 2.5737,
+      "k_ms": 8.82265,
+      "control_p95_ms": 2.827,
+      "k_p95_ms": 9.261885,
+      "ratio": 0.29171507426906884,
+      "ratio_ci95": [
+        0.28971564069742567,
+        0.2937317613535701
+      ],
+      "time_reduction_pct": -242.80024866923102,
+      "derived_rate_increase_pct": -70.82849257309311,
+      "control_degree": [
+        24,
+        24
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 2.139245376079278e-17,
+      "k_error": 2.143241174162175e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 26.9736,
+      "k_ms": 15.35655,
+      "control_p95_ms": 28.135305000000002,
+      "k_p95_ms": 16.39923,
+      "ratio": 1.756488273733358,
+      "ratio_ci95": [
+        1.7247572629235908,
+        1.7831153481739062
+      ],
+      "time_reduction_pct": 43.06822226176706,
+      "derived_rate_increase_pct": 75.6488273733358,
+      "control_degree": [
+        26,
+        26
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 0.0,
+      "k_error": 3.5163333001598996e-16
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 7.2625,
+      "k_ms": 4.305,
+      "control_p95_ms": 8.02847,
+      "k_p95_ms": 4.812235,
+      "ratio": 1.6869918699186994,
+      "ratio_ci95": [
+        1.670010877363512,
+        1.7094410521371537
+      ],
+      "time_reduction_pct": 40.722891566265076,
+      "derived_rate_increase_pct": 68.69918699186994,
+      "control_degree": [
+        26,
+        26
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 1.8755477356223437e-17,
+      "k_error": 3.5165655044205883e-16
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 26.9736,
+      "k_ms": 7.2625,
+      "control_p95_ms": 28.135305000000002,
+      "k_p95_ms": 8.02847,
+      "ratio": 3.714092943201377,
+      "ratio_ci95": [
+        3.6818361666712147,
+        3.765040647749205
+      ],
+      "time_reduction_pct": 73.07552569920219,
+      "derived_rate_increase_pct": 271.4092943201377,
+      "control_degree": [
+        26,
+        26
+      ],
+      "k_degree": [
+        26,
+        26
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 0.0,
+      "k_error": 1.8755477356223437e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 15.35655,
+      "k_ms": 4.305,
+      "control_p95_ms": 16.39923,
+      "k_p95_ms": 4.812235,
+      "ratio": 3.5671428571428576,
+      "ratio_ci95": [
+        3.534738133259275,
+        3.6366639141205614
+      ],
+      "time_reduction_pct": 71.96635963155788,
+      "derived_rate_increase_pct": 256.7142857142858,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.5163333001598996e-16,
+      "k_error": 3.5165655044205883e-16
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 15.35655,
+      "k_ms": 15.5691,
+      "control_p95_ms": 16.39923,
+      "k_p95_ms": 16.427865,
+      "ratio": 0.9863479584561727,
+      "ratio_ci95": [
+        0.9526747062461347,
+        1.011138131030716
+      ],
+      "time_reduction_pct": -1.384099944323447,
+      "derived_rate_increase_pct": -1.3652041543827265,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.5163333001598996e-16,
+      "k_error": 3.5163333001598996e-16
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 4.305,
+      "k_ms": 7.237500000000001,
+      "control_p95_ms": 4.812235,
+      "k_p95_ms": 7.778295,
+      "ratio": 0.5948186528497408,
+      "ratio_ci95": [
+        0.5843137870537098,
+        0.603511369350243
+      ],
+      "time_reduction_pct": -68.11846689895475,
+      "derived_rate_increase_pct": -40.51813471502592,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.5165655044205883e-16,
+      "k_error": 3.5165638667028284e-16
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 25.46875,
+      "k_ms": 31.32155,
+      "control_p95_ms": 29.4859,
+      "k_p95_ms": 33.976915,
+      "ratio": 0.8131382386886984,
+      "ratio_ci95": [
+        0.8054725899580322,
+        0.8510067375093576
+      ],
+      "time_reduction_pct": -22.98031901840489,
+      "derived_rate_increase_pct": -18.68617613113016,
+      "control_degree": [
+        23,
+        23
+      ],
+      "k_degree": [
+        28,
+        28
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.2228380619190701e-17,
+      "k_error": 1.2228380619190701e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 10.529499999999999,
+      "k_ms": 13.03815,
+      "control_p95_ms": 11.51997,
+      "k_p95_ms": 14.48932,
+      "ratio": 0.8075915678221219,
+      "ratio_ci95": [
+        0.7930661786027664,
+        0.8317594269558776
+      ],
+      "time_reduction_pct": -23.824967947195972,
+      "derived_rate_increase_pct": -19.240843217787805,
+      "control_degree": [
+        23,
+        23
+      ],
+      "k_degree": [
+        28,
+        28
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.4687682104713448e-17,
+      "k_error": 1.4687682104713448e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 25.46875,
+      "k_ms": 10.529499999999999,
+      "control_p95_ms": 29.4859,
+      "k_p95_ms": 11.51997,
+      "ratio": 2.418799563132153,
+      "ratio_ci95": [
+        2.3608476710029374,
+        2.4976910748510255
+      ],
+      "time_reduction_pct": 58.657177914110434,
+      "derived_rate_increase_pct": 141.87995631321527,
+      "control_degree": [
+        23,
+        23
+      ],
+      "k_degree": [
+        23,
+        23
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.2228380619190701e-17,
+      "k_error": 1.4687682104713448e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 31.32155,
+      "k_ms": 13.03815,
+      "control_p95_ms": 33.976915,
+      "k_p95_ms": 14.48932,
+      "ratio": 2.402300172953985,
+      "ratio_ci95": [
+        2.3566763093788063,
+        2.4295348864266573
+      ],
+      "time_reduction_pct": 58.373228655669976,
+      "derived_rate_increase_pct": 140.23001729539848,
+      "control_degree": [
+        28,
+        28
+      ],
+      "k_degree": [
+        28,
+        28
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.2228380619190701e-17,
+      "k_error": 1.4687682104713448e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 31.32155,
+      "k_ms": 35.5017,
+      "control_p95_ms": 33.976915,
+      "k_p95_ms": 40.34097,
+      "ratio": 0.8822549342707532,
+      "ratio_ci95": [
+        0.8532612665254548,
+        0.8843030970328337
+      ],
+      "time_reduction_pct": -13.345923174300122,
+      "derived_rate_increase_pct": -11.77450657292468,
+      "control_degree": [
+        28,
+        28
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 1.2228380619190701e-17,
+      "k_error": 1.2228380619190701e-17
+    },
+    {
+      "device": "RTX 3060 Laptop",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 13.03815,
+      "k_ms": 21.8061,
+      "control_p95_ms": 14.48932,
+      "k_p95_ms": 23.68792,
+      "ratio": 0.5979129693067536,
+      "ratio_ci95": [
+        0.5823465533628784,
+        0.6089589821444132
+      ],
+      "time_reduction_pct": -67.2484209799703,
+      "derived_rate_increase_pct": -40.208703069324635,
+      "control_degree": [
+        28,
+        28
+      ],
+      "k_degree": [
+        28,
+        28
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.4687682104713448e-17,
+      "k_error": 1.6607081590386038e-17
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 16.010103,
+      "k_ms": 9.3559765,
+      "control_p95_ms": 16.780151349999997,
+      "k_p95_ms": 9.98877535,
+      "ratio": 1.7112166752449625,
+      "ratio_ci95": [
+        1.7081509615561798,
+        1.715167803147786
+      ],
+      "time_reduction_pct": 41.56204679007999,
+      "derived_rate_increase_pct": 71.12166752449625,
+      "control_degree": [
+        22,
+        22
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 0.0,
+      "k_error": 1.8617478666312534e-15
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 1.4776984999999998,
+      "k_ms": 0.9387570000000001,
+      "control_p95_ms": 1.5093986,
+      "k_p95_ms": 0.95545605,
+      "ratio": 1.5741011784732362,
+      "ratio_ci95": [
+        1.5692192519323063,
+        1.5851580886880985
+      ],
+      "time_reduction_pct": 36.47168214625648,
+      "derived_rate_increase_pct": 57.41011784732362,
+      "control_degree": [
+        22,
+        22
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 1.8755477356223422e-17,
+      "k_error": 1.8617226544975872e-15
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 16.010103,
+      "k_ms": 1.4776984999999998,
+      "control_p95_ms": 16.780151349999997,
+      "k_p95_ms": 1.5093986,
+      "ratio": 10.834485519204359,
+      "ratio_ci95": [
+        10.772556198099371,
+        10.874775988024219
+      ],
+      "time_reduction_pct": 90.770212409002,
+      "derived_rate_increase_pct": 983.4485519204359,
+      "control_degree": [
+        22,
+        22
+      ],
+      "k_degree": [
+        22,
+        22
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 0.0,
+      "k_error": 1.8755477356223422e-17
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 9.3559765,
+      "k_ms": 0.9387570000000001,
+      "control_p95_ms": 9.98877535,
+      "k_p95_ms": 0.95545605,
+      "ratio": 9.966345390766726,
+      "ratio_ci95": [
+        9.935434460854044,
+        10.021146573643623
+      ],
+      "time_reduction_pct": 89.96623174502416,
+      "derived_rate_increase_pct": 896.6345390766726,
+      "control_degree": [
+        13,
+        13
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 1.8617478666312534e-15,
+      "k_error": 1.8617226544975872e-15
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 9.3559765,
+      "k_ms": 9.3142705,
+      "control_p95_ms": 9.98877535,
+      "k_p95_ms": 10.04291655,
+      "ratio": 1.0044776453507551,
+      "ratio_ci95": [
+        1.0004910939130274,
+        1.0088887496426966
+      ],
+      "time_reduction_pct": 0.44576854163753676,
+      "derived_rate_increase_pct": 0.44776453507551217,
+      "control_degree": [
+        13,
+        13
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 1.8617478666312534e-15,
+      "k_error": 1.8617478666312534e-15
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 0.9387570000000001,
+      "k_ms": 3.825682,
+      "control_p95_ms": 0.95545605,
+      "k_p95_ms": 4.048085599999999,
+      "ratio": 0.24538291473258886,
+      "ratio_ci95": [
+        0.24332280287878677,
+        0.2462827175743529
+      ],
+      "time_reduction_pct": -307.526335356221,
+      "derived_rate_increase_pct": -75.4617085267411,
+      "control_degree": [
+        13,
+        13
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 1.8617226544975872e-15,
+      "k_error": 1.8617307020645936e-15
+    },
+    {
+      "device": "T4",
+      "family": "balanced",
+      "n": 100000,
+      "q": 4,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 22.196618,
+      "k_ms": 22.235146,
+      "control_p95_ms": 23.5872983,
+      "k_p95_ms": 23.4316706,
+      "ratio": 0.9982672477167454,
+      "ratio_ci95": [
+        0.9945399416293466,
+        1.0061198878921207
+      ],
+      "time_reduction_pct": -0.17357599252283418,
+      "derived_rate_increase_pct": -0.1732752283254646,
+      "control_degree": [
+        30,
+        30
+      ],
+      "k_degree": [
+        30,
+        30
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.4154177296933592e-14,
+      "k_error": 1.4154177296933592e-14
+    },
+    {
+      "device": "T4",
+      "family": "balanced",
+      "n": 100000,
+      "q": 4,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 1.9865425,
+      "k_ms": 1.988741,
+      "control_p95_ms": 2.25979275,
+      "k_p95_ms": 2.2287472999999998,
+      "ratio": 0.9988945267382731,
+      "ratio_ci95": [
+        0.9827301342090478,
+        1.0205928925817978
+      ],
+      "time_reduction_pct": -0.11066966853214844,
+      "derived_rate_increase_pct": -0.11054732617269414,
+      "control_degree": [
+        30,
+        30
+      ],
+      "k_degree": [
+        30,
+        30
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.4154172078532742e-14,
+      "k_error": 1.4154172078532742e-14
+    },
+    {
+      "device": "T4",
+      "family": "balanced",
+      "n": 100000,
+      "q": 4,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 22.196618,
+      "k_ms": 1.9865425,
+      "control_p95_ms": 23.5872983,
+      "k_p95_ms": 2.25979275,
+      "ratio": 11.173492638591926,
+      "ratio_ci95": [
+        10.995191821011838,
+        11.289542561448375
+      ],
+      "time_reduction_pct": 91.0502469340149,
+      "derived_rate_increase_pct": 1017.3492638591925,
+      "control_degree": [
+        30,
+        30
+      ],
+      "k_degree": [
+        30,
+        30
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.4154177296933592e-14,
+      "k_error": 1.4154172078532742e-14
+    },
+    {
+      "device": "T4",
+      "family": "balanced",
+      "n": 100000,
+      "q": 4,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 22.235146,
+      "k_ms": 1.988741,
+      "control_p95_ms": 23.4316706,
+      "k_p95_ms": 2.2287472999999998,
+      "ratio": 11.18051370188476,
+      "ratio_ci95": [
+        11.067478638730726,
+        11.299851832839442
+      ],
+      "time_reduction_pct": 91.05586713934777,
+      "derived_rate_increase_pct": 1018.051370188476,
+      "control_degree": [
+        30,
+        30
+      ],
+      "k_degree": [
+        30,
+        30
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.4154177296933592e-14,
+      "k_error": 1.4154172078532742e-14
+    },
+    {
+      "device": "T4",
+      "family": "balanced",
+      "n": 100000,
+      "q": 4,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 22.235146,
+      "k_ms": 22.1496135,
+      "control_p95_ms": 23.4316706,
+      "k_p95_ms": 23.604085949999998,
+      "ratio": 1.0038615797968664,
+      "ratio_ci95": [
+        1.0010560679541622,
+        1.005803735582113
+      ],
+      "time_reduction_pct": 0.3846725359932357,
+      "derived_rate_increase_pct": 0.386157979686641,
+      "control_degree": [
+        30,
+        30
+      ],
+      "k_degree": [
+        30,
+        30
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.4154177296933592e-14,
+      "k_error": 1.4154177296933592e-14
+    },
+    {
+      "device": "T4",
+      "family": "balanced",
+      "n": 100000,
+      "q": 4,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 1.988741,
+      "k_ms": 8.546322499999999,
+      "control_p95_ms": 2.2287472999999998,
+      "k_p95_ms": 9.566416799999999,
+      "ratio": 0.23270137535764657,
+      "ratio_ci95": [
+        0.22998032194549178,
+        0.2346620327620625
+      ],
+      "time_reduction_pct": -329.73531998384897,
+      "derived_rate_increase_pct": -76.72986246423534,
+      "control_degree": [
+        30,
+        30
+      ],
+      "k_degree": [
+        30,
+        30
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.4154172078532742e-14,
+      "k_error": 1.4154168968994138e-14
+    },
+    {
+      "device": "T4",
+      "family": "grid",
+      "n": 65536,
+      "q": 4,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 7.9356725,
+      "k_ms": 7.908502,
+      "control_p95_ms": 8.5836255,
+      "k_p95_ms": 8.580032749999999,
+      "ratio": 1.0034356063891745,
+      "ratio_ci95": [
+        0.9948308100486997,
+        1.0137343566733577
+      ],
+      "time_reduction_pct": 0.3423843410876537,
+      "derived_rate_increase_pct": 0.3435606389174506,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.1996154863805246e-14,
+      "k_error": 1.1996154863805246e-14
+    },
+    {
+      "device": "T4",
+      "family": "grid",
+      "n": 65536,
+      "q": 4,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 0.860777,
+      "k_ms": 0.8587210000000001,
+      "control_p95_ms": 0.8817926,
+      "k_p95_ms": 0.8739642,
+      "ratio": 1.0023942584378394,
+      "ratio_ci95": [
+        0.9984767619116173,
+        1.0069110492470088
+      ],
+      "time_reduction_pct": 0.2388539656612454,
+      "derived_rate_increase_pct": 0.23942584378393583,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.1996164873760871e-14,
+      "k_error": 1.1996164873760871e-14
+    },
+    {
+      "device": "T4",
+      "family": "grid",
+      "n": 65536,
+      "q": 4,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 7.9356725,
+      "k_ms": 0.860777,
+      "control_p95_ms": 8.5836255,
+      "k_p95_ms": 0.8817926,
+      "ratio": 9.219196725748946,
+      "ratio_ci95": [
+        9.124589104092856,
+        9.329039976445342
+      ],
+      "time_reduction_pct": 89.15306799770278,
+      "derived_rate_increase_pct": 821.9196725748945,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.1996154863805246e-14,
+      "k_error": 1.1996164873760871e-14
+    },
+    {
+      "device": "T4",
+      "family": "grid",
+      "n": 65536,
+      "q": 4,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 7.908502,
+      "k_ms": 0.8587210000000001,
+      "control_p95_ms": 8.580032749999999,
+      "k_p95_ms": 0.8739642,
+      "ratio": 9.209629204363234,
+      "ratio_ci95": [
+        9.169853215986258,
+        9.248368580513551
+      ],
+      "time_reduction_pct": 89.1417995468674,
+      "derived_rate_increase_pct": 820.9629204363233,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.1996154863805246e-14,
+      "k_error": 1.1996164873760871e-14
+    },
+    {
+      "device": "T4",
+      "family": "grid",
+      "n": 65536,
+      "q": 4,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 7.908502,
+      "k_ms": 7.907364,
+      "control_p95_ms": 8.580032749999999,
+      "k_p95_ms": 8.5930607,
+      "ratio": 1.0001439164808905,
+      "ratio_ci95": [
+        0.9959183842758248,
+        1.0029829789042213
+      ],
+      "time_reduction_pct": 0.014389577191742386,
+      "derived_rate_increase_pct": 0.014391648089051579,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.1996154863805246e-14,
+      "k_error": 1.1996154863805246e-14
+    },
+    {
+      "device": "T4",
+      "family": "grid",
+      "n": 65536,
+      "q": 4,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 0.8587210000000001,
+      "k_ms": 4.161179499999999,
+      "control_p95_ms": 0.8739642,
+      "k_p95_ms": 4.48099675,
+      "ratio": 0.20636480594023887,
+      "ratio_ci95": [
+        0.2049255904440994,
+        0.20724737693376397
+      ],
+      "time_reduction_pct": -384.57875142217307,
+      "derived_rate_increase_pct": -79.3635194059761,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.1996164873760871e-14,
+      "k_error": 1.19960963810712e-14
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 14.940558,
+      "k_ms": 17.799429,
+      "control_p95_ms": 15.463640550000001,
+      "k_p95_ms": 18.5712267,
+      "ratio": 0.8393841173219657,
+      "ratio_ci95": [
+        0.8319409461135917,
+        0.843215088333968
+      ],
+      "time_reduction_pct": -19.134968051394075,
+      "derived_rate_increase_pct": -16.06158826780343,
+      "control_degree": [
+        20,
+        20
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.222838061919071e-17,
+      "k_error": 1.222838061919071e-17
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 1.4567545000000002,
+      "k_ms": 1.7290275,
+      "control_p95_ms": 1.53871815,
+      "k_p95_ms": 1.7762733,
+      "ratio": 0.8425282420320095,
+      "ratio_ci95": [
+        0.8393332905880783,
+        0.8523052835616526
+      ],
+      "time_reduction_pct": -18.690383314415683,
+      "derived_rate_increase_pct": -15.747175796799052,
+      "control_degree": [
+        20,
+        20
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.468768210471346e-17,
+      "k_error": 1.468768210471346e-17
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 14.940558,
+      "k_ms": 1.4567545000000002,
+      "control_p95_ms": 15.463640550000001,
+      "k_p95_ms": 1.53871815,
+      "ratio": 10.256057558085455,
+      "ratio_ci95": [
+        10.125511201217908,
+        10.298054318890175
+      ],
+      "time_reduction_pct": 90.24966470462482,
+      "derived_rate_increase_pct": 925.6057558085455,
+      "control_degree": [
+        20,
+        20
+      ],
+      "k_degree": [
+        20,
+        20
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.222838061919071e-17,
+      "k_error": 1.468768210471346e-17
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 17.799429,
+      "k_ms": 1.7290275,
+      "control_p95_ms": 18.5712267,
+      "k_p95_ms": 1.7762733,
+      "ratio": 10.294474205875847,
+      "ratio_ci95": [
+        10.243253542971289,
+        10.37278333441949
+      ],
+      "time_reduction_pct": 90.28605074915606,
+      "derived_rate_increase_pct": 929.4474205875847,
+      "control_degree": [
+        24,
+        24
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.222838061919071e-17,
+      "k_error": 1.468768210471346e-17
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 17.799429,
+      "k_ms": 23.8483005,
+      "control_p95_ms": 18.5712267,
+      "k_p95_ms": 24.40294305,
+      "ratio": 0.7463604796492731,
+      "ratio_ci95": [
+        0.744130337633753,
+        0.7503054987068462
+      ],
+      "time_reduction_pct": -33.98351430262174,
+      "derived_rate_increase_pct": -25.36395203507269,
+      "control_degree": [
+        24,
+        24
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 1.222838061919071e-17,
+      "k_error": 1.222838061919071e-17
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 1.7290275,
+      "k_ms": 9.996864,
+      "control_p95_ms": 1.7762733,
+      "k_p95_ms": 10.5987857,
+      "ratio": 0.1729569893118482,
+      "ratio_ci95": [
+        0.17175531483738596,
+        0.17486953253166249
+      ],
+      "time_reduction_pct": -478.1784268902606,
+      "derived_rate_increase_pct": -82.70430106881518,
+      "control_degree": [
+        24,
+        24
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.468768210471346e-17,
+      "k_error": 1.6607081590386053e-17
+    },
+    {
+      "device": "T4",
+      "family": "rmat",
+      "n": 65536,
+      "q": 4,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 20.7359215,
+      "k_ms": 20.6734605,
+      "control_p95_ms": 21.233768650000002,
+      "k_p95_ms": 21.1190802,
+      "ratio": 1.0030213132436148,
+      "ratio_ci95": [
+        0.9966332267692767,
+        1.0074609450157508
+      ],
+      "time_reduction_pct": 0.30122124063788336,
+      "derived_rate_increase_pct": 0.3021313243614765,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 8.420013519789822e-18,
+      "k_error": 8.49241804621256e-18
+    },
+    {
+      "device": "T4",
+      "family": "rmat",
+      "n": 65536,
+      "q": 4,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 12.417996500000001,
+      "k_ms": 12.505146,
+      "control_p95_ms": 12.78976685,
+      "k_p95_ms": 13.23265905,
+      "ratio": 0.9930309090353684,
+      "ratio_ci95": [
+        0.984822368638016,
+        0.9992274403064894
+      ],
+      "time_reduction_pct": -0.7018000045337258,
+      "derived_rate_increase_pct": -0.6969090964631608,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 1.263585991012429e-17,
+      "k_error": 1.263585991012429e-17
+    },
+    {
+      "device": "T4",
+      "family": "rmat",
+      "n": 65536,
+      "q": 4,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 20.7359215,
+      "k_ms": 12.417996500000001,
+      "control_p95_ms": 21.233768650000002,
+      "k_p95_ms": 12.78976685,
+      "ratio": 1.6698282609437036,
+      "ratio_ci95": [
+        1.658495763505375,
+        1.6782591583732505
+      ],
+      "time_reduction_pct": 40.11360189611057,
+      "derived_rate_increase_pct": 66.98282609437037,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 8.420013519789822e-18,
+      "k_error": 1.263585991012429e-17
+    },
+    {
+      "device": "T4",
+      "family": "rmat",
+      "n": 65536,
+      "q": 4,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 20.6734605,
+      "k_ms": 12.505146,
+      "control_p95_ms": 21.1190802,
+      "k_p95_ms": 13.23265905,
+      "ratio": 1.653196252166908,
+      "ratio_ci95": [
+        1.642300125844881,
+        1.6683000747049341
+      ],
+      "time_reduction_pct": 39.51111377797636,
+      "derived_rate_increase_pct": 65.3196252166908,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        64.0,
+        64.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 8.49241804621256e-18,
+      "k_error": 1.263585991012429e-17
+    },
+    {
+      "device": "T4",
+      "family": "rmat",
+      "n": 65536,
+      "q": 4,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 20.6734605,
+      "k_ms": 20.7762395,
+      "control_p95_ms": 21.1190802,
+      "k_p95_ms": 21.1431837,
+      "ratio": 0.9950530508661108,
+      "ratio_ci95": [
+        0.9933927567604202,
+        1.0016212994882172
+      ],
+      "time_reduction_pct": -0.4971543104745235,
+      "derived_rate_increase_pct": -0.4946949133889156,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        64.0,
+        64.0
+      ],
+      "k_penalty": [
+        1024.0,
+        1024.0
+      ],
+      "control_error": 8.49241804621256e-18,
+      "k_error": 8.454621668866857e-18
+    },
+    {
+      "device": "T4",
+      "family": "rmat",
+      "n": 65536,
+      "q": 4,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 12.505146,
+      "k_ms": 55.111661,
+      "control_p95_ms": 13.23265905,
+      "k_p95_ms": 55.4679685,
+      "ratio": 0.22690562710494247,
+      "ratio_ci95": [
+        0.22617407107169968,
+        0.22884318846294258
+      ],
+      "time_reduction_pct": -340.7118557432276,
+      "derived_rate_increase_pct": -77.30943728950575,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        64.0,
+        64.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 1.263585991012429e-17,
+      "k_error": 1.6044647633732948e-17
+    },
+    {
+      "device": "T4",
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 24.3688395,
+      "k_ms": 24.402773500000002,
+      "control_p95_ms": 24.962422399999998,
+      "k_p95_ms": 25.11731495,
+      "ratio": 0.998609420359534,
+      "ratio_ci95": [
+        0.9916987926213687,
+        1.0039422424538547
+      ],
+      "time_reduction_pct": -0.13925160449270724,
+      "derived_rate_increase_pct": -0.1390579640465961,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 3.262043151343607e-17,
+      "k_error": 3.262043151343607e-17
+    },
+    {
+      "device": "T4",
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 2.277311,
+      "k_ms": 2.2824955,
+      "control_p95_ms": 2.9854528,
+      "k_p95_ms": 2.8041041,
+      "ratio": 0.9977285825974247,
+      "ratio_ci95": [
+        0.9843575475952328,
+        1.013019107454456
+      ],
+      "time_reduction_pct": -0.22765884852793405,
+      "derived_rate_increase_pct": -0.22714174025753042,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 3.8458717176154606e-17,
+      "k_error": 3.8458717176154606e-17
+    },
+    {
+      "device": "T4",
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 24.3688395,
+      "k_ms": 2.277311,
+      "control_p95_ms": 24.962422399999998,
+      "k_p95_ms": 2.9854528,
+      "ratio": 10.70070776455214,
+      "ratio_ci95": [
+        10.521389032825851,
+        10.784321753950943
+      ],
+      "time_reduction_pct": 90.65482375555881,
+      "derived_rate_increase_pct": 970.0707764552141,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 3.262043151343607e-17,
+      "k_error": 3.8458717176154606e-17
+    },
+    {
+      "device": "T4",
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 24.402773500000002,
+      "k_ms": 2.2824955,
+      "control_p95_ms": 25.11731495,
+      "k_p95_ms": 2.8041041,
+      "ratio": 10.691269051790027,
+      "ratio_ci95": [
+        10.522987129933345,
+        10.751855912671864
+      ],
+      "time_reduction_pct": 90.6465734314995,
+      "derived_rate_increase_pct": 969.1269051790026,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        64.0,
+        64.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 3.262043151343607e-17,
+      "k_error": 3.8458717176154606e-17
+    },
+    {
+      "device": "T4",
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 24.402773500000002,
+      "k_ms": 24.321822,
+      "control_p95_ms": 25.11731495,
+      "k_p95_ms": 26.0154213,
+      "ratio": 1.0033283485094169,
+      "ratio_ci95": [
+        0.9993577264990021,
+        1.0078139782957252
+      ],
+      "time_reduction_pct": 0.3317307354428478,
+      "derived_rate_increase_pct": 0.33283485094168785,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        64.0,
+        64.0
+      ],
+      "k_penalty": [
+        1024.0,
+        1024.0
+      ],
+      "control_error": 3.262043151343607e-17,
+      "k_error": 3.262043151343607e-17
+    },
+    {
+      "device": "T4",
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 2.2824955,
+      "k_ms": 13.8032595,
+      "control_p95_ms": 2.8041041,
+      "k_p95_ms": 14.2102781,
+      "ratio": 0.16535916752126556,
+      "ratio_ci95": [
+        0.16395416997242934,
+        0.1677296159151964
+      ],
+      "time_reduction_pct": -504.74421526789416,
+      "derived_rate_increase_pct": -83.46408324787345,
+      "control_degree": [
+        32,
+        32
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        64.0,
+        64.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 3.8458717176154606e-17,
+      "k_error": 4.298445981923641e-17
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 16384,
+      "q": 16,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 6.817705,
+      "k_ms": 3.6876485,
+      "control_p95_ms": 6.95082825,
+      "k_p95_ms": 3.8557473499999997,
+      "ratio": 1.8487946993863436,
+      "ratio_ci95": [
+        1.8413198119542544,
+        1.8555280951465853
+      ],
+      "time_reduction_pct": 45.91070602204115,
+      "derived_rate_increase_pct": 84.87946993863436,
+      "control_degree": [
+        23,
+        23
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 0.0,
+      "k_error": 3.943182815856916e-15
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 16384,
+      "q": 16,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 1.9086825,
+      "k_ms": 1.2558065,
+      "control_p95_ms": 1.9417636999999999,
+      "k_p95_ms": 1.28119125,
+      "ratio": 1.5198858263593953,
+      "ratio_ci95": [
+        1.5116746727359969,
+        1.5256492742073713
+      ],
+      "time_reduction_pct": 34.205584218433394,
+      "derived_rate_increase_pct": 51.98858263593953,
+      "control_degree": [
+        23,
+        23
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.101552204057114e-17,
+      "k_error": 3.9431703809129705e-15
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 16384,
+      "q": 16,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 6.817705,
+      "k_ms": 1.9086825,
+      "control_p95_ms": 6.95082825,
+      "k_p95_ms": 1.9417636999999999,
+      "ratio": 3.571942950176365,
+      "ratio_ci95": [
+        3.5569452329598565,
+        3.584437236647891
+      ],
+      "time_reduction_pct": 72.00403214864825,
+      "derived_rate_increase_pct": 257.19429501763653,
+      "control_degree": [
+        23,
+        23
+      ],
+      "k_degree": [
+        23,
+        23
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 0.0,
+      "k_error": 3.101552204057114e-17
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 16384,
+      "q": 16,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 3.6876485,
+      "k_ms": 1.2558065,
+      "control_p95_ms": 3.8557473499999997,
+      "k_p95_ms": 1.28119125,
+      "ratio": 2.936478271134924,
+      "ratio_ci95": [
+        2.920165683529513,
+        2.9515004057828467
+      ],
+      "time_reduction_pct": 65.9456019194888,
+      "derived_rate_increase_pct": 193.6478271134924,
+      "control_degree": [
+        13,
+        13
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.943182815856916e-15,
+      "k_error": 3.9431703809129705e-15
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 16384,
+      "q": 16,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 3.6876485,
+      "k_ms": 3.703212,
+      "control_p95_ms": 3.8557473499999997,
+      "k_p95_ms": 3.83918715,
+      "ratio": 0.9957972970491562,
+      "ratio_ci95": [
+        0.9883029275609144,
+        0.9996291116806049
+      ],
+      "time_reduction_pct": -0.42204402073571234,
+      "derived_rate_increase_pct": -0.4202702950843795,
+      "control_degree": [
+        13,
+        13
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.943182815856916e-15,
+      "k_error": 3.943182815856916e-15
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 16384,
+      "q": 16,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 1.2558065,
+      "k_ms": 1.8834925,
+      "control_p95_ms": 1.28119125,
+      "k_p95_ms": 1.94974215,
+      "ratio": 0.666743562822788,
+      "ratio_ci95": [
+        0.6638453536479164,
+        0.6691565970950812
+      ],
+      "time_reduction_pct": -49.98270036028638,
+      "derived_rate_increase_pct": -33.3256437177212,
+      "control_degree": [
+        13,
+        13
+      ],
+      "k_degree": [
+        13,
+        13
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.9431703809129705e-15,
+      "k_error": 3.943192543161381e-15
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 16384,
+      "q": 16,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 10.089744,
+      "k_ms": 12.017033,
+      "control_p95_ms": 10.3275867,
+      "k_p95_ms": 12.2507838,
+      "ratio": 0.8396202290532114,
+      "ratio_ci95": [
+        0.8357963537759198,
+        0.8424904586535081
+      ],
+      "time_reduction_pct": -19.10146580527712,
+      "derived_rate_increase_pct": -16.03797709467886,
+      "control_degree": [
+        20,
+        20
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.7953484157126703e-17,
+      "k_error": 1.7953484157126703e-17
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 16384,
+      "q": 16,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 2.20215,
+      "k_ms": 2.679245,
+      "control_p95_ms": 2.3403215,
+      "k_p95_ms": 2.95073,
+      "ratio": 0.8219293121756316,
+      "ratio_ci95": [
+        0.8084679865412994,
+        0.8262732663749575
+      ],
+      "time_reduction_pct": -21.664963785391556,
+      "derived_rate_increase_pct": -17.80706878243684,
+      "control_degree": [
+        20,
+        20
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 2.1387989525835933e-17,
+      "k_error": 2.1387989525835933e-17
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 16384,
+      "q": 16,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 10.089744,
+      "k_ms": 2.20215,
+      "control_p95_ms": 10.3275867,
+      "k_p95_ms": 2.3403215,
+      "ratio": 4.581769634221102,
+      "ratio_ci95": [
+        4.569517182332845,
+        4.598534347400052
+      ],
+      "time_reduction_pct": 78.17437191667102,
+      "derived_rate_increase_pct": 358.1769634221102,
+      "control_degree": [
+        20,
+        20
+      ],
+      "k_degree": [
+        20,
+        20
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.7953484157126703e-17,
+      "k_error": 2.1387989525835933e-17
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 16384,
+      "q": 16,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 12.017033,
+      "k_ms": 2.679245,
+      "control_p95_ms": 12.2507838,
+      "k_p95_ms": 2.95073,
+      "ratio": 4.485231100552581,
+      "ratio_ci95": [
+        4.403196864839353,
+        4.520166661682398
+      ],
+      "time_reduction_pct": 77.70460478888592,
+      "derived_rate_increase_pct": 348.5231100552581,
+      "control_degree": [
+        24,
+        24
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.7953484157126703e-17,
+      "k_error": 2.1387989525835933e-17
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 16384,
+      "q": 16,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 12.017033,
+      "k_ms": 15.996530499999999,
+      "control_p95_ms": 12.2507838,
+      "k_p95_ms": 16.433080099999998,
+      "ratio": 0.7512274614798503,
+      "ratio_ci95": [
+        0.7480215513445203,
+        0.7546319085734087
+      ],
+      "time_reduction_pct": -33.11547451022228,
+      "derived_rate_increase_pct": -24.87725385201497,
+      "control_degree": [
+        24,
+        24
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 1.7953484157126703e-17,
+      "k_error": 1.7953484157126703e-17
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 16384,
+      "q": 16,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 2.679245,
+      "k_ms": 8.8385655,
+      "control_p95_ms": 2.95073,
+      "k_p95_ms": 8.884290049999999,
+      "ratio": 0.30313120381356,
+      "ratio_ci95": [
+        0.30146199153601966,
+        0.3097735150708436
+      ],
+      "time_reduction_pct": -229.89015562219953,
+      "derived_rate_increase_pct": -69.686879618644,
+      "control_degree": [
+        24,
+        24
+      ],
+      "k_degree": [
+        24,
+        24
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 2.1387989525835933e-17,
+      "k_error": 2.1428024362044518e-17
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 27.0991755,
+      "k_ms": 15.703971,
+      "control_p95_ms": 27.4453176,
+      "k_p95_ms": 15.890513,
+      "ratio": 1.7256256713668157,
+      "ratio_ci95": [
+        1.7200487411465608,
+        1.7305810885485589
+      ],
+      "time_reduction_pct": 42.05000443648185,
+      "derived_rate_increase_pct": 72.56256713668157,
+      "control_degree": [
+        26,
+        26
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 0.0,
+      "k_error": 3.516333300159899e-16
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 7.6154165,
+      "k_ms": 4.0681674999999995,
+      "control_p95_ms": 7.8095759,
+      "k_p95_ms": 4.45551795,
+      "ratio": 1.87195254374359,
+      "ratio_ci95": [
+        1.796517813606275,
+        1.9325860497395022
+      ],
+      "time_reduction_pct": 46.579842350054,
+      "derived_rate_increase_pct": 87.195254374359,
+      "control_degree": [
+        26,
+        26
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 1.8755477356223422e-17,
+      "k_error": 3.516565504420588e-16
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 27.0991755,
+      "k_ms": 7.6154165,
+      "control_p95_ms": 27.4453176,
+      "k_p95_ms": 7.8095759,
+      "ratio": 3.558462692093072,
+      "ratio_ci95": [
+        3.5443026444243833,
+        3.5860086993308355
+      ],
+      "time_reduction_pct": 71.8979771174219,
+      "derived_rate_increase_pct": 255.84626920930722,
+      "control_degree": [
+        26,
+        26
+      ],
+      "k_degree": [
+        26,
+        26
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 0.0,
+      "k_error": 1.8755477356223422e-17
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 15.703971,
+      "k_ms": 4.0681674999999995,
+      "control_p95_ms": 15.890513,
+      "k_p95_ms": 4.45551795,
+      "ratio": 3.8602075750322475,
+      "ratio_ci95": [
+        3.714307099336124,
+        3.970598823199556
+      ],
+      "time_reduction_pct": 74.09465733221235,
+      "derived_rate_increase_pct": 286.02075750322473,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.516333300159899e-16,
+      "k_error": 3.516565504420588e-16
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 15.703971,
+      "k_ms": 15.709386,
+      "control_p95_ms": 15.890513,
+      "k_p95_ms": 15.94734165,
+      "ratio": 0.9996553016139522,
+      "ratio_ci95": [
+        0.9947148281557177,
+        1.0044082289970364
+      ],
+      "time_reduction_pct": -0.03448172439952657,
+      "derived_rate_increase_pct": -0.03446983860477815,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.516333300159899e-16,
+      "k_error": 3.516333300159899e-16
+    },
+    {
+      "device": "T4",
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 4.0681674999999995,
+      "k_ms": 6.991763000000001,
+      "control_p95_ms": 4.45551795,
+      "k_p95_ms": 7.13886,
+      "ratio": 0.5818514586378284,
+      "ratio_ci95": [
+        0.5648056621215161,
+        0.6057203316641806
+      ],
+      "time_reduction_pct": -71.86517025171656,
+      "derived_rate_increase_pct": -41.814854136217164,
+      "control_degree": [
+        15,
+        15
+      ],
+      "k_degree": [
+        15,
+        15
+      ],
+      "control_penalty": [
+        8.0,
+        8.0
+      ],
+      "k_penalty": [
+        8.0,
+        8.0
+      ],
+      "control_error": 3.516565504420588e-16,
+      "k_error": 3.5165638667028274e-16
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true,
+      "comparison": "coordinate change on CuPy",
+      "control": "cupy_identity",
+      "candidate": "cupy_onepass",
+      "control_ms": 27.5660045,
+      "k_ms": 33.5104625,
+      "control_p95_ms": 28.1662639,
+      "k_p95_ms": 33.9304835,
+      "ratio": 0.8226088941625319,
+      "ratio_ci95": [
+        0.819835876933242,
+        0.8245198207858426
+      ],
+      "time_reduction_pct": -21.564452693896953,
+      "derived_rate_increase_pct": -17.739110583746807,
+      "control_degree": [
+        23,
+        23
+      ],
+      "k_degree": [
+        28,
+        28
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.222838061919071e-17,
+      "k_error": 1.222838061919071e-17
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true,
+      "comparison": "coordinate change on fused executor",
+      "control": "fused_identity",
+      "candidate": "fused_onepass",
+      "control_ms": 12.402211000000001,
+      "k_ms": 14.993307999999999,
+      "control_p95_ms": 13.49841575,
+      "k_p95_ms": 16.3149132,
+      "ratio": 0.8271831006206237,
+      "ratio_ci95": [
+        0.8238754127055702,
+        0.8335863906057239
+      ],
+      "time_reduction_pct": -20.892218331070133,
+      "derived_rate_increase_pct": -17.281689937937628,
+      "control_degree": [
+        23,
+        23
+      ],
+      "k_degree": [
+        28,
+        28
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.468768210471346e-17,
+      "k_error": 1.468768210471346e-17
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true,
+      "comparison": "fusion without balancing",
+      "control": "cupy_identity",
+      "candidate": "fused_identity",
+      "control_ms": 27.5660045,
+      "k_ms": 12.402211000000001,
+      "control_p95_ms": 28.1662639,
+      "k_p95_ms": 13.49841575,
+      "ratio": 2.2226685628876974,
+      "ratio_ci95": [
+        2.215365838208959,
+        2.2301712005271437
+      ],
+      "time_reduction_pct": 55.009036583448264,
+      "derived_rate_increase_pct": 122.26685628876974,
+      "control_degree": [
+        23,
+        23
+      ],
+      "k_degree": [
+        23,
+        23
+      ],
+      "control_penalty": [
+        1.0,
+        1.0
+      ],
+      "k_penalty": [
+        1.0,
+        1.0
+      ],
+      "control_error": 1.222838061919071e-17,
+      "k_error": 1.468768210471346e-17
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true,
+      "comparison": "fusion with the same balanced plan",
+      "control": "cupy_onepass",
+      "candidate": "fused_onepass",
+      "control_ms": 33.5104625,
+      "k_ms": 14.993307999999999,
+      "control_p95_ms": 33.9304835,
+      "k_p95_ms": 16.3149132,
+      "ratio": 2.2350279538044577,
+      "ratio_ci95": [
+        2.2306863008665125,
+        2.2522446927268427
+      ],
+      "time_reduction_pct": 55.257830297030374,
+      "derived_rate_increase_pct": 123.50279538044578,
+      "control_degree": [
+        28,
+        28
+      ],
+      "k_degree": [
+        28,
+        28
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.222838061919071e-17,
+      "k_error": 1.468768210471346e-17
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true,
+      "comparison": "one versus eight simultaneous dyadic balancing sweeps",
+      "control": "cupy_onepass",
+      "candidate": "cupy_iterated",
+      "control_ms": 33.5104625,
+      "k_ms": 38.2303255,
+      "control_p95_ms": 33.9304835,
+      "k_p95_ms": 38.56235755,
+      "ratio": 0.8765413859738129,
+      "ratio_ci95": [
+        0.8739795224629651,
+        0.8782420861982658
+      ],
+      "time_reduction_pct": -14.084744428698937,
+      "derived_rate_increase_pct": -12.345861402618707,
+      "control_degree": [
+        28,
+        28
+      ],
+      "k_degree": [
+        32,
+        32
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        64.0,
+        64.0
+      ],
+      "control_error": 1.222838061919071e-17,
+      "k_error": 1.222838061919071e-17
+    },
+    {
+      "device": "T4",
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true,
+      "comparison": "compensation cost and accuracy",
+      "control": "fused_onepass",
+      "candidate": "fused_compensated",
+      "control_ms": 14.993307999999999,
+      "k_ms": 22.554453,
+      "control_p95_ms": 16.3149132,
+      "k_p95_ms": 23.2465231,
+      "ratio": 0.664760435555675,
+      "ratio_ci95": [
+        0.6602349446081213,
+        0.666006774062782
+      ],
+      "time_reduction_pct": -50.4301318961766,
+      "derived_rate_increase_pct": -33.5239564444325,
+      "control_degree": [
+        28,
+        28
+      ],
+      "k_degree": [
+        28,
+        28
+      ],
+      "control_penalty": [
+        2.0,
+        2.0
+      ],
+      "k_penalty": [
+        2.0,
+        2.0
+      ],
+      "control_error": 1.468768210471346e-17,
+      "k_error": 1.6607081590386053e-17
+    }
+  ],
+  "application": [
+    {
+      "device": "RTX 3060 Laptop",
+      "control_ms": 353.19820000222535,
+      "k_ms": 378.3861500014609,
+      "control_p95_ms": 4668.270900001873,
+      "k_p95_ms": 422.59396499975986,
+      "ratio": 0.9334332136650924,
+      "ratio_ci95": [
+        0.9149673557868656,
+        1.1921410600665612
+      ],
+      "time_reduction_pct": -7.131392515329038,
+      "derived_rate_increase_pct": -6.656678633490765,
+      "recall_at_10": 0.058742086240082585,
+      "ndcg_at_10": 0.09449848870553298,
+      "top10_exact_agreement": 1.0,
+      "setup": [
+        {
+          "seed": 20261011,
+          "load_build_ms": 4953.01080000354,
+          "methods": [
+            {
+              "method": "cupy_restart",
+              "compile_ms": 0.0,
+              "prepare_ms": 3.7742999993497506
+            },
+            {
+              "method": "cupy_restart_captured",
+              "error": "NotImplementedError"
+            },
+            {
+              "method": "fused_onepass",
+              "compile_ms": 102.67999999632593,
+              "prepare_ms": 9.696499997517094
+            },
+            {
+              "method": "torch_identity_packed_captured",
+              "compile_ms": 43.847100001585204,
+              "prepare_ms": 41.996599997219164
+            }
+          ]
+        },
+        {
+          "seed": 20261012,
+          "load_build_ms": 3808.783799999219,
+          "methods": [
+            {
+              "method": "cupy_restart",
+              "compile_ms": 0.0,
+              "prepare_ms": 3.3962000015890226
+            },
+            {
+              "method": "cupy_restart_captured",
+              "error": "NotImplementedError"
+            },
+            {
+              "method": "fused_onepass",
+              "compile_ms": 108.1006000022171,
+              "prepare_ms": 10.633300000336021
+            },
+            {
+              "method": "torch_identity_packed_captured",
+              "compile_ms": 45.21549999481067,
+              "prepare_ms": 37.68780000245897
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device": "T4",
+      "control_ms": 340.8380339999866,
+      "k_ms": 340.5952170000006,
+      "control_p95_ms": 5668.891860549991,
+      "k_p95_ms": 411.5054646000046,
+      "ratio": 1.0007129195827373,
+      "ratio_ci95": [
+        0.9919416124036946,
+        1.1858218097411157
+      ],
+      "time_reduction_pct": 0.07124116904921873,
+      "derived_rate_increase_pct": 0.07129195827373369,
+      "recall_at_10": 0.058742086240082585,
+      "ndcg_at_10": 0.09449848870553298,
+      "top10_exact_agreement": 1.0,
+      "setup": [
+        {
+          "seed": 20261011,
+          "load_build_ms": 1509.161234000004,
+          "methods": [
+            {
+              "method": "cupy_restart",
+              "compile_ms": 0.0,
+              "prepare_ms": 4.537276999997175
+            },
+            {
+              "method": "cupy_restart_captured",
+              "error": "NotImplementedError"
+            },
+            {
+              "method": "fused_onepass",
+              "compile_ms": 125.5238150000082,
+              "prepare_ms": 11.577834999997094
+            },
+            {
+              "method": "torch_identity_packed_captured",
+              "compile_ms": 37.82872299998985,
+              "prepare_ms": 31.39887500000782
+            }
+          ]
+        },
+        {
+          "seed": 20261012,
+          "load_build_ms": 782.061428999981,
+          "methods": [
+            {
+              "method": "cupy_restart",
+              "compile_ms": 0.0,
+              "prepare_ms": 4.443205000001171
+            },
+            {
+              "method": "cupy_restart_captured",
+              "error": "NotImplementedError"
+            },
+            {
+              "method": "fused_onepass",
+              "compile_ms": 121.9694770000217,
+              "prepare_ms": 11.708516999988205
+            },
+            {
+              "method": "torch_identity_packed_captured",
+              "compile_ms": 44.314167999999654,
+              "prepare_ms": 31.414219999987836
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "primary_case_runs": 40,
+    "primary_method_checks": 480,
+    "small_whole_fixture_checks": 288,
+    "packed_balanced_case_runs": 40,
+    "packed_balanced_method_checks": 120,
+    "application_runs": 4,
+    "primary_pooled_faster": 19,
+    "primary_pooled_strong_speed": 18,
+    "packed_balanced_pooled_faster": 18,
+    "packed_balanced_pooled_strong_speed": 18
+  },
+  "estimator": "Pooled median ratio; 2000 paired whole-block bootstrap draws, stratified by process/input seed. Descriptive, conditional on observed fastest accepted control; no multiplicity adjustment.",
+  "runtime": [
+    {
+      "nvrtc": [
+        13,
+        4
+      ],
+      "cupy_accelerators": "default CUB enabled",
+      "wrapper_sha256": "a5628a6c6f14116c169eaf3d60331e9807fdcaa14705a22ce8ae72ae697d6695",
+      "scope": "Compatibility preload only; no accelerator disabled and no frozen algorithm or selection policy changed."
+    },
+    {
+      "nvrtc": [
+        13,
+        4
+      ],
+      "cupy_accelerators": "default CUB enabled",
+      "wrapper_sha256": "a5628a6c6f14116c169eaf3d60331e9807fdcaa14705a22ce8ae72ae697d6695",
+      "scope": "Compatibility preload only; no accelerator disabled and no frozen algorithm or selection policy changed."
+    },
+    {
+      "nvrtc": [
+        12,
+        8
+      ],
+      "cupy_accelerators": "default CUB enabled",
+      "wrapper_sha256": "a5628a6c6f14116c169eaf3d60331e9807fdcaa14705a22ce8ae72ae697d6695",
+      "scope": "Compatibility preload only; no accelerator disabled and no frozen algorithm or selection policy changed."
+    },
+    {
+      "nvrtc": [
+        12,
+        8
+      ],
+      "cupy_accelerators": "default CUB enabled",
+      "wrapper_sha256": "a5628a6c6f14116c169eaf3d60331e9807fdcaa14705a22ce8ae72ae697d6695",
+      "scope": "Compatibility preload only; no accelerator disabled and no frozen algorithm or selection policy changed."
+    }
+  ]
+}

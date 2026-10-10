@@ -1,0 +1,75 @@
+{
+  "study_id": "kgf-recommendation-20261010-v1",
+  "freeze_sha256": "9e75947bc5a3bc3231502379d27fcce0b67fe29b2d704b5a4d3a140e77e8ddad",
+  "seed": 20261012,
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "torch": "2.11.0+cu128",
+  "cupy": "14.2.0",
+  "nvrtc": [
+    13,
+    4
+  ],
+  "dataset_sha256": "a6898adb50b9ca05aa231689da44c217cb524e7ebd39d264c56e2832f2c54e20",
+  "vertices": 9992,
+  "nnz": 944258,
+  "evaluated_users": 256,
+  "load_build_ms": 3808.783799999219,
+  "cpu_reference_recall": 0.058742086240082585,
+  "cpu_reference_ndcg": 0.09449848870553298,
+  "status": "complete",
+  "methods": [
+    {
+      "method": "cupy_restart",
+      "request_batch_ms": [
+        562.0072000019718,
+        372.4763000063831,
+        338.43200000410434,
+        355.0671000048169,
+        347.9058000011719
+      ],
+      "compile_ms": 0.0,
+      "prepare_ms": 3.3962000015890226,
+      "recall_at_10": 0.058742086240082585,
+      "ndcg_at_10": 0.09449848870553298,
+      "top10_exact_agreement": 1.0,
+      "quality_within_margin": true
+    },
+    {
+      "method": "cupy_restart_captured",
+      "request_batch_ms": [],
+      "error": "NotImplementedError"
+    },
+    {
+      "method": "fused_onepass",
+      "request_batch_ms": [
+        450.55169999977807,
+        375.4606000002241,
+        375.4373999981908,
+        380.3823999987799,
+        372.355499996047
+      ],
+      "compile_ms": 108.1006000022171,
+      "prepare_ms": 10.633300000336021,
+      "recall_at_10": 0.058742086240082585,
+      "ndcg_at_10": 0.09449848870553298,
+      "top10_exact_agreement": 1.0,
+      "quality_within_margin": true
+    },
+    {
+      "method": "torch_identity_packed_captured",
+      "request_batch_ms": [
+        620.0825999985682,
+        626.9805999982054,
+        615.5515999998897,
+        628.5882000011043,
+        619.2762999999104
+      ],
+      "compile_ms": 45.21549999481067,
+      "prepare_ms": 37.68780000245897,
+      "recall_at_10": 0.058742086240082585,
+      "ndcg_at_10": 0.09449848870553298,
+      "top10_exact_agreement": 1.0,
+      "quality_within_margin": true
+    }
+  ]
+}

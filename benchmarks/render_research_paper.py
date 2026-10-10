@@ -46,6 +46,8 @@ EXPECTED_FIGURES = (
     "precision_percent_comparison.png",
     "native_win_coverage.png",
     "graphfuse_pipeline.png",
+    "controlled_matched_degrees.png",
+    "controlled_application.png",
 )
 INK = colors.HexColor("#17243A")
 MUTED = colors.HexColor("#5C6878")
@@ -603,7 +605,7 @@ def validate_pdf(
         "not peer-reviewed",
         "does not compare these polynomial cases with native cugraph",
         "one deliberately asymmetric sparse family",
-        "all six selected profiles passed",
+        "all six selected t4 cases passed",
         "59/89 attempts when failures count as non-wins",
         "26/89 attempts) also had aggregate and maximum-relative errors no worse",
         "4 k cases lacked accepted accuracy",
@@ -616,6 +618,11 @@ def validate_pdf(
         "and both interval endpoints",
         "their timings replay",
         "sensitivity accuracy checks additionally include both interval endpoints",
+        "18/20 pooled device",
+        "36.88",
+        "7.13%",
+        "specialized scalar-restart control",
+        "no end-to-end median speed gain is confirmed",
     )
     missing = [phrase for phrase in required if normalized(phrase) not in text]
     if missing:

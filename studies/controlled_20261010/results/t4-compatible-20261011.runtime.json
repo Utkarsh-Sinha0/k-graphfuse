@@ -1,0 +1,9 @@
+{
+  "nvrtc": [
+    12,
+    8
+  ],
+  "cupy_accelerators": "default CUB enabled",
+  "wrapper_sha256": "a5628a6c6f14116c169eaf3d60331e9807fdcaa14705a22ce8ae72ae697d6695",
+  "scope": "Compatibility preload only; no accelerator disabled and no frozen algorithm or selection policy changed."
+}

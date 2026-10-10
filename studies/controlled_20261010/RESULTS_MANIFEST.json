@@ -1,0 +1,23 @@
+{
+  "sha256": {
+    "studies/controlled_20261010/results/application-rtx-20261011.json": "00596c9645bd487d3280bab383d28b2ba106fcfd842c5cc6e69cc774e6f899ea",
+    "studies/controlled_20261010/results/application-rtx-20261012.json": "e7f410fa329f6f19d89f4c85923b8801cbf0a251f1896baf9247f4f63c3693a6",
+    "studies/controlled_20261010/results/application-t4-20261011.json": "27c78b23ebb7db1da8a296ebd9aa0c02649292cd061d6f68f7a921f7d96ab97c",
+    "studies/controlled_20261010/results/application-t4-20261012.json": "e8c840cfeb55b6fe297aa1ca2fc0a978c58544274920589ab3745c4bee64e8b4",
+    "studies/controlled_20261010/results/controls-rtx-20261013.json": "1f34874102d0636bff710789c6065424c8452c8c97aed3db6729a4bfe5ab43fb",
+    "studies/controlled_20261010/results/controls-rtx-20261014.json": "ce53df7ba0c18d6e03004b0abc361ba48d21e3814981d689c5dba84166a43de7",
+    "studies/controlled_20261010/results/controls-t4-20261013.json": "9357198b04b6beac7269a000180977cb8eefa589943478e6ecbf6609fd9fb056",
+    "studies/controlled_20261010/results/controls-t4-20261014.json": "78351550d1b1779c570f56328d3f954a0ccad7d3910ad99cd2b818214c8fc5a1",
+    "studies/controlled_20261010/results/excluded_attempt.json": "5694a7388d8ba61cc824bb2a4e4742e070298d42b6a22764722e04095d382693",
+    "studies/controlled_20261010/results/rtx-compatible-20261011.json": "c0aa882795d5109d756bdf28e33c6dbed78ee4a0def8ce89e4df2ee87d8be351",
+    "studies/controlled_20261010/results/rtx-compatible-20261011.runtime.json": "74ce66ba20d3c822c061945de09bc2a305e686d33a779872e3a8e02e664f6900",
+    "studies/controlled_20261010/results/rtx-compatible-20261012.json": "514f8d18b8209a23fbc7ae7e37e94491fd1348912a6d8ecf0fd91568591e2f5a",
+    "studies/controlled_20261010/results/rtx-compatible-20261012.runtime.json": "74ce66ba20d3c822c061945de09bc2a305e686d33a779872e3a8e02e664f6900",
+    "studies/controlled_20261010/results/t4-compatible-20261011.json": "1fc7d808b672a8e465ed3c44cbaa794f4414e01c11d695c69fd3faaa65c96303",
+    "studies/controlled_20261010/results/t4-compatible-20261011.runtime.json": "5a450ac991c16b75802702a0f35fbad913bba25e7650188209e567fa9fcc8a38",
+    "studies/controlled_20261010/results/t4-compatible-20261012.json": "429fab022de36d4d21ee8e8e99ac214aeb777082d85542e0dc93555abcd845c3",
+    "studies/controlled_20261010/results/t4-compatible-20261012.runtime.json": "5a450ac991c16b75802702a0f35fbad913bba25e7650188209e567fa9fcc8a38",
+    "studies/controlled_20261010/SUMMARY.json": "fb70431a14b1d8e9a99d037ac5cfeba102bcb7c4a8e2c0c1478069abe16c896d",
+    "studies/controlled_20261010/analyse.py": "b9659c3f4154a91a1d95a97f2a93805fc20d2fa9fc53fffc9b20d8b04ad2f2b6"
+  }
+}

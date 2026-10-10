@@ -1,6 +1,6 @@
 ---
 title: "K GraphFuse: Similarity-Aware Sparse Polynomial Evaluation with Selective GPU Compensation"
-description: "Unreviewed technical manuscript on similarity-aware sparse polynomial evaluation, selective GPU compensation, six constructed T4 cases, and evidence limits."
+description: "Unreviewed controlled study of sparse matrix-valued polynomial actions: matched budgets and degrees, six graph families, two GPUs, component comparisons and MovieLens outcomes, with raw evidence and losses."
 ---
 # K GraphFuse: Similarity-Aware Sparse Polynomial Evaluation with Selective GPU Compensation
 
@@ -12,9 +12,11 @@ description: "Unreviewed technical manuscript on similarity-aware sparse polynom
 
 ## Abstract
 
-We study a source-separated prototype for evaluating finite matrix-valued polynomials of a sparse graph operator and their directional derivatives. The method combines exact ordered coefficient fusion, a fixed dyadic diagonal similarity, fused sparse Horner evaluation, and profile-specific floating-point compensation. The mathematical contribution is an explicit transfer bound: if the retained computation approximates the polynomial in balanced coordinates with induced Frobenius error at most \(\delta_B\), then the corresponding output in the original coordinates has error at most \(\kappa_2(D)\delta_B\|X\|_F\). We prove this by similarity and submultiplicativity; the numerical-range tail planner uses a complete Crouzeix inequality as a stated external theorem premise, not as a theorem independently proved here. We also give the coupled Horner recurrence for a diagonal affine derivative and an exact-rational coefficient-encoding bound.
+We study finite matrix-valued sparse polynomial actions and fixed affine directional sensitivities. K GraphFuse integrates condition-penalized dyadic similarity planning, ordered coefficients, fused Horner execution and selective compensation. The supporting transfer bound is elementary; balancing, graph polynomials and compensated arithmetic are prior art. The complete constant-two Crouzeix inequality is an attributed external premise, not re-proved here. The specific contribution is an inspectable integration and controlled empirical separation of its components, with no worldwide-first claim.
 
-A constructed alternating sparse family was evaluated on one Tesla T4 across six resident workloads with 4 or 16 channels. Against independently tuned FP64 CuPy or PyTorch controls, all six selected profiles passed the recorded sampled-error and latency gates. Pooled-median latency reductions were 19.98%–73.26%; the corresponding reciprocal-latency rate increases were 24.98%–273.95%. These are two descriptions of the same measured latency ratios, not independent throughput measurements. Every complete output was compared with an FP64 CPU computation; 256/384-bit checks covered only the first 16 rows of the large fixtures. Results are near the FP64 rounding floor and are limited by one constructed family, one GPU architecture, post-exploration profile selection, and within-run uncertainty. This study does not compare these polynomial cases with native cuGraph, establish broad graph-algorithm performance, or change the installed K GraphFuse core.
+A publicly frozen repaired implementation is confirmed on six graph families, ten fixtures, two independent input/coefficient seeds per device and two GPU architectures. Additional packed-balanced CuPy controls are frozen before separate fresh-seed runs. Under matching original-coordinate budgets and matching selected degrees, 18/20 pooled device–fixture comparisons pass the strong speed gate, with 36.88–83.71% less resident compute time in those wins; R-MAT instead uses 55.52% more time on RTX and 2.21% more on T4. Every large output passes full FP64 CPU checks, with separate complete 64-row 256/384-bit checks. Same-backend comparisons show balancing can reduce degree 22 to 13, or increase degree 20 to 24 and slow execution.
+
+A complete MovieLens 1M recommendation workflow preserves Recall@10, nDCG@10 and all top-10 lists. Against an algebraically equivalent specialized scalar-restart control, K uses 7.13% more pooled-median request time on RTX and practically ties T4; no end-to-end median speed gain is confirmed. Historical six-case T4 measurements and the separate native-cuGraph study remain distinct. This study does not compare these polynomial cases with native cuGraph, establish exhaustive SOTA, prove universal execution accuracy or change the installed K GraphFuse core.
 
 **Keywords:** sparse graph filters; matrix polynomials; similarity scaling; numerical range; Horner evaluation; directional sensitivity; compensated arithmetic; CUDA
 
@@ -22,11 +24,11 @@ A constructed alternating sparse family was evaluated on one Tesla T4 across six
 
 Many graph workloads apply a sequence of linear sparse propagations and small channel transforms to a feature matrix. When the graph operator is fixed and the stages are linear, the ordered stages can be represented by a single matrix-valued polynomial. Evaluation then becomes a sequence of sparse matrix–feature products plus dense transformations on a small channel dimension. This is a useful setting for fusing memory-bound sparse work while retaining the full finite polynomial.
 
-This manuscript describes K GraphFuse’s experimental precision-GPU prototype [8]. It asks a narrow question: for one deliberately asymmetric sparse family, can a simple diagonal coordinate change reduce the polynomial degree needed by an existing error planner, while fused evaluation and selected compensation preserve measured accuracy and improve resident latency against FP64 framework controls?
+This manuscript asks which gains come from coordinate changes, execution fusion and compensation under one original-coordinate accuracy requirement, and whether they survive a complete application. One deliberately asymmetric sparse family motivated the historical six-case experiment. The revised study freezes the repaired method before fresh confirmation across six families and two devices, then tests packed-balanced controls and a specialized application control in separately frozen follow-ups.
 
-The answer is positive for the six reported T4 cases, under a post-exploration selection procedure and the exact timing and error contracts below. The result is not a general claim about graph workloads. The balancing rule is a one-step heuristic, not an optimizer. The theorem we prove transfers any balanced-coordinate approximation bound back to the original coordinates. The numerical-range tail bound relies on a cited complete Crouzeix inequality supplied as a premise. This work neither proves that inequality nor verifies every premise in its separate proof.
+The results identify conditional kernel gains and practical counterexamples. Balancing lowers the degree on the alternating fixture but raises it on random sparse fixtures. R-MAT defeats the fused row-oriented executor. The real-data recommendation application preserves quality yet has no confirmed end-to-end median gain against an efficient scalar recurrence. This is a regime map for a specified computation, rather than a universal graph-processing claim.
 
-The implementation is maintained under *experiments/precision_gpu/*, separately from the installed *k_graphfuse* 0.1.0 numerical core. The tested core is unchanged. Timed results belong to the frozen *source/product_v1* and *source/wide_v1* sources; later checked-API repairs passed tests but were not given a new full performance run.
+The implementation remains separate from installed *k_graphfuse* 0.1.0. Historical results use *source/product_v1* and *source/wide_v1*. New confirmations use current repaired sources pinned by *studies/controlled_20261010/FREEZE.json*. The initial environment failure, repair and excluded controls remain documented.
 
 **Figure 1.** Pipeline overview.
 
@@ -34,14 +36,13 @@ The implementation is maintained under *experiments/precision_gpu/*, separately 
 
 ### 1.1 Contributions
 
-This manuscript makes four bounded contributions.
+This manuscript documents three bounded contributions.
 
-1. It states and proves the original-coordinate error-transfer theorem for a fixed positive diagonal similarity.
-2. It writes the exact coupled Horner recurrence for a value and its derivative with respect to a fixed affine graph parameter, and gives an exact-rational coefficient-encoding certificate.
-3. It describes the fused sparse GPU evaluation and its arithmetic and workspace costs without claiming an asymptotic graph-algorithm improvement.
-4. It reports six preselected T4 comparison cases with absolute medians, p95 values, derived latency and reciprocal-latency changes, sampled accuracy gates, source versions, and limitations.
+1. An inspectable integration of original-coordinate budget planning, finite ordered matrix-valued polynomial actions and fixed affine sensitivities with selective compensated CUDA execution.
+2. Controlled component evidence with matching requested accuracy, identical execution backends where possible, retained-degree reporting, fixed profiles and fresh-seed two-device confirmation.
+3. A reproducible real-data recommendation workflow that tests complete request latency and held-out quality, including an efficient control that removes the apparent application speed advantage.
 
-The prototype does not introduce a new general sparse graph algorithm, an optimal balancing method, an adjoint engine, or a new proof of a spectral-set inequality.
+The specific contribution is an inspectable integration of **original-coordinate error-budget planning for finite sparse matrix-valued polynomial actions and fixed affine sensitivities, with selective compensated CUDA execution**, plus a controlled regime map that separates coordinate choice, execution fusion and compensation. The similarity transfer proof is elementary supporting analysis. Balancing, polynomial graph filters, Horner evaluation, error-free transforms and sparse fusion are established prior art. Worldwide first priority for this integration is unestablished.
 
 ## 2. Problem and notation
 
@@ -181,7 +182,11 @@ Crouzeix and Palencia established a complete \((1+\sqrt{2})\)-spectral-set bound
 
 FMA semantics and the effects of floating-point operation order follow standard floating-point behavior documented by NVIDIA [7]. Compensation and mixed precision are execution choices, not exact-arithmetic certificates. The specific combination and performance behavior reported here are evaluated only under the experiment below.
 
-## 7. Experimental design
+The focused closest-method review compares LAPACK DGEBAL [1], balancing failure analysis [9], tolerance-selected exponential actions [10], polynomial graph filtering and channel mixing [11], linear graph-layer simplification [12], compensated Horner [13], GE-SpMM [14], FusedMM [15] and vendor sparse primitives [16]. These establish that balancing, degree selection, graph-polynomial representations, compensation and sparse fusion are existing ideas. Exponential actions have a different function target; GE-SpMM is a GPU sparse primitive, while FusedMM's published kernels are CPU-oriented. Chebyshev graph filters already use recursive sparse polynomial evaluation with channel weights. Those specific implementations and DGEBAL were not run as equivalent performance controls, so no superiority claim against them is made.
+
+The specific contribution is an inspectable integration of **original-coordinate error-budget planning for finite sparse matrix-valued polynomial actions and fixed affine sensitivities, with selective compensated CUDA execution**, plus a controlled regime map that separates coordinate choice, execution fusion and compensation. The similarity transfer proof is elementary supporting analysis. Balancing, polynomial graph filters, Horner evaluation, error-free transforms and sparse fusion are established prior art. Worldwide first priority for this integration is unestablished. See the [closest-method comparison](closest-methods.md) for the exact distinctions and evidence gaps.
+
+## 7. Historical experimental design
 
 ### 7.1 Constructed family
 
@@ -209,7 +214,7 @@ Timing is resident validated-input compute, including the owned GPU output and i
 
 ![Percent latency reductions and derived reciprocal-latency rate increases for the six T4 cases](../assets/precision_percent_comparison.png)
 
-## 8. Results
+## 8. Historical results and new controlled confirmation
 
 All six selected T4 cases passed the recorded combined gates against their fastest accepted FP64 CuPy or PyTorch controls. The rate-change column is calculated as control median divided by K median, minus one. It is a reciprocal-latency transformation of the timing result, not a separate measured system-throughput result. See [metric definitions](../benchmarks/metric-definitions.md) for the formulas and interpretation.
 
@@ -228,29 +233,85 @@ Every full output was checked against degree-48 FP64 CPU evaluation; normalized 
 
 The sampled errors were near the FP64 floor. The largest sampled Frobenius component decreased by \(0.0077\%\), \(1.9316\%\), \(10.0281\%\), \(1.4723\%\), \(28.7375\%\), and \(19.9051\%\), respectively, in table order. Such small absolute errors mean a relative percentage can be numerically noticeable without implying a material downstream application gain. In the million-vertex sensitivity case, a faster mixed profile failed an error component; the selected fully compensated profile was slower but passed the screen.
 
-### 8.1 Separate native PageRank context
+### 8.1 Frozen controlled confirmation
+
+The primary protocol fixes a degree-32 polynomial, rational channel matrices with geometric decay, a single original-coordinate truncation budget of `1e-12`, and an additional `1e-13` empirical rounding-screen allowance. This screen is not a floating-roundoff proof. The six families are alternating asymmetric, already balanced, grid, random sparse, R-MAT and randomly similarity-scaled random operators. Ten fixtures vary size, 4/16 channels and two value-plus-derivative cases. Sensitivity timings/checks here use theta=0; interval planning remains conditional.
+
+The fixed K profile is `fused_onepass_captured`, with current repaired sources pinned in `FREEZE.json`. The primary comparison includes six identity-coordinate FP64 CuPy/PyTorch controls with packing and supported capture. Twelve total methods isolate identity/one-pass/eight-sweep coordinates, identical-plan fusion, and compensation. The eight-sweep control uses simultaneous dyadic updates; it is Osborne-inspired and does not reproduce LAPACK DGEBAL's sequential algorithm. No optimal balancing claim is made.
+
+Primary seeds 20261011/12 run in separate processes on RTX 3060 Laptop and Tesla T4. Five randomized paired blocks contain 11 synchronized resident samples per method per process, after three warmups. Owned outputs and original-coordinate scaling are included; validation, compilation, preparation and transfer are separate. Every large output is checked against a full finite-polynomial FP64 CPU reference. Every row of separate 64-row, four-channel fixtures across all six families is checked against 384-bit references cross-checked at 256 bits (discrepancy below `1e-65`). These small checks do not certify every large row at arbitrary precision.
+
+During review, packing combined with balancing was identified as a stronger compatible control. A separate public `CONTROL_FREEZE.json` fixes that follow-up before fresh seeds 20261013/14. It compares packed one-pass and packed eight-sweep CuPy with the same fixed K profile. All selected control/K retained degrees match in that confirmation. It was not part of the original freeze and is reported separately.
+
+Point estimates and 95% intervals use the same pooled-median control/K ratio estimator. The analysis resamples paired whole blocks within each separate process, with 2,000 bootstrap draws and a fixed analysis seed. Intervals are descriptive, conditional on the observed fastest accepted control, and not multiplicity-adjusted. Pooling two coefficient/input seeds is a descriptive summary; it is not 110 independent graph observations. A strong speed gate requires at least 10% less median time, interval lower endpoint above one and no p95 regression.
+
+The primary study passes the strong speed gate in **18/20 pooled device–fixture comparisons**. The stronger packed-balanced confirmation also passes **18/20**, with **36.88–83.71% lower pooled-median resident compute time in those 18 wins**. The remaining R-MAT comparison uses **55.52% more time on RTX** and **2.21% more on T4**. Ten fixtures times two devices form these 20 comparisons; they are not 20 independent graph families.
+
+The primary study has 40 case-runs, 480 large method checks and 288 small whole-fixture method checks. The follow-up has another 40 case-runs and 120 large method checks; these reuse the ten graph fixtures with fresh coefficients/inputs. Every recorded healthy large and small method passes the matching screen. The largest K full-output normalized FP64 CPU difference in the primary aggregate is `1.416e-14`.
+
+Balancing reduces the alternating q=4 value degree from **22 to 13** with condition penalty 8, giving **36.47% less T4 time on the same eager fused executor**. In the random q=4 fixture it instead raises degree **20 to 24**, causing **18.69% more T4 time** on that executor. Balanced/grid/full-degree fixtures have no degree reduction. Fusion gains therefore remain distinguishable from coordinate gains. The compensated control uses **1.50–6.05 times** the latency of the otherwise matching eager fused profile across the 20 pooled cases; the worst-of-two-seeds normalized CPU difference is no worse in only 6/20. These near-floor rounded-reference differences do not establish universal accuracy superiority or a compensated execution theorem.
+
+| T4 value-only fixture, q=4 | Identity / one-pass degree | Condition penalty | One-pass time reduction on the same fused executor |
+|---|---:|---:|---:|
+| alternating | 22 / 13 | 8 | +36.47% |
+| balanced | 30 / 30 | 1 | -0.11% |
+| grid | 15 / 15 | 1 | +0.24% |
+| random | 20 / 24 | 2 | -18.69% |
+| rmat | 32 / 32 | 64 | -0.70% |
+| similarity random | 32 / 32 | 64 | -0.23% |
+
+
+**Figure 3.** Fresh-seed matched-degree confirmation; negative outcomes remain visible.
+
+![Controlled matched-degree GPU comparison, including R-MAT losses](../assets/controlled_matched_degrees.png)
+
+The packed-balanced control set isolates matching degrees; it does not replace the primary PyTorch competitor set or claim to be the fastest of every combined framework method. All 20 rows in each study, all 120 component comparisons, full error screens and intervals are in the [controlled report](controlled-study.md) and its hashed raw artifacts. These comparisons are separate from native-cuGraph PageRank.
+
+### 8.2 Real-data recommendation application
+
+The application is a reproducible **MovieLens 1M recommendation workflow** on real public ratings. Latest 20% of each user's timestamp-ordered ratings are held out. The training bipartite graph uses ratings >=4; all previously rated items are excluded from recommendations. There are 9,992 stored vertices, 944,258 stored positive-training edges and 256 deterministic eligible evaluation users, batched in four channels. The finite diffusion uses alpha=17/20 and degree 12. This is a fixed numerical recommender, not a trained recommendation quality-SOTA model.
+
+Request timing includes seed construction, host-to-device transfer, checked numerical execution, device-to-host output, seen-item exclusion and stable top-10 ranking. Data load/graph construction, compilation and GPU preparation are recorded separately. `APPLICATION_FREEZE.json` fixes the stronger scalar-restart control before its separate runs: y0=(1-alpha)X, y[j+1]=alpha A y[j]+(1-alpha)X. This is algebraically the same finite polynomial, avoids unnecessary channel GEMMs, and receives the same finite input/output checks. Method order is shuffled within five whole-workflow blocks. All blocks remain recorded.
+
+All healthy implementations have **Recall@10=0.0587420862**, **nDCG@10=0.0944984887** and **100% exact top-10 agreement** with the CPU finite-polynomial reference. The predeclared 0.001 absolute quality noninferiority margin passes. This demonstrates preserved application outcomes, not increased recommendation quality or relevance.
+
+Against that specialized control, **K uses 7.13% more pooled-median time on RTX and is a practical tie on T4 (+0.07% time reduction)**. Both descriptive ratio intervals include one. There is no confirmed end-to-end median speed advantage. The generic matrix-coefficient application controls in the primary raw runs are weaker; their apparent gains are not the application headline.
+
+The observed application p95 values include a large first-use CuPy outlier in each first-seed process. Some lazy compilation happens inside the first request, while other preparation happens before timing, and cache state is not reset uniformly. Those observed tails are retained but do not establish superior steady-state tail latency or a fair fully cold comparison. Compile/preparation fields are the last reported warm-cache setup, not a cold-start distribution. No cold-start break-even or customer-cost saving is established. Captured CuPy restart fails with `NotImplementedError` on both devices and is an unsupported control, not a K win.
+
+The archive SHA-256 is `a6898adb50b9ca05aa231689da44c217cb524e7ebd39d264c56e2832f2c54e20`. Only ratings are parsed; demographics and the archive are not redistributed. [GroupLens research-use terms](https://files.grouplens.org/datasets/movielens/ml-1m-README.txt) apply separately; commercial use requires their permission. Cite Harper and Konstan, *The MovieLens Datasets: History and Context*, ACM TiiS (2015), [doi:10.1145/2827872](https://doi.org/10.1145/2827872).
+
+| GPU | Specialized CuPy / K median (ms) | Time reduction | Ratio (95% interval) | Observed CuPy / K p95 (ms) |
+|---|---:|---:|---:|---:|
+| RTX 3060 Laptop | 353.198 / 378.386 | -7.13% | 0.933× (0.915–1.192) | 4668.271 / 422.594 |
+| T4 | 340.838 / 340.595 | +0.07% | 1.001× (0.992–1.186) | 5668.892 / 411.505 |
+
+
+**Figure 4.** Complete recommendation request latency and quality parity.
+
+![MovieLens workflow medians and matching quality](../assets/controlled_application.png)
+
+### 8.3 Separate native PageRank context
 
 The precision experiment has no native-cuGraph control. A separate K GraphFuse PageRank/ranking study used different source, operators, error contracts, and candidate pools; it must not be pooled with the six cases above. That study records 15 suites, 111 records, 2,190 configurations, and 104 predeclared cases. Of 89 attempted native comparisons, 85 were comparable and 4 K cases lacked accepted accuracy. A strong speed gate passed in 59/85 comparable cases (59/89 attempts when failures count as non-wins); 26/85 comparables (26/89 attempts) also had aggregate \(L_1\) and maximum-relative errors no worse. The strongest-tested-control counts were 38/85 for GPU and 33/85 overall, including measured CPU alternatives. These denominators and gates belong only to that study.
 
 The separate study also has losses: native cuGraph was 2.72× faster on Graph500-22; the later datagen confirmation measured K at 56.089 ms versus 54.667 ms for native; and full file-import and changing-graph rebuild workflows favored native cuGraph. The earlier 19-workload suite passed zero strongest GPU gates under its protocol. K GraphFuse does not implement BFS, SSSP, connected components, triangle counting, or Louvain. The native context provides scope and negative evidence, not corroboration of the precision-GPU results.
 
-**Figure 3.** Coverage of the separate native-comparison study.
+**Figure 5.** Coverage of the separate native-comparison study.
 
 ![Native-comparison study wins, failures, and scope; separate from the precision-GPU cases](../assets/native_win_coverage.png)
 
 ## 9. Limitations and threats to validity
 
-**Workload coverage.** The experiment uses one synthetic alternating directed family. It does not measure public graph datasets, arbitrary sparse matrices, broad coefficient distributions, or other graph algorithms. At most, it motivates tests on similarly asymmetric linear filters and diagonal sensitivities.
+**Workload coverage.** Historical six-case results use one constructed family. New confirmation covers six synthetic families, ten fixtures, two fresh coefficient/input seeds per phase and two devices. MovieLens adds one real-data fixed-model application. These are targeted numerical workloads, not broad graph-algorithm or production coverage.
 
-**Selection and uncertainty.** Profile selection follows pilots and exploratory results; the wide follow-up was designed after earlier wide profiles lost. The public selection policy was reconstructed after exploration. The reported block interval covers within-run variability only and does not correct selection or multiple comparisons. There is one T4 setup and no independent cross-device replication.
+**Selection and uncertainty.** Historical profile selection follows exploration. The new repaired profile/protocol is publicly frozen before confirmation. Packed-balanced and scalar-restart controls were identified during review and separately frozen before fresh confirmation, rather than being retrospectively folded into the initial protocol. Bootstrap intervals use paired blocks and the same pooled-median estimator; they are descriptive and do not adjust multiple comparisons or observed control selection. Both devices remain author-controlled.
 
-**Accuracy scope.** The full-output reference is FP64 CPU arithmetic, not arbitrary precision. High-precision checks cover only the first 16 rows of the specified fixtures. GPU accuracy is not proven for every possible input or every parameter in the interval. The selected errors are near the representational floor, where the output format bounds achievable improvement.
+**Accuracy and certificate scope.** Large references are FP64 CPU arithmetic. Historical high-precision checks sample the first 16 rows; new high-precision checks cover whole separate 64-row fixtures. Neither proves every large output at arbitrary precision or every input/parameter. The additional rounding-screen allowance is empirical. The complete constant-two Crouzeix result is a pinned external premise. The elementary transfer proof and exact coefficient bounds do not bound execution roundoff, and dyadic balancing is heuristic.
 
-**Certificate scope.** The transfer theorem is elementary and proved above. The complete constant-two Crouzeix result is a supplied theorem premise from a pinned external manuscript; it was not independently reconstructed here. The dyadic balancing rule is heuristic and not optimal. Exact truncation and coefficient bounds exclude execution rounding unless a separate floating-point proof is supplied.
+**Timing and application scope.** Resident timings exclude setup, transfers and finite checks; separate checked-call samples are retained. The new application includes the full request path and separately records data construction and preparation. First-use compilation/cache differences prevent fair cold-start or steady-state tail conclusions from its observed p95. No customer saving, integrated energy, allocator-peak comparison or concurrent capacity was measured. A real application with unchanged quality and no confirmed median speed gain is a substantive limit on adoption claims.
 
-**Timing scope.** Reported times exclude setup and JIT, host transfer, input validation, graph loading, output serialization, and full application workflows. Rate increases are reciprocals of per-call latencies. They do not measure resource utilization, concurrent capacity, energy, cloud cost, or end-user benefit. The results use frozen timed sources; the subsequently repaired checked API passed 29 core plus 14 upgrade checks but has no new full latency confirmation.
-
-**External validity and priority.** The manuscript does not establish a new theorem about balancing, a globally optimal metric, global state of the art, original-world priority for the individual engineering ideas, peer review, or independent replication. The broader PageRank results are from distinct experiments and have documented losses.
+**External validity and priority.** DGEBAL, GE-SpMM, FusedMM and Chebyshev/Clenshaw executors remain unmeasured as equivalent controls. No new balancing theorem, globally optimal metric, exhaustive SOTA, worldwide-first integration, peer review or independent external replication is established. The separate PageRank studies retain their own recorded losses and errors.
 
 ## 10. Applications and adoption criteria
 
@@ -260,11 +321,17 @@ The method may lose on already balanced operators, wider channels, different har
 
 ## 11. Conclusion
 
-K GraphFuse’s experimental prototype combines a provable coordinate-error transfer, a simple dyadic balancing heuristic, fused sparse Horner evaluation, and selective GPU compensation. On one constructed asymmetric family, six selected Tesla T4 workloads passed the recorded sampled-accuracy and speed gates against tuned FP64 CuPy/PyTorch controls, with 19.98%–73.26% lower pooled-median latency and corresponding 24.98%–273.95% higher derived reciprocal-latency rate. The latter is computed from latency ratios, not measured throughput. This is evidence for a narrow numerical workload, not a native-cuGraph win or a general graph-processing claim. Broader adoption requires independent hardware and workload replication, complete-path timing, and accuracy validation under the target application’s own contract.
+K GraphFuse documents an integration and an empirical regime map for finite sparse polynomial actions and fixed affine sensitivities. New frozen, matching-budget confirmation supports execution gains across several low-channel regimes while exposing harmful balancing, R-MAT losses and no confirmed end-to-end median advantage in a specialized recommendation workflow. These negative results sharpen the practical boundary. The historical six T4 cases recorded 19.98%–73.26% lower pooled-median latency and 24.98%–273.95% higher derived reciprocal-latency rate. The latter is computed from latency ratios, not measured throughput. Those selected historical results are retained separately rather than used to override stronger controls.
 
 ## Reproducibility and artifact status
 
 The audited record is *experiments/precision_gpu/PRODUCT_VERIFIED.json*; the mathematical derivation and premise ledger are *experiments/precision_gpu/DERIVATION.md* and *experiments/precision_gpu/RESEARCH.md*. Timed sources are *experiments/precision_gpu/source/product_v1* and *source/wide_v1*. The later checked API at *experiments/precision_gpu/source/repaired_api* passed 29 core plus 14 upgrade checks but does not retime the six cases. The repository’s offline evidence audit can check recorded results without launching a GPU benchmark. No private host paths, account screenshots, or contact details are included. No DOI, publication venue, or acceptance is asserted for this manuscript.
+
+New confirmation artifacts are under [studies/controlled_20261010](https://github.com/Utkarsh-Sinha0/k-graphfuse/tree/main/studies/controlled_20261010): the primary freeze, runtime repair, application freeze, fresh-seed packed-balanced freeze, complete successful raw results, redacted invalid-attempt ledger, recomputation script and checksum manifests. The new runs confirm repaired implementation behavior under their own protocol; they do not retime the historical six cases.
+
+## Assistance and research responsibility
+
+Codex assisted implementation, analysis, figures and manuscript drafting. Earlier drafting also used native Luna subagents. The attributed human author is Utkarsh Sinha; AI systems are not listed as authors. Source and automated output/integrity checks are available for inspection. These checks and assistance do not constitute independent scientific peer review.
 
 ## References
 
@@ -276,3 +343,13 @@ The audited record is *experiments/precision_gpu/PRODUCT_VERIFIED.json*; the mat
 6. OpenAI. “An Upper Bound of 9/4 for Matrix Multiplication Exponent.” Mathematics preprint 107-01, repository snapshot *fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb*, 2 October 2026. [Pinned manuscript](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026/paper.pdf). Not implemented.
 7. NVIDIA. “Floating Point and IEEE 754 Compliance for NVIDIA GPUs.” [CUDA documentation](https://docs.nvidia.com/cuda/floating-point/index.html). Accessed 10 October 2026.
 8. U. Sinha. *K GraphFuse: Sparse Graph Polynomial Plans and CUDA Execution*, software v0.1.0, released 10 October 2026. [Repository](https://github.com/Utkarsh-Sinha0/k-graphfuse). The experimental sources described here are separately versioned under *experiments/precision_gpu/*.
+
+9. James, Langou and Lowery. *On matrix balancing and eigenvector computation* (2014). [Primary source](https://arxiv.org/abs/1401.5766).
+10. Al-Mohy and Higham. *Computing the Action of the Matrix Exponential, with an Application to Exponential Integrators* (2011). [Primary source](https://eprints.maths.manchester.ac.uk/1591/).
+11. Defferrard, Bresson and Vandergheynst. *Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering* (NeurIPS 2016). [Primary source](https://arxiv.org/abs/1606.09375).
+12. Wu et al. *Simplifying Graph Convolutional Networks* (ICML 2019). [Primary source](https://proceedings.mlr.press/v97/wu19e.html).
+13. Graillat. *Accurate simple zeros of polynomials in floating point arithmetic* (2008), Section 2, compensated Horner prior art. [Primary source](https://perso.lip6.fr/Stef.Graillat/papers/graillat-2008-cma.pdf).
+14. Huang et al. *GE-SpMM* (SC 2020). [Primary source](https://arxiv.org/abs/2007.03179).
+15. Rahman, Sujon and Azad. *FusedMM* (2020 preprint). [Primary source](https://arxiv.org/abs/2011.06391).
+16. NVIDIA. *cuSPARSE documentation*, accessed 10 October 2026. [Primary source](https://docs.nvidia.com/cuda/cusparse/index.html).
+17. Harper and Konstan. *The MovieLens Datasets: History and Context*, ACM TiiS (2015). [Primary source](https://doi.org/10.1145/2827872).

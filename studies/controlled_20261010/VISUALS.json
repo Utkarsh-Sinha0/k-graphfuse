@@ -1,0 +1,12 @@
+{
+  "source_sha256": {
+    "studies/controlled_20261010/SUMMARY.json": "fb70431a14b1d8e9a99d037ac5cfeba102bcb7c4a8e2c0c1478069abe16c896d",
+    "studies/controlled_20261010/figures.py": "d5f03a9eb85bd92d2e1592942b4a865beee177c54b4cda35d08fc0e3228afc7a"
+  },
+  "artifact_sha256": {
+    "docs/assets/controlled_matched_degrees.png": "ecb8374e18daab9722bf34216c498c7321f26cbc719da668f998c29df588b705",
+    "docs/assets/controlled_matched_degrees.svg": "637b0026bf07abfc88254831ee3ca6ae3fd01c710ab47eaf2bd8ff4e1aff9889",
+    "docs/assets/controlled_application.png": "0bdf6ca2382b74a909594e60c704124c47e4e3a254ad6e14c741f583b48fb9af",
+    "docs/assets/controlled_application.svg": "782c9870885f092a6bed2e4b047741cc272a51603eb333fba3084b99a75ee12e"
+  }
+}

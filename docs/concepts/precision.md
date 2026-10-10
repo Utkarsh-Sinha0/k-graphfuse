@@ -6,7 +6,7 @@ description: Coordinate error transfer, dyadic balancing, coupled derivatives, c
 
 This experimental implementation is a derived application of a stated research theorem and classical matrix balancing. It is not a claim of a new balancing theorem, an optimal similarity construction, or global state of the art. The tested released numerical core is unchanged.
 
-The [technical manuscript](../research/paper.md) presents this derivation as a research document with proofs, methods, six-case results, limitations and references. Its status is an unreviewed preprint draft.
+The [technical manuscript](../research/paper.md) presents this derivation as a research document with proofs, methods, historical results, new controlled two-device confirmation, application outcomes, limitations and references. Its status is an unreviewed preprint draft.
 
 ## Contract
 
@@ -104,4 +104,10 @@ The selection gate requires all sampled value/derivative Frobenius and maximum-a
 
 The full degree-48 CPU computation checks every output but is already rounded. Independent high-precision sparse Horner evaluation supplies the accuracy reference for the first 16 rows. In the tested operator family each multiply reaches at most the next row; degree 48 therefore needs at most 48 additional rows. The 64-row and 128-row influence windows contain that cone without wrapping into their artificial boundary. Evaluations at 256 and 384 bits agreed below 1e-65. This justifies those sampled rows, not arbitrary-precision truth at every vertex or for unrelated operators. Errors near the nearest-FP64 floor can improve only modestly in a stored FP64 result.
 
-After the frozen timed experiments, a same-process integration check exposed optional CuPy CUB headers mismatching PyTorch's preloaded CUDA compiler, and a default-stream dependency ambiguity in projected execution. The final checked API replaces the finite reduction with a self-contained flag kernel and uses a named stream plus events to order cross-library projection. The combined 29 core and 14 upgrade checks passed. These repairs are separately versioned; recorded large-run performance applies to the frozen timed sources. Named-stream captured paths bypass the new default-stream branch, but the repaired version was not given a new full latency confirmation.
+After the historical frozen timed experiments, a same-process integration check exposed optional CuPy CUB headers mismatching PyTorch's preloaded CUDA compiler, and a default-stream dependency ambiguity in projected execution. The final checked API replaces the finite reduction with a self-contained flag kernel and uses a named stream plus events to order cross-library projection. The combined 29 core and 14 upgrade checks passed. Historical large-run performance applies to its frozen sources. The new controlled study confirms the repaired implementation under a separate frozen protocol, including checked application requests; it does not retime the historical six cases.
+
+## Controlled component findings
+
+The new [controlled confirmation](https://utkarsh-sinha0.github.io/k-graphfuse/research/controlled-study/) uses the repaired implementation across six graph families and two GPUs. Matching-budget, matching-degree packed-balanced CuPy comparisons pass the strong speed gate in **18/20 pooled device–fixture comparisons**, with **36.88–83.71% less resident time in the wins**. R-MAT loses on both devices. MovieLens recommendation quality matches exactly, but specialized scalar-restart CuPy removes the application median speed advantage: K uses **7.13% more time on RTX** and practically ties T4. These are scoped experimental results, separate from native-cuGraph PageRank and the installed API.
+
+Read the [closest-method comparison](../research/closest-methods.md) before attributing novelty to balancing, graph polynomials, compensation or fusion.

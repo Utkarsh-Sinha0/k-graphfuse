@@ -1,0 +1,75 @@
+{
+  "study_id": "kgf-recommendation-20261010-v1",
+  "freeze_sha256": "9e75947bc5a3bc3231502379d27fcce0b67fe29b2d704b5a4d3a140e77e8ddad",
+  "seed": 20261012,
+  "gpu": "Tesla T4",
+  "torch": "2.11.0+cu128",
+  "cupy": "14.2.0",
+  "nvrtc": [
+    12,
+    8
+  ],
+  "dataset_sha256": "a6898adb50b9ca05aa231689da44c217cb524e7ebd39d264c56e2832f2c54e20",
+  "vertices": 9992,
+  "nnz": 944258,
+  "evaluated_users": 256,
+  "load_build_ms": 782.061428999981,
+  "cpu_reference_recall": 0.058742086240082585,
+  "cpu_reference_ndcg": 0.09449848870553298,
+  "status": "complete",
+  "methods": [
+    {
+      "method": "cupy_restart",
+      "request_batch_ms": [
+        472.51653300000385,
+        339.8995040000159,
+        342.2587750000048,
+        341.2756089999789,
+        340.29335299999275
+      ],
+      "compile_ms": 0.0,
+      "prepare_ms": 4.443205000001171,
+      "recall_at_10": 0.058742086240082585,
+      "ndcg_at_10": 0.09449848870553298,
+      "top10_exact_agreement": 1.0,
+      "quality_within_margin": true
+    },
+    {
+      "method": "cupy_restart_captured",
+      "request_batch_ms": [],
+      "error": "NotImplementedError"
+    },
+    {
+      "method": "fused_onepass",
+      "request_batch_ms": [
+        463.737105000007,
+        338.3345039999881,
+        341.4597409999942,
+        347.6667930000019,
+        338.5333669999966
+      ],
+      "compile_ms": 121.9694770000217,
+      "prepare_ms": 11.708516999988205,
+      "recall_at_10": 0.058742086240082585,
+      "ndcg_at_10": 0.09449848870553298,
+      "top10_exact_agreement": 1.0,
+      "quality_within_margin": true
+    },
+    {
+      "method": "torch_identity_packed_captured",
+      "request_batch_ms": [
+        607.8991050000013,
+        609.1433690000088,
+        609.4450209999991,
+        610.0192069999935,
+        610.2366319999817
+      ],
+      "compile_ms": 44.314167999999654,
+      "prepare_ms": 31.414219999987836,
+      "recall_at_10": 0.058742086240082585,
+      "ndcg_at_10": 0.09449848870553298,
+      "top10_exact_agreement": 1.0,
+      "quality_within_margin": true
+    }
+  ]
+}

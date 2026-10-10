@@ -15,3 +15,14 @@ The runtime needs NumPy, SciPy, Mpmath, CuPy, CUDA-enabled PyTorch, threadpoolct
 The primary resident profile and comparator set are fixed in the protocol. Named same-backend pairs isolate effects; their results must not be pooled as independent algorithm victories. The iterated balancing control uses eight simultaneous dyadic sweeps of the existing update. It is an Osborne-inspired sparse control, not LAPACK DGEBAL or a claim to reproduce its sequential algorithm. Capture is tested with supported PyTorch controls; CuPy 14.2 cuBLAS capture is unavailable.
 
 Large outputs use full FP64 CPU reference checks. The separate small-fixture check uses complete 64-row 256/384-bit references across six families. Neither supports an all-input floating-roundoff theorem. Application timing includes request seed construction, transfer, checked execution, host output, seen-item exclusion and ranking. Load/build, compile and GPU preparation are separate recorded costs. The model is a fixed finite graph-diffusion recommender; its quality metrics do not claim learned recommender state of the art.
+
+## Published confirmation
+
+Successful raw results, runtime metadata and the redacted excluded-attempt ledger are in `results/`. `SUMMARY.json` contains primary comparisons, matched-degree follow-up, all 120 pooled component comparisons and complete application outcomes. `RESULTS_MANIFEST.json` pins their bytes; `VISUALS.json` pins reproducible figures.
+
+```sh
+python studies/controlled_20261010/analyse.py --verify
+python studies/controlled_20261010/figures.py
+```
+
+[Controlled report](../../docs/research/controlled-study.md). The initial primary freeze, compiler-preload repair, application control and fresh-seed packed-balanced follow-up are distinct pre-run records. Read their stated scopes and preserve all losing results.

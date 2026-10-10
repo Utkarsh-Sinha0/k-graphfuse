@@ -4,6 +4,8 @@ description: Six audited FP64 sparse polynomial and sensitivity cases on Tesla T
 ---
 # Precision GPU experiment
 
+This page retains the historical six-case study. The [new controlled confirmation](../research/controlled-study.md) uses matched budgets, matched-degree packed-balanced controls, varied families and repaired sources on two devices. Its complete recommendation workflow preserves quality but has no confirmed median speed advantage against specialized scalar-restart CuPy.
+
 The experimental K GraphFuse portfolio passes speed and sampled-accuracy gates on **six of six constructed T4 cases**, with **about 20.0–73.3% less median compute time** (`s=1.250–3.739x`, control median / K median) and **about 25.0–273.9% higher derived reciprocal-latency serial compute rate** against the fastest accepted equivalent FP64 CuPy/PyTorch control. The rate is calculated from isolated median latency, not measured concurrent throughput. This is a sparse polynomial and directional-sensitivity study. It does not compare native cuGraph PageRank or replace the installed `k_graphfuse` API.
 
 ## Latency and tail latency

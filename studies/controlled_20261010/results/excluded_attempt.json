@@ -1,0 +1,8 @@
+{
+  "status": "excluded_environment_failure",
+  "original_private_artifact_sha256": "815080b31de823ba7a56a8aebec63c447d6ad9875d03f5e84b5f721214249fe0",
+  "freeze_sha256": "fe6e761811c7ca7eafb509f1cd7deaf13844652f1a19dce63090a6491bb66295",
+  "reason": "CuPy CUB compilation encountered incompatible CUDA headers/NVRTC loaded before the runtime repair. Incomplete controls are not scored as wins. Original private host paths are withheld.",
+  "repair": "RUNTIME_FREEZE.json pins the compiler preload; no numerical source or CUB configuration was weakened.",
+  "case_count": 10
+}

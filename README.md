@@ -19,6 +19,9 @@ It is useful when repeated graph ranking or linear propagation consumes a meanin
 
 ## Audited benchmark evidence
 
+The new [controlled confirmation](https://utkarsh-sinha0.github.io/k-graphfuse/research/controlled-study/) uses the repaired implementation across six graph families and two GPUs. Matching-budget, matching-degree packed-balanced CuPy comparisons pass the strong speed gate in **18/20 pooled device–fixture comparisons**, with **36.88–83.71% less resident time in the wins**. R-MAT loses on both devices. MovieLens recommendation quality matches exactly, but specialized scalar-restart CuPy removes the application median speed advantage: K uses **7.13% more time on RTX** and practically ties T4. These are scoped experimental results, separate from native-cuGraph PageRank and the installed API.
+
+
 | Study | Measured result | Comparison contract |
 |---|---|---|
 | Native NVIDIA cuGraph ranking study | **66.3% (59/89 attempted) strong speed wins**, including **29.2% (26/89) with both reference errors no worse** | 85 comparable cases and four K accuracy failures, counted as non-wins |
@@ -33,7 +36,7 @@ For latency comparisons, `s = baseline median / K median`; compute-time reductio
 
 The original same-T4 `datagen-7_5-fb` experiment recorded **21.28% less median compute time** (63.398 ms native / 49.906 ms K; `s=1.2703x`) or **27.03% higher derived serial rate**; sampled total GPU and process-memory peaks were 56.76% and 35.87% lower, while aggregate L1 error was worse. A later longer confirmation on that graph favors cuGraph. **Native cuGraph was 2.72x faster on the recorded Graph500-22 workload.** Complete file/rebuild workflows also favored native; see [all measured losses](docs/benchmarks/cugraph.md#negative-results-and-unsupported-tasks). The older 19-workload suite passed zero strongest GPU gates under its separate protocol. [Historical reference result](docs/benchmarks/historical-reference.md).
 
-The new fused implementation lives in [experiments/precision_gpu](experiments/precision_gpu/README.md), separate from the installed `k_graphfuse` 0.1.0 API. Its repaired checked API passed 43 combined CPU/GPU tests; performance belongs to separately frozen timed versions. Raw samples, rejected configurations, code hashes and offline audits are included. Global SOTA, customer savings and integrated energy savings remain unestablished.
+The new fused implementation lives in [experiments/precision_gpu](experiments/precision_gpu/README.md), separate from the installed `k_graphfuse` 0.1.0 API. Its repaired checked API passed 43 combined CPU/GPU tests; historical performance belongs to separately frozen timed versions; the new controlled study confirms the current repaired implementation under its own protocol. Raw samples, rejected configurations, code hashes and offline audits are included. Global SOTA, customer savings and integrated energy savings remain unestablished.
 
 ## Install and run
 

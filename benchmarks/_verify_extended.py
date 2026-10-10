@@ -110,7 +110,11 @@ for label,name in (('Source','docs/research/paper.md'),('PDF','docs/research/k-g
     digest=re.search(label+r' SHA-256: `([0-9a-f]{64})`',record)
     assert digest and hashlib.sha256((repo/name).read_bytes()).hexdigest()==digest[1],name
 pdf_figures=re.findall(r'`(docs/assets/[^`]+)` — SHA-256 `([0-9a-f]{64})`',record)
-assert {name for name,_ in pdf_figures}=={name for name in presentation['artifacts'] if name.endswith('.png')}
+controlled=json.loads((repo/'studies/controlled_20261010/VISUALS.json').read_text(encoding='utf-8'))
+for key in ('source_sha256','artifact_sha256'):
+    for name,digest in controlled[key].items():
+        assert hashlib.sha256((repo/name).read_bytes()).hexdigest()==digest,name
+assert {name for name,_ in pdf_figures}=={name for name in presentation['artifacts'] if name.endswith('.png')}|{name for name in controlled['artifact_sha256'] if name.endswith('.png')}
 for name,digest in pdf_figures:
     assert hashlib.sha256((repo/name).read_bytes()).hexdigest()==digest,name
 tex_record=json.loads((repo/'research/TEX_COMPILATION.json').read_text(encoding='utf-8'))

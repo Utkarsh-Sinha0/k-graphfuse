@@ -3,6 +3,9 @@ description: Evaluate K GraphFuse for ranking refresh, fraud feature enrichment,
 ---
 # Evaluate application fit
 
+The new [controlled confirmation](https://utkarsh-sinha0.github.io/k-graphfuse/research/controlled-study/) uses the repaired implementation across six graph families and two GPUs. Matching-budget, matching-degree packed-balanced CuPy comparisons pass the strong speed gate in **18/20 pooled device–fixture comparisons**, with **36.88–83.71% less resident time in the wins**. R-MAT loses on both devices. MovieLens recommendation quality matches exactly, but specialized scalar-restart CuPy removes the application median speed advantage: K uses **7.13% more time on RTX** and practically ties T4. These are scoped experimental results, separate from native-cuGraph PageRank and the installed API.
+
+
 The benchmark supports a repeated graph-computation opportunity. It does not establish measured customer savings or a replacement for a graph database service. Use the table below to define a concrete pilot and its acceptance gate.
 
 ## Prioritize a matching calculation

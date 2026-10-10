@@ -1,5 +1,13 @@
 # Release notes
 
+## Frozen controlled study and revised manuscript — 10 October 2026
+
+- Confirms repaired source on six graph families, ten fixtures, two fresh input/coefficient seeds per phase and RTX 3060 Laptop / Tesla T4; all source freezes precede their confirmation runs.
+- Adds separate matched-degree packed-balanced controls: 18/20 strong pooled speed wins, 36.88–83.71% less resident time in the wins, and R-MAT losses on both devices.
+- Adds a complete MovieLens recommendation demonstration with unchanged Recall@10, nDCG@10 and top-10 lists; an efficient scalar-restart control removes the end-to-end median speed advantage.
+- Publishes all healthy raw results, an excluded-environment ledger, source/result manifests, 120 pooled component comparisons, same-estimator bootstrap intervals and two reproducible PNG/SVG graphics.
+- Revises the [manuscript](../research/paper.md), PDF, closest-method review, applications, claims and agent navigation. [Controlled report](../research/controlled-study.md). Installed API and version remain 0.1.0.
+
 ## Research manuscript and presentation update — 10 October 2026
 
 - Adds a technical research manuscript with a proof of similarity error transfer, coupled derivative recurrence, coefficient-encoding bound, reproducible methods, results and limitations; its status is an unreviewed preprint draft.

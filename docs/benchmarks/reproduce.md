@@ -1,5 +1,7 @@
 # Reproduce and audit the evidence
 
+The [new controlled-study protocol](../research/controlled-study.md#reproduction-and-integrity) gives separate primary, packed-balanced and specialized application commands. `python studies/controlled_20261010/analyse.py --verify` recomputes the new raw results, source freezes, budget gates, same-estimator intervals and quality parity without GPU access. The full repository audit runs it automatically.
+
 An offline audit checks saved facts. A new benchmark execution measures your environment. Keep these two outcomes separate.
 
 ## Audit without a GPU or network
