@@ -1,0 +1,147 @@
+{
+  "study_id": "kgf-controlled-20261010-v1",
+  "question": "Which gains come from condition-penalized similarity, GPU fusion and compensation under the same original-coordinate accuracy budget?",
+  "seeds": [
+    20261011,
+    20261012
+  ],
+  "graph_seed": 47119,
+  "degree": 32,
+  "budget": "1/1000000000000",
+  "rounding_screen_allowance": 1e-13,
+  "blocks": 5,
+  "samples_per_block": 11,
+  "warmups": 3,
+  "cases": [
+    {
+      "family": "alternating",
+      "n": 100000,
+      "q": 4
+    },
+    {
+      "family": "balanced",
+      "n": 100000,
+      "q": 4
+    },
+    {
+      "family": "grid",
+      "n": 65536,
+      "q": 4
+    },
+    {
+      "family": "random",
+      "n": 65536,
+      "q": 4
+    },
+    {
+      "family": "rmat",
+      "n": 65536,
+      "q": 4
+    },
+    {
+      "family": "similarity_random",
+      "n": 65536,
+      "q": 4
+    },
+    {
+      "family": "alternating",
+      "n": 16384,
+      "q": 16
+    },
+    {
+      "family": "random",
+      "n": 16384,
+      "q": 16
+    },
+    {
+      "family": "alternating",
+      "n": 100000,
+      "q": 4,
+      "derivative": true
+    },
+    {
+      "family": "random",
+      "n": 65536,
+      "q": 4,
+      "derivative": true
+    }
+  ],
+  "methods": [
+    "cupy_identity",
+    "cupy_onepass",
+    "cupy_iterated",
+    "fused_identity",
+    "fused_onepass",
+    "fused_compensated",
+    "cupy_identity_packed",
+    "fused_onepass_captured",
+    "torch_identity",
+    "torch_identity_packed",
+    "torch_identity_captured",
+    "torch_identity_packed_captured"
+  ],
+  "comparison_pairs": [
+    [
+      "cupy_identity",
+      "cupy_onepass",
+      "coordinate change on CuPy"
+    ],
+    [
+      "fused_identity",
+      "fused_onepass",
+      "coordinate change on fused executor"
+    ],
+    [
+      "cupy_identity",
+      "fused_identity",
+      "fusion without balancing"
+    ],
+    [
+      "cupy_onepass",
+      "fused_onepass",
+      "fusion with the same balanced plan"
+    ],
+    [
+      "cupy_onepass",
+      "cupy_iterated",
+      "one versus eight simultaneous dyadic balancing sweeps"
+    ],
+    [
+      "fused_onepass",
+      "fused_compensated",
+      "compensation cost and accuracy"
+    ]
+  ],
+  "primary_resident_profile": "fused_onepass_captured; compare with the fastest accepted identity-coordinate CuPy/PyTorch baseline among supported eager/captured and packed/unpacked variants. CuPy 14.2 cuBLAS stream capture is unsupported; PyTorch captured controls cover the capture alternative. Report all results and same-backend component pairs separately.",
+  "small_accuracy_oracle": "Full 64-row, four-channel fixtures from all six families, cross-checked at 256/384 bits; all methods checked against the 384-bit finite polynomial. This is separate from full-output FP64 CPU checks on large fixtures.",
+  "timing": "Synchronized resident FP64 computation, original-coordinate output, input/output scaling and owned GPU outputs. Validation and preparation measured separately. All methods and losses reported; no profile selection from confirmation data.",
+  "uncertainty": "Point and paired block-bootstrap interval use the same pooled-median ratio estimator. Two separate processes per hardware with fresh feature/coefficient seeds. Intervals are descriptive and not multiplicity-adjusted.",
+  "application": {
+    "dataset": "MovieLens 1M",
+    "url": "https://files.grouplens.org/datasets/movielens/ml-1m.zip",
+    "split": "Latest 20% of each user's ratings by timestamp held out; training graph uses ratings >=4; evaluate held-out positives >=4, excluding all training-rated items",
+    "users": 256,
+    "channels": 4,
+    "degree": 12,
+    "alpha": "17/20",
+    "k": 10,
+    "repeats": 5,
+    "methods": [
+      "cupy_identity",
+      "cupy_onepass",
+      "fused_onepass",
+      "torch_identity_packed_captured"
+    ],
+    "outcomes": [
+      "Recall@10",
+      "nDCG@10",
+      "top-10 agreement",
+      "full request-batch latency",
+      "load/build/compile/prepare costs",
+      "amortization break-even"
+    ],
+    "scope": "Fixed finite personalized graph-diffusion recommender; no learned-model SOTA or live customer claim. Archive remains outside the repository and is not redistributed. Demographics are never loaded.",
+    "archive_sha256": "a6898adb50b9ca05aa231689da44c217cb524e7ebd39d264c56e2832f2c54e20"
+  },
+  "sensitivity_scope": "Timing and new accuracy comparisons use theta=0; conditional parameter-interval planning is retained, without a new all-parameter floating-point claim."
+}
