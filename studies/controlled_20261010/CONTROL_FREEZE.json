@@ -1,0 +1,15 @@
+{
+  "study_id": "kgf-packed-balanced-controls-20261010-v1",
+  "methods": [
+    "cupy_onepass_packed",
+    "cupy_iterated_packed",
+    "fused_onepass_captured"
+  ],
+  "seeds": [
+    20261013,
+    20261014
+  ],
+  "runner_sha256": "1f3af13519230885e9af8d73a451a5d01d599371a421609fe37f76c863abc6c4",
+  "base_freeze_sha256": "fe6e761811c7ca7eafb509f1cd7deaf13844652f1a19dce63090a6491bb66295",
+  "purpose": "Stronger combined packing/balancing controls, identified during study review; frozen before fresh-seed confirmation. Same graphs, budgets and backends; retain all outcomes."
+}
