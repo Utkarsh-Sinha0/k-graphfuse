@@ -1,0 +1,47 @@
+{
+  "study_id": "kgf-recommendation-20261010-v1",
+  "source_sha256": {
+    "application.py": "25f74c7684ba1724e7d718b842efa6b270c75ba26f38b507990281c6479572f9",
+    "FREEZE.json": "fe6e761811c7ca7eafb509f1cd7deaf13844652f1a19dce63090a6491bb66295",
+    "runtime.py": "a5628a6c6f14116c169eaf3d60331e9807fdcaa14705a22ce8ae72ae697d6695",
+    "RUNTIME_FREEZE.json": "5595b31cd183497c6c51a9daf6348c2d24fbe7da397d9eb91bc11cad88d71243"
+  },
+  "methods": [
+    "cupy_restart",
+    "cupy_restart_captured",
+    "fused_onepass",
+    "torch_identity_packed_captured"
+  ],
+  "protocol": {
+    "dataset": "MovieLens 1M",
+    "url": "https://files.grouplens.org/datasets/movielens/ml-1m.zip",
+    "split": "Latest 20% of each user's ratings by timestamp held out; training graph uses ratings >=4; evaluate held-out positives >=4, excluding all training-rated items",
+    "users": 256,
+    "channels": 4,
+    "degree": 12,
+    "alpha": "17/20",
+    "k": 10,
+    "repeats": 5,
+    "methods": [
+      "cupy_identity",
+      "cupy_onepass",
+      "fused_onepass",
+      "torch_identity_packed_captured"
+    ],
+    "outcomes": [
+      "Recall@10",
+      "nDCG@10",
+      "top-10 agreement",
+      "full request-batch latency",
+      "load/build/compile/prepare costs",
+      "amortization break-even"
+    ],
+    "scope": "Fixed finite personalized graph-diffusion recommender; no learned-model SOTA or live customer claim. Archive remains outside the repository and is not redistributed. Demographics are never loaded.",
+    "archive_sha256": "a6898adb50b9ca05aa231689da44c217cb524e7ebd39d264c56e2832f2c54e20"
+  },
+  "blocks": 5,
+  "quality_noninferiority_margin": 0.001,
+  "order": "Shuffle methods inside each whole-workflow block, fixed seed; no selection of the K profile.",
+  "equation": "y_0=(1-alpha)X; y_{j+1}=alpha A y_j+(1-alpha)X; after d steps this equals the same finite polynomial with c_k=(1-alpha)alpha^k.",
+  "scope": "Specialized baseline uses scalar channel coefficients, avoiding unnecessary GEMMs. Includes checked compute, transfers and top-10 ranking. No recommendation quality-SOTA claim."
+}
